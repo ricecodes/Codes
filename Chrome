@@ -538,6 +538,26 @@ nav a:hover { color:{color:Links Hover}; border-left:10px solid {color:Accent}; 
 
 .post-header { background:{color:Posts Head}; color:{color:Text}; }
 
+.pinned { 
+    display:inline-block; 
+    font-weight:bold; 
+    color:#00cf35;
+    margin-left:7px; 
+    }
+    
+.pinned i {
+    display:inline-block;
+    vertical-align:middle;
+    margin-left:-3px;
+    margin-right:5px;
+    font-size:15px;
+    -webkit-transition:all 0.4s ease;
+    -moz-transition:all 0.4s ease;
+    -o-transition:all 0.4s ease;
+    -ms-transition:all 0.4s ease;
+    transition:all 0.4s ease;
+    }
+
 .tabs { 
     display:inline-block; 
     background:{color:Posts}; 
@@ -955,6 +975,9 @@ $(document).ready(function(){
 {block:Audio}<span><i class="bx bxs-music"></i></span> audio{/block:Audio}
 <i class="bx bx-x" style="font-size:10px;margin-left:10px;"></i>
 </div>
+{block:PinnedPostLabel}
+<div class="pinned"><i class="bx bxs-pin"></i>{PinnedPostLabel}</div>
+{/block:PinnedPostLabel}
 {block:IndexPage}
 <div class="icons">
 <a href="{Permalink}" title="Posted {TimeAgo}"><i class="bx bx-minus"></i></a>
