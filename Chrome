@@ -571,7 +571,7 @@ nav a:hover { color:{color:Links Hover}; border-left:10px solid {color:Accent}; 
     text-transform:capitalize;
     }
     
-.tabs i { display:inline-block; font-size:12px; }
+.tabs i { display:inline-block; font-size:{select:Font Size}; }
 
 .tabs span { margin-right:5px; }
 
