@@ -740,6 +740,9 @@ a.likey .liked + i { color:{color:Like Button}; opacity:1; }
     color:{color:Text};
     background:{color:Posts Head};
     border-top:5px solid {color:Accent};
+    {block:ifBoxShadow}
+    box-shadow:rgba(0,0,0,0.2) 10px 10px;
+    {/block:ifBoxShadow}
     }
     
 #notes { display:inline-block; font-weight:bold; margin-right:15px; }
