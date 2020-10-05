@@ -850,7 +850,7 @@ ol.notes li.note blockquote {
     transition: all 0.4s ease;
     }
 
-main { width:100vw; margin:0 auto; }
+main { width:100%; margin:0 auto; }
     
 section { width:100%; margin:100px auto 0 auto; }
 
@@ -858,12 +858,12 @@ article {
     {block:ifNotGrid}
     margin:0 auto 75px auto; 
     width:100%;
-    max-width:700px;
+    max-width:1100px;
     {/block:ifNotGrid}
     {block:ifGrid}
     margin:0 auto 75px auto; 
     width:100%;
-    max-width:700px;
+    max-width:1100px;
     {/block:ifGrid}
     }
 }
@@ -1062,6 +1062,26 @@ function closeNav() { document.getElementById("mySidenav").style.width = "0"; }
 {block:Link}
 <div class="link">
 <a href="{URL}"><h1><span class="fas fa-external-link-alt" aria-hidden="true"></span>{Name}</h1></a>
+{block:NotReblog}
+<div class="caption">{Body}</div>
+{/block:NotReblog}
+{block:Rebloggedfrom}
+<div class="unnest">
+{block:Reblogs}
+<div class="reblogged">
+<div class="username">
+{block:IsActive}
+<div class="active">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<span class="fas fa-circle"></span> {Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
+{/block:IsActive}
+{block:IsDeactivated}
+<div class="deleted">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<span class="fas fa-circle"></span> {Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
+{/block:IsDeactivated}
+</div>
+{Body}
+</div>
+{/block:Reblogs}
+</div>
+{/block:RebloggedFrom}
 </div>
 {block:NotReblog}
 {block:Description}
