@@ -1062,26 +1062,6 @@ function closeNav() { document.getElementById("mySidenav").style.width = "0"; }
 {block:Link}
 <div class="link">
 <a href="{URL}"><h1><span class="fas fa-external-link-alt" aria-hidden="true"></span>{Name}</h1></a>
-{block:NotReblog}
-<div class="caption">{Body}</div>
-{/block:NotReblog}
-{block:Rebloggedfrom}
-<div class="unnest">
-{block:Reblogs}
-<div class="reblogged">
-<div class="username">
-{block:IsActive}
-<div class="active">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<span class="fas fa-circle"></span> {Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
-{/block:IsActive}
-{block:IsDeactivated}
-<div class="deleted">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<span class="fas fa-circle"></span> {Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
-{/block:IsDeactivated}
-</div>
-{Body}
-</div>
-{/block:Reblogs}
-</div>
-{/block:RebloggedFrom}
 </div>
 {block:NotReblog}
 {block:Description}
