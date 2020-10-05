@@ -285,11 +285,11 @@ nav a:first-of-type { {block:IndexPage}color:{color:Accent 1}; border-bottom:2px
 nav a:hover { 
     color:{color:Accent 1};
     border-bottom:2px solid {color:Accent 1}; 
-    -webkit-transition: all 0.4s linear;
-    -moz-transition: all 0.4s linear;
-    -o-transition: all 0.4s linear;
-    -ms-transition: all 0.4s linear;
-    transition: all 0.4s linear;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    transition: all 0.4s ease;
     }
 
 #search { display:inline-block; margin-left:25px; margin-top:0; width:40vw; background:{color:Posts}; border-radius:4px; }
@@ -355,11 +355,11 @@ nav a:hover {
     background:{color:Posts};
     color:{color:Accent 3};
     cursor:pointer;
-    -webkit-transition: all 0.4s linear;
-    -moz-transition: all 0.4s linear;
-    -o-transition: all 0.4s linear;
-    -ms-transition: all 0.4s linear;
-    transition: all 0.4s linear;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    transition: all 0.4s ease;
     }
 
 .closebtn {
