@@ -539,6 +539,7 @@ footer {
 
 @media only screen and (max-width:600px) {
 iframe.tmblr-iframe { display:none!important; }
+.header { padding:15px 25px; width:calc(100% - 50px); }
 .title { display:block; text-align:center; margin:0 auto; }
 nav a { margin:0 0 0 15px; }
 section.layout-two-columns, section.layout-three-columns {  width:90%; margin:150px auto 70px auto; column-count:1; }
