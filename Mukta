@@ -546,8 +546,9 @@ section.layout-two-columns, section.layout-three-columns {  width:90%; margin:15
 section.layout-two-columns article, section.layout-three-columns article { margin:0 0 50px 0; width:100%; max-width:700px; }
 footer { padding:25px; width:calc(100% - 50px); }
 .foot { width:100%; }
-.description, .navigate { display:block; margin:0 auto; width:100%; text-align:center; }
-.navigate { column-count:3; margin:25px 0 0 0; }
+.description, .navigate { display:block; width:100%; text-align:center; }
+.description { margin:0 auto; }
+.navigate { column-count:3; margin:25px auto 0 auto; }
 }
 
 @media only screen and (min-width:601px) and (max-width:999px) {
