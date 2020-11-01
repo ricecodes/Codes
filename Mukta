@@ -498,24 +498,6 @@ footer {
 .foot { width:85%; margin:0 auto; }
     
 .description { margin:auto 0; width:60%; color:{color:Text}; }
-
-#search {
-    width:160px;
-    background:{color:Sidebar};
-    border-top:1px solid {color:Borders};
-    }
-
-#searchbar {
-    display:inline-block;
-    margin:0;
-    padding:5px 10px;
-    width:140px;
-    background:{color:Sidebar}; 
-    color:{color:Text}; 
-    font-size:{text:Font Size}; 
-    outline:none;
-    border:0px solid transparent; 
-    }
     
 .navigate { display:inline-block; width:35%; column-count:2; }
 .navigate a:before { content:"—"; margin:0 7px 0 0; color:{color:Accent 1}; }
