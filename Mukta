@@ -547,7 +547,7 @@ section.layout-two-columns article, section.layout-three-columns article { margi
 footer { padding:25px; width:calc(100% - 50px); }
 .foot { width:100%; }
 .description, .navigate { display:block; margin:0 auto; width:100%; text-align:center; }
-.navigate { column-count:3; }
+.navigate { column-count:3; margin:25px 0 0 0; }
 }
 
 @media only screen and (min-width:601px) and (max-width:999px) {
