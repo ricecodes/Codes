@@ -21,19 +21,19 @@ Credit:
 
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 
-<meta name="color:Accent 1" content="#f37458">
+<meta name="color:Accent 1" content="#6b70b3">
 <meta name="color:Accent 2" content="#ffda55">
 <meta name="color:Background" content="#f2f2f2">
 <meta name="color:Header" content="#ffffff">
 <meta name="color:Posts" content="#ffffff">
 <meta name="color:Borders" content="#e0e0e0">
 <meta name="color:Blockquote" content="#eeeeee">
-<meta name="color:Text" content="#1a1a1a">
+<meta name="color:Text" content="#333333">
 <meta name="color:Question" content="#eeeeee">
 <meta name="color:Pagination" content="#d2d2d2">
-<meta name="color:Pagination Text" content="#1a1a1a">
-<meta name="color:Selection Background" content="#f3876f">
-<meta name="color:Selection" content="#ffffff">
+<meta name="color:Pagination Text" content="#393939">
+<meta name="color:Selection Background" content="#cab1da">
+<meta name="color:Selection" content="#444444">
 
 <meta name="select:Layout" title="One Column" content="one-column">
 <meta name="select:Layout" title="Two Columns" content="two-columns">
@@ -270,6 +270,7 @@ section.layout-three-columns article { margin:0 0 50px 0; width:calc(100% * 0.9)
 .active img, .deleted img { {block:PermalinkPage}width:15px!important; height:15px!important;{/block:PermalinkPage} }
 .photo img, .pxuimg img { width:100%; display:block; }
 .pxuimg img:hover { cursor:zoom-in; }
+.posts img:hover, img:not(.lightbox-image):hover { cursor:pointer; }
 
 article:hover .zoom { opacity:1!important; }
 
@@ -302,7 +303,10 @@ article:hover .zoom { opacity:1!important; }
     
 .pxuone:hover .bx { background:{color:Question}; color:{color:Accent 2}; }
 
-.npf_row { margin:0 0 0 -15px!important; width:calc(100% + 30px)!important; height:auto!important; {block:PermalinkPage}margin:0 0 4px -15px!important; width:calc(100% + 30px)!important; height:auto!important;{/block:PermalinkPage} }
+.npf_row { margin:0 0 4px -15px!important; width:calc(100% + 30px)!important; height:auto!important; {block:PermalinkPage}margin:0 0 10px -15px!important; width:calc(100% + 30px)!important; height:auto!important;{/block:PermalinkPage} }
+
+.npf_row img:hover { cursor:pointer; }
+.npf_row img:focus { border:0; outline:none; }
 
 /* VIDEO */
 
