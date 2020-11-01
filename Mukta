@@ -303,7 +303,8 @@ article:hover .zoom { opacity:1!important; }
     
 .pxuone:hover .bx { background:{color:Question}; color:{color:Accent 2}; }
 
-.npf_row { margin:0 0 4px -15px!important; width:calc(100% + 30px)!important; height:auto!important; {block:PermalinkPage}margin:0 0 10px -15px!important; width:calc(100% + 30px)!important; height:auto!important;{/block:PermalinkPage} }
+section.layout-two-columns .npf_row, section.layout-three-columns .npf_row { margin:0 0 -3px -15px!important; width:calc(100% + 30px)!important; height:auto!important; }
+.npf_row { {block:PermalinkPage}margin:0 0 4px -15px!important; width:calc(100% + 30px)!important; height:auto!important;{/block:PermalinkPage} }
 
 .npf_row img:hover { cursor:pointer; }
 .npf_row img:focus { border:0; outline:none; }
@@ -573,14 +574,14 @@ $(document).ready(function(){
     var npfOptions = {
         rowClass:"npf_row",
         imageContainerClass:"tmblr-full",
-        generatedPhotosetContainerClass:"npf_photoset",
-        imageClass:"npf_image",
+        generatedPhotosetContainerClass:".photo-slideshow",
+        imageClass:"photo",
         includeCommonPhotosets:false,
         useTumblrLightbox:true,
         insertGalleryIndicator:true,
         galleryIndicatorClass:"npf_gallery_indicator",
         galleryIndicatorContent:"<img src='image_url'>",
-        photosetMargins:""
+        photosetMargins:"4px"
     }
     npfPhotosets("article", npfOptions);
     $(".photo-slideshow").pxuPhotoset({
@@ -664,10 +665,10 @@ $(document).ready(function(){
 <div class="reblogged">
 <div class="username">
 {block:IsActive}
-<div class="active">{block:HasText}<a href="{Permalink}">{/block:HasText}<img src="{PortraitURL-64}"> {Username}{block:HasText}</a>{/block:HasText}</div>
+<div class="active">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}"> {Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
 {/block:IsActive}
 {block:IsDeactivated}
-<div class="deleted">{block:HasText}<a href="{Permalink}">{/block:HasText}<img src="{PortraitURL-64}"> {Username}{block:HasText}</a>{/block:HasText}</div>
+<div class="deleted">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}"> {Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
 {/block:IsDeactivated}
 </div>
 {Body}
@@ -690,10 +691,10 @@ $(document).ready(function(){
 <div class="reblogged">
 <div class="username">
 {block:IsActive}
-<div class="active">{block:HasText}<a href="{Permalink}">{/block:HasText}<img src="{PortraitURL-64}"> {Username}{block:HasText}</a>{/block:HasText}</div>
+<div class="active">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}"> {Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
 {/block:IsActive}
 {block:IsDeactivated}
-<div class="deleted">{block:HasText}<a href="{Permalink}">{/block:HasText}<img src="{PortraitURL-64}"> {Username}{block:HasText}</a>{/block:HasText}</div>
+<div class="deleted">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}"> {Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
 {/block:IsDeactivated}
 </div>
 {Body}
@@ -741,10 +742,10 @@ $(document).ready(function(){
 <div class="reblogged">
 <div class="username">
 {block:IsActive}
-<div class="active">{block:HasText}<a href="{Permalink}">{/block:HasText}<img src="{PortraitURL-64}"> {Username}{block:HasText}</a>{/block:HasText}</div>
+<div class="active">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}"> {Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
 {/block:IsActive}
 {block:IsDeactivated}
-<div class="deleted">{block:HasText}<a href="{Permalink}">{/block:HasText}<img src="{PortraitURL-64}"> {Username}{block:HasText}</a>{/block:HasText}</div>
+<div class="deleted">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}"> {Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
 {/block:IsDeactivated}
 </div>
 {Body}
@@ -788,10 +789,10 @@ $(document).ready(function(){
 <div class="reblogged">
 <div class="username">
 {block:IsActive}
-<div class="active">{block:HasText}<a href="{Permalink}">{/block:HasText}<img src="{PortraitURL-64}"> {Username}{block:HasText}</a>{/block:HasText}</div>
+<div class="active">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}"> {Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
 {/block:IsActive}
 {block:IsDeactivated}
-<div class="deleted">{block:HasText}<a href="{Permalink}">{/block:HasText}<img src="{PortraitURL-64}"> {Username}{block:HasText}</a>{/block:HasText}</div>
+<div class="deleted">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}"> {Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
 {/block:IsDeactivated}
 </div>
 {Body}
