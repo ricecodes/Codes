@@ -269,7 +269,6 @@ section.layout-three-columns article { margin:0 0 50px 0; width:calc(100% * 0.9)
 .active img, .deleted img { {block:PermalinkPage}width:15px!important; height:15px!important;{/block:PermalinkPage} }
 .photo img, .pxuimg img { width:100%; display:block; }
 .pxuimg img:hover { cursor:zoom-in; }
-.posts img:hover, img:not(.lightbox-image):hover { cursor:pointer; }
 
 article:hover .zoom { opacity:1!important; }
 
@@ -299,8 +298,6 @@ article:hover .zoom { opacity:1!important; }
     -ms-transition:all 0.4s ease;
     transition:all 0.4s ease;
     }
-    
-.pxuone:hover .bx { background:{color:Question}; color:{color:Accent 2}; }
 
 section.layout-two-columns .npf_row, section.layout-three-columns .npf_row { margin:0 0 -3px -15px!important; width:calc(100% + 30px)!important; height:auto!important; }
 .npf_row { {block:PermalinkPage}margin:0 0 4px -15px!important; width:calc(100% + 30px)!important; height:auto!important;{/block:PermalinkPage} }
