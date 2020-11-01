@@ -541,7 +541,7 @@ footer {
 iframe.tmblr-iframe { display:none!important; }
 .title { display:block; text-align:center; margin:0 auto; }
 nav a { margin:0 0 0 15px; }
-section.layout-two-columns, section.layout-three-columns {  width:90%; margin:100px auto; column-count:1; }
+section.layout-two-columns, section.layout-three-columns {  width:90%; margin:150px auto 70px auto; column-count:1; }
 section.layout-two-columns article, section.layout-three-columns article { margin:0 0 50px 0; width:100%; max-width:700px; }
 footer { padding:25px; width:calc(100% - 50px); }
 .foot { width:100%; }
@@ -629,8 +629,6 @@ $(document).ready(function(){
 
 <body>
 
-<div class="content flex">
-
 <div class="header flex justify">
 <div class="title"><a href="/">{Title}</a></div>
 <nav>
@@ -641,6 +639,8 @@ $(document).ready(function(){
 {block:HasPages}{block:Pages}<a href="{URL}">{Label}</a>{/block:Pages}{/block:HasPages}
 </nav>
 </div>
+
+<div class="content flex">
 
 <section class="{block:IndexPage}layout-{select:Layout}{/block:IndexPage}">
 
