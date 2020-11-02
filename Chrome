@@ -5,6 +5,7 @@ Credit:
 ★ Base Code, Like & Reblog Button, Photoset & Video Resizing: https://shythemes.tumblr.com/
 ★ Icons: https://boxicons.com/
 ★ s-m-t Tooltips: http://manos.malihu.gr/style-my-tooltips-jquery-plugin/
+★ Tumblr Redirects: https://magnusthemes.tumblr.com/post/162657076440/remove-tumblrs-redirects
 ★ Unnested Captions: https://neothm.com/post/148902138319/un-nest-tumblr-captions-a-plugin-by
 
 ----->
@@ -843,6 +844,12 @@ ol.notes li.note blockquote {
 <script>
 $(document).ready(function(){
     var $container = $('#container');
+    //remove tumblr redirects script by magnusthemes@tumblr 
+    $('a[href*="t.umblr.com/redirect"]').each(function(){
+        var originalURL = $(this).attr("href").split("?z=")[1].split("&t=")[0];
+        var replaceURL = decodeURIComponent(originalURL);
+        $(this).attr("href", replaceURL);
+    });
     var $audio = $('iframe.tumblr_audio_player');
     $audio.load(function() {
     $(this).contents().find('head').append('<style type="text/css">' +
