@@ -7,6 +7,7 @@ Credit:
 ★ Icons: https://fontawesome.com/
 ★ SideNav Menu & Masonry: https://www.w3schools.com/
 ★ s-m-t Tooltips: http://manos.malihu.gr/style-my-tooltips-jquery-plugin/
+★ Tumblr Redirects: https://magnusthemes.tumblr.com/post/162657076440/remove-tumblrs-redirects
 
 ----->
 
@@ -887,6 +888,12 @@ article {
 <script>
 $(document).ready(function(){
     var $container = $("main");
+    //remove tumblr redirects script by magnusthemes@tumblr 
+    $('a[href*="t.umblr.com/redirect"]').each(function(){
+        var originalURL = $(this).attr("href").split("?z=")[1].split("&t=")[0];
+        var replaceURL = decodeURIComponent(originalURL);
+        $(this).attr("href", replaceURL);
+    });
     $("a[title]").style_my_tooltips({
         tip_follows_cursor:true,
         tip_delay_time:200,
