@@ -7,6 +7,7 @@ Credit:
 ★ Icons: https://boxicons.com/
 ★ Like & Reblog Button, PXU Photoset, Notecount: https://shythemes.tumblr.com/
 ★ NPF Photosets: https://codematurgy.tumblr.com/post/179837255439/npfphotosets-plugin
+★ Tumblr Redirects: https://magnusthemes.tumblr.com/post/162657076440/remove-tumblrs-redirects
 ★ Video Resizing: https://nouvae.tumblr.com/post/176815415055/tutorial-responsive-tumblr-videos-and-external
 
 ----->
@@ -604,6 +605,12 @@ $(document).ready(function(){
         if(_width > _parentWidth) { if(_left < _parentWidth - _width){ $(this).animate({left:_parentWidth - _width}, 400, 'easeOutExpo'); } } 
         else { $(this).animate({left:0}, 400, 'easeOutExpo'); 1}
     }
+    });
+    //remove tumblr redirects script by magnusthemes@tumblr 
+    $('a[href*="t.umblr.com/redirect"]').each(function(){
+        var originalURL = $(this).attr("href").split("?z=")[1].split("&t=")[0];
+        var replaceURL = decodeURIComponent(originalURL);
+        $(this).attr("href", replaceURL);
     });
 });
 </script>
