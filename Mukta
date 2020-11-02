@@ -555,11 +555,11 @@ $(document).ready(function(){
     var npfOptions = {
         rowClass:"npf_row",
         imageContainerClass:"tmblr-full",
-        generatedPhotosetContainerClass:".photo-slideshow",
-        imageClass:".photo",
+        generatedPhotosetContainerClass:"photo-slideshow",
+        imageClass:"photo",
         includeCommonPhotosets:false,
         useTumblrLightbox:true,
-        insertGalleryIndicator:true,
+        insertGalleryIndicator:false,
         galleryIndicatorClass:"npf_gallery_indicator",
         galleryIndicatorContent:"<img src='image_url'>",
         photosetMargins:"4px"
