@@ -628,7 +628,7 @@ $(document).ready(function(){
 </nav>
 </div>
 
-<div class="content flex">
+<div class="content">
 
 <section class="{block:IndexPage}layout-{select:Layout}{/block:IndexPage}">
 
