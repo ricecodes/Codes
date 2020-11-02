@@ -119,7 +119,7 @@ p:first-of-type { margin-top:0; }
 pre {
     margin:5px 0;
     padding:2px 5px;
-    background:{color:Blockquote};
+    background:{color:Question};
     color:{color:Text};
     white-space:pre-wrap;    
     word-wrap:break-word;
