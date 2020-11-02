@@ -556,7 +556,7 @@ $(document).ready(function(){
         rowClass:"npf_row",
         imageContainerClass:"tmblr-full",
         generatedPhotosetContainerClass:".photo-slideshow",
-        imageClass:"photo",
+        imageClass:".photo",
         includeCommonPhotosets:false,
         useTumblrLightbox:true,
         insertGalleryIndicator:true,
