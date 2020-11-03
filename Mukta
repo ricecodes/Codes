@@ -248,7 +248,8 @@ section.layout-three-columns article { margin:0 0 50px 0; width:calc(100% * 0.9)
 /* ANSWER */
 
 .question { margin:15px 0 0 15px; }
-.reanswer, .reanswer .asker { margin:10px 0 0 15px; text-align:right; }
+.reanswer { margin:10px 0 15px 15px;  }
+.reanswer, .reanswer .asker { text-align:right; }
  
 .question, .reanswer {
     background:{color:Question};
@@ -730,7 +731,7 @@ $(document).ready(function(){
 </div>
 <div class="unnest">
 {block:Reblogs}
-<div class="reblogged">
+<div class="reblogged" style="margin:-15px 0 0 0;">
 <div class="username">
 {block:IsActive}
 <div class="active">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}"> {Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
