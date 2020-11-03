@@ -232,7 +232,9 @@ section.layout-three-columns article { margin:0 0 50px 0; width:calc(100% * 0.9)
     color:{color:Text};
     }
     
-.src { text-align:right; padding:0 15px 15px 0; }
+.quote p { display:none; }
+    
+.src { font-family:{text:Google Font}; font-size:{text:Font Size}; text-align:right; padding:0 15px 15px 0; }
 .src a { text-decoration:underline; }
 
 /* CHAT */
@@ -693,8 +695,9 @@ $(document).ready(function(){
 {/block:Link}
 
 {block:Quote}
-<div class="quote">{Quote}</div>
+<div class="quote">{Quote}
 {block:Source}<div class="src">— {Source}</div>{/block:Source}
+</div>
 {/block:Quote}
 
 {block:Chat}
