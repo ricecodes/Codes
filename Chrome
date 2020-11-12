@@ -406,7 +406,7 @@ nav a:hover { color:{color:Links Hover}; border-left:10px solid {color:Accent}; 
     text-align:center;
     }
     
-#sr-title { width:calc({select:Post Size} - 30px); padding:15px; background:{color:Links Background}; }
+#sr-title { width:calc({select:Post Size} - 30px); padding:15px; background:{color:Posts Head}; }
     
 .sr-title { display:inline-block; color:{color:Text}; font-weight:700; }
 
@@ -940,6 +940,8 @@ $(document).ready(function(){
 </div>
 </div>
 
+<article class="entry" id="{PostID}">
+
 {block:SearchResults}
 <div id="sr-title"><div class="sr-title">Search results for {SearchQuery}</div></div>
 <div id="sr">
@@ -955,8 +957,6 @@ $(document).ready(function(){
 {/block:NoSearchResults}
 
 {block:Posts}
-
-<article class="entry" id="{PostID}">
 
 <section id="posts">
 
@@ -1125,7 +1125,9 @@ $(document).ready(function(){
 {block:HasTags}
 <div class="tags">{block:Tags}<a href="{TagURL}">#{Tag}</a>{/block:Tags}</div>
 {/block:HasTags}
+{block:Date}
 <strong>Posted on {Month} {DayofMonth}, {Year} with {NoteCountWithLabel}</strong>
+{/block:Date}
 {block:RebloggedFrom}
 <div class="root"><strong>Source: <a href="{ReblogRootURL}" title="{ReblogRootTitle}">{ReblogRootName}</a></strong></div>
 {/block:RebloggedFrom}
