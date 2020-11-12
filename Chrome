@@ -71,9 +71,9 @@ Credit:
 <meta name="select:Background Size" title="Cover" content="cover">
 <meta name="select:Background Size" title="Auto" content="auto">
 
-<meta name="if:Captions" content="0">
-<meta name="if:Show Tags" content="0">
-<meta name="if:Box Shadow" content="0">
+<meta name="if:Captions" content="">
+<meta name="if:Show Tags" content="">
+<meta name="if:Box Shadow" content="">
 
 <meta name="text:Sidebar Size" content="180px">
 <meta name="text:Title" content="Title">
