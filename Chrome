@@ -1125,9 +1125,7 @@ $(document).ready(function(){
 {block:HasTags}
 <div class="tags">{block:Tags}<a href="{TagURL}">#{Tag}</a>{/block:Tags}</div>
 {/block:HasTags}
-{block:Date}
 <strong>Posted on {Month} {DayofMonth}, {Year} with {NoteCountWithLabel}</strong>
-{/block:Date}
 {block:RebloggedFrom}
 <div class="root"><strong>Source: <a href="{ReblogRootURL}" title="{ReblogRootTitle}">{ReblogRootName}</a></strong></div>
 {/block:RebloggedFrom}
