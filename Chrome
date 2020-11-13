@@ -510,7 +510,7 @@ nav a:hover { color:{color:Links Hover}; border-left:10px solid {color:Accent}; 
 /* VIDEO */
 
 .tumblr_video_container { max-width:100%; }
-.tumblr_video_iframe  { display:block; overflow:hidden; border-bottom:1px solid {color:Borders}; max-width:100%; }
+.tumblr_video_iframe  { display:block; overflow:hidden; max-width:100%; }
 
 /* AUDIO */
 
@@ -731,12 +731,12 @@ a.likey .liked + i { color:{color:Like Button}; opacity:1; }
         
 /* NOTES */
 
-ol.notes { margin:15px 0 0 10px; padding:0; list-style-type:none; }
-ol.notes li.note { padding:5px; }
+ol.notes { margin:15px 0 0 0; padding:0; list-style-type:none; }
+ol.notes li.note { padding:10px; }
 ol.notes li.note a { color:{color:Text}; }
 ol.notes li.note a:hover { color:{color:Links Hover}; }
 ol.notes li.note img.avatar { display:none; }
-ol.notes li.note blockquote { margin:5px 0 0 0; padding:0 0 0 15px; border-left:2px solid {color:Borders}; }
+ol.notes li.note blockquote { margin:5px 0 0 0; padding:0 0 0 15px; }
 
 {CustomCSS}
 </style>
