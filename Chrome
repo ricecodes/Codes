@@ -430,8 +430,6 @@ nav a:hover { color:{color:Links Hover}; border-left:10px solid {color:Accent}; 
     box-shadow:rgba(0,0,0,0.2) 10px 10px;
     {/block:ifBoxShadow}
     }
-    
-/* LINK */
 
 /* LINK */
 
@@ -443,20 +441,13 @@ nav a:hover { color:{color:Links Hover}; border-left:10px solid {color:Accent}; 
     font-weight:bold;
     line-height:1.4em;
     color:{color:Text};
-    -webkit-transition:.5s ease-in-out;
-    -moz-transition:.5s ease-in-out;
-    -o-transition:.5s ease-in-out;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    transition: all 0.4s ease;
     }
     
-.link span {
-    font-weight:normal;
-    font-size:{select:Font Size};
-    display:block;
-    line-height:1.2em;
-    margin-top:10px;
-    padding-bottom:15px;
-    }
-
 /* QUOTE */
 
 .quote {
