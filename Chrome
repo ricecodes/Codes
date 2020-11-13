@@ -55,7 +55,6 @@ Credit:
 <meta name="select:Post Size" title="540px" content="540px">
 <meta name="select:Post Size" title="600px" content="600px">
 
-<meta name="select:Font Size" title="12px" content="12px">
 <meta name="select:Font Size" title="13px" content="13px">
 <meta name="select:Font Size" title="14px" content="14px">
 <meta name="select:Font Size" title="15px" content="15px">
@@ -63,7 +62,6 @@ Credit:
 <meta name="select:Sidebar Font Size" title="12px" content="12px">
 <meta name="select:Sidebar Font Size" title="13px" content="13px">
 <meta name="select:Sidebar Font Size" title="14px" content="14px">
-<meta name="select:Sidebar Font Size" title="15px" content="15px">
 
 <meta name="select:Background Size" title="Contain" content="contain">
 <meta name="select:Background Size" title="Cover" content="cover">
