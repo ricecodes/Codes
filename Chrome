@@ -557,7 +557,7 @@ nav a:hover { color:{color:Links Hover}; border-left:10px solid {color:Accent}; 
 
 .tabs span { margin-right:5px; }
 
-.icons { display:inline-block; float:right; }
+.icons { display:inline-block; margin-top:-1px; float:right; }
 
 .icons a { font-size:13px; }
 
