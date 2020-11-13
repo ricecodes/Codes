@@ -763,6 +763,39 @@ ol.notes li.note blockquote { margin:5px 0 0 0; padding:0 0 0 15px; }
 
 .next { display:inline-block; margin-bottom:60px; float:right; }
 
+/* CREDIT */
+
+#thm {
+    position:fixed;
+    bottom:10px;
+    right:20px;
+    }
+    
+#thm a {
+    font-size:16px;
+    display:inline-block;
+    width:auto;
+    text-align:center;
+    padding:5px;
+    background:{color:Icons Background};
+    color:{color:Icons};
+    -webkit-transition:all 0.4s ease;
+    -moz-transition:all 0.4s ease;
+    -o-transition:all 0.4s ease;
+    -ms-transition:all 0.4s ease;
+    transition:all 0.4s ease;
+    }
+
+#thm a:hover {
+    background:{color:Icons Hover};
+    color:{color:Icons};
+    -webkit-transition:all 0.4s ease;
+    -moz-transition:all 0.4s ease;
+    -o-transition:all 0.4s ease;
+    -ms-transition:all 0.4s ease;
+    transition:all 0.4s ease;
+    }
+
 {CustomCSS}
 </style>
 </head>
@@ -1059,6 +1092,8 @@ $(document).ready(function(){
 {/block:Pagination}
 
 </section>
+
+<div id="thm"><a href="https://ricecodes.tumblr.com/" title="theme by ricecodes"><i class="bx bx-cog"></i></a></div>
 
 </div>
     
