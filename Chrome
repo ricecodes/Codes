@@ -280,7 +280,7 @@ hr {
 
 .sidetitle span { margin-right:5px; }
 
-#side-icons { display:inline-block; margin-top:-1px; float:right; }
+#side-icons { display:inline-block; margin-top:-4px; float:right; }
 
 #side-icons a { margin-left:3px; }
 
@@ -291,6 +291,7 @@ hr {
     padding:2px 5px;
     background:{color:Icons Background};
     color:{color:Icons};
+    margin-top:-2px;
     margin-left:1px;
     -webkit-transition:all 0.4s ease;
     -moz-transition:all 0.4s ease;
