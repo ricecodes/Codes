@@ -411,9 +411,9 @@ nav a:hover { color:{color:Links Hover}; border-left:10px solid {color:Accent}; 
     
 /* CONTAINER */
 
-.content { margin:100px auto 0px auto; width:calc({select:Post Size} + {text:Sidebar Size} + 90px); }
+.content { margin:100px auto 0px auto; width:calc({select:Post Size} + {text:Sidebar Size} + 60px); }
 
-.entry { margin:100px 0 100px calc({text:Sidebar Size} + 80px); width:{select:Post Size}; }
+.entry { margin:100px 0 100px calc({text:Sidebar Size} + 60px); width:{select:Post Size}; }
 
 .posts { 
     {block:IndexPage}
