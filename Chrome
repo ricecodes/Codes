@@ -280,22 +280,24 @@ hr {
 
 .sidetitle span { margin-right:5px; }
 
-#side-icons { display:inline-block; float:right; margin-right:-3px; margin-top:-3px; }
+#side-icons { display:inline-block; margin-top:-1px; float:right; }
 
-#side-icons i {
+#side-icons a { margin-left:3px; }
+
+#side-icons i { 
+    vertical-align:middle;
     display:inline-block;
+    font-size:calc({select:Font Size} - 2px);
+    padding:2px 5px;
     background:{color:Icons Background};
     color:{color:Icons};
-    font-size:calc({select:Sidebar Font Size} - 2px);
-    padding:4px 7px;
+    margin-left:1px;
     -webkit-transition:all 0.4s ease;
     -moz-transition:all 0.4s ease;
     -o-transition:all 0.4s ease;
     -ms-transition:all 0.4s ease;
     transition:all 0.4s ease;
     }
-    
-#side-icons a:last-child { margin-left:-1px; {block:NoSearchResults}margin-left:0;{/block:NoSearchResults} }
     
 #side-icons i:hover {
     background:{color:Icons Hover};
@@ -307,29 +309,7 @@ hr {
     transition:all 0.4s ease;
     }
 
-#menu a:hover { cursor:help; }
-
-#menu {
-    margin-right:4px;
-    background:transparent;
-    color:{color:Text};
-    display:inline-block;
-    float:right;
-    text-align:center;
-    -webkit-transition:all 0.1s ease;
-    -moz-transition:all 0.1s ease;
-    -o-transition:all 0.1s ease;
-    -ms-transition:all 0.1s ease;
-    transition:all 0.1s ease;
-    }
-    
-#menu i { display:inline-block; font-size:{select:Font Size}; font-weight:700; }
-
-#menu:hover { cursor:help; }
-
-.exit { background:transparent; }
-
-.exit:hover { background:transparent; }
+#side-icons { display:inline-block; float:right; margin-right:-3px; margin-top:-4px; }
 
 #description { padding:7px 10px 7px 10px; background:{color:Posts}; }
     
@@ -568,15 +548,13 @@ nav a:hover { color:{color:Links Hover}; border-left:10px solid {color:Accent}; 
     padding:2px 5px;
     background:{color:Icons Background};
     color:{color:Icons};
-    margin-left:-2px;
+    margin-left:1px;
     -webkit-transition:all 0.4s ease;
     -moz-transition:all 0.4s ease;
     -o-transition:all 0.4s ease;
     -ms-transition:all 0.4s ease;
     transition:all 0.4s ease;
     }
-    
-.icons i:last-child { margin-left:-3px; }
     
 .icons i:hover {
     background:{color:Icons Hover};
