@@ -847,7 +847,7 @@ $(document).ready(function(){
 
 {block:SearchResults}
 <article class="posts">
-<div id="sr-title">{lang:Search results for SearchQuery}</div>
+<div id="sr-title"><div class="sr-title">{lang:Search results for SearchQuery}</div></div>
 <div id="sr">
 {lang:SearchResultCount results for SearchQuery}
 </div>
