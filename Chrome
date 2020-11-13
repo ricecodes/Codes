@@ -771,8 +771,9 @@ ol.notes li.note blockquote { margin:5px 0 0 0; padding:0 0 0 15px; }
     right:20px;
     }
     
-#thm a {
+#thm i {
     font-size:16px;
+    vertical-align:middle;
     display:inline-block;
     width:auto;
     text-align:center;
@@ -786,7 +787,7 @@ ol.notes li.note blockquote { margin:5px 0 0 0; padding:0 0 0 15px; }
     transition:all 0.4s ease;
     }
 
-#thm a:hover {
+#thm i:hover {
     background:{color:Icons Hover};
     color:{color:Icons};
     -webkit-transition:all 0.4s ease;
