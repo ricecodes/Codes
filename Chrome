@@ -295,7 +295,7 @@ hr {
     transition:all 0.4s ease;
     }
     
-#side-icons a:last-child { margin-left:-1px; }
+#side-icons a:last-child { margin-left:-1px; {block:NoSearchResults}margin-left:0;{/block:NoSearchResults} }
     
 #side-icons i:hover {
     background:{color:Icons Hover};
