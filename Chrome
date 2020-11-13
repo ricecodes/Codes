@@ -738,6 +738,31 @@ ol.notes li.note a:hover { color:{color:Links Hover}; }
 ol.notes li.note img.avatar { display:none; }
 ol.notes li.note blockquote { margin:5px 0 0 0; padding:0 0 0 15px; }
 
+/* PAGINATION */
+
+.pgs { margin-top:10px; margin-left:0px; width:{select:Post Size}; }
+
+.pgs a {
+    padding:5px 7px;
+    background:{color:Pagination};
+    color:{color:Pagination Text};
+    overflow:hidden;
+    {block:ifBoxShadow}
+    box-shadow:rgba(0,0,0,0.2) 5px 5px;
+    {/block:ifBoxShadow}
+    -webkit-transition:all 0.4s ease;
+    -moz-transition:all 0.4s ease;
+    -o-transition:all 0.4s ease;
+    -ms-transition:all 0.4s ease;
+    transition:all 0.4s ease;
+    }
+    
+.pgs a:hover { background:{color:Links Hover}; color:{color:Posts}; }
+
+.prev { display:inline-block; margin-bottom:60px; }
+
+.next { display:inline-block; margin-bottom:60px; float:right; }
+
 {CustomCSS}
 </style>
 </head>
@@ -1026,6 +1051,12 @@ $(document).ready(function(){
 {/block:Date}
 
 {/block:Posts}
+
+{block:Pagination}
+<div class="pgs">
+{block:PreviousPage}<a class="prev" href="{PreviousPage}">Previous</a>{/block:PreviousPage} 
+{block:NextPage}<a class="next" href="{NextPage}">Next</a>{/block:NextPage}</div>
+{/block:Pagination}
 
 </section>
 
