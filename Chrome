@@ -282,7 +282,8 @@ hr {
 
 #side-icons { display:inline-block; margin-top:-4px; float:right; }
 
-#side-icons a { margin-left:3px; }
+#side-icons a { margin-left:0; }
+#side-icons a:last-child { margin-left:-1px; }
 
 #side-icons i { 
     vertical-align:middle;
@@ -292,7 +293,6 @@ hr {
     background:{color:Icons Background};
     color:{color:Icons};
     margin-top:-2px;
-    margin-left:1px;
     -webkit-transition:all 0.4s ease;
     -moz-transition:all 0.4s ease;
     -o-transition:all 0.4s ease;
@@ -538,7 +538,7 @@ nav a:hover { color:{color:Links Hover}; border-left:10px solid {color:Accent}; 
 
 .tabs span { margin-right:5px; }
 
-.icons { display:inline-block; margin-top:-1px; float:right; }
+.icons { display:inline-block; margin-top:0; float:right; }
 
 .icons a { font-size:13px; }
 
@@ -549,7 +549,7 @@ nav a:hover { color:{color:Links Hover}; border-left:10px solid {color:Accent}; 
     padding:2px 5px;
     background:{color:Icons Background};
     color:{color:Icons};
-    margin-left:1px;
+    margin-left:-3px;
     -webkit-transition:all 0.4s ease;
     -moz-transition:all 0.4s ease;
     -o-transition:all 0.4s ease;
