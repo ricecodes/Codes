@@ -43,6 +43,7 @@ Credit:
 <meta name="if:One Photo Photosets" content="">
 <meta name="if:Captions" content="">
 <meta name="if:Tags" content="">
+<meta name="if:More Links" content="">
 
 <meta name="text:Google Font" content="Mukta">
 <meta name="text:Font Size" content="14px">
@@ -497,7 +498,7 @@ footer {
     
 .foot { width:85%; margin:0 auto; }
     
-.description { margin:auto 0; width:60%; color:{color:Text}; }
+.description { margin:0; {block:ifMoreLinks}width:60%;{/block:ifMoreLinks}{block:ifNotMoreLinks}width:100%; text-align:center; margin:0 auto;{/block:ifNotMoreLinks} color:{color:Text}; }
     
 .navigate { display:inline-block; width:35%; column-count:2; }
 .navigate a:before { content:"—"; margin:0 7px 0 0; color:{color:Accent 1}; }
@@ -540,7 +541,7 @@ section.layout-two-columns, section.layout-three-columns {  width:90%; margin:15
 section article { margin:30px auto; width:calc(100% * 0.9); }
 section.layout-two-columns article, section.layout-three-columns article { margin:0 0 30px 0; width:calc(100% * 0.9); break-inside:avoid; }
 .foot { width:100%; }
-.description { width:50%; }
+.description { {block:ifMoreLinks}width:50%;{/block:ifMoreLinks}{block:ifNotMoreLinks}width:90%; text-align:center; margin:0 auto;{/block:ifNotMoreLinks} }
 .navigate { width:40%; }
 }
 
@@ -846,6 +847,7 @@ $(document).ready(function(){
 <footer>
 <div class="foot flex justify">
 <div class="description">{Description}</div>
+{block:ifMoreLinks}
 <div class="navigate">
 {block:ifLink1}<a href="{text:Link 1 URL}">{text:Link 1}</a>{/block:ifLink1}
 {block:ifLink2}<a href="{text:Link 2 URL}">{text:Link 2}</a>{/block:ifLink2}
@@ -854,6 +856,7 @@ $(document).ready(function(){
 {block:ifLink5}<a href="{text:Link 5 URL}">{text:Link 5}</a>{/block:ifLink5}
 {block:ifLink6}<a href="{text:Link 6 URL}">{text:Link 6}</a>{/block:ifLink6}
 </div>
+{/block:ifMoreLinks}
 </div>
 </footer>
 <div class="credit">© Mukta Theme by <a href="https://ricecodes.tumblr.com/">Ricecodes.</a></div>
