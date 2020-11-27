@@ -169,7 +169,7 @@ hr { width:25%; margin:10px auto; border-top:1px solid {color:Blockquote}; }
 /* HEADER */
 
 .header {
-    position:fixed;
+    position:sticky;
     top:0;
     left:0;
     padding:25px 50px;
@@ -192,7 +192,7 @@ nav a:hover { color:{color:Accent 2}; }
 
 .content { margin:0; width:100%; }
 
-section { width:calc(100vw - 300px); margin:150px auto 100px auto; }
+section { width:calc(100vw - 300px); margin:75px auto 100px auto; }
 section.layout-two-columns { column-count:2; width:calc(100vw - 400px); }
 section.layout-three-columns { column-count:3; width:calc(100vw - 300px); }
 
@@ -523,7 +523,7 @@ footer {
 @media only screen and (max-width:600px) {
 iframe.tmblr-iframe { display:none!important; }
 .header { padding:15px 25px; width:calc(100% - 50px); }
-.title { display:block; text-align:center; margin:0 auto; }
+.title, nav { display:block; text-align:center; margin:0 auto; }
 nav a { margin:0 0 0 15px; }
 section { width:90%; margin:150px auto 70px auto; }
 section.layout-two-columns, section.layout-three-columns { width:90%; margin:150px auto 70px auto; column-count:1; }
@@ -536,8 +536,8 @@ footer { padding:25px; width:calc(100% - 50px); }
 }
 
 @media only screen and (min-width:601px) and (max-width:999px) {
-section { width:90%; margin:150px auto 70px auto; }
-section.layout-two-columns, section.layout-three-columns {  width:90%; margin:150px auto 100px auto; column-count:2; }
+section { width:90%; margin:75px auto 100px auto; }
+section.layout-two-columns, section.layout-three-columns {  width:90%; column-count:2; }
 section article { margin:30px auto; width:calc(100% * 0.9); }
 section.layout-two-columns article, section.layout-three-columns article { margin:0 0 30px 0; width:calc(100% * 0.9); break-inside:avoid; }
 .foot { width:100%; }
