@@ -169,7 +169,7 @@ hr { width:25%; margin:10px auto; border-top:1px solid {color:Blockquote}; }
 /* HEADER */
 
 .header {
-    position:sticky;
+    position:fixed;
     top:0;
     left:0;
     padding:25px 50px;
@@ -192,7 +192,7 @@ nav a:hover { color:{color:Accent 2}; }
 
 .content { margin:0; width:100%; }
 
-section { width:calc(100vw - 300px); margin:75px auto 100px auto; }
+section { width:calc(100vw - 300px); margin:150px auto 100px auto; }
 section.layout-two-columns { column-count:2; width:calc(100vw - 400px); }
 section.layout-three-columns { column-count:3; width:calc(100vw - 300px); }
 
@@ -204,7 +204,7 @@ article {
     border:1px solid {color:Borders};
     }
     
-section.layout-two-columns article { margin:0 0 30px 0; width:calc(100% * 0.9); break-inside:avoid; }
+section.layout-two-columns article { margin:0 0 50px 0; width:calc(100% * 0.9); break-inside:avoid; }
 section.layout-three-columns article { margin:0 0 50px 0; width:calc(100% * 0.9); break-inside:avoid; }
     
 /* LINK */
@@ -525,21 +525,22 @@ iframe.tmblr-iframe { display:none!important; }
 .header { padding:15px 25px; width:calc(100% - 50px); }
 .title, nav { display:block; text-align:center; margin:0 auto; }
 nav a { margin:0 0 0 15px; }
-section { width:90%; margin:150px auto 70px auto; }
-section.layout-two-columns, section.layout-three-columns { width:90%; margin:150px auto 70px auto; column-count:1; }
+section { width:90%; margin:150px auto 100px auto; }
+section.layout-two-columns, section.layout-three-columns { width:90%; margin:100px auto 70px auto; column-count:1; }
 section article, section.layout-two-columns article, section.layout-three-columns article { margin:0 0 50px 0; width:100%; max-width:700px; }
 footer { padding:25px; width:calc(100% - 50px); }
 .foot { width:100%; }
 .description, .navigate { display:block; width:100%; text-align:center; }
 .description { margin:0 auto; }
 .navigate { column-count:3; margin:25px auto 0 auto; }
+.pgs { width:90%; }
 }
 
 @media only screen and (min-width:601px) and (max-width:999px) {
 section { width:90%; margin:75px auto 100px auto; }
 section.layout-two-columns, section.layout-three-columns {  width:90%; column-count:2; }
 section article { margin:30px auto; width:calc(100% * 0.9); }
-section.layout-two-columns article, section.layout-three-columns article { margin:0 0 30px 0; width:calc(100% * 0.9); break-inside:avoid; }
+section.layout-two-columns article, section.layout-three-columns article { margin:30px 0; width:calc(100% * 0.9); break-inside:avoid; }
 .foot { width:100%; }
 .description { {block:ifMoreLinks}width:50%;{/block:ifMoreLinks}{block:ifNotMoreLinks}width:90%; text-align:center; margin:0 auto;{/block:ifNotMoreLinks} }
 .navigate { width:40%; }
@@ -839,9 +840,9 @@ $(document).ready(function(){
 
 {block:Pagination}
 <div class="pgs flex centered">
-{block:PreviousPage}<a class="prev" href="{PreviousPage}">Previous</a>{/block:PreviousPage}
+{block:PreviousPage}<a class="prev" href="{PreviousPage}"><<</a>{/block:PreviousPage}
 {block:JumpPagination length="5"}<div class="jump">{block:CurrentPage}<span class="current_page">{PageNumber}</span>{/block:CurrentPage}{block:JumpPage}<a href="{URL}">{PageNumber}</a>{/block:JumpPage}</div>{/block:JumpPagination}
-{block:NextPage}<a class="next" href="{NextPage}">Next</a>{/block:NextPage}</div>
+{block:NextPage}<a class="next" href="{NextPage}">>></a>{/block:NextPage}</div>
 {/block:Pagination}
 
 <footer>
