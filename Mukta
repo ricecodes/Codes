@@ -202,6 +202,7 @@ article {
     width:100%;
     max-width:700px;
     border:1px solid {color:Borders};
+    overflow:hidden;
     }
     
 section.layout-two-columns article { margin:0 0 50px 0; width:calc(100% * 0.9); break-inside:avoid; }
@@ -270,7 +271,7 @@ section.layout-three-columns article { margin:0 0 50px 0; width:calc(100% * 0.9)
 
 /* PHOTO */
 
-.posts img, img:not(.lightbox-image) { max-width:100%!important; height:auto!important; {block:PermalinkPage}width:100%!important; height:auto!important;{/block:PermalinkPage} }
+.unnest img, .caption img { max-width:100%!important; }
 .active img, .deleted img { {block:PermalinkPage}width:15px!important; height:15px!important;{/block:PermalinkPage} }
 .photo img, .pxuimg img { width:100%; display:block; }
 .pxuimg img:hover { cursor:zoom-in; }
@@ -303,9 +304,8 @@ article:hover .zoom { opacity:1!important; }
     -ms-transition:all 0.4s ease;
     transition:all 0.4s ease;
     }
-
-section.layout-two-columns .npf_row, section.layout-three-columns .npf_row { margin:0 0 -3px -15px!important; width:calc(100% + 30px)!important; height:auto!important; }
-.npf_row { {block:PermalinkPage}margin:0 0 4px -15px!important; width:calc(100% + 30px)!important; height:auto!important;{/block:PermalinkPage} }
+    
+.npf_row { margin:0 0 4px -15px!important; width:calc(100% + 30px)!important; height:auto!important; }
 
 .npf_row img:hover { cursor:pointer; }
 .npf_row img:focus { border:0; outline:none; }
@@ -564,7 +564,7 @@ $(document).ready(function(){
     var npfOptions = {
         rowClass:"npf_row",
         imageContainerClass:"tmblr-full",
-        generatedPhotosetContainerClass:"photo-slideshow",
+        generatedPhotosetContainerClass:"npf_photoset",
         imageClass:"photo",
         includeCommonPhotosets:false,
         useTumblrLightbox:true,
