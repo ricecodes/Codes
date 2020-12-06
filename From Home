@@ -534,7 +534,7 @@ nav .bx, .pgs { display:none; }
 .content { margin:0; width:100%; }
 section { width:90%; }
 
-.m-pgs { display:inline-block; margin:0; width:90%; text-align:center; }
+.m-pgs { display:inline-block; margin:0; width:100%; text-align:center; }
 .jump { display:inline-block; }
 
 .m-pgs a, .jump a {
