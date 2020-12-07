@@ -656,7 +656,7 @@ $(document).ready(function(){
 <div class="popup flex justify">
 <div class="left">
 <div class="navigation">
-<h2>{text:Navigation Heading 1}</h2>
+{block:ifNavigationHeading1}<h2>{text:Navigation Heading 1}</h2>{/block:ifNavigationHeading1}
 <p>
 {block:ifLink1}<a href="{text:Link 1 URL}">{text:Link 1}</a>{/block:ifLink1}
 {block:ifLink2}<a href="{text:Link 2 URL}">{text:Link 2}</a>{/block:ifLink2}
@@ -664,7 +664,7 @@ $(document).ready(function(){
 {block:ifLink4}<a href="{text:Link 4 URL}">{text:Link 4}</a>{/block:ifLink4}
 {block:ifLink5}<a href="{text:Link 5 URL}">{text:Link 5}</a>{/block:ifLink5}
 </p>
-<h2>{text:Navigation Heading 2}</h2>
+{block:ifNavigationHeading2}<h2>{text:Navigation Heading 2}</h2>{/block:ifNavigationHeading2}
 <p>
 {block:ifLink6}<a href="{text:Link 6 URL}">{text:Link 6}</a>{/block:ifLink6}
 {block:ifLink7}<a href="{text:Link 7 URL}">{text:Link 7}</a>{/block:ifLink7}
@@ -673,7 +673,7 @@ $(document).ready(function(){
 {block:ifLink10}<a href="{text:Link 10 URL}">{text:Link 10}</a>{/block:ifLink10}
 </p>
 {block:HasPages}
-<h2>{text:Pages Heading}</h2>
+{block:ifPagesHeading}<h2>{text:Pages Heading}</h2>{/block:ifPagesHeading}
 <p>{block:Pages}<a href="{URL}">{Label}</a>{/block:Pages}</p>
 {/block:HasPages}
 </div>
