@@ -30,6 +30,7 @@ Credit:
 <meta name="color:Night Sidebar" content="#333333">
 <meta name="color:Description" content="#ececec">
 <meta name="color:Night Description" content="#333333">
+<meta name="color:Posts Background" content="#ececec">
 <meta name="color:Posts" content="#ffffff">
 <meta name="color:Night Posts" content="#494949">
 <meta name="color:Borders" content="#d0d0d0">
@@ -184,16 +185,6 @@ body::-webkit-scrollbar-thumb { background:{color:Accent}; }
     background:{color:Sidebar};
     border-bottom:1px solid {color:Borders};
     z-index:9999!important;
-    }
-    
-.head {
-    display:none;
-    padding:10px 10px 10px 65px;
-    width:175px;
-    height:calc(100% - 20px);
-    background:{color:Description};
-    color:{color:Text};
-    border-right:1px solid {color:Borders};
     }
 
 .exit { position:fixed; top:15px; left:15px; }
@@ -408,7 +399,7 @@ article img { max-width:100%; }
 
 /* POST HEADER */
 
-.post-header { color:{color:Permalink}; background:{color:Description}; width:100%; border-bottom:1px solid {color:Borders}; }
+.post-header { color:{color:Permalink}; background:{color:Posts Background}; width:100%; border-bottom:1px solid {color:Borders}; }
     
 .post-type, .permalink { display:inline-block; }
 
@@ -429,7 +420,7 @@ article img { max-width:100%; }
 
 /* POST FOOTER */
 
-.post-footer { background:{color:Description}; color:{color:Permalink}; border-top:1px solid {color:Borders}; }
+.post-footer { background:{color:Posts Background}; color:{color:Permalink}; border-top:1px solid {color:Borders}; }
     
 .pinned { position:absolute; background:{color:Accent}; }
     
@@ -473,7 +464,7 @@ a.likey .liked + .bx:before { content:"\ed36"; }
     
 /* TAGS */
 
-.tags { padding:15px; border-top:1px solid {color:Borders}; background:{color:Description}; font-size:{text:Font Size}; }
+.tags { padding:15px; border-top:1px solid {color:Borders}; background:{color:Posts Background}; font-size:{text:Font Size}; }
 .tags strong { margin:0 13px 0 0; font-weight:bold; }
 .tags a { color:{color:Permalink}; margin:0 15px 0 0; }
 .tags a:hover { color:{color:Permalink}; text-decoration:underline; }
