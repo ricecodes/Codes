@@ -149,12 +149,13 @@ hr { width:25%; margin:10px auto; border-top:1px solid {color:Borders}; }
 .justify { justify-content:space-between; }
     
 .unnest { margin:0; }
-.a-unnest { margin:0; border-top:1px solid {color:Borders}; }
+.a-unnest { margin:0; }
 
 .reblogged, .caption { margin:0; padding:15px; }
 
 .reblogged blockquote, blockquote { margin:0 0 0 15px; padding:0 0 0 15px; border-left:2px solid {color:Borders}; }
     
+.a-unnest .reblogged:first-of-type { border-top:1px solid {color:Borders}; }
 .reblogged { border-bottom:1px solid {color:Borders}; }
 .reblogged:last-of-type { border-bottom:0!important; }
 
@@ -509,7 +510,7 @@ body.night .header, body.night .reblogged, body.night .post-header, body.night .
 
 body.night::-webkit-scrollbar, body.night .permalink .bx, body.night .post-footer .bx, body.night .t-controls .bx { border-left:1px solid {color:Night Borders}; }
 
-body.night .post-footer, body.night .tags, body.night .notes, body.night .a-unnest { border-top:1px solid {color:Night Borders}; }
+body.night .post-footer, body.night .tags, body.night .notes, body.night .a-unnest .reblogged:first-of-type { border-top:1px solid {color:Night Borders}; }
 
 /* MEDIA QUERIES */
 
