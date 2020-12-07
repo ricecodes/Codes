@@ -163,7 +163,7 @@ hr { width:25%; margin:10px auto; border-top:1px solid {color:Borders}; }
 .username a { color:{color:Text}; text-decoration:none; }
 .username a:hover { color:{color:Links Hover}; }
 
-.active img, .deleted img { margin:0 7px 0 0; vertical-align:top; width:15px; height:15px; border-radius:4px; }
+.active img, .deleted img { margin:0 7px 0 0; vertical-align:top; width:15px!important; height:15px!important; border-radius:4px; }
 .deleted img { filter:grayscale(100%); }
 
 body::-webkit-scrollbar { width:8px; height:8px; background:{color:Sidebar}; border-left:1px solid {color:Borders}; z-index:999; }
@@ -371,7 +371,7 @@ article { margin:7rem 0; width:100%; background:{color:Posts}; border:1px solid 
 
 /* PHOTO */
 
-article img { max-width:100%; } 
+.unnest img, .caption img, .a-unnest img { max-width:100%; } 
 .photo img { width:100%; display:block; }
 .photo img:hover { cursor:zoom-in; }
 
