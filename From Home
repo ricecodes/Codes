@@ -511,6 +511,8 @@ body.night::-webkit-scrollbar, body.night .permalink .bx, body.night .post-foote
 
 body.night .post-footer, body.night .tags, body.night .notes, body.night .a-unnest { border-top:1px solid {color:Night Borders}; }
 
+/* MEDIA QUERIES */
+
 @media only screen and (max-width:599px) {
 iframe.tmblr-iframe, .t-controls { display:none; }
 .sidebar { position:relative; margin:0; width:calc(100% - 50px); border-bottom:1px solid {color:Borders}; }
