@@ -513,7 +513,7 @@ body.night .post-footer, body.night .tags, body.night .notes, body.night .a-unne
 
 @media only screen and (max-width:599px) {
 iframe.tmblr-iframe, .t-controls { display:none; }
-.sidebar { position:relative; margin:55px 0 0 0; width:calc(100% - 50px); border-bottom:1px solid {color:Borders}; }
+.sidebar { position:relative; margin:0; width:calc(100% - 50px); border-bottom:1px solid {color:Borders}; }
 body.night .sidebar { border-right:none; border-bottom:1px solid {color:Night Borders}; }
 .description { text-align:center; }
 
@@ -523,7 +523,7 @@ nav .bx, .pgs { display:none; }
 
 .popup { width:90%; top:45%; }
 
-.content { margin:0; width:100%; }
+.content { position:relative; margin:0; width:100%; }
 section { width:90%; }
 
 .m-pgs { display:inline-block; margin:0; width:100%; text-align:center; }
