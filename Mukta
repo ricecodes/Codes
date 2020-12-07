@@ -5,8 +5,9 @@ Credit:
 
 ★ Draggable Tags: https://www.jqueryscript.net/other/Tumblr-Like-Draggable-Tag-Bar-with-jQuery-CSS3-Tag-Overflow.html
 ★ Icons: https://boxicons.com/
-★ Like & Reblog Button, PXU Photoset, Notecount: https://shythemes.tumblr.com/
-★ NPF Photosets: https://codematurgy.tumblr.com/post/179837255439/npfphotosets-plugin
+★ CSS Photosets: https://annasthms.tumblr.com/post/177359244495/photosetscss-by-annasthms-and-espoirthemes-to
+★ Like & Reblog Button, Notecount: https://shythemes.tumblr.com/
+★ NPF Photosets: https://annalogs.tumblr.com/photosets
 ★ Tumblr Redirects: https://magnusthemes.tumblr.com/post/162657076440/remove-tumblrs-redirects
 ★ Video Resizing: https://nouvae.tumblr.com/post/176815415055/tutorial-responsive-tumblr-videos-and-external
 
@@ -61,8 +62,7 @@ Credit:
 <meta name="text:Link 6 URL" content="">
         
 <link href="https://fonts.googleapis.com/css?family={text:Google Font}:700,400" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/gh/boscoxvi/npfphotosets/npfphotosetstyle.css" rel="stylesheet" type="text/css">
-<link href="https://static.tumblr.com/qudkd6d/OcDnl99gb/style.css" rel="stylesheet" type="text/css">
+<link href="https://static.tumblr.com/0podkko/oDSpg7y88/photosets.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
 
 <style type="text/css">
@@ -305,10 +305,8 @@ article:hover .zoom { opacity:1!important; }
     transition:all 0.4s ease;
     }
     
-.npf_row { margin:0 0 4px -15px!important; width:calc(100% + 30px)!important; height:auto!important; }
-
-.npf_row img:hover { cursor:pointer; }
-.npf_row img:focus { border:0; outline:none; }
+[photoset-layout] { grid-gap:2px; width:calc(100% + 1px); }
+[photoset-layout] div { cursor:pointer; }
 
 /* VIDEO */
 
@@ -554,35 +552,13 @@ section.layout-two-columns article, section.layout-three-columns article { margi
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/boscoxvi/npfphotosets/npfphotosets.js"></script>
-<script src="https://static.tumblr.com/qudkd6d/Az6nkemqr/pxuphotoset.min.js"></script>
+<script src="https://static.tumblr.com/0podkko/qWqq8va08/photosets.js"></script>
+<script src="https://static.tumblr.com/05ejowb/Y02qjlxxp/csslightbox.js"></script>
 <script src="https://rawgit.com/robinpx/tumblr/master/scripts/flexibleFrames/flexibleFrames.min.js"></script>
 
 <script>
 $(document).ready(function(){
     var $container = $(".content");
-    var npfOptions = {
-        rowClass:"npf_row",
-        imageContainerClass:"tmblr-full",
-        generatedPhotosetContainerClass:"npf_photoset",
-        imageClass:"photo",
-        includeCommonPhotosets:false,
-        useTumblrLightbox:true,
-        insertGalleryIndicator:false,
-        galleryIndicatorClass:"npf_gallery_indicator",
-        galleryIndicatorContent:"<img src='image_url'>",
-        photosetMargins:"4px"
-    }
-    npfPhotosets("article", npfOptions);
-    $(".photo-slideshow").pxuPhotoset({
-        lightbox:true,
-        rounded:false,
-        gutter:"1px",
-        borderRadius:"0px",
-        photoset:".photo-slideshow",
-        photoWrap:".photo-data",
-        photo:".pxu-photo"
-    });
     $container.find(".notecount a").each(function(){
         var i = $(this).html().split(" ")[0].replace(/,/g, "");
         if (i >= 1e6) {
@@ -594,6 +570,11 @@ $(document).ready(function(){
             $(this).text(i + "k notes");
         }
     });
+    undoPhotoset();
+    undoPhotoset({
+        "posts":"article .unnest, article .text",
+        "text class":".unnest,.text",
+        "photoset class":"photoset-grid" },false);
     $(document).ready(flexFrame);
     function flexFrame() {
     $(".caption",".unnest").each(function() {
@@ -653,7 +634,9 @@ $(document).ready(function(){
 {block:Text}
 {block:Title}<h1>{Title}</h1>{/block:Title}
 {block:NotReblog}
+<div class="text">
 <div class="caption">{Body}</div>
+</div>
 {/block:NotReblog}
 {block:Rebloggedfrom}
 <div class="unnest">
@@ -758,8 +741,8 @@ $(document).ready(function(){
 
 {block:Photoset}
 {block:ifOnePhotoPhotosets}{block:IndexPage}<a href="#" onclick="Tumblr.Lightbox.init([/*{block:Photos}, /**/ { width: '{PhotoWidth-HighRes}', height: '{PhotoHeight-HighRes}', low_res: '{PhotoURL-500}', high_res: '{PhotoURL-HighRes}' }{/block:Photos}]);$('body').toggleClass('tumblr_lightbox_active');return false"><div class="zoom"><span class="bx bx-zoom-in"></span></div>{block:Photos}<div class="pxuimg"><img src="{PhotoURL-HighRes}"></div><!--{/block:Photos}--></a>{/block:IndexPage}
-{block:PermalinkPage}<div class="photo-slideshow" id="photoset_{PostID}" data-layout="{PhotosetLayout}">{block:Photos}<div class="photo-data"><div class="pxu-photo"><img src="{PhotoURL-500}" width="{PhotoWidth-500}" height="{PhotoHeight-500}" data-highres="{PhotoURL-HighRes}" data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}"></div><a class="tumblr-box" rel="post-{PostID}" href="{PhotoURL-HighRes}"></a></div>{/block:Photos}</div>{/block:PermalinkPage}{/block:ifOnePhotoPhotosets}
-{block:ifNotOnePhotoPhotosets}<div class="photo-slideshow" id="photoset_{PostID}" data-layout="{PhotosetLayout}">{block:Photos}<div class="photo-data"><div class="pxu-photo"><img src="{PhotoURL-500}" width="{PhotoWidth-500}" height="{PhotoHeight-500}" data-highres="{PhotoURL-HighRes}" data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}"></div><a class="tumblr-box" rel="post-{PostID}" href="{PhotoURL-HighRes}"></a></div>{/block:Photos}</div>{/block:ifNotOnePhotoPhotosets}
+{block:PermalinkPage}<div class="photoset-grid" photoset-layout="{PhotosetLayout}">{block:Photos}<div data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}" data-lowres="{PhotoURL-500}" data-highres="{PhotoURL-HighRes}" onclick="lightbox(this)"><img src="{PhotoURL-HighRes}" /></div>{/block:Photos}</div>{/block:PermalinkPage}{/block:ifOnePhotoPhotosets}
+{block:ifNotOnePhotoPhotosets}<div class="photoset-grid" photoset-layout="{PhotosetLayout}">{block:Photos}<div data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}" data-lowres="{PhotoURL-500}" data-highres="{PhotoURL-HighRes}" onclick="lightbox(this)"><img src="{PhotoURL-HighRes}" /></div>{/block:Photos}</div>{/block:ifNotOnePhotoPhotosets}
 {/block:Photoset}
 
 {block:Panorama}
