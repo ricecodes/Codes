@@ -632,7 +632,7 @@ $(document).ready(function(){
 
 {block:Date}
 <div class="post-header">
-<div class="post-info">{block:PinnedPostLabel}<div class="pinned"><span class="bx bxs-pin"></span></div>{/block:PinnedPostLabel}<a href="{Permalink}">{DayOfWeek}</a></div>
+<div class="post-info">{block:PinnedPostLabel}<div class="pinned"><span class="bx bxs-pin"></span></div>{/block:PinnedPostLabel}{block:IndexPage}<a href="{Permalink}">{DayOfWeek}</a>{/block:IndexPage}{block:PermalinkPage}{Month} {DayofMonth}, {Year}{/block:PermalinkPage}</div>
 </div>
 {/block:Date}
 
@@ -809,7 +809,7 @@ $(document).ready(function(){
 <div class="tags"><strong>Tagged as:</strong> {block:Tags}<a href="{TagURL}">{Tag}</a><span class="comma">, </span>{/block:Tags}</div>
 {/block:HasTags}
 {block:Date}
-<div class="date"><strong>Posted on {Month} {DayofMonth}, {Year} with {NoteCountWithLabel}</strong></div>
+<div class="date"><strong>{NoteCountWithLabel}</strong></div>
 {/block:Date}
 {block:RebloggedFrom}
 <div class="root"><strong>Source: <a href="{ReblogRootURL}">{ReblogRootName}</a></strong></div>
