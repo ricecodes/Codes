@@ -427,7 +427,7 @@ article { margin:7rem 0; width:100%; background:{color:Posts}; border:1px solid 
     
 .notecount { display:inline-block; font-weight:bold; padding:15px; }
 .notecount a { color:{color:Permalink}; }
-.notecount a:hover { color:{color:Links Hover}; }
+.notecount a:hover { color:{color:Links Hover}!important; }
     
 .post-foot, .controls { display:inline-block!important; }
 .controls a { color:{color:Permalink}; }
