@@ -741,18 +741,18 @@ $(document).ready(function(){
 {/block:Answer}
 
 {block:Photo}
-<div class="photo"><a href="#" onclick="Tumblr.Lightbox.init([{ width:{PhotoWidth-HighRes}, height:{PhotoHeight-HighRes}, low_res:'{PhotoURL-500}', high_res:'{PhotoURL-HighRes}' }]); $('body').toggleClass('tumblr_lightbox_active'); return false"><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"></a></div>
+<div class="photo">{LinkOpenTag}<a href="#" onclick="Tumblr.Lightbox.init([{ width:{PhotoWidth-HighRes}, height:{PhotoHeight-HighRes}, low_res:'{PhotoURL-500}', high_res:'{PhotoURL-HighRes}' }]); $('body').toggleClass('tumblr_lightbox_active'); return false"><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"></a>{LinkCloseTag}</div>
 {/block:Photo}
 
 {block:Photoset}
-{block:ifOnePhotoPhotosets}{block:IndexPage}<a href="#" onclick="Tumblr.Lightbox.init([/*{block:Photos}, /**/ { width: '{PhotoWidth-HighRes}', height: '{PhotoHeight-HighRes}', low_res: '{PhotoURL-500}', high_res: '{PhotoURL-HighRes}' }{/block:Photos}]);$('body').toggleClass('tumblr_lightbox_active');return false"><div class="zoom"><span class="bx bx-zoom-in"></span></div>{block:Photos}<div class="pxuimg"><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"></div><!--{/block:Photos}--></a>{/block:IndexPage}
+{block:ifOnePhotoPhotosets}{block:IndexPage}{LinkOpenTag}<a href="#" onclick="Tumblr.Lightbox.init([/*{block:Photos}, /**/ { width: '{PhotoWidth-HighRes}', height: '{PhotoHeight-HighRes}', low_res: '{PhotoURL-500}', high_res: '{PhotoURL-HighRes}' }{/block:Photos}]);$('body').toggleClass('tumblr_lightbox_active');return false"><div class="zoom"><span class="bx bx-zoom-in"></span></div>{block:Photos}<div class="pxuimg"><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"></div><!--{/block:Photos}--></a>{/block:IndexPage}
 {block:PermalinkPage}<div class="photoset-grid" photoset-layout="{PhotosetLayout}">{block:Photos}<div data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}" data-lowres="{PhotoURL-500}" data-highres="{PhotoURL-HighRes}" onclick="lightbox(this)"><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/></div>{/block:Photos}</div>{/block:PermalinkPage}{/block:ifOnePhotoPhotosets}
 {block:ifNotOnePhotoPhotosets}<div class="photoset-grid" photoset-layout="{PhotosetLayout}">{block:Photos}<div data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}" data-lowres="{PhotoURL-500}" data-highres="{PhotoURL-HighRes}" onclick="lightbox(this)"><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/></div>{/block:Photos}</div>{/block:ifNotOnePhotoPhotosets}
 {/block:Photoset}
 
 {block:Panorama}
-{LinkOpenTag}<div class="photo-slideshow"><img src="{PhotoURL-Panorama}" alt="{PhotoAlt}">
-</div>{LinkCloseTag}
+<div class="photo-slideshow">{LinkOpenTag}<img src="{PhotoURL-Panorama}" alt="{PhotoAlt}">{LinkCloseTag}
+</div>
 {/block:Panorama}
 
 {block:Video}
