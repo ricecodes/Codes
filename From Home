@@ -564,6 +564,7 @@ section { width:90%; }
 <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"></script>
 <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
 <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<script src="https://static.tumblr.com/mcvcgog/W8pqlzc6v/night.js"></script>
 <script src="https://static.tumblr.com/0podkko/qWqq8va08/photosets.js"></script>
 <script src="https://static.tumblr.com/05ejowb/Y02qjlxxp/csslightbox.js"></script>
 
@@ -609,28 +610,6 @@ $(document).ready(function(){
         "posts":"article .unnest, article .text",
         "text class":".unnest,.text",
         "photoset class":"photoset-grid" },false);
-    var mode = localStorage.getItem("daynight");
-    localStorage.setItem ("daynight",mode);
-        if (mode == "night") {
-            $("body").addClass("night");
-            $(".luna").hide();
-            $(".solis").show();
-        }
-        else {
-            mode = "day";
-        }
-    $(".luna").click(function(){
-        $("body").addClass("night");
-         $(".luna").hide();
-         $(".solis").show();
-         localStorage.setItem("daynight","night")
-    });
-    $(".solis").click(function(){
-        $("body").removeClass("night");
-         $(".solis").hide();
-         $(".luna").show();
-         localStorage.setItem("daynight","day")
-    });
 });
 </script>
 
