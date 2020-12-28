@@ -314,7 +314,7 @@ nav a:hover .bx, .pgs a:hover .bx { color:white; }
 
 section { margin:100px auto; width:{select:Post Size}; }
 
-article { margin:7rem 0; width:100%; background:{color:Posts}; border:1px solid {color:Borders}; overflow:hidden; }
+article { margin:7rem 0; width:100%; background:{color:Posts}; border:1px solid {color:Borders}; }
     
 /* LINK */
 
@@ -465,9 +465,9 @@ a.likey .liked + .bx:before { content:"\ed36"; }
     
 /* TAGS */
 
-.tags { padding:15px; border-top:1px solid {color:Borders}; background:{color:Posts Background}; font-size:{text:Font Size}; }
+.tags { display:inline-block; padding:15px; border-top:1px solid {color:Borders}; background:{color:Posts Background}; font-size:{text:Font Size}; }
 .tags strong { margin:0 13px 0 0; font-weight:bold; }
-.tags a { color:{color:Permalink}; margin:0 15px 0 0; }
+.tags a { color:{color:Permalink}; margin:0 15px 0 0; word-break:break-word; }
 .tags a:hover { color:{color:Permalink}; text-decoration:underline; }
         
 /* NOTES */
