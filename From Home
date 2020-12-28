@@ -465,9 +465,9 @@ a.likey .liked + .bx:before { content:"\ed36"; }
     
 /* TAGS */
 
-.tags { display:inline-block; padding:15px; border-top:1px solid {color:Borders}; background:{color:Posts Background}; font-size:{text:Font Size}; }
+.tags { padding:15px; border-top:1px solid {color:Borders}; background:{color:Posts Background}; font-size:{text:Font Size}; }
 .tags strong { margin:0 13px 0 0; font-weight:bold; }
-.tags a { color:{color:Permalink}; margin:0 15px 0 0; word-break:break-word; }
+.tags a { display:inline-block; color:{color:Permalink}; margin:0 15px 0 0; word-break:keep-all; }
 .tags a:hover { color:{color:Permalink}; text-decoration:underline; }
         
 /* NOTES */
