@@ -314,7 +314,7 @@ nav a:hover .bx, .pgs a:hover .bx { color:white; }
 
 section { margin:100px auto; width:{select:Post Size}; }
 
-article { margin:7rem 0; width:100%; background:{color:Posts}; border:1px solid {color:Borders}; }
+article { margin:7rem 0; width:100%; background:{color:Posts}; border:1px solid {color:Borders}; overflow:hidden; }
     
 /* LINK */
 
