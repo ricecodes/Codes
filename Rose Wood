@@ -112,9 +112,9 @@ ul li:before { content:"\ec9b"; }
 /* PERMALINKPAGE */
 
 {block:PermalinkPage}
-.sidebar { margin:0 0 0 -2vw; }
+.sidebar { margin:0 0 0 -3vw; }
 .container { width:60vw; }
-.content { margin:100px 0 100px 13vw; }
+.content { margin:100px 0 100px 12vw; }
 article { margin:0 0 3em 0; width:100%; }
 .post-footer { margin:0; width:100%; background:transparent; border-radius:0!important; border-top:1px solid {color:Borders}; }
 body.night .notecount { background:{color:Night Posts}; }
