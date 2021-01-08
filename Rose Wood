@@ -191,6 +191,11 @@ $(document).ready(function(){
             const dio = aud.contentDocument || aud.contentWindow.document;
             dio.head.innerHTML += '<style type="text/css"> .audio-player {background:{color:Accent}; color:{color:Accent Text}!important;}.audio-player .audio-info .track-artist {color:{color:Accent Text}!important;} </style>'}
         });
+        undoPhotoset();
+        undoPhotoset({
+            "posts":"article .unnest, article .text",
+            "text class":".unnest,.text",
+            "photoset class":"photoset-grid" },false);
         tippy("[title]", {
             theme:"custom",
             duration:300,
