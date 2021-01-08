@@ -112,9 +112,9 @@ ul li:before { content:"\ec9b"; }
 /* PERMALINKPAGE */
 
 {block:PermalinkPage}
-.sidebar { margin:0 0 0 -4vw; }
+.sidebar { margin:0 0 0 -2vw; }
 .container { width:60vw; }
-.content { margin:100px 0 100px 11vw; }
+.content { margin:100px 0 100px 13vw; }
 article { margin:0 0 3em 0; width:100%; }
 .post-footer { margin:0; width:100%; background:transparent; border-radius:0!important; border-top:1px solid {color:Borders}; }
 body.night .notecount { background:{color:Night Posts}; }
@@ -150,13 +150,17 @@ $(document).ready(function(){
     });
     {block:ifInfiniteScroll}
     var $grid = $(".grid").masonry({
-        itemSelector:"article"
+        itemSelector:"article",
+        stagger:30,
+        visibleStyle:{ transform:"translateY(0)", opacity: 1 },
+        hiddenStyle:{ transform:"translateY(100px)", opacity: 0 }
     });
     var msnry = $grid.data("masonry");
     $grid.infiniteScroll({
         path:".next",
         append:"article",
         status:".load-status",
+        responseBody:"json",
         history:false,
         outlayer:msnry,
         hideNav:".pgs",
