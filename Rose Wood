@@ -160,7 +160,7 @@ $(document).ready(function(){
         path:".next",
         append:"article",
         status:".load-status",
-        responseBody:"json",
+        responseBody:"text",
         history:false,
         outlayer:msnry,
         hideNav:".pgs",
