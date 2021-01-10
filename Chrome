@@ -452,7 +452,7 @@ nav a:hover { color:{color:Links Hover}; border-left:10px solid {color:Accent}; 
 
 /* ANSWER */
 
-.reanswer { margin-top:10px; margin-bottom:0px; }
+.reanswer { margin:10px 0; }
  
 .question, .reanswer {
     margin-left:10px;
