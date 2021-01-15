@@ -514,7 +514,7 @@ body.night .post-footer, body.night .tags, body.night .notes, body.night .a-unne
 
 /* MEDIA QUERIES */
 
-@media only screen and (max-width:599px) {
+@media only screen and (max-width:999px) {
 iframe.tmblr-iframe, .t-controls, .tippy-box[data-theme~='custom'] { display:none; }
 .sidebar { position:relative; margin:0; width:calc(100% - 50px); border-bottom:1px solid {color:Borders}; }
 body.night .sidebar { border-right:none; border-bottom:1px solid {color:Night Borders}; }
@@ -546,13 +546,6 @@ section { width:90%; }
 
 .m-pgs a:hover, .jump a:hover { background:{color:Links Hover}; }
 .jump a, .current_page { margin:0 10px; }
-
-}
-
-@media only screen and (min-width:600px) {
-.sidebar { position:fixed; top:55px; left:0; border-right:1px solid {color:Borders}; }
-.m-pgs { display:none; }
-.popup { width:50vw; top:47%; }
 }
 
 {CustomCSS}
