@@ -18,7 +18,7 @@ Notes:
 <html>
 <head>
 
-<title>{Title} — About</title>
+<title>{Title}</title>
 <link rel="shortcut icon" href="{Favicon}">
 <link rel="alternate" type="application/rss+xml" href="{RSS}">
     
