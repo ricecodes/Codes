@@ -59,7 +59,6 @@ Notes:
 /* BASICS */
 
 iframe.tmblr-iframe {
-    display:none;
     z-index:9999999999999!important;
     top:10px!important;
     right:0!important;
