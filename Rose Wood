@@ -139,7 +139,7 @@ article, article.layout-three{margin:0 0 3em 0; width:100%;}
 {block:ifInfiniteScroll}<script src="https://unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.min.js"></script>{/block:ifInfiniteScroll}
 <script src="https://static.tumblr.com/0podkko/qWqq8va08/photosets.js"></script>
 <script src="https://static.tumblr.com/05ejowb/Y02qjlxxp/csslightbox.js"></script>
-<script src="https://static.tumblr.com/05ejowb/9HNqmg0tm/rosewood.min.js"></script>
+<script src="https://static.tumblr.com/05ejowb/4KAqn0gbk/rosewood.min.js"></script>
 
 <script>
 $(document).ready(function(){
