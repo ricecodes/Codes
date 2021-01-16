@@ -139,6 +139,7 @@ article, article.layout-three{margin:0 0 3em 0; width:100%;}
 {block:ifInfiniteScroll}<script src="https://unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.min.js"></script>{/block:ifInfiniteScroll}
 <script src="https://static.tumblr.com/0podkko/qWqq8va08/photosets.js"></script>
 <script src="https://static.tumblr.com/05ejowb/Y02qjlxxp/csslightbox.js"></script>
+<script src="https://static.tumblr.com/05ejowb/H7dqn1vv1/load.min.js"></script>
 <script src="https://static.tumblr.com/05ejowb/4KAqn0gbk/rosewood.min.js"></script>
 
 <script>
@@ -295,6 +296,15 @@ $(document).ready(function(){
 </div> <!--- SIDEBAR --->
 
 <div class="content">
+
+{block:IndexPage}
+<div id="preloader"> 
+<div id="loader">	   
+<div class="preload"><span class="bx bx-loader-alt bx-spin"></span></div>
+</div>
+</div> 
+{/block:IndexPage}
+
 <div class="grid">
 
 {block:Posts}
