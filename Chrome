@@ -405,6 +405,7 @@ nav a:hover { color:{color:Links Hover}; border-left:10px solid {color:Accent}; 
     background:{color:Posts}; 
     line-height:1.4em;
     border-top:5px solid {color:Accent};
+    overflow:hidden;
     {block:ifBoxShadow}
     box-shadow:rgba(0,0,0,0.2) 10px 10px;
     {/block:ifBoxShadow}
@@ -482,7 +483,7 @@ nav a:hover { color:{color:Links Hover}; border-left:10px solid {color:Accent}; 
 
 /* PHOTO */
 
-.posts img, img:not(.lightbox-image) { max-width:100%; }
+.unnest img, .caption img { max-width:100%; height:auto; }
 .photo img { width:100%; display:block; }
 .photo img:hover { cursor:zoom-in; }
 
@@ -595,15 +596,9 @@ nav a:hover { color:{color:Links Hover}; border-left:10px solid {color:Accent}; 
 
 .controls i:hover, .likey:hover i, .post-header-perm:hover i  { cursor:pointer; color:{color:Links Hover}; }
 
-.likey {
-    position:relative;
-    display:inline-block;
-    vertical-align:middle;
-    overflow:hidden;
-    margin-top:0px;
-    }
-
-a.likey .liked + i { color:{color:Like Button}; opacity:1; }
+.likey { position:relative; display:inline-block; vertical-align:top; overflow:hidden; }
+a.likey .liked + .bx { display:inline-block; color:{color:Like Button}; opacity:1; }
+a.likey .liked + .bx:before { content:"\ed36"; }
  
 .likey .like_button iframe {
     position:absolute;
@@ -794,10 +789,10 @@ $(document).ready(function(){
         var replaceURL = decodeURIComponent(originalURL);
         $(this).attr("href", replaceURL);
     });
-    var $audio = $('iframe.tumblr_audio_player');
-    $audio.load(function() {
-    $(this).contents().find('head').append('<style type="text/css">' +
-      '.audio-player { background:{color:Posts}; color:{color:Text} !important; }' + '.audio-player .audio-info .track-artist { color:{color:Text} !important; }' + '</style>');
+    document.querySelectorAll("iframe.tumblr_audio_player").forEach( aud => {
+        aud.onload = function() {
+            const dio = aud.contentDocument || aud.contentWindow.document;
+            dio.head.innerHTML += '<style type="text/css"> .audio-player {background:{color:Accent}; color:white!important;}.audio-player .audio-info .track-artist {color:white!important;} </style>'}
     });
     $("a[title]").style_my_tooltips({
         tip_follows_cursor:true,
@@ -817,7 +812,7 @@ $(document).ready(function(){
     $(".photo-slideshow").pxuPhotoset({
         lightbox:true,
         rounded:false,
-        gutter:"2px",
+        gutter:"4px",
         borderRadius:"0px",
         photoset:".photo-slideshow",
         photoWrap:".photo-data",
