@@ -340,7 +340,7 @@ $(document).ready(function(){
 <div class="gate">
 <div class="m-links">
 <a href="/">return</a>
-<a href="/ask">message</a>
+{block:AskEnabled}<a href="/ask">message</a>{/block:AskEnabled}
 <a href="/archive">archive</a>
 <!--- You can add as many links as you want! Just copy and paste <a href="URL here">Link Name</a> as many times as you want. This only applies for the mobile navigation. --->
 <a href="URL HERE">Link Name</a>
@@ -357,7 +357,7 @@ $(document).ready(function(){
 <nav>
 <ul>
 <li><a href="/">return</a></li>
-<li><a href="/ask">message</a></li>
+{block:AskEnabled}<li><a href="/ask">message</a></li>{/block:AskEnabled}
 <li><a href="/archive">archive</a></li>
 <li><a class="menu"><span class="close">more</span><span class="close" style="display:none;">close</span></a></li>
 <div class="lists">
