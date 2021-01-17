@@ -220,7 +220,7 @@ body::-webkit-scrollbar-thumb { background:{color:Accent}; }
     z-index:100000;
     }
     
-.popup { position:fixed; left:50%; transform:translate(-50%,-50%); z-index:99999999; }
+.popup { position:fixed; top:43%; left:50%; transform:translate(-50%,-50%); z-index:99999999; }
     
 .popup h2 { margin:10px 0; padding:0; font-weight:700; font-size:{text:Font Size}; text-transform:capitalize; }
 .navigation h2:before { font-family:"Boxicons"; content:"\ea9e"; font-size:{text:Font Size}; margin:0 7px 0 0; vertical-align:middle; color:{color:Accent}; }
