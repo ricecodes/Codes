@@ -269,8 +269,7 @@ iframe.tmblr-iframe,.tippy-box[data-theme~='custom'] { display:none; }
 .gate { position:absolute; width:60%; margin:0 0 0 20%; z-index:9999; }
 .content { margin:70px auto; width:100%; }
 .small, .big { width:100%; }
-.detail .con { column-count:2; break-inside:avoid; }
-.detail span { margin:0 3px 0 0; padding:0; background:transparent; color:var(--accent); font-weight:bold; border-radius:0; }
+.detail .con { display:grid; grid-template-columns:repeat(2, 1fr); }
 .detail span:after { content:":"; }
 .thm { display:none; }
 }
