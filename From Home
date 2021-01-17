@@ -380,8 +380,8 @@ article { margin:7rem 0; width:100%; background:{color:Posts}; border:1px solid 
 
 /* VIDEO */
 
-.tumblr_video_container { max-width:100%; }
-.tumblr_video_iframe  { display:block; overflow:hidden; max-width:100%; }
+.tumblr_video_container { width:100%; }
+.tumblr_video_iframe, #youtube_iframe { margin:0 auto; display:block; overflow:hidden; width:100%; }
 
 /* AUDIO */
 
