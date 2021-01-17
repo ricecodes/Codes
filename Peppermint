@@ -221,7 +221,7 @@ body.night::-webkit-scrollbar, body.night::-webkit-scrollbar-thumb { border:6px 
 body.night::-webkit-scrollbar { background:var(--night-bg); }
 body.night .info::-webkit-scrollbar, body.night .info::-webkit-scrollbar-thumb { border:6px solid var(--night-content); }
 body.night a, body.night .bx { color:var(--night-text); }
-body.night .info::-webkit-scrollbar, body.night .avatar, body.night .info { background:var(--night-content); }
+body.night .info::-webkit-scrollbar, body.night .avatar, body.night .info, body.night .m-links { background:var(--night-content); }
 
 /* MEDIA QUERIES */
 
