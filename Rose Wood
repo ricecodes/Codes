@@ -140,7 +140,7 @@ article, article.layout-three{margin:0 0 3em 0; width:100%;}
 <script src="https://static.tumblr.com/0podkko/qWqq8va08/photosets.js"></script>
 <script src="https://static.tumblr.com/05ejowb/Y02qjlxxp/csslightbox.js"></script>
 <script src="https://dl.dropbox.com/s/4nd29cq457mtna3/load.min.js"></script>
-<script src="https://static.tumblr.com/05ejowb/4KAqn0gbk/rosewood.min.js"></script>
+<script src="https://static.tumblr.com/05ejowb/6aJqn2uya/rosewood.min.js"></script>
 
 <script>
 $(document).ready(function(){
