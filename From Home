@@ -282,7 +282,7 @@ input::placeholder { color:{color:Text}!important; }
 
 /* SIDEBAR */
     
-.sidebar { padding:25px; width:200px; height:calc(100% - 55px); background:{color:Sidebar}; }
+.sidebar { position:fixed; top:55px; left:0; padding:25px; width:200px; height:calc(100% - 55px); background:{color:Sidebar}; border-right:1px solid {color:Borders}; }
 
 .side-title { text-align:center; }
 .title { display:inline-block; color:{color:Accent}; font-size:calc({text:Font Size} + 7px); font-weight:bold; }
@@ -516,8 +516,8 @@ body.night .post-footer, body.night .tags, body.night .notes, body.night .a-unne
 
 @media only screen and (max-width:999px) {
 iframe.tmblr-iframe, .t-controls, .tippy-box[data-theme~='custom'] { display:none; }
-.sidebar { position:relative; margin:0; width:calc(100% - 50px); border-bottom:1px solid {color:Borders}; }
-body.night .sidebar { border-right:none; border-bottom:1px solid {color:Night Borders}; }
+.sidebar { position:relative; margin:0; width:calc(100% - 50px); border-right:0; border-bottom:1px solid {color:Borders}; }
+body.night .sidebar { border-right:none; border-right:0; border-bottom:1px solid {color:Night Borders}; }
 .description { text-align:center; }
 
 nav { text-align:center; }
