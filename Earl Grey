@@ -168,8 +168,8 @@ nav a, .menu {
 .con { align-self:center; margin:0; padding:10px 20px 20px; }
 
 .con.one { column-count:1; }
-.con.two { column-count:2; }
-.con.three { column-count:3; }
+.con.two { display:grid; grid-template-columns:repeat(2, 1fr); }
+.con.three { display:grid; grid-template-columns:repeat(3, 1fr); }
 
 h3 { padding:20px 20px 0; margin:0; }
 
