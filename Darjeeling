@@ -261,7 +261,7 @@ body.night .box, body.night .m-links { background:var(--night-content); }
 /* MEDIA QUERIES */
 
 @media only screen and (max-width:999px) {
-iframe.tmblr-iframe,.tippy-box[data-theme~='custom'] { display:none; }
+iframe.tmblr-iframe { display:none; }
 .container { width:95%; margin:50px auto; } 
 .sidebar, .tab { display:none; }
 .m-side { display:inline-block; position:relative; margin:50px 0 0; display:inline-block; width:100%; text-align:center; }
