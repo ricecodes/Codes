@@ -160,7 +160,7 @@ nav a, .menu {
 .content { margin:0 0 0 14vw; width:75%; }
 
 .following { width:100%; }
-.avatar { display:inline-block; margin:10px; width:100px; height:100px; background:var(--content); border-radius:var(--round); }
+.avatar { display:inline-block; margin:0 10px 20px; width:100px; height:100px; background:var(--content); border-radius:var(--round); }
 .avatar img { margin:10px; width:80px; height:80px; border-radius:var(--rounded); }
 
 /* CREDIT & TABS */
