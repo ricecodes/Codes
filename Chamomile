@@ -156,14 +156,12 @@ nav a, .menu {
 
 /* CONTAINER */
 
-.container { margin:100px auto; width:70vw; }
-.content { margin:0 0 0 12vw; width:75%; }
+.container { margin:100px auto; width:73.7vw; }
+.content { margin:0 0 0 14vw; width:75%; }
 
-.following { display:inline-block; width:100%; }
-
-.people { margin:0 0 0 2.5em; }
-.avatar { display:inline-block; margin:10px; width:90px; height:90px; background:var(--content); border-radius:var(--round); }
-.avatar img { margin:10px; width:70px; height:70px; border-radius:var(--rounded); }
+.following { width:100%; }
+.avatar { display:inline-block; margin:10px; width:100px; height:100px; background:var(--content); border-radius:var(--round); }
+.avatar img { margin:10px; width:80px; height:80px; border-radius:var(--rounded); }
 
 /* CREDIT & TABS */
 
@@ -207,22 +205,22 @@ body.night {
     }
 
 body.night::-webkit-scrollbar, body.night::-webkit-scrollbar-thumb { border:6px solid var(--night-bg); }
-body.night::-webkit-scrollbar, body.night .hp { background:var(--night-bg); }
+body.night::-webkit-scrollbar { background:var(--night-bg); }
 body.night a, body.night .bx { color:var(--night-text); }
 body.night .avatar, body.night .m-links { background:var(--night-content); }
 
 /* MEDIA QUERIES */
 
 @media only screen and (max-width:999px) {
-iframe.tmblr-iframe { display:none; }
-.container { width:100%; margin:100px auto; } 
+iframe.tmblr-iframe,.tippy-box[data-theme~='custom'] { display:none; }
+.container { width:95%; margin:50px auto; } 
 .sidebar, .tab { display:none; }
 .m-side { display:inline-block; position:relative; margin:50px 0 0; display:inline-block; width:100%; text-align:center; }
 .m-side, .navi, .m-thm { display:inline-block; margin:0; }
-.gate { position:absolute; width:60%; margin:0 0 0 20%; z-index:9999; }
-.content { margin:70px auto; width:100%; }
-.avatar { display:inline-block; margin:7px; width:calc(100% / 4); }
-.avatar img { margin:7px; width:calc(100% - 14px); height:calc(100% - 14px); }
+.gate { position:absolute; width:50%; margin:0 0 0 25%; z-index:9999; }
+.content { margin:70px auto; width:90%; }
+.avatar { margin:7px; width:80px; height:80px; }
+.avatar img { width:60px; height:60px; }
 .thm { display:none; }
 }
 
@@ -326,13 +324,11 @@ $(document).ready(function(){
 <div class="content flex justify">
 
 <div class="following">
-<div class="people">
 {block:Following}
 {block:Followed}
 <a href="{FollowedURL}" title="{FollowedName}" target="_blank"><div class="avatar"><img src="{FollowedPortraitURL-64}"></div></a>
 {/block:Followed}
 {/block:Following}
-</div>
 </div> <!--- FOLLOWING --->
 
 </div> <!--- CONTENT --->
