@@ -222,7 +222,7 @@ body.night {
     }
 
 body.night::-webkit-scrollbar, body.night::-webkit-scrollbar-thumb { border:6px solid var(--night-bg); }
-body.night::-webkit-scrollbar, body.night .hp { background:var(--night-bg); }
+body.night::-webkit-scrollbar { background:var(--night-bg); }
 body.night a, body.night .bx { color:var(--night-text); }
 body.night .box, body.night .m-links { background:var(--night-content); }
 
