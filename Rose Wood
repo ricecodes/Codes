@@ -104,7 +104,7 @@ Credit:
 
 {block:ifRoundCorners} 
 ul li:before { content:"\ec9b"; }
-.round, .modal-container, .permalink, .question, .answer, .lightbox-image, #tumblr_lightbox img, .post-footer { border-radius:10px!important; } 
+.round, .modal-container, .permalink, .m-permalink, .question, .answer, .lightbox-image, #tumblr_lightbox img, .post-footer { border-radius:10px!important; } 
 .tippy-box[data-theme~='custom'], .pgs a { border-radius:4px; }
 .up-wrap, .gate { border-radius:5px; }
 {/block:ifRoundCorners}
