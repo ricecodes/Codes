@@ -53,7 +53,7 @@ Credit:
 <meta name="if:Hide Text Posts" content="">
 <meta name="if:Hide Quote Posts" content="">
 <meta name="if:Hide Chat Posts" content="">
-<meta name="if:Show More" content="">
+<meta name="if:Show More Links" content="">
 <meta name="if:Show Random" content="">
 <meta name="if:Hide Tags" content="">
 
@@ -275,21 +275,21 @@ $(document).ready(function(){
 {block:AskEnabled}<li><a href="/ask">message</a></li>{block:AskEnabled}
 <li><a href="/archive">archive</a></li>
 {block:ifShowRandom}<li><a href="/random">random</a></li>{/block:ifShowRandom}
-{block:ifShowMore}
+{block:ifShowMoreLinks}
 {block:ifLink1}<li><a href="{text:Link 1 URL}">{text:Link 1}</a></li>{/block:ifLink1}
 {block:ifLink2}<li><a href="{text:Link 2 URL}">{text:Link 2}</a></li>{/block:ifLink2}
 {block:ifLink3}<li><a href="{text:Link 3 URL}">{text:Link 3}</a></li>{/block:ifLink3}
 {block:ifLink4}<li><a href="{text:Link 4 URL}">{text:Link 4}</a></li>{/block:ifLink4}
 {block:HasPages}{block:Pages}<li><a href="{URL}">{Label}</a></li>{/block:Pages}{/block:HasPages}
-{/block:ifShowMore}
-{block:ifNotShowMore}<li><a class="menu"><span class="close">more</span><span class="close" style="display:none;">close</span></a></li>
+{/block:ifShowMoreLinks}
+{block:ifNotShowMoreLinks}<li><a class="menu"><span class="close">more</span><span class="close" style="display:none;">close</span></a></li>
 <div class="lists">
 {block:ifLink1}<li><a href="{text:Link 1 URL}">{text:Link 1}</a></li>{/block:ifLink1}
 {block:ifLink2}<li><a href="{text:Link 2 URL}">{text:Link 2}</a></li>{/block:ifLink2}
 {block:ifLink3}<li><a href="{text:Link 3 URL}">{text:Link 3}</a></li>{/block:ifLink3}
 {block:ifLink4}<li><a href="{text:Link 4 URL}">{text:Link 4}</a></li>{/block:ifLink4}
 {block:HasPages}{block:Pages}<li><a href="{URL}">{Label}</a></li>{/block:Pages}{/block:HasPages}
-</div>{/block:ifNotShowMore}
+</div>{/block:ifNotShowMoreLinks}
 </ul>
 </nav>
 </div>
