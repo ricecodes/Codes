@@ -313,7 +313,6 @@ $(document).ready(function(){
 
 {block:Date}
 {block:IndexPage}
-<a href="{Permalink}" target="_blank"><div class="m-permalink"><div class="info"><h2>{ShortMonth} {DayofMonthWithZero} '{ShortYear}</h2>{NoteCountWithLabel}</div></div></a>
 <div class="permalink"><div class="info"><h2>{ShortMonth} {DayofMonthWithZero} '{ShortYear}</h2>{NoteCountWithLabel}</div>{block:ifNotHideTags}{block:HasTags}<div class="ptags">{block:Tags}<a href="{TagURL}">#{Tag}</a>{/block:Tags}</div>{/block:HasTags}{/block:ifNotHideTags}</div>
 {/block:IndexPage}
 {/block:Date}
