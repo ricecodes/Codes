@@ -229,7 +229,7 @@ body::-webkit-scrollbar-thumb { background:{color:Accent}; }
 
 .navigation p { margin:0; }
 .navigation p > a:after { font-family:"Boxicons"; content:"\ee08"; font-size:6px; margin:0 7px; vertical-align:middle; color:{color:Accent}; }
-.navigation p > a:last-of-type:after { display:none; }
+.navigation p > a:last-of-type:after, .m-pgs { display:none; }
 .navigation a { color:{color:Text}; }
 
 .extra { margin:0 0 15px 0; }
@@ -851,7 +851,7 @@ $(document).ready(function(){
 {/block:Panorama}
 
 {block:Video}
-{Video-700}
+{VideoEmbed-700}
 {/block:Video}
             
 {block:Audio}
