@@ -377,9 +377,9 @@ $(document).ready(function(){
 <div class="con">
 <!--- Details go here --->
 
-<p>
-<span>Detail Name</span> Detail
-</p>
+<p><span>Detail Name</span> Detail</p>
+<p><span>Detail Name</span> Detail</p>
+<p><span>Detail Name</span> Detail</p>
 
 <!--- 
 Just copy and paste the above to add as many details as you want. Please make sure that your details are in the exact format as shown and that they are under <div class="con">.
