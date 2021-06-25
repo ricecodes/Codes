@@ -80,8 +80,8 @@ Credit:
 <link href="https://fonts.googleapis.com/css?family={text:Google Font}:700,400" rel="stylesheet">
 <link href="https://static.tumblr.com/0podkko/oDSpg7y88/photosets.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
-<link href="https://static.tumblr.com/05ejowb/hPbqv7tjz/retrowave.min.css" rel="stylesheet">
-{block:ifDay}<link href="https://static.tumblr.com/05ejowb/ohzqv7txy/retroday.min.css" rel="stylesheet">{/block:ifDay}
+<link href="https://static.tumblr.com/05ejowb/Jdaqva0b4/retrowave.min.css" rel="stylesheet">
+{block:ifDay}<link href="https://static.tumblr.com/05ejowb/vMqqva08d/retroday.min.css" rel="stylesheet">{/block:ifDay}
 
 <style type="text/css">
 
@@ -142,59 +142,15 @@ body { background-image:url({image:Day Background})!important; }
 body.night { background-image:url({image:Night Background})!important; }
 {/block:ifDay}
 
-/* MOBILE SIDEBAR */
-
-.m-sidebar, .m-footer { display:none; }
-
 /* MEDIA QUERIES */
 
 @media only screen and (max-width:999px) {
-.tmblr-iframe, .appear, .tippy-box[data-theme~='custom'], .sidebar, .controls, .credits, .p-wrap { display:none; }
 body { background-image:url({image:Night Background}); background-size:cover; background-attachment:fixed; background-repeat:repeat; }
-.wrapper { margin:80px auto; width:100%; }
-section, .tags, .pgs { margin:0 auto; width:90vw; }
-.entry, article { width:100%; }
-.m-sidebar { display:block; width:100%; }
-.description, .side-links, .updates { padding:25px; }
-
-.m-footer { display:block; margin:0; padding:15px 20px; width:calc(100% - 40px); background:{color:Posts Head}; }
-.mcount, .mcon, .likey { display:inline-block; }
-.mcount, .mcon .bx { vertical-align:middle; padding:5px 7px; text-transform:capitalize; background:{color:Posts}; color:{color:Permalink}; border:1px solid {color:Borders}; -webkit-transition:all 0.4s ease; -moz-transition:all 0.4s ease; -o-transition:all 0.4s ease; -ms-transition:all 0.4s ease; transition:all 0.4s ease; }
-.mcon .bx { font-size:calc({text:Font Size} + 5px); margin:0 0 0 5px; cursor:pointer; }
-a:hover.mcount, .mcon .bx:hover { color:{color:Accent Text}!important; background:{color:Links Hover}!important; border-color:{color:Links Hover}!important; }
-.mcon { float:right; }
-
-body.day .m-footer { background:{color:Day Posts Head}; }
-body.day .mcount, body.day .mcon .bx { background:{color:Day Posts}; color:{color:Day Permalink}; border:1px solid {color:Day Borders}; }
-
-.hover .bx { cursor:default; }
-
-.hover .bx:hover { background:{color:Posts}!important; color:{color:Permalink}!important; border-color:{color:Borders}!important; }
-body.day .hover .bx:hover { background:{color:Day Posts}!important; color:{color:Day Permalink}!important; border-color:{color:Day Borders}!important; }
-
-.tags { position:relative; margin:10px 0 0; }
-.tags { text-align:center; }
-
-.sun, .moon, .solis, .luna { margin:15px 0; padding:5px 7px; background:{color:Posts}; text-transform:capitalize; cursor:pointer; }
-.sun .bx, .moon .bx, .solis .bx, .luna .bx { margin:0 7px 0 0; vertical-align:middle; font-size:calc({text:Font Size} + 3px); -webkit-transition:all 0.4s ease; -moz-transition:all 0.4s ease; -o-transition:all 0.4s ease; -ms-transition:all 0.4s ease; transition:all 0.4s ease; }
-
 body.day { background-image:url({image:Day Background}); background-size:cover; background-attachment:fixed; background-repeat:repeat; }
-
-.moon { background:{color:Day Posts}; color:{color:Day Permalink}!important; }
-.solis:hover, .luna:hover, .sun:hover, .moon:hover { background:{color:Links Hover}!important; color:{color:Accent Text}!important; border-color:{color:Links Hover}!important; }
-.solis:hover .bx, .luna:hover .bx, .sun:hover .bx, .moon:hover .bx { color:{color:Accent Text}!important; }
 
 {block:ifDay}
 body { background-image:url({image:Day Background}); background-size:cover; background-attachment:fixed; background-repeat:repeat; }
 body.night { background-image:url({image:Night Background}); background-size:cover; background-attachment:fixed; background-repeat:repeat; }
-.solis { color:{color:Permalink}!important; }
-.luna { background:{color:Day Posts}; color:{color:Day Permalink}!important; }
-.hover .bx:hover { background:{color:Day Posts}!important; color:{color:Day Permalink}!important; border-color:{color:Day Borders}!important; }
-body.night .hover .bx:hover { background:{color:Posts}!important; color:{color:Permalink}!important; border-color:{color:Borders}!important; }
-.m-footer { background:{color:Day Posts Head}; }
-.mcount, .mcon .bx { background:{color:Day Posts}; color:{color:Day Permalink}; border:1px solid {color:Day Borders}; }
-body.night .m-footer { background:{color:Posts Head}; }
-body.night .mcount, body.night .mcon .bx { background:{color:Posts}; color:{color:Permalink}; border:1px solid {color:Borders}; }
 {/block:ifDay}
 
 }
