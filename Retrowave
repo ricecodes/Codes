@@ -152,7 +152,7 @@ body.night { background-image:url({image:Night Background})!important; }
 .tmblr-iframe, .appear, .tippy-box[data-theme~='custom'], .sidebar, .controls, .credits, .p-wrap { display:none; }
 body { background-image:url({image:Night Background}); background-size:cover; background-attachment:fixed; background-repeat:repeat; }
 .wrapper { margin:80px auto; width:100%; }
-section, .tags { margin:0 auto; width:90vw; }
+section, .tags, .pgs { margin:0 auto; width:90vw; }
 .entry, article { width:100%; }
 .m-sidebar { display:block; width:100%; }
 .description, .side-links, .updates { padding:25px; }
