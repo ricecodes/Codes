@@ -153,7 +153,7 @@ body { background-image:url({image:Day Background}); background-size:cover; back
 body.night { background-image:url({image:Night Background}); background-size:cover; background-attachment:fixed; background-repeat:repeat; }
 {/block:ifDay}
 
-.permalink, .p-wrap, .sticky { display:none!important; } 
+.permalink, .p-wrap, .stick { display:none!important; } 
 
 }
 
