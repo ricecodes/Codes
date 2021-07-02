@@ -481,7 +481,6 @@ body.night { background-image:url({image:Night Background}); background-size:cov
 <div class="m-footer flex justify t-border">
 <a class="mcount {block:ifRoundCorners}rounder{/block:ifRoundCorners}" href="{Permalink}">{NoteCountWithLabel}</a>
 <div class="mcon"><a href="{ReblogURL}" title="Reblog"><span class="bx bx-revision {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></span></a>
-<a class="likey" title="Like">{LikeButton}<span class="bx bx-meh {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></span></a>
 {block:HasTags}{block:ifHideTags}<a class="tbtn"><span class="close"><i class="bx bx-hash {block:ifRoundCorners}rounder{/block:ifRoundCorners}" title="Show Tags"></i></span><span class="close none"><i class="bx bx-x {block:ifRoundCorners}rounder{/block:ifRoundCorners}" title="Hide Tags"></i></span></a>{/block:ifHideTags}{/block:HasTags}</div>
 </div>
 {/block:IndexPage}
@@ -511,7 +510,6 @@ body.night { background-image:url({image:Night Background}); background-size:cov
 {block:RebloggedFrom}<a href="{ReblogParentURL}" title="Via {ReblogParentName}"><img src="{ReblogParentPortraitURL-128}" class="{block:ifRoundCorners}rounder{/block:ifRoundCorners}"></a>{/block:RebloggedFrom}
 {block:ContentSource}<a href="{SourceURL}" target="_blank" title="Content Source"><i class="bx bx-link-external {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></i></a>{/block:ContentSource}
 <a href="{ReblogURL}" title="Reblog"><span class="bx bx-revision {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></span></a>
-<a class="likey" title="Like">{LikeButton}<span class="bx bx-meh {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></span></a>
 {block:HasTags}{block:ifHideTags}<a class="tbtn"><span class="close"><i class="bx bx-hash {block:ifRoundCorners}rounder{/block:ifRoundCorners}" title="Show Tags"></i></span><span class="close none"><i class="bx bx-x {block:ifRoundCorners}rounder{/block:ifRoundCorners}" title="Hide Tags"></i></span></a>{/block:ifHideTags}{/block:HasTags}
 </div> <!--- PERMALINK --->
 </div> <!--- STICK --->
