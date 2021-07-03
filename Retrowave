@@ -80,8 +80,8 @@ Credit:
 <link href="https://fonts.googleapis.com/css?family={text:Google Font}:700,400" rel="stylesheet">
 <link href="https://static.tumblr.com/0podkko/oDSpg7y88/photosets.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
-<link href="https://static.tumblr.com/05ejowb/Jdaqva0b4/retrowave.min.css" rel="stylesheet">
-{block:ifDay}<link href="https://static.tumblr.com/05ejowb/vMqqva08d/retroday.min.css" rel="stylesheet">{/block:ifDay}
+<link href="https://static.tumblr.com/05ejowb/h2Wqvnf7d/retrowave.min.css" rel="stylesheet">
+{block:ifDay}<link href="https://static.tumblr.com/05ejowb/OQQqvnexz/retroday.min.css" rel="stylesheet">{/block:ifDay}
 
 <style type="text/css">
 
@@ -174,7 +174,7 @@ body.night { background-image:url({image:Night Background}); background-size:cov
 
 <div class="content">
 
-<div class="controls">
+<div class="ctrls">
 <a class="appear"><span class="hide" title="Show Controls"><i class="bx bx-cog {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></i></span><span class="hide" style="display:none;" title="Hide Controls"><i class="bx bx-cog {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></i></span></a>
 {block:ifNotDay}
 <a class="sun" title="Day"><span class="bx bx-sun {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></span></a>
@@ -505,11 +505,12 @@ body.night { background-image:url({image:Night Background}); background-size:cov
 {block:Date}
 <div class="p-wrap" style="{block:HasTags}{block:ifHideTags}margin-bottom:10px{/block:ifHideTags}{/block:HasTags}">
 <div class="stick">
-<div class="permalink">
+<div class="controls">
 {block:PinnedPostLabel}<a title="Pinned Post"><span class="bx bx-map {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></span></a>{/block:PinnedPostLabel}
 {block:RebloggedFrom}<a href="{ReblogParentURL}" title="Via {ReblogParentName}"><img src="{ReblogParentPortraitURL-128}" class="{block:ifRoundCorners}rounder{/block:ifRoundCorners}"></a>{/block:RebloggedFrom}
 {block:ContentSource}<a href="{SourceURL}" target="_blank" title="Content Source"><i class="bx bx-link-external {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></i></a>{/block:ContentSource}
 <a href="{ReblogURL}" title="Reblog"><span class="bx bx-revision {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></span></a>
+<a class="likey" title="Like">{LikeButton}<span class="bx bx-meh {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></span></a>
 {block:HasTags}{block:ifHideTags}<a class="tbtn"><span class="close"><i class="bx bx-hash {block:ifRoundCorners}rounder{/block:ifRoundCorners}" title="Show Tags"></i></span><span class="close none"><i class="bx bx-x {block:ifRoundCorners}rounder{/block:ifRoundCorners}" title="Hide Tags"></i></span></a>{/block:ifHideTags}{/block:HasTags}
 </div> <!--- PERMALINK --->
 </div> <!--- STICK --->
