@@ -481,6 +481,7 @@ body.night { background-image:url({image:Night Background}); background-size:cov
 <div class="m-footer flex justify t-border">
 <a class="mcount {block:ifRoundCorners}rounder{/block:ifRoundCorners}" href="{Permalink}">{NoteCountWithLabel}</a>
 <div class="mcon"><a href="{ReblogURL}" title="Reblog"><span class="bx bx-revision {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></span></a>
+<a class="likey" title="Like">{LikeButton}<span class="bx bx-meh {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></span></a>
 {block:HasTags}{block:ifHideTags}<a class="tbtn"><span class="close"><i class="bx bx-hash {block:ifRoundCorners}rounder{/block:ifRoundCorners}" title="Show Tags"></i></span><span class="close none"><i class="bx bx-x {block:ifRoundCorners}rounder{/block:ifRoundCorners}" title="Hide Tags"></i></span></a>{/block:ifHideTags}{/block:HasTags}</div>
 </div>
 {/block:IndexPage}
@@ -529,7 +530,7 @@ body.night { background-image:url({image:Night Background}); background-size:cov
 {/block:Posts}
 
 {block:Pagination}
-<div class="pgs flex justify shadow-{select:Shadow}">
+<div class="pgs flex justify">
 <div class="prev {block:ifRoundCorners}round{/block:ifRoundCorners}">{block:PreviousPage}<a href="{PreviousPage}">Previous</a>{/block:PreviousPage}<span>Previous</span></div>
 <div class="next {block:ifRoundCorners}round{/block:ifRoundCorners}">{block:NextPage}<a href="{NextPage}">Next</a>{/block:NextPage}<span>Next</span></div>
 </div>
