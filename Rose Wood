@@ -72,7 +72,7 @@ Credit:
 <meta name="text:Link 4 URL" content="">
         
 <link href="https://fonts.googleapis.com/css?family={text:Google Font}:700,400" rel="stylesheet">
-<link href="https://static.tumblr.com/05ejowb/mNjqwexla/rosewood.min.css" rel="stylesheet">
+<link href="https://static.tumblr.com/05ejowb/EWlqweylc/rosewood.min.css" rel="stylesheet">
 <link href="https://static.tumblr.com/0podkko/oDSpg7y88/photosets.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
 
@@ -116,7 +116,7 @@ a:hover.read_more { background:{color:Links Hover}; }
 {block:ifRoundCorners} 
 ul li:before { content:"\ec9b"; }
 .round, .modal-container, .permalink, .m-permalink, .question, .answer, .lightbox-image, #tumblr_lightbox img, .post-footer { border-radius:10px!important; } 
-.tippy-box[data-theme~='custom'], .pgs a { border-radius:4px; }
+.tippy-box[data-theme~='custom'], .pgs a, .pgs span { border-radius:5px; }
 .up-wrap, .gate { border-radius:5px; }
 {/block:ifRoundCorners}
 
@@ -179,7 +179,7 @@ $(document).ready(function(){
     });
     var msnry = $grid.data("masonry");
     $grid.infiniteScroll({
-        path:".next",
+        path:".next a",
         append:"article",
         status:".load-status",
         responseBody:"text",
@@ -753,8 +753,9 @@ $(document).ready(function(){
 </div> <!--- GRID --->
 {block:Pagination}
 <div class="pgs flex justify">
-{block:PreviousPage}<a class="prev" href="{PreviousPage}">Previous</a>{/block:PreviousPage} 
-{block:NextPage}<a class="next" href="{NextPage}">Next</a>{/block:NextPage}</div>
+<div class="prev">{block:PreviousPage}<a href="{PreviousPage}">Previous</a>{/block:PreviousPage}<span>Previous</span></div>
+<div class="next">{block:NextPage}<a href="{NextPage}">Next</a>{/block:NextPage}<span>Next</span></div>
+</div>
 {/block:Pagination}
 
 {block:IndexPage}{block:ifInfiniteScroll}
