@@ -26,15 +26,17 @@ Credit:
 
 <meta name="color:Accent" content="#d29b9b">
 <meta name="color:Accent Text" content="#ffffff">
-<meta name="color:Background" content="#f0f0f0">
-<meta name="color:Night Background" content="#222222">
-<meta name="color:Borders" content="#dadada">
-<meta name="color:Night Borders" content="#6a6a6a">
 <meta name="color:Links" content="#c57a84">
 <meta name="color:Links Hover" content="#73bc9e">
+<meta name="color:Background" content="#f0f0f0">
+<meta name="color:Borders" content="#dadada">
 <meta name="color:Posts" content="#fafafa">
-<meta name="color:Night Posts" content="#3a3a3a">
+<meta name="color:Question" content="#f0f0f0">
 <meta name="color:Text" content="#333333">
+<meta name="color:Night Background" content="#222222">
+<meta name="color:Night Borders" content="#6a6a6a">
+<meta name="color:Night Posts" content="#3a3a3a">
+<meta name="color:Night Question" content="#222222">
 <meta name="color:Night Text" content="#ffffff">
 
 <meta name="select:Layout" title="Two Columns" content="two">
@@ -70,7 +72,7 @@ Credit:
 <meta name="text:Link 4 URL" content="">
         
 <link href="https://fonts.googleapis.com/css?family={text:Google Font}:700,400" rel="stylesheet">
-<link href="https://static.tumblr.com/nnubjjk/8X2qpcm6i/rosewood.min.css" rel="stylesheet">
+<link href="https://static.tumblr.com/05ejowb/mNjqwexla/rosewood.min.css" rel="stylesheet">
 <link href="https://static.tumblr.com/0podkko/oDSpg7y88/photosets.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
 
@@ -86,10 +88,12 @@ Credit:
     --links:{color:Links};
     --links-hover:{color:Links Hover};
     --posts:{color:Posts};
+    --ask:{color:Question};
     --text:{color:Text};
     --night-bg:{color:Night Background};
     --night-borders:{color:Night Borders};
     --night-posts:{color:Night Posts};
+    --night-ask:{color:Night Question};
     --night-text:{color:Night Text};
     --rgb-accent:{RGBcolor:Accent};
     --rgb-bg:{RGBcolor:Background};
@@ -100,7 +104,12 @@ Credit:
     --body-size:{text:Font Size};
 }
 
-.post-header { z-index:999999999; }
+p.read_more_container { display:flex; justify-content:center; width:100%; }
+a.read_more { margin:0 auto; padding:5px 8px; font-weight:normal; font-size:{text:Font Size}; background:{color:Accent}; color:{color:Accent Text}; text-decoration:none; border-radius:5px; }
+
+a:hover.read_more { background:{color:Links Hover}; }
+
+.thm .bx:hover { color:{color:Links Hover}!important; }
 
 /* ROUND CORNERS */
 
@@ -119,6 +128,7 @@ ul li:before { content:"\ec9b"; }
 .content { margin:100px 0 100px 13vw; }
 article { margin:0 0 3em 0; width:100%; }
 .post-footer { margin:0; width:100%; background:transparent; border-radius:0!important; border-top:1px solid {color:Borders}; }
+.notecount { background:transparent; }
 body.night .notecount { background:{color:Night Posts}; }
 body.night .post-footer, body.night ol.notes { border-top:1px solid {color:Night Borders}; }
 @media only screen and (max-width:999px) { 
@@ -142,7 +152,7 @@ article, article.layout-three{margin:0 0 3em 0; width:100%;}
 <script src="https://static.tumblr.com/0podkko/qWqq8va08/photosets.js"></script>
 <script src="https://static.tumblr.com/05ejowb/Y02qjlxxp/csslightbox.js"></script>
 <script src="https://static.tumblr.com/05ejowb/cxAqpcpux/load.min.js"></script>
-<script src="https://static.tumblr.com/05ejowb/6aJqn2uya/rosewood.min.js"></script>
+<script src="https://static.tumblr.com/05ejowb/Tqyqwexdt/rosewood.min.js"></script>
 
 <script>
 $(document).ready(function(){
@@ -150,6 +160,15 @@ $(document).ready(function(){
         aud.onload = function() {
             const dio = aud.contentDocument || aud.contentWindow.document;
             dio.head.innerHTML += '<style type="text/css"> .audio-player {background:{color:Accent}; color:{color:Accent Text}!important;}.audio-player .audio-info .track-artist {color:{color:Accent Text}!important;} </style>'}
+    });
+    {block:IndexPage}
+    var $grid = $(".grid").imagesLoaded( function() {
+        $(".grid").masonry({
+          itemSelector:"article",
+          stagger:30,
+          visibleStyle:{ transform:"translateY(0)", opacity: 1 },
+          hiddenStyle:{ transform:"translateY(100px)", opacity: 0 }
+        });
     });
     {block:ifInfiniteScroll}
     var $grid = $(".grid").masonry({
@@ -216,12 +235,15 @@ $(document).ready(function(){
         });
     });
     {/block:ifInfiniteScroll}
+    {/block:IndexPage}
 });
 </script>
 
 <body>
 
 <div class="container {block:IndexPage}layout-{select:Layout}{/block:IndexPage}">
+
+<a class="t-ctrls"><span class="hide"><i class="bx bxs-cog"></i></span><span class="hide" style="display:none;"><i class="bx bx-x"></i></span></a>
 
 <div class="tab">
 <a class="luna" title="Night"><span class="bx bxs-moon"></span></a>
@@ -315,7 +337,7 @@ $(document).ready(function(){
 
 {block:Date}
 {block:IndexPage}
-<div class="permalink"><div class="info"><h2>{ShortMonth} {DayofMonthWithZero} '{ShortYear}</h2>{NoteCountWithLabel}</div>{block:ifNotHideTags}{block:HasTags}<div class="ptags">{block:Tags}<a href="{TagURL}">#{Tag}</a>{/block:Tags}</div>{/block:HasTags}{/block:ifNotHideTags}</div>
+<div class="permalink"><div class="info"><h2>{ShortMonth} {DayofMonthWithZero} '{ShortYear}</h2>{NoteCountWithLabel}</div>{block:ifNotHideTags}{block:HasTags}<div class="ptwrap"><div class="ptags">{block:Tags}<a href="{TagURL}">#{Tag}</a>{/block:Tags}</div></div>{/block:HasTags}{/block:ifNotHideTags}</div>
 {/block:IndexPage}
 {/block:Date}
 
@@ -730,10 +752,11 @@ $(document).ready(function(){
   
 </div> <!--- GRID --->
 {block:Pagination}
-<div class="pgs flex justify {block:IndexPage}layout-{select:Layout}{/block:IndexPage}">
+<div class="pgs flex justify">
 {block:PreviousPage}<a class="prev" href="{PreviousPage}">Previous</a>{/block:PreviousPage} 
 {block:NextPage}<a class="next" href="{NextPage}">Next</a>{/block:NextPage}</div>
 {/block:Pagination}
+
 {block:IndexPage}{block:ifInfiniteScroll}
 <div class="load-status">
 <div class="loading infinite-scroll-request">
@@ -742,11 +765,15 @@ $(document).ready(function(){
 <p class="infinite-scroll-last">End of content</p>
 <p class="infinite-scroll-error">No more pages to load</p>
 </div>
-
 {block:ifManualLoad}<div class="load-more"><a class="load" title="Load More"><span class="bx bxs-chevron-down"></span></a></div>{/block:ifManualLoad}
 {/block:ifInfiniteScroll}{/block:IndexPage}
 </div> <!--- CONTENT --->
-<div class="thm"><a href="https://ricecodes.tumblr.com/" title="Theme by Ricecodes"><span class="bx bxs-star"></span></a></div>
+
+<div class="credits">
+<a class="scroll" title="Back to top"><span class="bx bxs-chevron-up {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></span></a>
+<a class="thm" href="https://ricecodes.tumblr.com/" title="Theme by ricecodes" target="_blank"><span class="bx bxs-star {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></span></a>
+</div>
+    
 </div> <!--- CONTAINER --->
     
 </body>
