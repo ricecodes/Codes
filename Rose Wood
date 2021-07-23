@@ -562,6 +562,7 @@ $(document).ready(function(){
 {block:Date}
 <div class="post-footer">
 <div class="notecount">
+{block:PinnedPostLabel}<div class="pin"><span class="bx bxs-pin"></span>{lang:Pinned Post}</div>{/block:PinnedPostLabel}
 {block:RebloggedFrom}
 <div class="via"><span class="bx bx-repost"></span><a href="{ReblogParentURL}">{ReblogParentName}</a></div>
 <div class="root"><span class="bx bxs-map"></span><a href="{ReblogRootURL}">{ReblogRootName}</a></div>
@@ -580,7 +581,7 @@ $(document).ready(function(){
 <div class="modal-content">
 <div class="post-header flex justify">
 <a class="exit" title="Close"><span class="bx bx-x"></span></a>
-<div class="controls"><a href="{Permalink}" title="Permalink"><span class="bx bx-link-alt"></span></a><a class="likey">{LikeButton}<span class="bx bx-heart"></span></a><a href="{ReblogURL}" target="_blank"><span class="bx bx-revision"></span></a></div>
+<div class="controls">{block:PinnedPostLabel}<a href="{Permalink}" title="Pinned Post"><span class="bx bx-pin"></span></a>{/block:PinnedPostLabel}<a href="{Permalink}" title="Permalink"><span class="bx bx-link-alt"></span></a><a class="likey">{LikeButton}<span class="bx bx-heart"></span></a><a href="{ReblogURL}" target="_blank"><span class="bx bx-revision"></span></a></div>
 </div>
 <div class="modal-container">
 {block:Text}
