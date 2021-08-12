@@ -67,22 +67,20 @@ Notes:
 
 /* BASICS */
 
-iframe.tmblr-iframe {
+.tmblr-iframe {
     z-index:9999999999999!important;
-    top:10px!important;
-    right:0!important;
-    opacity:1!important;
-    transform:scale(0.75);
-    transform-origin:100% 0;
-    -webkit-transform:scale(0.75);
-    -webkit-transform-origin:100% 0;
-    -o-transform:scale(0.75);
-    -o-transform-origin:100% 0;
-    -moz-transform:scale(0.75);
-    -moz-transform-origin:100% 0;
-    -ms-transform:scale(0.75);
-    -ms-transform-origin:100% 0;
+    top:15px!important;
+    right:60px!important;
+    opacity:0;
+    visibility:hidden;
+    transform:scale(0.9);
+    -webkit-transform:scale(0.9);
+    -o-transform:scale(0.9);
+    -moz-transform:scale(0.9);
+    -ms-transform:scale(0.9);
     }
+
+body.open .tmblr-iframe { opacity:1; visibility:visible; top:15px!important; right:60px!important; }
 
 body { margin:0; background:var(--bg); color:var(--text); font-family:'Source Sans Pro',sans-serif; font-size:var(--font-size); }
 
@@ -171,7 +169,7 @@ nav a, .menu {
 
 .box { display:inline-block; margin:0 10px 20px; background:var(--content); border-radius:var(--round); overflow:hidden; }
 
-.con { margin:0; padding:20px; }
+.con { margin:0; padding:25px; }
 
 .giant, .palette { width:100%; }
 .big { width:calc(((100% / 3) * 2) - 20px); }
@@ -214,10 +212,11 @@ nav a, .menu {
 
 /* CREDIT & TABS */
 
-.thm { position:fixed; bottom:15px; right:15px; z-index:999;  }
-.tab { position:fixed; top:15px; left:15px; width:30px; z-index:999; }
+.thm { position:fixed; bottom:25px; right:25px; z-index:999; }
+.tab { position:fixed; top:25px; left:25px; z-index:999; }
+.t-ctrls .bx { position:fixed; top:25px; right:25px; z-index:999; }
 
-.tab .bx, .m-side .bx {
+.tab .bx, .m-side .bx, .t-ctrls .bx, .thm .bx {
     font-size:18px;
     vertical-align:middle;
     display:inline-block;
@@ -235,11 +234,12 @@ nav a, .menu {
     transition:all 0.4s ease;
     }
     
-.tab .bx { margin:0 0 10px; }
+.tab .bx { display:block; margin:0 0 10px; }
 .m-side .bx { margin:0 5px 10px; }
 
-.thm .bx { font-size:18px; padding:0; background:transparent; color:var(--accent)!important; }
-.tab .bx:hover, .m-side .bx:hover { background:var(--links-hover); cursor:pointer; }
+.thm .bx { font-size:18px; padding:10px; background:transparent; color:var(--accent)!important; }
+.thm .bx:hover { color:var(--links-hover)!important; }
+.tab .bx:hover, .m-side .bx:hover, .t-ctrls .bx:hover { background:var(--links-hover); cursor:pointer; }
 
 /* DAYNIGHT */ 
 
@@ -261,10 +261,10 @@ body.night .box, body.night .m-links { background:var(--night-content); }
 /* MEDIA QUERIES */
 
 @media only screen and (max-width:999px) {
-iframe.tmblr-iframe { display:none; }
+iframe.tmblr-iframe, .t-ctrls { display:none; }
 .container { width:95%; margin:50px auto; } 
 .sidebar, .tab { display:none; }
-.m-side { display:inline-block; position:relative; margin:50px 0 0; display:inline-block; width:100%; text-align:center; }
+.m-side { display:inline-block; position:relative; width:100%; text-align:center; }
 .m-side, .navi, .m-thm { display:inline-block; margin:0; }
 .gate { position:absolute; width:60%; margin:0 0 0 20%; z-index:9999; }
 .content { margin:70px auto; width:100%; }
@@ -307,6 +307,10 @@ $(document).ready(function(){
             return title;
         },
     });
+    $(".t-ctrls").click(function(){
+        $("body").toggleClass("open");
+        $(".hide",this).toggle();
+    });
     $(".menu").click(function(){
         $(".lists").slideToggle();
         $(".close",this).toggle();
@@ -321,6 +325,8 @@ $(document).ready(function(){
 <body>
 
 <div class="container">
+
+<a class="t-ctrls"><span class="hide"><i class="bx bxs-cog"></i></span><span class="hide" style="display:none;"><i class="bx bx-x"></i></span></a>
 
 <div class="tab">
 <a class="luna" title="Night"><span class="bx bxs-moon"></span></a>
