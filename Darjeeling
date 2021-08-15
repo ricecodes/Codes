@@ -282,7 +282,7 @@ iframe.tmblr-iframe, .t-ctrls { display:none; }
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
 <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
-<script src="https://static.tumblr.com/05ejowb/9zqqo58ev/night.min.js"></script>
+<script src="https://static.tumblr.com/05ejowb/m2iqxwfgt/night.min.js"></script>
 
 <script>
 $(document).ready(function(){
