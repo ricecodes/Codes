@@ -176,10 +176,10 @@ body.night { background-image:url({image:Night Background}); background-size:cov
 
 <div class="ctrls">
 <a class="appear"><span class="hide" title="Show Controls"><i class="bx bx-cog {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></i></span><span class="hide" style="display:none;" title="Hide Controls"><i class="bx bx-cog {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></i></span></a>
-{block:ifNotDayTheme}
+{block:ifNotDay}
 <a class="sun" title="Day"><span class="bx bx-sun {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></span></a>
 <a class="moon" style="display:none;" title="Night"><span class="bx bx-moon {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></span></a>
-{/block:ifNotDayTheme}
+{/block:ifNotDay}
 {block:ifDayTheme}
 <a class="luna" title="Night"><span class="bx bx-moon {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></span></a>
 <a class="solis" style="display:none;" title="Day"><span class="bx bx-sun {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></span></a>
