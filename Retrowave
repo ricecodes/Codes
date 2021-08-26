@@ -54,7 +54,7 @@ Credit:
 <meta name="select:Background Size" title="Cover" content="cover">
 <meta name="select:Background Size" title="Auto" content="auto">
 
-<meta name="if:Day" content="">
+<meta name="if:Day Theme" content="">
 <meta name="if:Custom Description" content="">
 <meta name="if:Round Corners" content="">
 <meta name="if:Hide Tags" content="">
@@ -81,7 +81,7 @@ Credit:
 <link href="https://static.tumblr.com/0podkko/oDSpg7y88/photosets.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
 <link href="https://static.tumblr.com/05ejowb/gUqqvy91o/retrowave.min.css" rel="stylesheet">
-{block:ifDay}<link href="https://static.tumblr.com/05ejowb/Kjnqvy921/retroday.min.css" rel="stylesheet">{/block:ifDay}
+{block:ifDayTheme}<link href="https://static.tumblr.com/05ejowb/Kjnqvy921/retroday.min.css" rel="stylesheet">{/block:ifDayTheme}
 
 <style type="text/css">
 
@@ -137,10 +137,10 @@ Credit:
 body { background-image:url({image:Night Background}); }
 body.day { background-image:url({image:Day Background}); }
 
-{block:ifDay}
+{block:ifDayTheme}
 body { background-image:url({image:Day Background})!important; }
 body.night { background-image:url({image:Night Background})!important; }
-{/block:ifDay}
+{/block:ifDayTheme}
 
 /* MEDIA QUERIES */
 
@@ -148,10 +148,10 @@ body.night { background-image:url({image:Night Background})!important; }
 body { background-image:url({image:Night Background}); background-size:cover; background-attachment:fixed; background-repeat:repeat; }
 body.day { background-image:url({image:Day Background}); background-size:cover; background-attachment:fixed; background-repeat:repeat; }
 
-{block:ifDay}
+{block:ifDayTheme}
 body { background-image:url({image:Day Background}); background-size:cover; background-attachment:fixed; background-repeat:repeat; }
 body.night { background-image:url({image:Night Background}); background-size:cover; background-attachment:fixed; background-repeat:repeat; }
-{/block:ifDay}
+{/block:ifDayTheme}
 
 .permalink, .p-wrap, .stick { display:none!important; } 
 
@@ -176,14 +176,14 @@ body.night { background-image:url({image:Night Background}); background-size:cov
 
 <div class="ctrls">
 <a class="appear"><span class="hide" title="Show Controls"><i class="bx bx-cog {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></i></span><span class="hide" style="display:none;" title="Hide Controls"><i class="bx bx-cog {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></i></span></a>
-{block:ifNotDay}
+{block:ifNotDayTheme}
 <a class="sun" title="Day"><span class="bx bx-sun {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></span></a>
 <a class="moon" style="display:none;" title="Night"><span class="bx bx-moon {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></span></a>
-{/block:ifNotDay}
-{block:ifDay}
+{/block:ifNotDayTheme}
+{block:ifDayTheme}
 <a class="luna" title="Night"><span class="bx bx-moon {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></span></a>
 <a class="solis" style="display:none;" title="Day"><span class="bx bx-sun {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></span></a>
-{/block:ifDay}
+{/block:ifDayTheme}
 </div>
 
 <div class="wrapper">
@@ -261,10 +261,10 @@ body.night { background-image:url({image:Night Background}); background-size:cov
 <a class="sun {block:ifRoundCorners}rounder{/block:ifRoundCorners} border"><span class="bx bx-sun"></span>Day</a>
 <a class="moon {block:ifRoundCorners}rounder{/block:ifRoundCorners} border" style="display:none;"><span class="bx bx-moon"></span>Night</a>
 {/block:ifNotDay}
-{block:ifDay}
+{block:ifDayTheme}
 <a class="luna {block:ifRoundCorners}rounder{/block:ifRoundCorners} border"><span class="bx bx-moon"></span>Night</a>
 <a class="solis {block:ifRoundCorners}rounder{/block:ifRoundCorners} border" style="display:none;"><span class="bx bx-sun"></span>Day</a>
-{/block:ifDay}
+{/block:ifDayTheme}
 
 <div class="post-icons">
 <a><span class="bx bx-minus {block:ifRoundCorners}lr{/block:ifRoundCorners}" {block:IndexPage}title="Posted {TimeAgo}"{/block:IndexPage}></span><span class="bx bx-window" {block:IndexPage}title="{NoteCountWithLabel}"{/block:IndexPage}></span><span class="bx bx-x big {block:ifRoundCorners}rr{/block:ifRoundCorners}" {block:IndexPage}title="{block:NotReblog}Original Post{/block:NotReblog}{block:RebloggedFrom}Reblogged Post{/block:RebloggedFrom}"{/block:IndexPage}></span></a>
