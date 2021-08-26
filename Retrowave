@@ -257,10 +257,10 @@ body.night { background-image:url({image:Night Background}); background-size:cov
 <article class="{block:ifRoundCorners}round{/block:ifRoundCorners} r-border b-border l-border a-border">
 <div class="post-header flex justify b-border">
 
-{block:ifNotDay}
+{block:ifNotDayMode}
 <a class="sun {block:ifRoundCorners}rounder{/block:ifRoundCorners} border"><span class="bx bx-sun"></span>Day</a>
 <a class="moon {block:ifRoundCorners}rounder{/block:ifRoundCorners} border" style="display:none;"><span class="bx bx-moon"></span>Night</a>
-{/block:ifNotDay}
+{/block:ifNotDayMode}
 {block:ifDayMode}
 <a class="luna {block:ifRoundCorners}rounder{/block:ifRoundCorners} border"><span class="bx bx-moon"></span>Night</a>
 <a class="solis {block:ifRoundCorners}rounder{/block:ifRoundCorners} border" style="display:none;"><span class="bx bx-sun"></span>Day</a>
