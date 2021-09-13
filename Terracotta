@@ -523,18 +523,16 @@ section.layout-two .entry, section.layout-three .entry { margin:0 0 8rem; width:
 {/block:Posts}
 </div> <!--- GRID --->
 
-{block:Pagination}
 <div class="pgs flex justify">
+{block:Pagination}
 <div class="prev">{block:PreviousPage}<a href="{PreviousPage}" class="rounder">{lang:Previous}</a>{/block:PreviousPage}<span class="rounder">{lang:Previous}</span></div>
 <div class="next">{block:NextPage}<a href="{NextPage}" class="rounder">{lang:Next}</a>{/block:NextPage}<span class="rounder">{lang:Next}</span></div>
-</div>
 {/block:Pagination}
 {block:PermalinkPagination}
-<div class="pgs flex justify">
 <div class="next">{block:NextPost}<a href="{NextPost}" class="rounder">{lang:Newer}</a>{/block:NextPost}<span class="rounder">{lang:Newer}</span></div>
 <div class="prev">{block:PreviousPost}<a href="{PreviousPost}" class="rounder">{lang:Older}</a>{/block:PreviousPost}<span class="rounder">{lang:Older}</span></div>
-</div>
 {/block:PermalinkPagination}
+</div>
 
 </section>
 
