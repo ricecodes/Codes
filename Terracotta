@@ -42,12 +42,12 @@ Credit:
 <meta name="color:Selection" content="#ffffff">
 <meta name="color:Tooltips" content="#000">
 <meta name="color:Tooltips Text" content="#ffffff">
-<meta name="color:Night Background" content="#2b2f33">
-<meta name="color:Night Borders" content="#606973">
-<meta name="color:Night Posts" content="#40464d">
+<meta name="color:Night Background" content="#15161a">
+<meta name="color:Night Borders" content="#41424d">
+<meta name="color:Night Posts" content="#25262b">
 <meta name="color:Night Text" content="#ffffff">
 <meta name="color:Night Permalink" content="#eeeeee">
-<meta name="color:Night Question" content="#2b2f33">
+<meta name="color:Night Question" content="#2f3138">
 
 <meta name="select:Layout" title="One Column" content="one">
 <meta name="select:Layout" title="Two Columns" content="two">
