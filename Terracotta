@@ -194,6 +194,7 @@ body.day {
 section.layout-two .description, section.layout-three .description { width:100%; }
 section.layout-two .grid, section.layout-three .grid { margin:0; }
 section.layout-two .entry, section.layout-three .entry { margin:0 0 8rem; width:100%; }
+@media only screen and (max-width:999px) { .m-thm { padding-top:30px; } }
 {/block:PermalinkPage}
 
 {CustomCSS}
