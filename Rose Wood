@@ -112,6 +112,7 @@ a:hover.read_more { background:{color:Links Hover}; }
 .thm .bx:hover { color:{color:Links Hover}!important; }
 
 body.night .up-info { background:{color:Night Posts}; }
+body.night ol.notes li.note blockquote { background:{color:Night Background}; }
 
 /* ROUND CORNERS */
 
