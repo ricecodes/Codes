@@ -258,7 +258,7 @@ iframe.tmblr-iframe, .t-ctrls { display:none; }
 .sidebar { display:none; }
 .tab { display:inline-block; position:relative; width:100%; text-align:center; }
 .navi, .m-thm, .tab .bx { display:inline-block; margin:0; }
-.gate { position:absolute; width:60%; margin:0 0 0 20%; z-index:9999; }
+.gate { position:absolute; width:60%; margin:10px 0 0 20%; z-index:9999; }
 .content { margin:70px auto; width:100%; }
 .small, .big { width:100%; }
 .detail .con { display:grid; grid-template-columns:repeat(2, 1fr); }
