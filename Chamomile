@@ -25,6 +25,7 @@ Notes:
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 
 <link href="https://fonts.googleapis.com/css?family=Source Sans Pro:700,400" rel="stylesheet">
+<script src="https://static.tumblr.com/05ejowb/RA6r1jy9i/render.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
 
 <style type="text/css">
@@ -37,15 +38,10 @@ Notes:
     --accent:#7eaba6;
     --accent-text:#fff;
     --bg:#f0f0f0;
-    --hp-bg:#eee;
     --links:#7eaba6;
     --links-hover:#f1b6aa;
     --content:#fafafa;
     --text:#333;
-    --night-bg:#222;
-    --night-content:#3a3a3a;
-    --night-borders:#6a6a6a;
-    --night-text:#fff;
     
     /* FONT */
     --font-size:14px;
@@ -54,6 +50,12 @@ Notes:
     --round:10px; /* Change 10px this to 0 if you don't want round corners */
     --rounded:4px; /* This is the round corners for smaller items */
     
+}
+
+[data-theme="daynight"] {
+    --bg:#222;
+    --content:#3a3a3a;
+    --text:#fff;
 }
 
 /* BASICS */
@@ -110,6 +112,7 @@ hr { width:25%; margin:10px auto; }
 .flex { display:flex; flex-wrap:wrap; }
 .justify { justify-content:space-between; }
 .center { text-align:center; }
+.none { display:none; }
 
 body::-webkit-scrollbar { width:18px; background:var(--bg);  }
 body::-webkit-scrollbar-thumb { background:var(--accent); border:6px solid var(--bg); border-radius:10px; }
@@ -192,40 +195,91 @@ nav a, .menu {
 .thm .bx:hover { color:var(--links-hover)!important; }
 .tab .bx:hover, .m-side .bx:hover, .t-ctrls .bx:hover { background:var(--links-hover); cursor:pointer; }
 
-/* DAYNIGHT */ 
-
-body.night { 
-    background:var(--night-bg);!important; 
-    color:var(--night-text);!important; 
-    -webkit-transition:all 0s ease;
-    -moz-transition:all 0s ease;
-    -o-transition:all 0s ease;
-    -ms-transition:all 0s ease;
-    transition:all 0s ease;
-    }
-
-body.night::-webkit-scrollbar, body.night::-webkit-scrollbar-thumb { border:6px solid var(--night-bg); }
-body.night::-webkit-scrollbar { background:var(--night-bg); }
-body.night a, body.night .bx { color:var(--night-text); }
-body.night .avatar, body.night .m-links { background:var(--night-content); }
+body.night .diemnox { display:block; }
+input[type=checkbox], body.night .moon { display:none; }
+input[type=checkbox]:checked + .dn { vertical-align:middle; }
 
 /* MEDIA QUERIES */
 
 @media only screen and (max-width:999px) {
 iframe.tmblr-iframe, .t-ctrls { display:none; }
 .container { width:95%; margin:50px auto; } 
-.sidebar, .tab { display:none; }
-.m-side { display:inline-block; position:relative; margin:50px 0 0; display:inline-block; width:100%; text-align:center; }
-.m-side, .navi, .m-thm { display:inline-block; margin:0; }
-.gate { position:absolute; width:50%; margin:0 0 0 25%; z-index:9999; }
+.sidebar { display:none; }
+.tab { display:inline-block; position:relative; margin:50px 0 0; display:inline-block; width:100%; text-align:center; }
+.tab .bx, .navi, .m-thm { display:inline-block; margin:0; }
+.tab .bx { margin:0 5px; }
+.gate { position:absolute; width:50%; margin:10px 0 0 25%; z-index:9999; }
 .content { margin:70px auto; width:90%; }
 .avatar { margin:7px; width:80px; height:80px; }
 .avatar img { width:60px; height:60px; }
 .thm { display:none; }
+body.night .diemnox { display:inline-block; }
+body.night .moon { display:none; }
 }
 
 </style>
 </head>
+
+<body>
+
+<div class="container">
+
+<a class="t-ctrls"><span class="hide"><i class="bx bxs-cog"></i></span><span class="hide" style="display:none;"><i class="bx bx-x"></i></span></a>
+
+<div class="tab">
+<label class="dn"><input class="modus" type="checkbox">
+<a class="diemnox moon" title="Night"><i class="bx bxs-moon"></i></a>
+<a class="diemnox none" title="Day"><i class="bx bxs-sun"></i></a>
+</label>
+<a class="navi"><span class="close"><i class="bx bx-menu"></i></span><span class="close" style="display:none;"><i class="bx bx-x"></i></span></a>
+<div class="m-thm"><a href="https://ricecodes.tumblr.com/" title="Page by Ricecodes"><span class="bx bxs-star"></span></a></div>
+
+<div class="gate">
+<div class="m-links">
+<a href="/">return</a>
+{block:AskEnabled}<a href="/ask">message</a>{/block:AskEnabled}
+<a href="/archive">archive</a>
+<!--- You can add as many links as you want! Just copy and paste <a href="URL here">Link Name</a> as many times as you want. This only applies for the mobile navigation. --->
+<a href="URL HERE">Link Name</a>
+<a href="URL HERE">Link Name</a>
+<a href="URL HERE">Link Name</a>
+</div>
+</div>
+</div> <!--- END OF TAB --->
+
+<div class="sidebar">
+<div class="side">
+<img src="{PortraitURL-128}">
+<nav>
+<ul>
+<li><a href="/">return</a></li>
+{block:AskEnabled}<li><a href="/ask">message</a></li>{/block:AskEnabled}
+<li><a href="/archive">archive</a></li>
+<li><a class="menu"><span class="close">more</span><span class="close" style="display:none;">close</span></a></li>
+<div class="lists">
+<!--- You can add as many links as you want! Just copy and paste <li><a href="URL here">Link Name</a></li> as many times as you want after <div class="lists"> --->
+<li><a href="URL here">Link Name</a></li>
+<li><a href="URL HERE">Link Name</a></li>
+<li><a href="URL HERE">Link Name</a></li>
+</div>
+</ul>
+</nav>
+</div>
+</div> <!--- END OF SIDEBAR --->
+
+<div class="content flex justify">
+
+<div class="following">
+{block:Following}
+{block:Followed}
+<a href="{FollowedURL}" title="{FollowedName}" target="_blank"><div class="avatar"><img src="{FollowedPortraitURL-64}"></div></a>
+{/block:Followed}
+{/block:Following}
+</div> <!--- FOLLOWING --->
+
+</div> <!--- CONTENT --->
+<div class="thm"><a href="https://ricecodes.tumblr.com/" title="Page by Ricecodes"><span class="bx bxs-star"></span></a></div>
+</div> <!--- CONTAINER --->
 
 <!----------------------------------------------------- SCRIPTS ------->
 
@@ -271,75 +325,7 @@ $(document).ready(function(){
     });
 });
 </script>
-
-<body>
-
-<div class="container">
-
-<a class="t-ctrls"><span class="hide"><i class="bx bxs-cog"></i></span><span class="hide" style="display:none;"><i class="bx bx-x"></i></span></a>
-
-<div class="tab">
-<a class="luna" title="Night"><span class="bx bxs-moon"></span></a>
-<a class="solis" style="display:none;" title="Day"><span class="bx bxs-sun"></span></a>
-</div> <!--- TAB --->
-
-
-<!--- MOBILE NAVIGATION --->
-<div class="m-side">
-<a class="luna" title="Night"><span class="bx bxs-moon"></span></a>
-<a class="solis" style="display:none;" title="Day"><span class="bx bxs-sun"></span></a>
-
-<a class="navi"><span class="close"><i class="bx bx-menu"></i></span><span class="close" style="display:none;"><i class="bx bx-x"></i></span></a>
-
-<div class="m-thm"><a href="https://ricecodes.tumblr.com/" title="Page by Ricecodes"><span class="bx bxs-star"></span></a></div>
-
-<div class="gate">
-<div class="m-links">
-<a href="/">return</a>
-{block:AskEnabled}<a href="/ask">message</a>{/block:AskEnabled}
-<a href="/archive">archive</a>
-<!--- You can add as many links as you want! Just copy and paste <a href="URL here">Link Name</a> as many times as you want. This only applies for the mobile navigation. --->
-<a href="URL HERE">Link Name</a>
-<a href="URL HERE">Link Name</a>
-<a href="URL HERE">Link Name</a>
-</div>
-</div>
-
-</div> <!--- END OF MOBILE NAVIGATION --->
-
-<div class="sidebar">
-<div class="side">
-<img src="{PortraitURL-128}">
-<nav>
-<ul>
-<li><a href="/">return</a></li>
-{block:AskEnabled}<li><a href="/ask">message</a></li>{/block:AskEnabled}
-<li><a href="/archive">archive</a></li>
-<li><a class="menu"><span class="close">more</span><span class="close" style="display:none;">close</span></a></li>
-<div class="lists">
-<!--- You can add as many links as you want! Just copy and paste <li><a href="URL here">Link Name</a></li> as many times as you want after <div class="lists"> --->
-<li><a href="URL here">Link Name</a></li>
-<li><a href="URL HERE">Link Name</a></li>
-<li><a href="URL HERE">Link Name</a></li>
-</div>
-</ul>
-</nav>
-</div>
-</div> <!--- END OF SIDEBAR --->
-
-<div class="content flex justify">
-
-<div class="following">
-{block:Following}
-{block:Followed}
-<a href="{FollowedURL}" title="{FollowedName}" target="_blank"><div class="avatar"><img src="{FollowedPortraitURL-64}"></div></a>
-{/block:Followed}
-{/block:Following}
-</div> <!--- FOLLOWING --->
-
-</div> <!--- CONTENT --->
-<div class="thm"><a href="https://ricecodes.tumblr.com/" title="Page by Ricecodes"><span class="bx bxs-star"></span></a></div>
-</div> <!--- CONTAINER --->
+<script src="https://static.tumblr.com/05ejowb/5yUr1k551/mode.min.js"></script>
 
 </body>
 </html>
