@@ -25,6 +25,7 @@ Notes:
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 
 <link href="https://fonts.googleapis.com/css?family=Source Sans Pro:700,400" rel="stylesheet">
+<script src="https://static.tumblr.com/05ejowb/RA6r1jy9i/render.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
 
 <style type="text/css">
@@ -42,10 +43,6 @@ Notes:
     --links-hover:#f1b6aa;
     --content:#fafafa;
     --text:#333;
-    --night-bg:#222;
-    --night-content:#3a3a3a;
-    --night-borders:#6a6a6a;
-    --night-text:#fff;
     
     /* FONT */
     --font-size:14px;
@@ -65,6 +62,13 @@ Notes:
     --color-three:#ab7e99;
 }
 
+[data-theme="daynight"] {
+    --hp-bg:#222;
+    --bg:#222;
+    --content:#3a3a3a;
+    --text:#fff;
+}
+
 /* BASICS */
 
 .tmblr-iframe {
@@ -82,7 +86,7 @@ Notes:
 
 body.open .tmblr-iframe { opacity:1; visibility:visible; top:15px!important; right:60px!important; }
 
-body { margin:0; background:var(--bg); color:var(--text); font-family:'Source Sans Pro',sans-serif; font-size:var(--font-size); }
+body { margin:0; background:var(--bg); color:var(--text); font-family:'Source Sans Pro',sans-serif; font-size:var(--font-size); overflow-x:hidden; }
 
 a {
     color:var(--links);
@@ -120,6 +124,7 @@ hr { width:25%; margin:10px auto; }
 .flex { display:flex; flex-wrap:wrap; }
 .justify { justify-content:space-between; }
 .center { text-align:center; }
+.none { display:none; }
 
 body::-webkit-scrollbar { width:18px; background:var(--bg);  }
 body::-webkit-scrollbar-thumb { background:var(--accent); border:6px solid var(--bg); border-radius:10px; }
@@ -241,86 +246,30 @@ nav a, .menu {
 .thm .bx:hover { color:var(--links-hover)!important; }
 .tab .bx:hover, .m-side .bx:hover, .t-ctrls .bx:hover { background:var(--links-hover); cursor:pointer; }
 
-/* DAYNIGHT */ 
-
-body.night { 
-    background:var(--night-bg);!important; 
-    color:var(--night-text);!important; 
-    -webkit-transition:all 0s ease;
-    -moz-transition:all 0s ease;
-    -o-transition:all 0s ease;
-    -ms-transition:all 0s ease;
-    transition:all 0s ease;
-    }
-
-body.night::-webkit-scrollbar, body.night::-webkit-scrollbar-thumb { border:6px solid var(--night-bg); }
-body.night::-webkit-scrollbar, body.night .hp { background:var(--night-bg); }
-body.night a, body.night .bx { color:var(--night-text); }
-body.night .box, body.night .m-links { background:var(--night-content); }
+body.night .diemnox { display:block; }
+input[type=checkbox], body.night .moon { display:none; }
+input[type=checkbox]:checked + .dn { vertical-align:middle; }
 
 /* MEDIA QUERIES */
 
 @media only screen and (max-width:999px) {
 iframe.tmblr-iframe, .t-ctrls { display:none; }
 .container { width:95%; margin:50px auto; } 
-.sidebar, .tab { display:none; }
-.m-side { display:inline-block; position:relative; width:100%; text-align:center; }
-.m-side, .navi, .m-thm { display:inline-block; margin:0; }
+.sidebar { display:none; }
+.tab { display:inline-block; position:relative; width:100%; text-align:center; }
+.navi, .m-thm, .tab .bx { display:inline-block; margin:0; }
 .gate { position:absolute; width:60%; margin:0 0 0 20%; z-index:9999; }
 .content { margin:70px auto; width:100%; }
 .small, .big { width:100%; }
 .detail .con { display:grid; grid-template-columns:repeat(2, 1fr); }
 .detail span:after { content:":"; }
 .thm { display:none; }
+body.night .diemnox { display:inline-block; }
+body.night .moon { display:none; }
 }
 
 </style>
 </head>
-
-<!----------------------------------------------------- SCRIPTS ------->
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
-<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
-<script src="https://static.tumblr.com/05ejowb/m2iqxwfgt/night.min.js"></script>
-
-<script>
-$(document).ready(function(){
-    //remove tumblr redirects script by magnusthemes@tumblr
-    $('a[href*="t.umblr.com/redirect"]').each(function(){
-        var originalURL = $(this).attr("href").split("?z=")[1].split("&t=")[0];
-        var replaceURL = decodeURIComponent(originalURL);
-        $(this).attr("href", replaceURL);
-    });
-    tippy("[title]", {
-        theme:"custom",
-        duration:300,
-        allowHTML:true,
-        arrow:false,
-        followCursor:true,
-        inlinePositioning:true,
-        placement:"auto",
-        zIndex:9999999,
-        content(reference) {
-            const title = reference.getAttribute("title");
-            reference.removeAttribute("title");
-            return title;
-        },
-    });
-    $(".t-ctrls").click(function(){
-        $("body").toggleClass("open");
-        $(".hide",this).toggle();
-    });
-    $(".menu").click(function(){
-        $(".lists").slideToggle();
-        $(".close",this).toggle();
-    });
-    $(".navi").click(function(){
-        $(".gate").slideToggle();
-        $(".close",this).toggle();
-    });
-});
-</script>
 
 <body>
 
@@ -329,18 +278,11 @@ $(document).ready(function(){
 <a class="t-ctrls"><span class="hide"><i class="bx bxs-cog"></i></span><span class="hide" style="display:none;"><i class="bx bx-x"></i></span></a>
 
 <div class="tab">
-<a class="luna" title="Night"><span class="bx bxs-moon"></span></a>
-<a class="solis" style="display:none;" title="Day"><span class="bx bxs-sun"></span></a>
-</div> <!--- END OF TAB --->
-
-
-<!--- MOBILE NAVIGATION --->
-<div class="m-side">
-<a class="luna" title="Night"><span class="bx bxs-moon"></span></a>
-<a class="solis" style="display:none;" title="Day"><span class="bx bxs-sun"></span></a>
-
+<label class="dn"><input class="modus" type="checkbox">
+<a class="diemnox moon" title="Night"><i class="bx bxs-moon"></i></a>
+<a class="diemnox none" title="Day"><i class="bx bxs-sun"></i></a>
+</label>
 <a class="navi"><span class="close"><i class="bx bx-menu"></i></span><span class="close" style="display:none;"><i class="bx bx-x"></i></span></a>
-
 <div class="m-thm"><a href="https://ricecodes.tumblr.com/" title="Page by Ricecodes"><span class="bx bxs-star"></span></a></div>
 
 <div class="gate">
@@ -354,8 +296,7 @@ $(document).ready(function(){
 <a href="URL HERE">Link Name</a>
 </div>
 </div>
-
-</div> <!--- END OF MOBILE NAVIGATION --->
+</div> <!--- END OF TAB --->
 
 <div class="sidebar">
 <div class="side">
@@ -557,6 +498,51 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
 </div> <!--- CONTENT --->
 <div class="thm"><a href="https://ricecodes.tumblr.com/" title="Page by Ricecodes"><span class="bx bxs-star"></span></a></div>
 </div> <!--- CONTAINER --->
+
+<!----------------------------------------------------- SCRIPTS ------->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+
+<script>
+$(document).ready(function(){
+    //remove tumblr redirects script by magnusthemes@tumblr
+    $('a[href*="t.umblr.com/redirect"]').each(function(){
+        var originalURL = $(this).attr("href").split("?z=")[1].split("&t=")[0];
+        var replaceURL = decodeURIComponent(originalURL);
+        $(this).attr("href", replaceURL);
+    });
+    tippy("[title]", {
+        theme:"custom",
+        duration:300,
+        allowHTML:true,
+        arrow:false,
+        followCursor:true,
+        inlinePositioning:true,
+        placement:"auto",
+        zIndex:9999999,
+        content(reference) {
+            const title = reference.getAttribute("title");
+            reference.removeAttribute("title");
+            return title;
+        },
+    });
+    $(".t-ctrls").click(function(){
+        $("body").toggleClass("open");
+        $(".hide",this).toggle();
+    });
+    $(".menu").click(function(){
+        $(".lists").slideToggle();
+        $(".close",this).toggle();
+    });
+    $(".navi").click(function(){
+        $(".gate").slideToggle();
+        $(".close",this).toggle();
+    });
+});
+</script>
+<script src="https://static.tumblr.com/05ejowb/5yUr1k551/mode.min.js"></script>
 
 </body>
 </html>
