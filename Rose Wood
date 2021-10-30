@@ -72,8 +72,9 @@ Credit:
 <meta name="text:Link 4 URL" content="">
         
 <link href="https://fonts.googleapis.com/css?family={text:Google Font}:700,400" rel="stylesheet">
-<link href="https://static.tumblr.com/05ejowb/RjVqweyrz/rosewood.min.css" rel="stylesheet">
+<script src="https://static.tumblr.com/05ejowb/RA6r1jy9i/render.js"></script>
 <link href="https://static.tumblr.com/0podkko/oDSpg7y88/photosets.css" rel="stylesheet">
+<link href="https://static.tumblr.com/05ejowb/mENr1tc84/rosewood.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
 
 <style type="text/css">
@@ -90,29 +91,22 @@ Credit:
     --posts:{color:Posts};
     --ask:{color:Question};
     --text:{color:Text};
-    --night-bg:{color:Night Background};
-    --night-borders:{color:Night Borders};
-    --night-posts:{color:Night Posts};
-    --night-ask:{color:Night Question};
-    --night-text:{color:Night Text};
     --rgb-accent:{RGBcolor:Accent};
     --rgb-bg:{RGBcolor:Background};
-    --rgb-nightbg:{RGBcolor:Night Background};
     
     /* FONTS */
     --body-family:{text:Google Font};
     --body-size:{text:Font Size};
 }
 
-p.read_more_container { display:flex; justify-content:center; width:100%; }
-a.read_more { margin:0 auto; padding:5px 8px; font-weight:normal; font-size:{text:Font Size}; background:{color:Accent}; color:{color:Accent Text}; text-decoration:none; border-radius:5px; }
-
-a:hover.read_more { background:{color:Links Hover}; }
-
-.thm .bx:hover { color:{color:Links Hover}!important; }
-
-body.night .up-info { background:{color:Night Posts}; }
-body.night ol.notes li.note blockquote { background:{color:Night Background}; }
+[data-theme="daynight"] {
+    --background:{color:Night Background};
+    --borders:{color:Night Borders};
+    --posts:{color:Night Posts};
+    --ask:{color:Night Question};
+    --text:{color:Night Text};
+    --rgb-bg:{RGBcolor:Night Background};
+}
 
 /* ROUND CORNERS */
 
@@ -132,8 +126,8 @@ ul li:before { content:"\ec9b"; }
 article { margin:0 0 3em 0; width:100%; }
 .post-footer { margin:0; width:100%; background:transparent; border-radius:0!important; border-top:1px solid {color:Borders}; }
 .notecount { background:transparent; }
-body.night .notecount { background:{color:Night Posts}; }
-body.night .post-footer, body.night ol.notes { border-top:1px solid {color:Night Borders}; }
+[data-theme="daynight"] .notecount { background:{color:Night Posts}; }
+[data-theme="daynight"] .post-footer, [data-theme="daynight"] ol.notes { border-top:1px solid {color:Night Borders}; }
 @media only screen and (max-width:999px) { 
 .container, .container.layout-three{ margin:0; width:100%; }
 .content{ margin:100px auto; width:90%; }
@@ -145,103 +139,6 @@ article, article.layout-three{margin:0 0 3em 0; width:100%;}
 </style>
 </head>
 
-<!----------------------------------------------------- SCRIPTS ------->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
-<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
-<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-{block:ifInfiniteScroll}<script src="https://unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.min.js"></script>{/block:ifInfiniteScroll}
-<script src="https://static.tumblr.com/0podkko/qWqq8va08/photosets.js"></script>
-<script src="https://static.tumblr.com/05ejowb/Y02qjlxxp/csslightbox.js"></script>
-<script src="https://static.tumblr.com/05ejowb/cxAqpcpux/load.min.js"></script>
-<script src="https://static.tumblr.com/05ejowb/Tqyqwexdt/rosewood.min.js"></script>
-
-<script>
-$(document).ready(function(){
-    document.querySelectorAll("iframe.tumblr_audio_player").forEach( aud => {
-        aud.onload = function() {
-            const dio = aud.contentDocument || aud.contentWindow.document;
-            dio.head.innerHTML += '<style type="text/css"> .audio-player {background:{color:Accent}; color:{color:Accent Text}!important;}.audio-player .audio-info .track-artist {color:{color:Accent Text}!important;} </style>'}
-    });
-    {block:IndexPage}
-    var $grid = $(".grid").imagesLoaded( function() {
-        $(".grid").masonry({
-          itemSelector:"article",
-          stagger:30,
-          visibleStyle:{ transform:"translateY(0)", opacity: 1 },
-          hiddenStyle:{ transform:"translateY(100px)", opacity: 0 }
-        });
-    });
-    {block:ifInfiniteScroll}
-    var $grid = $(".grid").masonry({
-        itemSelector:"article",
-        stagger:30,
-        visibleStyle:{ transform:"translateY(0)", opacity: 1 },
-        hiddenStyle:{ transform:"translateY(100px)", opacity: 0 }
-    });
-    var msnry = $grid.data("masonry");
-    $grid.infiniteScroll({
-        path:".next a",
-        append:"article",
-        status:".load-status",
-        responseBody:"text",
-        history:false,
-        outlayer:msnry,
-        hideNav:".pgs",
-        button:".load",
-        {block:ifManualLoad}scrollThreshold:false{/block:ifManualLoad}
-        {block:ifNotManualLoad}scrollThreshold:true{/block:ifNotManualLoad}
-    });
-    $grid.on("append.infiniteScroll", function(event, response, path, items) {
-    var $elem = $(items);
-    $elem.imagesLoaded( function() {
-        $grid.infiniteScroll(items)
-        .masonry(items);
-    });
-    var $likes = $elem.map(function () { return this.id;}).get();
-        Tumblr.LikeButton.get_status_by_post_ids($likes);
-    $(".permalink").each(function(){
-        $(this).click(function(){
-            $(this).closest(items).find(".modal").fadeIn();
-        });
-    });
-    $(".exit,.modal-bg").each(function(){
-        $(this).click(function(){
-            $(this).closest(items).find(".modal").fadeOut();
-        });
-    });
-        document.querySelectorAll("iframe.tumblr_audio_player").forEach( aud => {
-        aud.onload = function() {
-            const dio = aud.contentDocument || aud.contentWindow.document;
-            dio.head.innerHTML += '<style type="text/css"> .audio-player {background:{color:Accent}; color:{color:Accent Text}!important;}.audio-player .audio-info .track-artist {color:{color:Accent Text}!important;} </style>'}
-        });
-        undoPhotoset();
-        undoPhotoset({
-            "posts":"article .unnest, article .text",
-            "text class":".unnest,.text",
-            "photoset class":"photoset-grid" },false);
-        tippy("[title]", {
-            theme:"custom",
-            duration:300,
-            allowHTML:true,
-            arrow:false,
-            followCursor:true,
-            inlinePositioning:true,
-            placement:"auto",
-            zIndex:9999999,
-            content(reference) {
-                const title = reference.getAttribute("title");
-                reference.removeAttribute("title");
-                return title;
-            },
-        });
-    });
-    {/block:ifInfiniteScroll}
-    {/block:IndexPage}
-});
-</script>
-
 <body>
 
 <div class="container {block:IndexPage}layout-{select:Layout}{/block:IndexPage}">
@@ -249,8 +146,10 @@ $(document).ready(function(){
 <a class="t-ctrls"><span class="hide"><i class="bx bxs-cog"></i></span><span class="hide" style="display:none;"><i class="bx bx-x"></i></span></a>
 
 <div class="tab">
-<a class="luna" title="Night"><span class="bx bxs-moon"></span></a>
-<a class="solis" style="display:none;" title="Day"><span class="bx bxs-sun"></span></a>
+<label class="dn"><input class="modus" type="checkbox">
+<a class="diemnox moon" title="Night"><i class="bx bxs-moon"></i></a>
+<a class="diemnox none" title="Day"><i class="bx bxs-sun"></i></a>
+</label>
 {block:ifUpdates}
 <a class="up"><span class="close" title="Updates"><i class="bx {select:Updates Icon}"></i></span><span class="close" style="display:none;"><i class="bx bx-x"></i></span></a>
 <div class="up-wrap">
@@ -350,12 +249,12 @@ $(document).ready(function(){
 <div class="small"><span class="bx bx-file"></span></div>
 {/block:ifHideTextPosts}
 {block:ifNotHideTextPosts}
-{block:Title}<h1>{Title}</h1>{/block:Title}
+{block:Title}<div class="t-title">{Title}</div>{/block:Title}
 {block:NotReblog}
-<div class="text"><div class="caption">{Body}</div></div>
+<div class="text {block:HasTags}{block:ifNotHideTags}has-tags{/block:ifNotHideTags}{/block:HasTags}"><div class="caption">{Body}</div></div>
 {/block:NotReblog}
 {block:Rebloggedfrom}
-<div class="unnest">
+<div class="unnest {block:HasTags}{block:ifNotHideTags}has-tags{/block:ifNotHideTags}{/block:HasTags}">
 {block:Reblogs}
 <div class="reblogged">
 <div class="username">
@@ -374,7 +273,7 @@ $(document).ready(function(){
 {/block:ifNotHideTextPosts}
 {/block:IndexPage}
 {block:PermalinkPage}
-{block:Title}<h1>{Title}</h1>{/block:Title}
+{block:Title}<div class="t-title">{Title}</div>{/block:Title}
 {block:NotReblog}
 <div class="text"><div class="caption">{Body}</div></div>
 {/block:NotReblog}
@@ -401,7 +300,7 @@ $(document).ready(function(){
 {block:Link}
 {block:IndexPage}<div class="small"><span class="bx bx-link-alt"></span></div>{/block:IndexPage}
 {block:PermalinkPage}
-<a href="{URL}"><div class="link"><span class="bx bx-link-external"></span>{Name}</div></a>
+<a href="{URL}"><div class="link flex justify">{Name}<span class="bx bx-link-external"></span></div></a>
 {block:NotReblog}
 {block:Description}
 <div class="caption">{Description}</div>
@@ -430,7 +329,7 @@ $(document).ready(function(){
 {block:Quote}
 {block:IndexPage}
 {block:ifHideQuotePosts}
-<div class="small"><span class="bx bx-quote-alt-left"></span></div>
+<div class="small"><span class="bx bxs-quote-alt-left"></span></div>
 {/block:ifHideQuotePosts}
 {block:ifNotHideQuotePosts}
 <div class="quote">{Quote} {block:Source}<div class="src">— {Source}</div>{/block:Source}</div>
@@ -447,8 +346,8 @@ $(document).ready(function(){
 <div class="small"><span class="bx bx-chat"></span></div>
 {/block:ifHideChatPosts}
 {block:ifNotHideChatPosts}
+{block:Title}<div class="t-title">{Title}</div>{/block:Title}
 <div class="chat">
-{block:Title}<h1>{Title}</h1>{/block:Title}
 {block:Lines}
 <div class="lines">
 {block:Label}<span class="label">{Label}</span>{/block:Label} {Line}
@@ -458,8 +357,8 @@ $(document).ready(function(){
 {/block:ifNotHideChatPosts}
 {/block:IndexPage}
 {block:PermalinkPage}
+{block:Title}<div class="t-title">{Title}</div>{/block:Title}
 <div class="chat">
-{block:Title}<h1>{Title}</h1>{/block:Title}
 {block:Lines}
 <div class="lines">
 {block:Label}<span class="label">{Label}</span>{/block:Label} {Line}
@@ -588,7 +487,7 @@ $(document).ready(function(){
 </div>
 <div class="modal-container">
 {block:Text}
-{block:Title}<h1>{Title}</h1>{/block:Title}
+{block:Title}<div class="t-title">{Title}</div>{/block:Title}
 {block:NotReblog}
 <div class="text"><div class="caption">{Body}</div></div>
 {/block:NotReblog}
@@ -612,7 +511,7 @@ $(document).ready(function(){
 {/block:Text}
 
 {block:Link}
-<a href="{URL}"><div class="link"><span class="bx bx-link-external"></span>{Name}</div></a>
+<a href="{URL}"><div class="link flex justify">{Name}<span class="bx bx-link-external"></span></div></a>
 {block:NotReblog}
 {block:Description}
 <div class="caption">{Description}</div>
@@ -642,8 +541,8 @@ $(document).ready(function(){
 {/block:Quote}
 
 {block:Chat}
+{block:Title}<div class="t-title">{Title}</div>{/block:Title}
 <div class="chat">
-{block:Title}<h1>{Title}</h1>{/block:Title}
 {block:Lines}
 <div class="lines">
 {block:Label}<span class="label">{Label}</span>{/block:Label} {Line}
@@ -780,6 +679,104 @@ $(document).ready(function(){
 </div>
     
 </div> <!--- CONTAINER --->
+
+<!----------------------------------------------------- SCRIPTS ------->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+{block:ifInfiniteScroll}<script src="https://unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.min.js"></script>{/block:ifInfiniteScroll}
+<script src="https://static.tumblr.com/0podkko/qWqq8va08/photosets.js"></script>
+<script src="https://static.tumblr.com/05ejowb/Y02qjlxxp/csslightbox.js"></script>
+<script src="https://static.tumblr.com/05ejowb/cxAqpcpux/load.min.js"></script>
+<script src="https://static.tumblr.com/05ejowb/Tqyqwexdt/rosewood.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    document.querySelectorAll("iframe.tumblr_audio_player").forEach( aud => {
+        aud.onload = function() {
+            const dio = aud.contentDocument || aud.contentWindow.document;
+            dio.head.innerHTML += '<style type="text/css"> .audio-player {background:{color:Accent}; color:{color:Accent Text}!important;}.audio-player .audio-info .track-artist {color:{color:Accent Text}!important;} </style>'}
+    });
+    {block:IndexPage}
+    var $grid = $(".grid").imagesLoaded( function() {
+        $(".grid").masonry({
+          itemSelector:"article",
+          stagger:30,
+          visibleStyle:{ transform:"translateY(0)", opacity: 1 },
+          hiddenStyle:{ transform:"translateY(100px)", opacity: 0 }
+        });
+    });
+    {block:ifInfiniteScroll}
+    var $grid = $(".grid").masonry({
+        itemSelector:"article",
+        stagger:30,
+        visibleStyle:{ transform:"translateY(0)", opacity: 1 },
+        hiddenStyle:{ transform:"translateY(100px)", opacity: 0 }
+    });
+    var msnry = $grid.data("masonry");
+    $grid.infiniteScroll({
+        path:".next a",
+        append:"article",
+        status:".load-status",
+        responseBody:"text",
+        history:false,
+        outlayer:msnry,
+        hideNav:".pgs",
+        button:".load",
+        {block:ifManualLoad}scrollThreshold:false{/block:ifManualLoad}
+        {block:ifNotManualLoad}scrollThreshold:true{/block:ifNotManualLoad}
+    });
+    $grid.on("append.infiniteScroll", function(event, response, path, items) {
+    var $elem = $(items);
+    $elem.imagesLoaded( function() {
+        $grid.infiniteScroll(items)
+        .masonry(items);
+    });
+    var $likes = $elem.map(function () { return this.id;}).get();
+        Tumblr.LikeButton.get_status_by_post_ids($likes);
+    $(".permalink").each(function(){
+        $(this).click(function(){
+            $(this).closest(items).find(".modal").fadeIn();
+        });
+    });
+    $(".exit,.modal-bg").each(function(){
+        $(this).click(function(){
+            $(this).closest(items).find(".modal").fadeOut();
+        });
+    });
+        document.querySelectorAll("iframe.tumblr_audio_player").forEach( aud => {
+        aud.onload = function() {
+            const dio = aud.contentDocument || aud.contentWindow.document;
+            dio.head.innerHTML += '<style type="text/css"> .audio-player {background:{color:Accent}; color:{color:Accent Text}!important;}.audio-player .audio-info .track-artist {color:{color:Accent Text}!important;} </style>'}
+        });
+        undoPhotoset();
+        undoPhotoset({
+            "posts":"article .unnest, article .text",
+            "text class":".unnest,.text",
+            "photoset class":"photoset-grid" },false);
+        tippy("[title]", {
+            theme:"custom",
+            duration:300,
+            allowHTML:true,
+            arrow:false,
+            followCursor:true,
+            inlinePositioning:true,
+            placement:"auto",
+            zIndex:9999999,
+            content(reference) {
+                const title = reference.getAttribute("title");
+                reference.removeAttribute("title");
+                return title;
+            },
+        });
+    });
+    {/block:ifInfiniteScroll}
+    {/block:IndexPage}
+});
+</script>
+<script src="https://static.tumblr.com/05ejowb/5yUr1k551/mode.min.js"></script>
     
 </body>
 </html>
