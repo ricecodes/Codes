@@ -74,7 +74,7 @@ Credit:
 <link href="https://fonts.googleapis.com/css?family={text:Google Font}:700,400" rel="stylesheet">
 <script src="https://static.tumblr.com/05ejowb/RA6r1jy9i/render.js"></script>
 <link href="https://static.tumblr.com/0podkko/oDSpg7y88/photosets.css" rel="stylesheet">
-<link href="https://static.tumblr.com/05ejowb/mENr1tc84/rosewood.min.css" rel="stylesheet">
+<link href="https://static.tumblr.com/05ejowb/98Xr1tfra/rosewood.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
 
 <style type="text/css">
@@ -150,21 +150,10 @@ article, article.layout-three{margin:0 0 3em 0; width:100%;}
 <a class="diemnox moon" title="Night"><i class="bx bxs-moon"></i></a>
 <a class="diemnox none" title="Day"><i class="bx bxs-sun"></i></a>
 </label>
-{block:ifUpdates}
-<a class="up"><span class="close" title="Updates"><i class="bx {select:Updates Icon}"></i></span><span class="close" style="display:none;"><i class="bx bx-x"></i></span></a>
-<div class="up-wrap">
-<h1>Updates</h1>
-<div class="up-info">{text:Updates}</div>
-</div>
-{/block:ifUpdates}
-</div> <!--- TAB --->
 
-<!--- MOBILE NAVIGATION - Please do not remove --->
-<div class="m-side">
-<a class="luna" title="Night"><span class="bx bxs-moon"></span></a>
-<a class="solis" style="display:none;" title="Day"><span class="bx bxs-sun"></span></a>
-
+<!--- MOBILE NAVIGATION --->
 <a class="navi"><span class="close"><i class="bx bx-menu"></i></span><span class="close" style="display:none;"><i class="bx bx-x"></i></span></a>
+<!--- MOBILE NAVIGATION --->
 
 {block:ifUpdates}
 <a class="up"><span class="close" title="Updates"><i class="bx {select:Updates Icon}"></i></span><span class="close" style="display:none;"><i class="bx bx-x"></i></span></a>
@@ -173,9 +162,9 @@ article, article.layout-three{margin:0 0 3em 0; width:100%;}
 <div class="up-info">{text:Updates}</div>
 </div>
 {/block:ifUpdates}
-
 <a class="m-thm" href="https://ricecodes.tumblr.com/" target="_blank"><span class="bx bxs-star"></span></a>
 
+<!--- MOBILE NAVIGATION --->
 <div class="gate">
 <div class="m-links">
 <a href="/">refresh</a>
@@ -188,9 +177,9 @@ article, article.layout-three{margin:0 0 3em 0; width:100%;}
 {block:ifLink4}<a href="{text:Link 4 URL}">{text:Link 4}</a>{/block:ifLink4}
 {block:HasPages}{block:Pages}<a href="{URL}">{Label}</a>{/block:Pages}{/block:HasPages}
 </div>
-</div>
-    
 </div> <!--- MOBILE NAVIGATION --->
+
+</div> <!--- TAB --->
 
 <div class="sidebar">
 <div class="side">
@@ -690,7 +679,7 @@ article, article.layout-three{margin:0 0 3em 0; width:100%;}
 <script src="https://static.tumblr.com/0podkko/qWqq8va08/photosets.js"></script>
 <script src="https://static.tumblr.com/05ejowb/Y02qjlxxp/csslightbox.js"></script>
 <script src="https://static.tumblr.com/05ejowb/cxAqpcpux/load.min.js"></script>
-<script src="https://static.tumblr.com/05ejowb/Tqyqwexdt/rosewood.min.js"></script>
+<script src="https://static.tumblr.com/05ejowb/Z09r1tfd0/rosewood.min.js"></script>
 
 <script>
 $(document).ready(function(){
