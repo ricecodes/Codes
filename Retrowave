@@ -19,6 +19,7 @@ Credit:
 <title>{Title}</title>
 <link rel="shortcut icon" href="{Favicon}">
 <link rel="alternate" type="application/rss+xml" href="{RSS}">
+<script src="https://static.tumblr.com/05ejowb/RA6r1jy9i/render.js"></script>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 
@@ -80,13 +81,20 @@ Credit:
 <link href="https://fonts.googleapis.com/css?family={text:Google Font}:700,400" rel="stylesheet">
 <link href="https://static.tumblr.com/0podkko/oDSpg7y88/photosets.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
-<link href="https://static.tumblr.com/05ejowb/gUqqvy91o/retrowave.min.css" rel="stylesheet">
-{block:ifDayMode}<link href="https://static.tumblr.com/05ejowb/zc7qyj610/retroday.min.css " rel="stylesheet">{/block:ifDayMode}
+<link href="https://static.tumblr.com/05ejowb/tKmr1tm5o/retrowave.min.css" rel="stylesheet">
 
 <style type="text/css">
 
 /* VARIABLES - Please do not edit/remove this */
 
+:root {
+    --body-family:{text:Google Font};
+    --body-size:{text:Font Size};
+    --line-hgt:{text:Line Height};
+    --bg-size:{select:Background Size};
+}
+
+{block:ifNotDayMode}
 :root {
     --accent:{color:Accent};
     --accent-text:{color:Accent Text};
@@ -104,23 +112,74 @@ Credit:
     --text:{color:Text};
     --permalink:{color:Permalink};
     --question:{color:Question};
-    --day-accent:{color:Day Accent};
-    --day-bg:{color:Day Background};
-    --day-posts-head:{color:Day Posts Head};
-    --day-posts:{color:Day Posts};
-    --day-borders:{color:Day Borders};
-    --day-text:{color:Day Text};
-    --day-permalink:{color:Day Permalink};
-    --day-question:{color:Day Question};
     --rgb-posts-head:{RGBcolor:Posts Head};
-    --rgb-day-posts-head:{RGBcolor:Day Posts Head};
-    
-    /* ETC */
-    --body-family:{text:Google Font};
-    --body-size:{text:Font Size};
-    --line-hgt:{text:Line Height};
-    --bg-size:{select:Background Size};
 }
+
+[data-theme="daynight"] {
+    --accent:{color:Day Accent};
+    --bg:{color:Day Background};
+    --posts-head:{color:Day Posts Head};
+    --posts:{color:Day Posts};
+    --borders:{color:Day Borders};
+    --text:{color:Day Text};
+    --permalink:{color:Day Permalink};
+    --question:{color:Day Question};
+    --rgb-posts-head:{RGBcolor:Day Posts Head};
+}
+
+.pgs a, .tags a, .m-side-links a, .m-search { background:var(--posts-head); color:var(--text); border:1px solid var(--posts-head); }
+
+[data-theme="daynight"] .pgs a, [data-theme="daynight"] .tags a, [data-theme="daynight"] .m-side-links a, [data-theme="daynight"] .ctrls .bx, [data-theme="daynight"] .credits .bx { border-color:var(--borders); background:var(--posts); }
+[data-theme="daynight"] .m-side-links a { background:var(--posts-head); }
+[data-theme="daynight"] .m-search, [data-theme="daynight"] .search, [data-theme="daynight"] .address, [data-theme="daynight"] .side-links a { border-color:var(--borders); }
+{/block:ifNotDayMode}
+
+{block:ifDayMode}
+:root {
+    --accent:{color:Day Accent};
+    --accent-text:{color:Accent Text};
+    --links:{color:Links};
+    --links-hover:{color:Links Hover};
+    --selection-bg:{color:Selection Background};
+    --selection:{color:Selection};
+    --tooltips:{color:Tooltips};
+    --tooltips-text:{color:Tooltips Text};
+    --like-btn:{color:Like Button};
+    --bg:{color:Day Background};
+    --posts-head:{color:Day Posts Head};
+    --posts:{color:Day Posts};
+    --borders:{color:Day Borders};
+    --text:{color:Day Text};
+    --permalink:{color:Day Permalink};
+    --question:{color:Day Question};
+    --rgb-posts-head:{RGBcolor:Day Posts Head};
+}
+
+[data-theme="daynight"] {
+    --accent:{color:Accent};
+    --bg:{color:Background};
+    --posts-head:{color:Posts Head};
+    --posts:{color:Posts};
+    --borders:{color:Borders};
+    --text:{color:Text};
+    --permalink:{color:Permalink};
+    --question:{color:Question};
+    --rgb-posts-head:{RGBcolor:Posts Head};
+}
+
+.pgs a, .tags a, .ctrls .bx, .credits .bx { background:var(--posts); color:var(--text); border:1px solid var(--borders); }
+
+.m-side-links a { background:var(--posts-head); color:var(--text); }
+.search, .address, .side-links a, .m-side-links a { border:1px solid var(--borders); }
+
+[data-theme="daynight"] .pgs a, [data-theme="daynight"] .tags a, [data-theme="daynight"] .ctrls .bx, [data-theme="daynight"] .credits .bx, [data-theme="daynight"] .search, [data-theme="daynight"] .address, [data-theme="daynight"] .side-links a, [data-theme="daynight"] .m-side-links a { border-color:var(--posts-head); background:var(--posts-head); }
+
+@media only screen and (max-width:999px) {
+[data-theme="daynight"] .ctrls .bx, [data-theme="daynight"] .m-post-icons .bx { background:var(--posts); color:var(--text); border:1px solid var(--borders); }
+.m-search .bx, [data-theme="daynight"] .m-search .bx { border-width:0; }
+.m-search .bx:hover { background:transparent!important; cursor:default; border-width:0; color:var(--text)!important; }
+}
+{/block:ifDayMode}
 
 {block:ifNotRoundCorners}
 .tippy-box[data-theme~='custom'] { border-radius:0; }
@@ -130,61 +189,43 @@ Credit:
 
 {block:ifRoundCorners}
 .reblogged blockquote, blockquote { border-radius:7px; }
-.side-links a { border-radius:5px; }
+.side-links a, .m-side-links a { border-radius:5px; }
 {/block:ifRoundCorners}
 
 /* DAYNIGHT */
 body { background-image:url({image:Night Background}); }
-body.day { background-image:url({image:Day Background}); }
+[data-theme="daynight"] body { background-image:url({image:Day Background}); }
 
 {block:ifDayMode}
 body { background-image:url({image:Day Background})!important; }
-body.night { background-image:url({image:Night Background})!important; }
+[data-theme="daynight"] body { background-image:url({image:Night Background})!important; }
 {/block:ifDayMode}
 
 /* MEDIA QUERIES */
 
 @media only screen and (max-width:999px) {
 body { background-image:url({image:Night Background}); background-size:cover; background-attachment:fixed; background-repeat:repeat; }
-body.day { background-image:url({image:Day Background}); background-size:cover; background-attachment:fixed; background-repeat:repeat; }
+[data-theme="daynight"] body { background-image:url({image:Day Background}); background-size:cover; background-attachment:fixed; background-repeat:repeat; }
 
 {block:ifDayMode}
 body { background-image:url({image:Day Background}); background-size:cover; background-attachment:fixed; background-repeat:repeat; }
-body.night { background-image:url({image:Night Background}); background-size:cover; background-attachment:fixed; background-repeat:repeat; }
+[data-theme="daynight"] body { background-image:url({image:Night Background}); background-size:cover; background-attachment:fixed; background-repeat:repeat; }
 {/block:ifDayMode}
 
 .permalink, .p-wrap, .stick { display:none!important; } 
-
 }
+
+body.night .diemnox { display:block; }
+input[type=checkbox], body.night .moon { display:none; }
+input[type=checkbox]:checked + .dn { vertical-align:middle; }
 
 {CustomCSS}
 </style>
 </head>
 
-<!----------------------------------------------------- SCRIPTS ------->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
-<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
-<script src="https://static.tumblr.com/0podkko/qWqq8va08/photosets.js"></script>
-<script src="https://static.tumblr.com/05ejowb/Y02qjlxxp/csslightbox.js"></script>
-<script src="https://static.tumblr.com/05ejowb/MWWqv6rfj/retrowave.min.js"></script>
-
 <body>
 
 <div class="content">
-
-<div class="ctrls">
-<a class="appear"><span class="hide" title="Show Controls"><i class="bx bx-cog {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></i></span><span class="hide" style="display:none;" title="Hide Controls"><i class="bx bx-cog {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></i></span></a>
-{block:ifNotDayMode}
-<a class="sun" title="Day"><span class="bx bx-sun {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></span></a>
-<a class="moon" style="display:none;" title="Night"><span class="bx bx-moon {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></span></a>
-{/block:ifNotDayMode}
-{block:ifDayMode}
-<a class="luna" title="Night"><span class="bx bx-moon {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></span></a>
-<a class="solis" style="display:none;" title="Day"><span class="bx bx-sun {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></span></a>
-{/block:ifDayMode}
-</div>
 
 <div class="wrapper">
 
@@ -251,40 +292,38 @@ body.night { background-image:url({image:Night Background}); background-size:cov
 
 <section>
 
-<!--- BEGINNING OF MOBILE SIDEBAR --->
-<div class="m-sidebar">
-<div class="entry">
-<article class="{block:ifRoundCorners}round{/block:ifRoundCorners} r-border b-border l-border a-border">
-<div class="post-header flex justify b-border">
-
+<div class="ctrls">
+<a class="appear"><span class="hide" title="Show Controls"><i class="bx bx-cog {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></i></span><span class="hide" style="display:none;" title="Hide Controls"><i class="bx bx-cog {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></i></span></a>
+<div class="m-post-header flex justify">
+<label class="dn"><input class="modus" type="checkbox">
 {block:ifNotDayMode}
-<a class="sun {block:ifRoundCorners}rounder{/block:ifRoundCorners} border"><span class="bx bx-sun"></span>Day</a>
-<a class="moon {block:ifRoundCorners}rounder{/block:ifRoundCorners} border" style="display:none;"><span class="bx bx-moon"></span>Night</a>
+<a class="diemnox moon" title="Day"><i class="bx bx-sun {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></i></a>
+<a class="diemnox none" title="Night"><i class="bx bx-moon {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></i></a>
 {/block:ifNotDayMode}
 {block:ifDayMode}
-<a class="luna {block:ifRoundCorners}rounder{/block:ifRoundCorners} border"><span class="bx bx-moon"></span>Night</a>
-<a class="solis {block:ifRoundCorners}rounder{/block:ifRoundCorners} border" style="display:none;"><span class="bx bx-sun"></span>Day</a>
+<a class="diemnox moon" title="Night"><i class="bx bx-moon {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></i></a>
+<a class="diemnox none" title="Day"><i class="bx bx-sun {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></i></a>
 {/block:ifDayMode}
-
-<div class="post-icons">
-<a><span class="bx bx-minus {block:ifRoundCorners}lr{/block:ifRoundCorners}" {block:IndexPage}title="Posted {TimeAgo}"{/block:IndexPage}></span><span class="bx bx-window" {block:IndexPage}title="{NoteCountWithLabel}"{/block:IndexPage}></span><span class="bx bx-x big {block:ifRoundCorners}rr{/block:ifRoundCorners}" {block:IndexPage}title="{block:NotReblog}Original Post{/block:NotReblog}{block:RebloggedFrom}Reblogged Post{/block:RebloggedFrom}"{/block:IndexPage}></span></a>
+</label>
+<div class="m-post-icons">
+<a class="{block:IndexPage}hover{/block:IndexPage}"><span class="bx bx-minus {block:ifRoundCorners}lr{/block:ifRoundCorners}" {block:IndexPage}title="Posted {TimeAgo}"{/block:IndexPage}></span><span class="bx bx-window" {block:IndexPage}title="{NoteCountWithLabel}"{/block:IndexPage}></span><span class="bx bx-x big {block:ifRoundCorners}rr{/block:ifRoundCorners}" {block:IndexPage}title="{block:NotReblog}Original Post{/block:NotReblog}{block:RebloggedFrom}Reblogged Post{/block:RebloggedFrom}"{/block:IndexPage}></span></a>
 </div> <!--- MOBILE ICONS --->
-</div> <!--- MOBILE HEADER --->
+</div> <!--- MOBILE POST HEADER --->
 
-<div class="post-address flex justify centered b-border">
-<div class="search border {block:ifRoundCorners}rounder{/block:ifRoundCorners}"><span class="bx bx-search"></span><form action="/search" method="get"><input class="searchbar" type="text" name="q" placeholder="Search" value="{SearchQuery}" autocomplete="off"/></form></div>
+<div class="m-address flex justify centered">
+<div class="m-search border {block:ifRoundCorners}rounder{/block:ifRoundCorners}"><span class="bx bx-search"></span><form action="/search" method="get"><input class="searchbar" type="text" name="q" placeholder="Search" value="{SearchQuery}" autocomplete="off"/></form></div>
 </div> <!--- MOBILE SEARCHBAR --->
 
-<div class="description">
+<div class="m-description">
 {block:ifNotCustomDescription}{Description}{/block:ifNotCustomDescription}
 {block:ifCustomDescription}{text:Description}{/block:ifCustomDescription}
 </div>
 
 {block:ifUpdates}
-<div class="updates t-border">{text:Updates}</div>
+<div class="m-updates t-border">{text:Updates}</div>
 {/block:ifUpdates} <!--- MOBILE UPDATES --->
 
-<div class="side-links t-border">
+<div class="m-side-links t-border">
 <a href="/">{text:Home Link}</a>
 {block:AskEnabled}<a href="/ask">{text:Ask Link}</a>{/block:AskEnabled}
 {block:SubmissionsEnabled}<a href="/submit">{text:Submit Link}</a>{/block:SubmissionsEnabled}
@@ -296,10 +335,7 @@ body.night { background-image:url({image:Night Background}); background-size:cov
 {block:HasPages}{block:Pages}<a href="{URL}">{Label}</a>{/block:Pages}{/block:HasPages}
 <a href="https://ricecodes.tumblr.com/">Theme</a>
 </div> <!--- MOBILE SIDE LINKS --->
-    
-</article>
-</div>
-</div> <!--- END OF MOBILE SIDEBAR --->
+</div> <!--- END OF CTRLS --->
 
 {block:Posts}
 
@@ -333,7 +369,7 @@ body.night { background-image:url({image:Night Background}); background-size:cov
 {/block:Date}
 
 {block:Text}
-{block:Title}<h1>{Title}</h1>{/block:Title}
+{block:Title}<div class="t-title">{Title}</div>{/block:Title}
 {block:NotReblog}
 <div class="text"><div class="caption">{Body}</div></div>
 {/block:NotReblog}
@@ -387,8 +423,8 @@ body.night { background-image:url({image:Night Background}); background-size:cov
 {/block:Quote}
 
 {block:Chat}
+{block:Title}<div class="t-title">{Title}</div>{/block:Title}
 <div class="chat">
-{block:Title}<h1>{Title}</h1>{/block:Title}
 {block:Lines}
 <div class="lines">
 {block:Label}<span class="label">{Label}</span>{/block:Label} {Line}
@@ -530,8 +566,8 @@ body.night { background-image:url({image:Night Background}); background-size:cov
 
 {block:Pagination}
 <div class="pgs flex justify">
-<div class="prev {block:ifRoundCorners}round{/block:ifRoundCorners}">{block:PreviousPage}<a href="{PreviousPage}">Previous</a>{/block:PreviousPage}<span>Previous</span></div>
-<div class="next {block:ifRoundCorners}round{/block:ifRoundCorners}">{block:NextPage}<a href="{NextPage}">Next</a>{/block:NextPage}<span>Next</span></div>
+<div class="prev">{block:PreviousPage}<a href="{PreviousPage}" class="{block:ifRoundCorners}rounder{/block:ifRoundCorners}">Previous</a>{/block:PreviousPage}<span class="{block:ifRoundCorners}rounder{/block:ifRoundCorners}">Previous</span></div>
+<div class="next">{block:NextPage}<a href="{NextPage}" class="{block:ifRoundCorners}rounder{/block:ifRoundCorners}">Next</a>{/block:NextPage}<span class="{block:ifRoundCorners}rounder{/block:ifRoundCorners}">Next</span></div>
 </div>
 {/block:Pagination}
 
@@ -544,6 +580,15 @@ body.night { background-image:url({image:Night Background}); background-size:cov
 </div>
 
 </div> <!--- CONTENT --->
+
+<!----------------------------------------------------- SCRIPTS ------->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<script src="https://static.tumblr.com/0podkko/qWqq8va08/photosets.js"></script>
+<script src="https://static.tumblr.com/05ejowb/Y02qjlxxp/csslightbox.js"></script>
+<script src="https://static.tumblr.com/05ejowb/4O3r1tgrb/retrowave.min.js"></script>
     
 </body>
 </html>
