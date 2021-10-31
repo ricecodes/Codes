@@ -24,6 +24,7 @@ Credit:
 
 <link rel="shortcut icon" href="{Favicon}">
 <link rel="alternate" type="application/rss+xml" href="{RSS}">
+<script src="https://static.tumblr.com/05ejowb/RA6r1jy9i/render.js"></script>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 
@@ -80,12 +81,17 @@ Credit:
 
 <link href="https://fonts.googleapis.com/css2?family={text:Google Font}:wght@400;700&display=swap" rel="stylesheet">
 <link href="https://static.tumblr.com/0podkko/oDSpg7y88/photosets.css" rel="stylesheet">
-<link href="https://static.tumblr.com/05ejowb/3dXqze3nv/main.min.css" rel="stylesheet">
 <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
+<link href="https://static.tumblr.com/05ejowb/wqor1to1j/main.min.css" rel="stylesheet">
 
 <style>
 
 /* VARIABLES - Please do not edit/remove this */
+
+:root {
+    --body-family:{text:Google Font},sans-serif;
+    --body-size:{text:Font Size};
+}
 
 {block:ifNotDarkMode}
 :root {
@@ -110,13 +116,9 @@ Credit:
     --selection:{color:Selection};
     --tooltips:{color:Tooltips};
     --tooltips-text:{color:Tooltips Text};
-    
-    /* FONTS */
-    --body-family:{text:Google Font},sans-serif;
-    --body-size:{text:Font Size};
 }
 
-body.night {
+[data-theme="daynight"] {
     --background:{color:Night Background};
     --blockquote:{color:Night Background};
     --borders:{color:Night Borders};
@@ -132,7 +134,7 @@ body.night {
 }
 
 .tmblr-iframe { filter:invert(1); -webkit-filter:invert(1); -o-filter:invert(1); -moz-filter:invert(1); -ms-filter:invert(1); }
-body.night .tmblr-iframe { filter:invert(0); -webkit-filter:invert(0); -o-filter:invert(0); -moz-filter:invert(0); -ms-filter:invert(0); }
+[data-theme="daynight"] .tmblr-iframe { filter:invert(0); -webkit-filter:invert(0); -o-filter:invert(0); -moz-filter:invert(0); -ms-filter:invert(0); }
 {/block:ifNotDarkMode}
 
 {block:ifDarkMode}
@@ -158,13 +160,9 @@ body.night .tmblr-iframe { filter:invert(0); -webkit-filter:invert(0); -o-filter
     --selection:{color:Selection};
     --tooltips:{color:Accent};
     --tooltips-text:{color:Accent Text};
-    
-    /* FONTS */
-    --body-family:{text:Google Font},sans-serif;
-    --body-size:{text:Font Size};
 }
 
-body.day {
+[data-theme="daynight"] {
     --background:{color:Background};
     --blockquote:{color:Question};
     --borders:{color:Borders};
@@ -178,7 +176,11 @@ body.day {
     --tooltips:{color:Tooltips};
     --tooltips-text:{color:Tooltips Text};
 }
+
+.tmblr-iframe { filter:invert(0); -webkit-filter:invert(0); -o-filter:invert(0); -moz-filter:invert(0); -ms-filter:invert(0); }
+[data-theme="daynight"] .tmblr-iframe { filter:invert(1); -webkit-filter:invert(1); -o-filter:invert(1); -moz-filter:invert(1); -ms-filter:invert(1); }
 {/block:ifDarkMode}
+
 
 {block:ifBorders}
 .border, .reblogged blockquote, blockquote { border:1px solid var(--borders); }
@@ -200,16 +202,6 @@ section.layout-two .entry, section.layout-three .entry { margin:0 0 8rem; width:
 {CustomCSS}
 </style>
 </head>
-
-<!----------------------------------------------------- SCRIPTS ------->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
-<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
-<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-<script src="https://static.tumblr.com/0podkko/qWqq8va08/photosets.js"></script>
-<script src="https://static.tumblr.com/05ejowb/Y02qjlxxp/csslightbox.js"></script>
-<script src="https://static.tumblr.com/05ejowb/4WPqzcmdk/main.min.js"></script>
 
 <body>
 
@@ -235,14 +227,6 @@ section.layout-two .entry, section.layout-three .entry { margin:0 0 8rem; width:
 <a href="https://ricecodes.tumblr.com/" target="_blank" title="Theme by ricecodes">Theme</a>
 <a class="search"><form action="/search" method="get"><input class="searchbar" type="text" name="q" value="{SearchQuery}" placeholder="Search" autocomplete="off"/></form></a>
 </nav>
-{block:ifNotDarkMode}
-<a class="luna" title="Night"><i class="bx bxs-moon"></i></a>
-<a class="solis none" title="Day"><i class="bx bxs-sun"></i></a>
-{/block:ifNotDarkMode}
-{block:ifDarkMode}
-<a class="sun" title="Day"><i class="bx bxs-sun"></i></a>
-<a class="moon none" title="Night"><i class="bx bxs-moon"></i></a>
-{/block:ifDarkMode}
 </div>
 
 <div class="tab_a">
@@ -261,21 +245,9 @@ section.layout-two .entry, section.layout-three .entry { margin:0 0 8rem; width:
 </div>
 </div>
 
-<div class="tab_b">
-{block:ifNotDarkMode}
-<a class="luna" title="Night"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="bx"><path d="M12 11.807A9.002 9.002 0 0 1 10.049 2a9.942 9.942 0 0 0-5.12 2.735c-3.905 3.905-3.905 10.237 0 14.142 3.906 3.906 10.237 3.905 14.143 0a9.946 9.946 0 0 0 2.735-5.119A9.003 9.003 0 0 1 12 11.807z"></path></svg></a>
-<a class="solis none" title="Day"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="bx"><path d="M6.995 12c0 2.761 2.246 5.007 5.007 5.007s5.007-2.246 5.007-5.007-2.246-5.007-5.007-5.007S6.995 9.239 6.995 12zM11 19h2v3h-2zm0-17h2v3h-2zm-9 9h3v2H2zm17 0h3v2h-3zM5.637 19.778l-1.414-1.414 2.121-2.121 1.414 1.414zM16.242 6.344l2.122-2.122 1.414 1.414-2.122 2.122zM6.344 7.759 4.223 5.637l1.415-1.414 2.12 2.122zm13.434 10.605-1.414 1.414-2.122-2.122 1.414-1.414z"></path></svg></a>
-{/block:ifNotDarkMode}
-{block:ifDarkMode}
-<a class="sun" title="Day"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="bx"><path d="M6.995 12c0 2.761 2.246 5.007 5.007 5.007s5.007-2.246 5.007-5.007-2.246-5.007-5.007-5.007S6.995 9.239 6.995 12zM11 19h2v3h-2zm0-17h2v3h-2zm-9 9h3v2H2zm17 0h3v2h-3zM5.637 19.778l-1.414-1.414 2.121-2.121 1.414 1.414zM16.242 6.344l2.122-2.122 1.414 1.414-2.122 2.122zM6.344 7.759 4.223 5.637l1.415-1.414 2.12 2.122zm13.434 10.605-1.414 1.414-2.122-2.122 1.414-1.414z"></path></svg></a>
-<a class="moon none" title="Night"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="bx"><path d="M12 11.807A9.002 9.002 0 0 1 10.049 2a9.942 9.942 0 0 0-5.12 2.735c-3.905 3.905-3.905 10.237 0 14.142 3.906 3.906 10.237 3.905 14.143 0a9.946 9.946 0 0 0 2.735-5.119A9.003 9.003 0 0 1 12 11.807z"></path></svg></a>
-{/block:ifDarkMode}
-</div>
-
 <section class="{block:IndexPage}layout-{select:Layout}{/block:IndexPage}">
 
-<!--- START OF MOBILE NAVIGATION --->
-<div class="m-header flex center">
+<div class="m-header">
 <div class="mbtn_3"><span class="exit_3"><i class="bx bx-menu"></i></span><span class="exit_3 none"><i class="bx bx-x"></i></span>
 <div class="menu_3 round">
 <a href="/">{text:Home Link}</a>
@@ -291,10 +263,17 @@ section.layout-two .entry, section.layout-three .entry { margin:0 0 8rem; width:
 </div>
 </div>
 <img src="{PortraitURL-128}">
-{block:ifNotDarkMode}<a class="luna"><i class="bx bxs-moon"></i></a><a class="solis none"><i class="bx bxs-sun"></i></a>{/block:ifNotDarkMode}
-{block:ifDarkMode}<a class="sun"><i class="bx bxs-sun"></i></a><a class="moon none"><i class="bx bxs-moon"></i></a>{/block:ifDarkMode}
+<label class="dn"><input class="modus" type="checkbox">
+{block:ifNotDarkMode}
+<a class="diemnox moon" title="Night"><i class="bx bxs-moon"></i></a>
+<a class="diemnox none" title="Day"><i class="bx bxs-sun"></i></a>
+{/block:ifNotDarkMode}
+{block:ifDarkMode}
+<a class="diemnox moon" title="Day"><i class="bx bxs-sun"></i></a>
+<a class="diemnox none" title="Night"><i class="bx bxs-moon"></i></a>
+{/block:ifDarkMode}
+</label>
 </div>
-<!--- END OF MOBILE NAVIGATION --->
 
 <div class="description">
 <a class="d-title" href="/">{block:ifNotCustomTitle}{Title}{/block:ifNotCustomTitle}{block:ifCustomTitle}{text:Custom Title}{/block:ifCustomTitle}</a>
@@ -540,6 +519,17 @@ section.layout-two .entry, section.layout-three .entry { margin:0 0 8rem; width:
 <a class="scroll" title="Back to top"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="bx"><path d="M11 8.414V18h2V8.414l4.293 4.293 1.414-1.414L12 4.586l-6.707 6.707 1.414 1.414z"></path></svg></a>
 
 </div>
+
+
+<!----------------------------------------------------- SCRIPTS ------->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script src="https://static.tumblr.com/0podkko/qWqq8va08/photosets.js"></script>
+<script src="https://static.tumblr.com/05ejowb/Y02qjlxxp/csslightbox.js"></script>
+<script src="https://static.tumblr.com/05ejowb/FyGr1tms2/main.min.js"></script>
     
 </body>
 </html>
