@@ -21,6 +21,7 @@ Credit:
 <title>{Title}</title>
 <link rel="shortcut icon" href="{Favicon}">
 <link rel="alternate" type="application/rss+xml" href="{RSS}">
+<script src="https://static.tumblr.com/05ejowb/RA6r1jy9i/render.js"></script>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 
@@ -72,9 +73,8 @@ Credit:
 <meta name="text:Link 4 URL" content="">
         
 <link href="https://fonts.googleapis.com/css?family={text:Google Font}:700,400" rel="stylesheet">
-<script src="https://static.tumblr.com/05ejowb/RA6r1jy9i/render.js"></script>
 <link href="https://static.tumblr.com/0podkko/oDSpg7y88/photosets.css" rel="stylesheet">
-<link href="https://static.tumblr.com/05ejowb/98Xr1tfra/rosewood.min.css" rel="stylesheet">
+<link href="https://static.tumblr.com/05ejowb/bitr1ynmo/rosewood.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
 
 <style type="text/css">
