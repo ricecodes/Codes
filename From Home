@@ -17,7 +17,6 @@ Credit:
 <html>
 <head>
 
-<meta charset="utf-8">
 <title>{Title}{block:TagPage} — {lang:Posts tagged Tag}{/block:TagPage}{block:SearchPage} — {lang:Search results for SearchQuery}{/block:SearchPage}{block:PermalinkPage}{block:PostSummary} — {PostSummary}{/block:PostSummary}{/block:PermalinkPage}</title>
 <meta name="description" content="{MetaDescription}">
 
