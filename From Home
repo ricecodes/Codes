@@ -285,7 +285,8 @@ nav a, .navi a { border-radius:5px; }
 <body>
 
 <div class="header flex justify center">
-<div class="search"><form action="/search" method="get"><input class="searchbar" type="text" name="q" value="{SearchQuery}" placeholder="Search {Name}..." autocomplete="off"/></form></div>
+<div class="search {block:HideFromSearchEnabled}none{/block:HideFromSearchEnabled}"><form action="/search" method="get"><input class="searchbar" type="text" name="q" value="{SearchQuery}" placeholder="Search {Name}..." autocomplete="off"/></form></div>
+{block:HideFromSearchEnabled}<div class="no-search"></div>{/block:HideFromSearchEnabled}
 <div class="ctrls"><i class="bx {select:Controls Icon}"></i></div>
 </div>
 
