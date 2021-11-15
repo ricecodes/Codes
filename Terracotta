@@ -81,7 +81,7 @@ Credit:
 <link href="https://fonts.googleapis.com/css2?family={text:Google Font}:wght@400;700&display=swap" rel="stylesheet">
 <link href="https://static.tumblr.com/0podkko/oDSpg7y88/photosets.css" rel="stylesheet">
 <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
-<link href="https://static.tumblr.com/05ejowb/wqor1to1j/main.min.css" rel="stylesheet">
+<link href="https://static.tumblr.com/05ejowb/U9Pr2ftyf/main.min.css" rel="stylesheet">
 
 <style>
 
@@ -524,13 +524,26 @@ section.layout-two .entry, section.layout-three .entry { margin:0 0 8rem; width:
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
 <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
-{block:IndexPage}
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-{/block:IndexPage}
 <script src="https://static.tumblr.com/0podkko/qWqq8va08/photosets.js"></script>
-<script src="https://static.tumblr.com/05ejowb/Y02qjlxxp/csslightbox.js"></script>
-<script src="https://static.tumblr.com/05ejowb/FyGr1tms2/main.min.js"></script>
+<script src="https://static.tumblr.com/05ejowb/LsQr2l789/main.min.js"></script>
+
+<script>
+$(document).ready(function(){
+   {block:IndexPage}
+   var $grid = $(".grid").masonry({
+        itemSelector:".entry",
+        stagger:30,
+        visibleStyle:{ transform:"translateY(0)", opacity: 1 },
+        hiddenStyle:{ transform:"translateY(100px)", opacity: 0 }
+        });
+    $grid.imagesLoaded().progress( function() {
+        $grid.masonry();
+    });
+   {/block:IndexPage}
+});
+</script>
     
 </body>
 </html>
