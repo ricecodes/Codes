@@ -205,7 +205,7 @@ input[type=checkbox]:checked + .dn { vertical-align:middle; }
 iframe.tmblr-iframe, .t-ctrls { display:none; }
 .container { width:95%; margin:50px auto; } 
 .sidebar { display:none; }
-.tab { display:inline-block; position:relative; margin:50px 0 0; display:inline-block; width:100%; text-align:center; }
+.tab { display:inline-block; position:inherit; margin:50px 0 0; display:inline-block; width:100%; text-align:center; }
 .tab .bx, .navi, .m-thm { display:inline-block; margin:0; }
 .tab .bx { margin:0 5px; }
 .gate { position:absolute; width:50%; margin:10px 0 0 25%; z-index:9999; }
