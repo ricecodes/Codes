@@ -840,7 +840,7 @@ Aliquam nisi lorem, pulvinar id, commodo feugiat, vehicula et, mauris. <!-- Quot
 
 <div class="credit">
 <a class="scroll" title="{lang:Back to top}"><i class="ft" data-feather="arrow-up"></i></a>
-<a class="thm" title="Theme by ricecodes"><i class="ft" data-feather="star"></i></a>
+<a class="thm" href="https://ricecodes.tumblr.com/" title="Theme by ricecodes"><i class="ft" data-feather="star"></i></a>
 </div>
 
 <!----------------------------------------------------- SCRIPTS ------->
