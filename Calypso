@@ -398,7 +398,7 @@ body.right-side .tmblr-iframe { right:20px!important; }
 {block:Text}
 {block:Title}<div class="t-title">{Title}</div>{/block:Title}
 {block:NotReblog}
-<div class="text"><div class="caption">{Body}</div></div>
+<div class="caption">{Body}</div>
 {/block:NotReblog}
 {block:Rebloggedfrom}
 <div class="unnest">
