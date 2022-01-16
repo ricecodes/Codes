@@ -18,30 +18,36 @@ Credit:
 <html>
 <head>
 
-<title>{Title}</title>
+<title>{Title}{block:TagPage} — {lang:Posts tagged Tag}{/block:TagPage}{block:SearchPage} — {lang:Search results for SearchQuery}{/block:SearchPage}{block:PermalinkPage}{block:PostSummary} — {PostSummary}{/block:PostSummary}{/block:PermalinkPage}</title>
+
+
 <link rel="shortcut icon" href="{Favicon}">
 <link rel="alternate" type="application/rss+xml" href="{RSS}">
 <script src="https://static.tumblr.com/05ejowb/RA6r1jy9i/render.js"></script>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 
-<meta name="color:Accent" content="#d29b9b">
+<meta name="color:Accent" content="#d99d98">
 <meta name="color:Accent Text" content="#ffffff">
-<meta name="color:Links" content="#c57a84">
-<meta name="color:Links Hover" content="#73bc9e">
 <meta name="color:Background" content="#f0f0f0">
-<meta name="color:Borders" content="#dadada">
 <meta name="color:Posts" content="#fafafa">
-<meta name="color:Question" content="#f0f0f0">
-<meta name="color:Text" content="#333333">
-<meta name="color:Night Background" content="#222222">
-<meta name="color:Night Borders" content="#6a6a6a">
-<meta name="color:Night Posts" content="#3a3a3a">
-<meta name="color:Night Question" content="#222222">
+<meta name="color:Borders" content="#d2d2d2">
+<meta name="color:Text" content="#000000">
+<meta name="color:Question" content="#eeeeee">
+<meta name="color:Links" content="#c48380">
+<meta name="color:Links Hover" content="#87c1af">
+<meta name="color:Selection Background" content="#e09692">
+<meta name="color:Selection" content="#ffffff">
+<meta name="color:Tooltips" content="#000000">
+<meta name="color:Tooltips Text" content="#ffffff">
+<meta name="color:Night Background" content="#15161a">
+<meta name="color:Night Borders" content="#41424d">
+<meta name="color:Night Posts" content="#25262b">
 <meta name="color:Night Text" content="#ffffff">
+<meta name="color:Night Question" content="#15161a">
 
-<meta name="select:Layout" title="Two Columns" content="two">
-<meta name="select:Layout" title="Three Columns" content="three">
+<meta name="select:Blog Layout" title="Two Columns" content="two">
+<meta name="select:Blog Layout" title="Three Columns" content="three">
 
 <meta name="select:Updates Icon" title="Notification" content="bxs-notification">
 <meta name="select:Updates Icon" title="Bell" content="bxs-bell">
@@ -49,7 +55,7 @@ Credit:
 <meta name="select:Updates Icon" title="Error" content="bxs-error">
 <meta name="select:Updates Icon" title="News" content="bxs-news">
 
-<meta name="if:Hide Avatar" content="">
+<meta name="if:Dark Mode" content="">
 <meta name="if:Round Corners" content="">
 <meta name="if:Infinite Scroll" content="">
 <meta name="if:Manual Load" content="">
@@ -60,8 +66,9 @@ Credit:
 <meta name="if:Show Random" content="">
 <meta name="if:Hide Tags" content="">
 
-<meta name="text:Google Font" content="Source Sans Pro">
+<meta name="text:Body Font" content="Source Sans Pro">
 <meta name="text:Font Size" content="14px">
+<meta name="text:Line Height" content="1.5em">
 <meta name="text:Updates" content="The updates tab will automatically be hidden if this is empty.">
 <meta name="text:Link 1" content="Link 1">
 <meta name="text:Link 1 URL" content="">
@@ -71,64 +78,111 @@ Credit:
 <meta name="text:Link 3 URL" content="">
 <meta name="text:Link 4" content="Link 4">
 <meta name="text:Link 4 URL" content="">
-        
-<link href="https://fonts.googleapis.com/css?family={text:Google Font}:700,400" rel="stylesheet">
-<link href="https://static.tumblr.com/0podkko/oDSpg7y88/photosets.css" rel="stylesheet">
-<link href="https://static.tumblr.com/05ejowb/5Frr2zotm/rosewood.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
 
-<style type="text/css">
+<link href="https://fonts.googleapis.com/css2?family={text:Body Font}:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://static.tumblr.com/0podkko/oDSpg7y88/photosets.css" rel="stylesheet">
+<link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+<link href="https://static.tumblr.com/05ejowb/jlAr5s3jr/rosewood.min.css" rel="stylesheet">
+
+<style>
 
 /* VARIABLES - Please do not edit/remove this */
 
 :root {
+    --body-font:{text:Body Font},sans-serif;
+    --body-size:{text:Font Size};
+    --line-hgt:{text:Line Height};
+    --post-size:{select:Post Size};
+    --rgb-accent:{RGBcolor:Accent};
+}
+
+{block:ifNotDarkMode}
+:root {
     --accent:{color:Accent};
     --accent-text:{color:Accent Text};
-    --background:{color:Background};
+    --bg:{color:Background};
+    --rgb-bg:{RGBcolor:Background};
+    --blockquote:{color:Question};
     --borders:{color:Borders};
     --links:{color:Links};
     --links-hover:{color:Links Hover};
     --posts:{color:Posts};
     --ask:{color:Question};
     --text:{color:Text};
-    --rgb-accent:{RGBcolor:Accent};
-    --rgb-bg:{RGBcolor:Background};
-    
-    /* FONTS */
-    --body-family:{text:Google Font};
-    --body-size:{text:Font Size};
+    --rgb-text:{RGBcolor:Text};
+    --selection-bg:{color:Selection Background};
+    --selection:{color:Selection};
+    --tooltips:{color:Tooltips};
+    --tooltips-text:{color:Tooltips Text};
 }
 
 [data-theme="daynight"] {
-    --background:{color:Night Background};
+    --bg:{color:Night Background};
+    --rgb-bg:{RGBcolor:Night Background};
+    --blockquote:{color:Night Background};
     --borders:{color:Night Borders};
+    --menu:{color:Night Posts};
+    --menu-text:{color:Night Text};
     --posts:{color:Night Posts};
     --ask:{color:Night Question};
     --text:{color:Night Text};
-    --rgb-bg:{RGBcolor:Night Background};
+    --rgb-text:{RGBcolor:Night Text};
+    --tooltips:{color:Accent};
+    --tooltips-text:{color:Accent Text};
 }
 
-/* ROUND CORNERS */
+.tmblr-iframe { filter:invert(1); -webkit-filter:invert(1); -o-filter:invert(1); -moz-filter:invert(1); -ms-filter:invert(1); }
+[data-theme="daynight"] .tmblr-iframe { filter:invert(0); -webkit-filter:invert(0); -o-filter:invert(0); -moz-filter:invert(0); -ms-filter:invert(0); }
+{/block:ifNotDarkMode}
 
-{block:ifRoundCorners} 
-ul li:before { content:"\ec9b"; }
-.round, .modal-container, .permalink, .m-permalink, .question, .answer, .lightbox-image, #tumblr_lightbox img, .post-footer { border-radius:10px!important; } 
-.tippy-box[data-theme~='custom'], .pgs a, .pgs span { border-radius:5px; }
-.up-wrap, .gate { border-radius:5px; }
+{block:ifDarkMode}
+:root {
+    --accent:{color:Accent};
+    --accent-text:{color:Accent Text};
+    --bg:{color:Night Background};
+    --rgb-bg:{RGBcolor:Night Background};
+    --blockquote:{color:Night Background};
+    --borders:{color:Night Borders};
+    --links:{color:Links};
+    --links-hover:{color:Links Hover};
+    --posts:{color:Night Posts};
+    --ask:{color:Night Question};
+    --text:{color:Night Text};
+    --rgb-text:{RGBcolor:Night Text};
+    --selection-bg:{color:Selection Background};
+    --selection:{color:Selection};
+    --tooltips:{color:Accent};
+    --tooltips-text:{color:Accent Text};
+}
+
+[data-theme="daynight"] {
+    --bg:{color:Background};
+    --rgb-bg:{RGBcolor:Background};
+    --blockquote:{color:Question};
+    --borders:{color:Borders};
+    --posts:{color:Posts};
+    --ask:{color:Question};
+    --text:{color:Text};
+    --rgb-text:{RGBcolor:Text};
+    --tooltips:{color:Tooltips};
+    --tooltips-text:{color:Tooltips Text};
+}
+
+.tmblr-iframe { filter:invert(0); -webkit-filter:invert(0); -o-filter:invert(0); -moz-filter:invert(0); -ms-filter:invert(0); }
+[data-theme="daynight"] .tmblr-iframe { filter:invert(1); -webkit-filter:invert(1); -o-filter:invert(1); -moz-filter:invert(1); -ms-filter:invert(1); }
+{/block:ifDarkMode}
+
+{block:ifRoundCorners}
+.round { border-radius:10px; }
+.rounder { border-radius:5px; }
 {/block:ifRoundCorners}
 
-/* PERMALINKPAGE */
-
 {block:PermalinkPage}
-.sidebar { margin:0 0 0 -2vw; }
-.container { width:60vw; }
-.content { margin:100px 0 100px 13vw; }
+.container { width:65vw; }
+.content { margin:100px 0 100px 15vw; width:45vw; }
 article { margin:0 0 3em 0; width:100%; }
-.post-footer { margin:0; width:100%; background:transparent; border-radius:0!important; border-top:1px solid {color:Borders}; }
-.notecount { background:transparent; }
-[data-theme="daynight"] .notecount { background:{color:Night Posts}; }
-[data-theme="daynight"] .post-footer, [data-theme="daynight"] ol.notes { border-top:1px solid {color:Night Borders}; }
-@media only screen and (max-width:999px) { 
+
+@media only screen and (max-width:999px) {
 .container, .container.layout-three{ margin:0; width:100%; }
 .content{ margin:100px auto; width:90%; }
 article, article.layout-three{margin:0 0 3em 0; width:100%;}
@@ -141,31 +195,20 @@ article, article.layout-three{margin:0 0 3em 0; width:100%;}
 
 <body>
 
-<div class="container {block:IndexPage}layout-{select:Layout}{/block:IndexPage}">
-
-<a class="t-ctrls"><span class="hide"><i class="bx bxs-cog"></i></span><span class="hide" style="display:none;"><i class="bx bx-x"></i></span></a>
-
 <div class="tab">
 <label class="dn"><input class="modus" type="checkbox">
+{block:ifNotDarkMode}
 <a class="diemnox moon" title="Night"><i class="bx bxs-moon"></i></a>
 <a class="diemnox none" title="Day"><i class="bx bxs-sun"></i></a>
+{/block:ifNotDarkMode}
+{block:ifDarkMode}
+<a class="diemnox moon" title="Day"><i class="bx bxs-sun"></i></a>
+<a class="diemnox none" title="Night"><i class="bx bxs-moon"></i></a>
+{/block:ifDarkMode}
 </label>
-
-<!--- MOBILE NAVIGATION --->
-<a class="navi"><span class="close"><i class="bx bx-menu"></i></span><span class="close" style="display:none;"><i class="bx bx-x"></i></span></a>
-<!--- MOBILE NAVIGATION --->
-
-{block:ifUpdates}
-<a class="up"><span class="close" title="Updates"><i class="bx {select:Updates Icon}"></i></span><span class="close" style="display:none;"><i class="bx bx-x"></i></span></a>
-<div class="up-wrap">
-<h1>Updates</h1>
-<div class="up-info">{text:Updates}</div>
-</div>
-{/block:ifUpdates}
-<a class="m-thm" href="https://ricecodes.tumblr.com/" target="_blank"><span class="bx bxs-star"></span></a>
-
-<!--- MOBILE NAVIGATION --->
-<div class="gate">
+<!--- START OF MOBILE NAVIGATION --->
+<a class="m-nav"><span class="close"><i class="bx bx-menu"></i></span><span class="close none"><i class="bx bx-x"></i></span></a>
+<div class="gate round">
 <div class="m-links">
 <a href="/">refresh</a>
 {block:AskEnabled}<a href="/ask">message</a>{block:AskEnabled}
@@ -177,13 +220,25 @@ article, article.layout-three{margin:0 0 3em 0; width:100%;}
 {block:ifLink4}<a href="{text:Link 4 URL}">{text:Link 4}</a>{/block:ifLink4}
 {block:HasPages}{block:Pages}<a href="{URL}">{Label}</a>{/block:Pages}{/block:HasPages}
 </div>
-</div> <!--- MOBILE NAVIGATION --->
+</div>
+<!--- END OF MOBILE NAVIGATION --->
+{block:ifUpdates}
+<a class="up"><span class="close" title="Updates"><i class="bx {select:Updates Icon}"></i></span><span class="close" style="display:none;"><i class="bx bx-x"></i></span></a>
+<div class="up-wrap round">
+<h1>Updates</h1>
+<div class="up-info">{text:Updates}</div>
+</div>
+{/block:ifUpdates}
+<a class="m-thm" href="https://ricecodes.tumblr.com/" target="_blank"><span class="bx bxs-star"></span></a>
+</div>
 
-</div> <!--- TAB --->
+<a class="t-ctrls"><span class="hide"><i class="bx bxs-cog"></i></span><span class="hide" style="display:none;"><i class="bx bx-x"></i></span></a>
+
+<div class="container {block:IndexPage}layout-{select:Blog Layout}{/block:IndexPage}">
 
 <div class="sidebar">
 <div class="side">
-{block:ifNotHideAvatar}<img src="{PortraitURL-128}">{/block:ifNotHideAvatar}
+{block:ShowAvatar}<img src="{PortraitURL-128}">{/block:ShowAvatar}
 <nav>
 <ul>
 <li><a href="/">refresh</a></li>
@@ -223,8 +278,7 @@ article, article.layout-three{margin:0 0 3em 0; width:100%;}
 <div class="grid">
 
 {block:Posts}
-
-<article id="{PostID}" class="{block:IndexPage}layout-{select:Layout}{/block:IndexPage} round">
+<article class="flex center {block:IndexPage}layout-{select:Blog Layout}{/block:IndexPage} round">
 
 {block:Date}
 {block:IndexPage}
@@ -240,10 +294,10 @@ article, article.layout-three{margin:0 0 3em 0; width:100%;}
 {block:ifNotHideTextPosts}
 {block:Title}<div class="t-title">{Title}</div>{/block:Title}
 {block:NotReblog}
-<div class="text {block:HasTags}{block:ifNotHideTags}has-tags{/block:ifNotHideTags}{/block:HasTags}"><div class="caption">{Body}</div></div>
+<div class="caption">{Body}</div>
 {/block:NotReblog}
 {block:Rebloggedfrom}
-<div class="unnest {block:HasTags}{block:ifNotHideTags}has-tags{/block:ifNotHideTags}{/block:HasTags}">
+<div class="unnest">
 {block:Reblogs}
 <div class="reblogged">
 <div class="username">
@@ -259,12 +313,12 @@ article, article.layout-three{margin:0 0 3em 0; width:100%;}
 {/block:Reblogs}
 </div>
 {/block:RebloggedFrom}
-{/block:ifNotHideTextPosts}
-{/block:IndexPage}
+{block:ifNotHideTextPosts}
+{block:IndexPage}
 {block:PermalinkPage}
 {block:Title}<div class="t-title">{Title}</div>{/block:Title}
 {block:NotReblog}
-<div class="text"><div class="caption">{Body}</div></div>
+<div class="caption">{Body}</div>
 {/block:NotReblog}
 {block:Rebloggedfrom}
 <div class="unnest">
@@ -360,23 +414,18 @@ article, article.layout-three{margin:0 0 3em 0; width:100%;}
 {block:Answer}
 {block:IndexPage}<div class="small"><span class="bx bx-conversation"></span></div>{/block:IndexPage}
 {block:PermalinkPage}
-{block:NotReblog}
 <div class="ask-wrap flex">
 <div class="q"><span class="bx bx-question-mark"></span></div>
-<div class="question"><div class="asker">{Asker} asked</div>{Question}</div>
-</div>
+<div class="question round"><div class="asker">{Asker} asked</div>{Question}</div>
+{block:NotReblog}
 <div class="ans-wrap flex">
-<div class="answer"><div class="asker answerer">{Name} answered</div>{Answer}</div>
+<div class="answer round"><div class="asker answerer">{Name} answered</div>{Answer}</div>
 <div class="a"><span class="bx bx-font"></span></div>
 </div>
 {/block:NotReblog}
 {block:Rebloggedfrom}
-<div class="ask-wrap flex">
-<div class="q"><span class="bx bx-question-mark"></span></div>
-<div class="question"><div class="asker">{Asker} asked</div>{Question}</div>
-</div>
 <div class="ans-wrap flex">
-<div class="answer">{block:Answerer}<div class="asker answerer">{Answerer} answered</div>{/block:Answerer}{Answer}</div>
+<div class="answer round">{block:Answerer}<div class="asker answerer">{Answerer} answered</div>{/block:Answerer}{Answer}</div>
 <div class="a"><span class="bx bx-font"></span></div>
 </div>
 <div class="unnest">
@@ -413,7 +462,7 @@ article, article.layout-three{margin:0 0 3em 0; width:100%;}
 {/block:Panorama}
 
 {block:Video}
-{block:IndexPage}<div class="small"><span class="bx bxs-movie-play"></span></div>{/block:IndexPage}
+{block:IndexPage}<div class="small"><span class="bx bx-video-recording"></span></div>{/block:IndexPage}
 {block:PermalinkPage}
 {VideoEmbed-700}
 {/block:PermalinkPage}
@@ -422,7 +471,20 @@ article, article.layout-three{margin:0 0 3em 0; width:100%;}
 {block:Audio}
 {block:IndexPage}<div class="small"><span class="bx bxs-music"></span></div>{/block:IndexPage}
 {block:PermalinkPage}
-{block:AudioEmbed}{AudioEmbed}{/block:AudioEmbed}
+{block:AudioEmbed}{AudioEmbed-640}{/block:AudioEmbed}
+{block:AudioPlayer}
+{AudioPlayer}
+<div class="audio flex justify">
+<div class="flex center">
+<div class="audio_player"><span class="audio-btns flex center"></span><div class="seekbar"></div></div>
+<div class="audio-info">
+{block:TrackName}<strong>{TrackName}</strong>{/block:TrackName}
+{block:Artist}<p>{Artist}</p>{/block:Artist}
+</div>
+</div>
+{block:AlbumArt}<img class="album" src="{AlbumArtURL}">{/block:AlbumArt}
+</div>
+{/block:AudioPlayer}
 {/block:PermalinkPage}
 {/block:Audio}
 
@@ -451,15 +513,14 @@ article, article.layout-three{margin:0 0 3em 0; width:100%;}
 {/block:Caption}
 
 {block:Date}
-<div class="post-footer">
-<div class="notecount">
-{block:PinnedPostLabel}<div class="pin"><span class="bx bxs-pin"></span>{lang:Pinned Post}</div>{/block:PinnedPostLabel}
+<div class="perm-footer">
+<div class="perm-info">
 {block:RebloggedFrom}
-<div class="via"><span class="bx bx-repost"></span><a href="{ReblogParentURL}">{ReblogParentName}</a></div>
-<div class="root"><span class="bx bxs-map"></span><a href="{ReblogRootURL}">{ReblogRootName}</a></div>
+<div class="via"><ul><li><a href="{ReblogParentURL}">{ReblogParentName}</a></li></ul></div>
+<div class="root"><ul><li><a href="{ReblogRootURL}">{ReblogRootName}</a></li></ul></div>
 {/block:RebloggedFrom}
-<div class="date"><span class="bx bxs-bookmark"></span>{Month} {DayOfMonthWithZero}, {Year} with {NoteCountWithLabel}</div>
-{block:HasTags}<div class="tags"><span class="bx bxs-purchase-tag"></span>{block:Tags}<a href="{TagURL}">#{Tag}</a>{/block:Tags}</div>{/block:HasTags}
+<div class="date"><ul><li>{Month} {DayOfMonthWithZero}, {Year} with {NoteCountWithLabel}</li></ul></div>
+{block:HasTags}<div class="itags"><ul><li>{block:Tags}<a href="{TagURL}">#{Tag}</a>{/block:Tags}</li></ul></div>{/block:HasTags}
 </div>
 {block:PostNotes}{PostNotes}{/block:PostNotes}
 </div>
@@ -472,13 +533,13 @@ article, article.layout-three{margin:0 0 3em 0; width:100%;}
 <div class="modal-content">
 <div class="post-header flex justify">
 <a class="exit" title="Close"><span class="bx bx-x"></span></a>
-<div class="controls">{block:PinnedPostLabel}<a href="{Permalink}" title="Pinned Post"><span class="bx bx-pin"></span></a>{/block:PinnedPostLabel}<a href="{Permalink}" title="Permalink"><span class="bx bx-link-alt"></span></a><a class="likey">{LikeButton}<span class="bx bx-heart"></span></a><a href="{ReblogURL}" target="_blank"><span class="bx bx-revision"></span></a></div>
+<div class="controls">{block:PinnedPostLabel}<a href="{Permalink}" title="Pinned Post"><span class="bx bx-pin"></span></a>{/block:PinnedPostLabel}<a href="{Permalink}" title="Permalink"><span class="bx bx-link-alt"></span></a><a class="likey" title="Like">{LikeButton}<span class="bx bx-heart"></span></a><a href="{ReblogURL}" title="Reblog"><span class="bx bx-revision"></span></a></div>
 </div>
-<div class="modal-container">
+<div class="modal-container round">
 {block:Text}
 {block:Title}<div class="t-title">{Title}</div>{/block:Title}
 {block:NotReblog}
-<div class="text"><div class="caption">{Body}</div></div>
+<div class="caption">{Body}</div>
 {/block:NotReblog}
 {block:Rebloggedfrom}
 <div class="unnest">
@@ -541,23 +602,19 @@ article, article.layout-three{margin:0 0 3em 0; width:100%;}
 {/block:Chat}
 
 {block:Answer}
-{block:NotReblog}
 <div class="ask-wrap flex">
 <div class="q"><span class="bx bx-question-mark"></span></div>
-<div class="question"><div class="asker">{Asker} asked</div>{Question}</div>
+<div class="question round"><div class="asker">{Asker} asked</div>{Question}</div>
 </div>
+{block:NotReblog}
 <div class="ans-wrap flex">
-<div class="answer"><div class="asker answerer">{Name} answered</div>{Answer}</div>
+<div class="answer round"><div class="asker answerer">{Name} answered</div>{Answer}</div>
 <div class="a"><span class="bx bx-font"></span></div>
 </div>
 {/block:NotReblog}
 {block:Rebloggedfrom}
-<div class="ask-wrap flex">
-<div class="q"><span class="bx bx-question-mark"></span></div>
-<div class="question"><div class="asker">{Asker} asked</div>{Question}</div>
-</div>
 <div class="ans-wrap flex">
-<div class="answer">{block:Answerer}<div class="asker answerer">{Answerer} answered</div>{/block:Answerer}{Answer}</div>
+<div class="answer round">{block:Answerer}<div class="asker answerer">{Answerer} answered</div>{/block:Answerer}{Answer}</div>
 <div class="a"><span class="bx bx-font"></span></div>
 </div>
 <div class="unnest">
@@ -596,7 +653,20 @@ article, article.layout-three{margin:0 0 3em 0; width:100%;}
 {/block:Video}
             
 {block:Audio}
-{block:AudioEmbed}{AudioEmbed}{/block:AudioEmbed}
+{block:AudioEmbed}{AudioEmbed-640}{/block:AudioEmbed}
+{block:AudioPlayer}
+{AudioPlayer}
+<div class="audio flex justify">
+<div class="flex center">
+<div class="audio_player"><span class="audio-btns flex center"></span><div class="seekbar"></div></div>
+<div class="audio-info">
+{block:TrackName}<strong>{TrackName}</strong>{/block:TrackName}
+{block:Artist}<p>{Artist}</p>{/block:Artist}
+</div>
+</div>
+{block:AlbumArt}<img class="album" src="{AlbumArtURL}">{/block:AlbumArt}
+</div>
+{/block:AudioPlayer}
 {/block:Audio}
 
 {block:Caption}
@@ -623,14 +693,14 @@ article, article.layout-three{margin:0 0 3em 0; width:100%;}
 {/block:Caption}
 </div>
 {block:Date}
-<div class="post-footer">
+<div class="post-footer round">
 <div class="notecount">
 {block:RebloggedFrom}
-<div class="via"><span class="bx bx-repost"></span><a href="{ReblogParentURL}">{ReblogParentName}</a></div>
-<div class="root"><span class="bx bxs-map"></span><a href="{ReblogRootURL}">{ReblogRootName}</a></div>
+<div class="via"><ul><li><a href="{ReblogParentURL}">{ReblogParentName}</a></li></ul></div>
+<div class="root"><ul><li><a href="{ReblogRootURL}">{ReblogRootName}</a></li></ul></div>
 {/block:RebloggedFrom}
-<div class="date"><span class="bx bxs-bookmark"></span>{Month} {DayOfMonth}, {Year} with {NoteCountWithLabel}</div>
-{block:HasTags}<div class="tags"><span class="bx bxs-purchase-tag"></span>{block:Tags}<a href="{TagURL}">#{Tag}</a>{/block:Tags}</div>{/block:HasTags}
+<div class="date"><ul><li>{Month} {DayOfMonthWithZero}, {Year} with {NoteCountWithLabel}</li></ul></div>
+{block:HasTags}<div class="itags"><ul><li>{block:Tags}<a href="{TagURL}">#{Tag}</a>{/block:Tags}</li></ul></div>{/block:HasTags}
 </div>
 </div>
 {/block:Date}
@@ -641,12 +711,12 @@ article, article.layout-three{margin:0 0 3em 0; width:100%;}
 </article>
 
 {/block:Posts}
-  
 </div> <!--- GRID --->
+
 {block:Pagination}
 <div class="pgs flex justify">
-<div class="prev">{block:PreviousPage}<a href="{PreviousPage}">Previous</a>{/block:PreviousPage}<span>Previous</span></div>
-<div class="next">{block:NextPage}<a href="{NextPage}">Next</a>{/block:NextPage}<span>Next</span></div>
+<div class="prev">{block:PreviousPage}<a href="{PreviousPage}" class="rounder">Previous</a>{/block:PreviousPage}<span class="rounder">Previous</span></div>
+<div class="next">{block:NextPage}<a href="{NextPage}" class="rounder">Next</a>{/block:NextPage}<span class="rounder">Next</span></div>
 </div>
 {/block:Pagination}
 
@@ -662,12 +732,12 @@ article, article.layout-three{margin:0 0 3em 0; width:100%;}
 {/block:ifInfiniteScroll}{/block:IndexPage}
 </div> <!--- CONTENT --->
 
-<div class="credits">
-<a class="scroll" title="Back to top"><span class="bx bxs-chevron-up {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></span></a>
-<a class="thm" href="https://ricecodes.tumblr.com/" title="Theme by ricecodes" target="_blank"><span class="bx bxs-star {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></span></a>
-</div>
-    
 </div> <!--- CONTAINER --->
+
+<div class="credit">
+<a class="scroll" title="Back to top"><span class="bx bx-up-arrow-alt"></span></a>
+<a class="thm" href="https://ricecodes.tumblr.com/" title="Theme by ricecodes" target="_blank"><span class="bx bxs-star"></span></a>
+</div>
 
 <!----------------------------------------------------- SCRIPTS ------->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -676,18 +746,11 @@ article, article.layout-three{margin:0 0 3em 0; width:100%;}
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 {block:ifInfiniteScroll}<script src="https://unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.min.js"></script>{/block:ifInfiniteScroll}
-<script src="https://static.tumblr.com/0podkko/qWqq8va08/photosets.js"></script>
-<script src="https://static.tumblr.com/05ejowb/Y02qjlxxp/csslightbox.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/annasthms/customaudio@latest/customaudio.min.js"></script>
 <script src="https://static.tumblr.com/05ejowb/cxAqpcpux/load.min.js"></script>
-<script src="https://static.tumblr.com/05ejowb/Z09r1tfd0/rosewood.min.js"></script>
 
 <script>
 $(document).ready(function(){
-    document.querySelectorAll("iframe.tumblr_audio_player").forEach( aud => {
-        aud.onload = function() {
-            const dio = aud.contentDocument || aud.contentWindow.document;
-            dio.head.innerHTML += '<style type="text/css"> .audio-player {background:{color:Accent}; color:{color:Accent Text}!important;}.audio-player .audio-info .track-artist {color:{color:Accent Text}!important;} </style>'}
-    });
     {block:IndexPage}
     var $grid = $(".grid").imagesLoaded( function() {
         $(".grid").masonry({
@@ -735,16 +798,20 @@ $(document).ready(function(){
             $(this).closest(items).find(".modal").fadeOut();
         });
     });
-        document.querySelectorAll("iframe.tumblr_audio_player").forEach( aud => {
-        aud.onload = function() {
-            const dio = aud.contentDocument || aud.contentWindow.document;
-            dio.head.innerHTML += '<style type="text/css"> .audio-player {background:{color:Accent}; color:{color:Accent Text}!important;}.audio-player .audio-info .track-artist {color:{color:Accent Text}!important;} </style>'}
+        customAudio({
+	    post:"article",
+	    wrappers: {
+		    audio:".audio",
+		    buttons:".audio-btns",
+    		seekbar:".seekbar"
+	    },
+	        default:false,
+	        pauseAll:true,
+	        playButton:"<i class='bx bx-play'></i>",
+	        pauseButton:"<i class='bx bx-pause'></i>",
+	        errorIcon:"<i class='bx bx-play'></i>",
+	        hideInfoIfError:true
         });
-        undoPhotoset();
-        undoPhotoset({
-            "posts":"article .unnest, article .text",
-            "text class":".unnest,.text",
-            "photoset class":"photoset-grid" },false);
         tippy("[title]", {
             theme:"custom",
             duration:300,
@@ -765,7 +832,7 @@ $(document).ready(function(){
     {/block:IndexPage}
 });
 </script>
-<script src="https://static.tumblr.com/05ejowb/5yUr1k551/mode.min.js"></script>
+<script src="https://static.tumblr.com/05ejowb/59hr5s287/rosewood.min.js"></script>
     
 </body>
 </html>
