@@ -186,6 +186,7 @@ article.borders-night-b { border:1px solid var(--bg); }
 
 .sidebar, .header, .menu { background:var(--posts); }
 [data-theme="daynight"] .sidebar, [data-theme="daynight"] .header { background:var(--posts-header); }
+.menu { background:var(--posts); }
 
 @media only screen and (max-width:999px) { 
 [data-theme="daynight"] .description, [data-theme="daynight"] .labels,  [data-theme="daynight"] .side img { background:var(--posts-header); } }
