@@ -162,7 +162,7 @@ Credit:
 
 <link href="https://fonts.googleapis.com/css2?family={text:Head Font}:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family={text:Body Font}:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link href="https://static.tumblr.com/05ejowb/3jtrcttm2/vermilion.min.css" rel="stylesheet">
+<link href="https://static.tumblr.com/05ejowb/abgrcvhvh/vermilion.min.css" rel="stylesheet">
 <link href="https://static.tumblr.com/0podkko/oDSpg7y88/photosets.css" rel="stylesheet">
 <link href="//npf-images-v3.github.io/recon.css">
 <link href="//unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
@@ -430,8 +430,8 @@ Credit:
 <h2>Site Info</h2>
 <div class="site-info">
 {block:ifEstablished}<p><span>Established:</span>{text:Established}</p>{/block:ifEstablished}
-{block:ifOnline}<p><span>Online:</span>{text:Online}</p>{/block:ifOnline}
-{block:ifVisits}<p><span>Visits:</span>{text:Visits}</p>{/block:ifVisits}
+{block:ifOnline}<p><span>Online:</span><a class="site-a">{text:Online}</a></p>{/block:ifOnline}
+{block:ifVisits}<p><span>Visits:</span><a class="site-a">{text:Visits}</a></p>{/block:ifVisits}
 <p><span>Layout:</span><a href="https://ricecodes.tumblr.com/" target="_blank">ricecodes</a></p>
 </div>
 {block:ifDisclaimer}<h2>Disclaimer</h2>{text:Disclaimer}{/block:ifDisclaimer}
