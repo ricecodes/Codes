@@ -1,0 +1,832 @@
+<!-----
+
+                   ★ [ Vermilion ] by ricecodes ★
+Credit:
+
+★ Icons: https://boxicons.com/
+★ CSS Photosets: https://annasthms.tumblr.com/post/177359244495/photosetscss-by-annasthms-and-espoirthemes-to
+★ Custom Audio js: hhttps://annasthms.tumblr.com/more/js/customaudio/new
+★ Day/Night Mode: https://egg.design/post/186889223257/day-night-mode-tutorial-after-featuring-a
+★ NPF Images: https://glenthemes.tumblr.com/post/659034084446748672/npf-images-v3
+★ Tumblr Redirects: https://magnusthemes.tumblr.com/post/643460974823833600/remove-redirects-v20
+★ Tippy Tooltip: https://atomiks.github.io/tippyjs/
+★ Vertical Carousel: https://yeolithm.com/post/176445927712/basic-vertical-css-carousel-tutorial
+
+----->
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>{Title}{block:TagPage} — {lang:Posts tagged Tag}{/block:TagPage}{block:SearchPage} — {lang:Search results for SearchQuery}{/block:SearchPage}{block:PermalinkPage}{block:PostSummary} — {PostSummary}{/block:PostSummary}{/block:PermalinkPage}</title>
+<meta name="description" content="{MetaDescription}">
+
+
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+<script src="https://static.tumblr.com/05ejowb/RA6r1jy9i/render.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+<meta name="image:Header" content="{HeaderImage}">
+<meta name="image:About 1" content="https://64.media.tumblr.com/1a801b66de554bf5fa264219e71071ba/72653df5c2f0837b-c6/s2048x3072/e9f45c22bcd8d20b01953e0441d032675cabc8d3.png">
+<meta name="image:About 2" content="https://64.media.tumblr.com/1a801b66de554bf5fa264219e71071ba/72653df5c2f0837b-c6/s2048x3072/e9f45c22bcd8d20b01953e0441d032675cabc8d3.png">
+<meta name="image:About 3" content="https://64.media.tumblr.com/1a801b66de554bf5fa264219e71071ba/72653df5c2f0837b-c6/s2048x3072/e9f45c22bcd8d20b01953e0441d032675cabc8d3.png">
+<meta name="image:Current Project" content="https://64.media.tumblr.com/1a801b66de554bf5fa264219e71071ba/72653df5c2f0837b-c6/s2048x3072/e9f45c22bcd8d20b01953e0441d032675cabc8d3.png">
+
+<meta name="color:Accent" content="#da473f">
+<meta name="color:Accent Text" content="#ffffff">
+<meta name="color:Header" content="#161616">
+<meta name="color:Header Text" content="#ffffff">
+<meta name="color:Background" content="#ffffff">
+<meta name="color:Sidebar" content="#f4f4f4">
+<meta name="color:Sidebar Icons" content="#e6e6e6">
+<meta name="color:Searchbar" content="#222222">
+<meta name="color:Borders" content="#d2d2d2">
+<meta name="color:Text" content="#000000">
+<meta name="color:Like Button" content="#ff492f">
+<meta name="color:Question" content="#eeeeee">
+<meta name="color:Links" content="#de5f32">
+<meta name="color:Links Hover" content="#99c9cc">
+<meta name="color:Selection Background" content="#e09692">
+<meta name="color:Selection" content="#ffffff">
+<meta name="color:Tooltips" content="#000000">
+<meta name="color:Tooltips Text" content="#ffffff">
+<meta name="color:Night Background" content="#15161a">
+<meta name="color:Night Header" content="#25262b">
+<meta name="color:Night Header Text" content="#ffffff">
+<meta name="color:Night Sidebar" content="#393a40">
+<meta name="color:Night Sidebar Icons" content="#25262b">
+<meta name="color:Night Searchbar" content="#303136">
+<meta name="color:Night Borders" content="#41424d">
+<meta name="color:Night Text" content="#ffffff">
+<meta name="color:Night Question" content="#25262b">
+
+<meta name="select:Header Size" title="Half Height" content="half">
+<meta name="select:Header Size" title="Full Height" content="full">
+
+<meta name="select:Header Style" title="Uppercase" content="uppercase">
+<meta name="select:Header Style" title="Lowercase" content="lowercase">
+<meta name="select:Header Style" title="Capitalize" content="capitalize">
+
+<meta name="select:Post Header Style" title="Uppercase" content="uppercase">
+<meta name="select:Post Header Style" title="Lowercase" content="lowercase">
+<meta name="select:Post Header Style" title="Capitalize" content="capitalize">
+
+<meta name="select:Post Size" title="Small" content="35vw">
+<meta name="select:Post Size" title="Medium" content="40vw">
+<meta name="select:Post Size" title="Large" content="45vw">
+
+<meta name="if:Dark Mode" content="">
+<meta name="if:Round Corners" content="">
+<meta name="if:Hide Header" content="">
+<meta name="if:Hide Description" content="">
+<meta name="if:Hide About Images" content="">
+<meta name="if:Hide Current Project" content="">
+<meta name="if:Hide Updates" content="">
+<meta name="if:Hide Schedule" content="">
+<meta name="if:Hide FAQ" content="">
+<meta name="if:Hide Navigation" content="">
+<meta name="if:Hide Members" content="">
+<meta name="if:Hide Tags" content="">
+<meta name="if:Status 1 On" content="">
+<meta name="if:Status 2 On" content="">
+<meta name="if:Status 3 On" content="">
+<meta name="if:Status 4 On" content="">
+<meta name="if:Status 5 On" content="">
+<meta name="if:Status 6 On" content="">
+
+<meta name="text:Header Position" content="50% 50%">
+<meta name="text:About Images Width" content="30%">
+<meta name="text:Head Font" content="Barlow Semi Condensed">
+<meta name="text:Body Font" content="Barlow">
+<meta name="text:Body Font Weight" content="500">
+<meta name="text:Font Size" content="14px">
+<meta name="text:Line Height" content="1.5em">
+<meta name="text:Custom Title" content="">
+<meta name="text:Custom Description" content="">
+<meta name="text:Home Link" content="Home">
+<meta name="text:Ask Link" content="Contact">
+<meta name="text:Archive Link" content="Archive">
+<meta name="text:Navigation Link" content="Navigation">
+<meta name="text:Members Link" content="Members">
+<meta name="text:Member Application Link" content="Insert link here.">
+<meta name="text:&#x25CF;&#x25C9;&#x25CE; About Section &#x25CE;&#x25C9;&#x25CF;" content="">
+<meta name="text:About Info" content="Anything you would like others to know?">
+<meta name="text:Official Website" content="Official Website Link">
+<meta name="text:Twitter" content="Twitter Link">
+<meta name="text:Instagram" content="Instgram Link">
+<meta name="text:YouTube" content="YouTube Link">
+<meta name="text:Facebook" content="Facebook Link">
+<meta name="text:TikTok" content="TikTok Link">
+<meta name="text:&#x25CF;&#x25C9;&#x25CE; Site Info &#x25CE;&#x25C9;&#x25CF;" content="">
+<meta name="text:Established" content="MM/DD/YYYY">
+<meta name="text:Online" content="Insert Link here.">
+<meta name="text:Visits" content="Insert Link here.">
+<meta name="text:Disclaimer" content="Disclaimer here.">
+<meta name="text:&#x25CF;&#x25C9;&#x25CE; Current Project &#x25CE;&#x25C9;&#x25CF;" content="">
+<meta name="text:Current Project Title" content="Current Project Title">
+<meta name="text:Current Project Info" content="Current Project Info">
+<meta name="text:Current Project Date" content="Current Project Date">
+<meta name="text:Current Project Status" content="Current Project Status">
+<meta name="text:Current Project Link 1 URL" content="Current Project Link 1 URL">
+<meta name="text:Current Project Link 1 Name" content="Current Project Link 1 Name">
+<meta name="text:Current Project Link 2 URL" content="Current Project Link 2 URL">
+<meta name="text:Current Project Link 2 Name" content="Current Project Link 2 Name">
+<meta name="text:Current Project Link 3 URL" content="Current Project Link 3 URL">
+<meta name="text:Current Project Link 3 Name" content="Current Project Link 3 Name">
+<meta name="text:&#x25CF;&#x25C9;&#x25CE; Schedule & Updates &#x25CE;&#x25C9;&#x25CF;" content="">
+<meta name="text:Event 1 Date" content="01/01">
+<meta name="text:Event 1 Description" content="Event 1">
+<meta name="text:Event 2 Date" content="02/02">
+<meta name="text:Event 2 Description" content="Event 2">
+<meta name="text:Event 3 Date" content="03/03">
+<meta name="text:Event 3 Description" content="Event 3">
+<meta name="text:Event 4 Date" content="04/04">
+<meta name="text:Event 4 Description" content="Event 4">
+<meta name="text:Updates" content="Updates go here.">
+<meta name="text:&#x25CF;&#x25C9;&#x25CE; Status &#x25CE;&#x25C9;&#x25CF;" content="">
+<meta name="text:Status 1" content="Hiatus">
+<meta name="text:Status 2" content="Askbox">
+<meta name="text:Status 3" content="Queue">
+<meta name="text:Status 4" content="Message">
+<meta name="text:Status 5" content="New Members">
+<meta name="text:Status 6" content="New Affiliates">
+<meta name="text:&#x25CF;&#x25C9;&#x25CE; Work in Progress &#x25CE;&#x25C9;&#x25CF;" content="">
+<meta name="text:Project 1" content="Project Name">
+<meta name="text:Project 1 Percent" content="60%">
+<meta name="text:Project 2" content="Project Name">
+<meta name="text:Project 2 Percent" content="40%">
+<meta name="text:Project 3" content="Project Name">
+<meta name="text:Project 3 Percent" content="50%">
+
+<link href="https://fonts.googleapis.com/css2?family={text:Head Font}:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family={text:Body Font}:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://static.tumblr.com/05ejowb/3jtrcttm2/vermilion.min.css" rel="stylesheet">
+<link href="https://static.tumblr.com/0podkko/oDSpg7y88/photosets.css" rel="stylesheet">
+<link href="//npf-images-v3.github.io/recon.css">
+<link href="//unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+
+<style>
+
+/* VARIABLES - Please do not edit/remove this */
+
+:root {
+    --head-font:{text:Head Font},sans-serif;
+    --body-font:{text:Body Font},sans-serif;
+    --body-wgt:{text:Body Font Weight};
+    --body-size:{text:Font Size};
+    --line-hgt:{text:Line Height};
+    --post-size:{select:Post Size};
+    --rgb-accent-text:{RGBcolor:Accent Text};
+    --head-xy:{text:Header Position};
+    --abt-imgs:{text:About Images Width};
+    --pro1-percent:{text:Project 1 Percent};
+    --pro2-percent:{text:Project 2 Percent};
+    --pro3-percent:{text:Project 3 Percent};
+    --selection-bg:{color:Selection Background};
+    --selection:{color:Selection};
+    --tooltips:{color:Tooltips};
+    --tooltips-text:{color:Tooltips Text};
+}
+
+{block:ifNotDarkMode}
+:root {
+    --accent:{color:Accent};
+    --accent-text:{color:Accent Text};
+    --bg:{color:Background};
+    --rgb-bg:{RGBcolor:Background};
+    --header:{color:Header};
+    --rgb-head:{RGBcolor:Header};
+    --head-text:{color:Header Text};
+    --sidebar:{color:Sidebar};
+    --side-icons:{color:Sidebar Icons};
+    --search:{color:Searchbar};
+    --borders:{color:Borders};
+    --like-btn:{color:Like Button};
+    --links:{color:Links};
+    --links-hover:{color:Links Hover};
+    --ask:{color:Question};
+    --text:{color:Text};
+    --rgb-text:{RGBcolor:Text};
+}
+
+[data-theme="daynight"] {
+    --bg:{color:Night Background};
+    --rgb-bg:{RGBcolor:Night Background};
+    --header:{color:Night Header};
+    --rgb-head:{RGBcolor:Night Header};
+    --head-text:{color:Night Header Text};
+    --sidebar:{color:Night Sidebar};
+    --side-icons:{color:Night Sidebar Icons};
+    --search:{color:Night Searchbar};
+    --borders:{color:Night Borders};
+    --menu:{color:Night Posts};
+    --menu-text:{color:Night Text};
+    --ask:{color:Night Question};
+    --text:{color:Night Text};
+    --rgb-text:{RGBcolor:Night Text};
+}
+
+.tmblr-iframe { filter:invert(1); -webkit-filter:invert(1); -o-filter:invert(1); -moz-filter:invert(1); -ms-filter:invert(1); }
+[data-theme="daynight"] .tmblr-iframe { filter:invert(0); -webkit-filter:invert(0); -o-filter:invert(0); -moz-filter:invert(0); -ms-filter:invert(0); }
+{/block:ifNotDarkMode}
+
+{block:ifDarkMode}
+:root {
+    --accent:{color:Accent};
+    --accent-text:{color:Accent Text};
+    --bg:{color:Night Background};
+    --rgb-bg:{RGBcolor:Night Background};
+    --header:{color:Night Header};
+    --rgb-head:{RGBcolor:Night Header};
+    --head-text:{color:Night Header Text};
+    --sidebar:{color:Night Sidebar};
+    --side-icons:{color:Night Sidebar Icons};
+    --search:{color:Night Searchbar};
+    --borders:{color:Night Borders};
+    --like-btn:{color:Like Button};
+    --links:{color:Links};
+    --links-hover:{color:Links Hover};
+    --ask:{color:Night Question};
+    --text:{color:Night Text};
+    --rgb-text:{RGBcolor:Night Text};
+}
+
+[data-theme="daynight"] {
+    --bg:{color:Background};
+    --rgb-bg:{RGBcolor:Background};
+    --header:{color:Header};
+    --rgb-head:{RGBcolor:Header};
+    --head-text:{color:Header Text};
+    --sidebar:{color:Sidebar};
+    --side-icons:{color:Sidebar Icons};
+    --search:{color:Searchbar};
+    --borders:{color:Borders};
+    --ask:{color:Question};
+    --text:{color:Text};
+    --rgb-text:{RGBcolor:Text};
+}
+
+.tmblr-iframe { filter:invert(0); -webkit-filter:invert(0); -o-filter:invert(0); -moz-filter:invert(0); -ms-filter:invert(0); }
+[data-theme="daynight"] .tmblr-iframe { filter:invert(1); -webkit-filter:invert(1); -o-filter:invert(1); -moz-filter:invert(1); -ms-filter:invert(1); }
+{/block:ifDarkMode}
+
+{block:ifRoundCorners}
+.round, .npf_inst, .spotify_audio_player, .soundcloud_audio_player, .faq span { border-radius:10px; }
+.rounder, .searchbar, .li a, .site-info span, .schedule td:first-of-type, .current img, .c-link a, .nav a { border-radius:5px; }
+{/block:ifRoundCorners}
+
+{CustomCSS}
+</style>
+</head>
+
+<body>
+
+<div class="container flex">
+
+<input hidden type="radio" name="carousel-control" id="button_a" checked/>
+<input hidden type="radio" name="carousel-control" id="button_b"/>
+<input hidden type="radio" name="carousel-control" id="button_c"/>
+<input hidden type="radio" name="carousel-control" id="button_d"/>
+
+<div class="header flex justify center">
+<div class="head-title {select:Header Style}">
+<img src="{PortraitURL-128}"><div class="search" style="{block:HideFromSearchEnabled}display:none!important;{/block:HideFromSearchEnabled}"><form action="/search" method="get"><input class="searchbar" type="text" name="q" placeholder="Search" value="{SearchQuery}" autocomplete="off"/></form></div> <!--- SEARCH --->
+{block:HideFromSearchEnabled}{block:ifNotCustomTitle}{Title}{/block:ifNotCustomTitle}{block:ifCustomTitle}{text:Custom Title}{/block:ifCustomTitle}{/block:HideFromSearchEnabled}
+</div>
+<nav class="{select:Header Style}">
+<a href="/">{text:Home Link}</a>
+{block:AskEnabled}<label for="button_b" class="label_b">{text:Ask Link}</label>{/block:AskEnabled}
+<a href="/archive">{text:Archive Link}</a>
+<label for="button_a" class="label_a">Blog</label>
+{block:ifNotHideNavigation}<label for="button_c" class="label_c">{text:Navigation Link}</label>{/block:ifNotHideNavigation}
+{block:ifNotHideMembers}<label for="button_d" class="label_d">{text:Members Link}</label>{/block:ifNotHideMembers}
+<div class="tab">
+<label class="dn"><input class="modus" type="checkbox">
+{block:ifNotDarkMode}
+<a class="diemnox moon" title="Night"><i class="bx bxs-moon"></i></a>
+<a class="diemnox none" title="Day"><i class="bx bxs-sun"></i></a>
+{/block:ifNotDarkMode}
+{block:ifDarkMode}
+<a class="diemnox moon" title="Day"><i class="bx bxs-sun"></i></a>
+<a class="diemnox none" title="Night"><i class="bx bxs-moon"></i></a>
+{/block:ifDarkMode}
+</label>
+<a class="ctrls"><span class="hide" title="Show Tumblr controls"><i class="bx bxs-cog"></i></span><span class="hide none" title="Hide Tumblr controls"><i class="bx bx-x"></i></span></a>
+</div>
+</nav>
+</div>
+
+<div class="carousel">
+<div class="c-wrapper">
+
+<section class="panel_a">
+
+{block:ifNotHideHeader}
+{block:HomePage}
+<div class="home-wrap page-{CurrentPage}">
+<div class="homepage">
+<div class="cover {select:Header Size}"><img src="{image:Header}" draggable="false"></div>
+<div class="d-wrap {select:Header Size} flex center {block:ifHideDescription}none{/block:ifHideDescription}">
+<div class="description">
+<div class="cover-title {select:Header Style}">{block:ifNotCustomTitle}{Title}{/block:ifNotCustomTitle}{block:ifCustomTitle}{text:Custom Title}{/block:ifCustomTitle}</div>
+<div class="desc">{block:ifNotCustomDescription}{Description}{/block:ifNotCustomDescription}{block:ifCustomDescription}{text:Custom Description}{/block:ifCustomDescription}</div></div>
+</div> <!--- D-WRAP --->
+</div> <!--- HOMEPAGE --->
+</div>
+{/block:HomePage}
+{/block:ifNotHideHeader}
+
+<div class="content flex justify">
+
+<div class="sidebar flex center">
+<div class="sidenav flex center">
+<a class="tbtn_a selected" title="About"><i class="bx bx-star"></i></a>
+<a class="tbtn_b {block:ifHideCurrentProject}none{/block:ifHideCurrentProject}" title="Current Project"><i class="bx bx-book-open"></i></a>
+<a class="tbtn_c {block:ifHideUpdates}none{/block:ifHideUpdates}" title="Updates"><i class="bx bx-calendar-week"></i></a>
+<a class="tbtn_d" title="Status"><i class="bx bxs-zap"></i></a>
+<a class="tbtn_e" title="Site Info"><i class="bx bx-info-circle"></i></a>
+</div> <!--- SIDEBAR NAVIGATION --->
+<div class="tabs flex center">
+<div class="tab_a flex center">
+<h2>About</h2>
+<div class="about flex justify">
+<i class="bx bxs-quote-left"></i>
+<div class="abt">
+{block:ifNotAboutInfo}{Description}{/block:ifNotAboutInfo}{block:ifAboutInfo}{text:About Info}{/block:ifAboutInfo}</div>
+</div>
+{block:ifNotHideAboutImages}
+<div class="abt_img flex justify">
+<img src="{image:About 1}" draggable="false">
+<img src="{image:About 2}" draggable="false">
+<img src="{image:About 3}" draggable="false">
+</div>
+{/block:ifNotHideAboutImages}
+<div class="li flex justify">
+{block:ifOfficialWebsite}<a href="{text:Official Website}" target="_blank"><i class="bx bx-world"></i>Official Website</a>{/block:ifOfficialWebsite}
+{block:ifTwitter}<a href="{text:Twitter}" target="_blank"><i class="bx bxl-twitter"></i>Twitter</a>{/block:ifTwitter}
+{block:ifInstagram}<a href="{text:Instagram}" target="_blank"><i class="bx bxl-instagram-alt"></i>Instagram</a>{/block:ifInstagram}
+{block:ifYouTube}<a href="{text:YouTube}" target="_blank"><i class="bx bxl-youtube"></i>YouTube</a>{/block:ifYouTube}
+{block:ifFacebook}<a href="{text:Facebook}" target="_blank"><i class="bx bxl-facebook"></i>Facebook</a>{/block:ifFacebook}
+{block:ifTikTok}<a href="{text:TikTok}" target="_blank"><i class="bx bxl-tiktok"></i>TikTok</a>{/block:ifTikTok}
+</div>
+</div> <!--- ABOUT --->
+<div class="tab_b">
+<div class="current">
+<img src="{image:Current Project}" draggable="false">
+<div class="c-title">{text:Current Project Title}</div>
+{block:ifCurrentProjectInfo}<div class="c-info">{text:Current Project Info}</div>{/block:ifCurrentProjectInfo}
+<div class="c-stat">
+<strong>Date:</strong> {text:Current Project Date}
+<p><strong>Status:</strong> {text:Current Project Status}</p>
+</div>
+<div class="c-link">
+{block:ifCurrentProjectLink1URL}<a href="{text:Current Project Link 1 URL}" target="_blank">{text:Current Project Link 1 Name}</a>{/block:ifCurrentProjectLink1URL}
+{block:ifCurrentProjectLink2URL}<a href="{text:Current Project Link 2 URL}" target="_blank">{text:Current Project Link 2 Name}</a>{/block:ifCurrentProjectLink2URL}
+{block:ifCurrentProjectLink3URL}<a href="{text:Current Project Link 3 URL}" target="_blank">{text:Current Project Link 3 Name}</a>{/block:ifCurrentProjectLink3URL}
+</div>
+</div>
+</div> <!--- PROJECTS --->
+<div class="tab_c">
+{block:ifNotHideSchedule}
+<table border="0" cellpadding="0" cellspacing="0"  class="schedule">
+<h2>Schedule</h2>
+{block:ifEvent1Description}<tr valign="middle" >{block:ifEvent1Date}<td>{text:Event 1 Date}</td>{/block:ifEvent1Date}<td>{text:Event 1 Description}</td></tr>{/block:ifEvent1Description}
+{block:ifEvent2Description}<tr valign="middle">{block:ifEvent2Date}<td>{text:Event 2 Date}</td>{/block:ifEvent2Date}<td>{text:Event 2 Description}</td></tr>{/block:ifEvent2Description}
+{block:ifEvent3Description}<tr valign="middle">{block:ifEvent3Date}<td>{text:Event 3 Date}</td>{/block:ifEvent3Date}<td>{text:Event 3 Description}</td></tr>{/block:ifEvent3Description}
+{block:ifEvent4Description}<tr valign="middle">{block:ifEvent4Date}<td>{text:Event 4 Date}</td>{/block:ifEvent4Date}<td>{text:Event 4 Description}</td></tr>{/block:ifEvent4Description}
+<!---- Add following if you want more:
+<tr valign="middle"><td>EVENT DATE <p>EVENT TIME</p></td> <td>EVENT DESCRIPTION</td></tr>
+---->
+</table><!--- SCHEDULE --->
+{/block:ifNotHideSchedule}
+{block:ifUpdates}
+<h2>Updates</h2>
+<div class="updates">{text:Updates}</div>
+{/block:ifUpdates} <!--- UPDATES --->
+</div> 
+<div class="tab_d">
+<h2>Status</h2>
+<div class="status">
+{block:ifStatus1}<span><i class="bx {block:ifStatus1On}bxs-toggle-right on{/block:ifStatus1On}{block:ifNotStatus1On}bxs-toggle-left off{/block:ifNotStatus1On}"></i>{text:Status 1}</span>{/block:ifStatus1}
+{block:ifStatus2}<span><i class="bx {block:ifStatus2On}bxs-toggle-right on{/block:ifStatus2On}{block:ifNotStatus2On}bxs-toggle-left off{/block:ifNotStatus2On}"></i>{text:Status 2}</span>{/block:ifStatus2}
+{block:ifStatus3}<span><i class="bx {block:ifStatus3On}bxs-toggle-right on{/block:ifStatus3On}{block:ifNotStatus3On}bxs-toggle-left off{/block:ifNotStatus3On}"></i>{text:Status 3}</span>{/block:ifStatus3}
+{block:ifStatus4}<span><i class="bx {block:ifStatus4On}bxs-toggle-right on{/block:ifStatus4On}{block:ifNotStatus4On}bxs-toggle-left off{/block:ifNotStatus4On}"></i>{text:Status 4}</span>{/block:ifStatus4}
+{block:ifStatus5}<span><i class="bx {block:ifStatus5On}bxs-toggle-right on{/block:ifStatus5On}{block:ifNotStatus5On}bxs-toggle-left off{/block:ifNotStatus5On}"></i>{text:Status 5}</span>{/block:ifStatus5}
+{block:ifStatus6}<span><i class="bx {block:ifStatus6On}bxs-toggle-right on{/block:ifStatus6On}{block:ifNotStatus6On}bxs-toggle-left off{/block:ifNotStatus6On}"></i>{text:Status 6}</span>{/block:ifStatus6}
+</div> <!--- STATUS --->
+<h2>Progress</h2>
+<span class="pro">
+{text:Project 1}<i class="bx bxs-circle"></i>{text:Project 1 Percent}
+<div class="hp"><div class="bar one"></div></div>
+{text:Project 2}<i class="bx bxs-circle"></i>{text:Project 2 Percent}
+<div class="hp"><div class="bar two"></div></div>
+{text:Project 3}<i class="bx bxs-circle"></i>{text:Project 3 Percent}
+<div class="hp"><div class="bar three"></div></div>
+</span> <!--- PROGRESS --->
+</div> 
+<div class="tab_e">
+<h2>Site Info</h2>
+<div class="site-info">
+{block:ifEstablished}<p><span>Established:</span>{text:Established}</p>{/block:ifEstablished}
+{block:ifOnline}<p><span>Online:</span>{text:Online}</p>{/block:ifOnline}
+{block:ifVisits}<p><span>Visits:</span>{text:Visits}</p>{/block:ifVisits}
+<p><span>Layout:</span><a href="https://ricecodes.tumblr.com/" target="_blank">ricecodes</a></p>
+</div>
+{block:ifDisclaimer}<h2>Disclaimer</h2>{text:Disclaimer}{/block:ifDisclaimer}
+</div> <!--- SITE INFO --->
+</div>
+</div>
+
+<div class="wrapper">
+
+{block:TagPage}
+<div class="tagpg {select:Post Header Style}">{lang:TagResultCount posts tagged Tag 2}<div class="bb"></div></div>
+{/block:TagPage}
+
+{block:SearchPage}
+<div class="tagpg">{lang:SearchResultCount results for SearchQuery 2}{block:NoSearchResults}{lang:Sorry no results for SearchQuery 2}{/block:NoSearchResults}<div class="bb"></div></div>
+{/block:SearchPage}
+
+{block:posts inlineMediaWidth="1280" inlineNestedMediaWidth="1280"}
+<div class="entry">
+
+{block:Date}
+<div class="post-header flex justify">
+<div class="post-info {select:Post Header Style}">
+{block:NotReblog}<img src="{PostAuthorPortraitURL-128}">{/block:NotReblog}{block:RebloggedFrom}<img src="{ReblogRootPortraitURL-128}">{/block:RebloggedFrom}{block:NotReblog}<a href="{Permalink}" title="{lang:Posted by PostAuthorName}">{PostAuthorName}</a>{/block:NotReblog}{block:RebloggedFrom}<a href="{ReblogRootURL}" title="{lang:Originally from ReblogRootName}">{ReblogRootName}</a>{/block:RebloggedFrom}
+</div>
+</div>
+{/block:Date}
+
+<article class="{block:Link}round{/block:Link}{block:Answer}round{/block:Answer}{block:Photo}round{/block:Photo}{block:Photoset}round{/block:Photoset}{block:Video}round{/block:Video}{block:Audio}round{/block:Audio} borders-{select:Borders}" post-type="{PostType}">
+
+{block:Text}
+{block:Title}<div class="t-title">{Title}</div>{/block:Title}
+{block:NotReblog}
+<div class="caption">{Body}</div>
+{/block:NotReblog}
+{block:Rebloggedfrom}
+<div class="unnest">
+{block:Reblogs}
+<div class="reblogged">
+<div class="username {select:Post Header Style}">
+{block:IsActive}
+<div class="active">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}"> {Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
+{/block:IsActive}
+{block:IsDeactivated}
+<div class="deleted">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}"> {Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
+{/block:IsDeactivated}
+<i class="bx bx-repost"></i>
+</div>
+{Body}
+</div>
+{/block:Reblogs}
+</div>
+{/block:RebloggedFrom}
+{/block:Text}
+
+{block:Link}
+<a href="{URL}"><div class="link flex justify">{Name}<i class="bx bx-link-external"></i></div></a>
+{/block:Link}
+
+{block:Quote}
+<div class="quote">{Quote} {block:Source}<div class="src">— {Source}</div>{/block:Source}</div>
+{/block:Quote}
+
+{block:Chat}
+{block:Title}<div class="t-title">{Title}</div>{/block:Title}
+<div class="chat">
+{block:Lines}
+<div class="lines">
+{block:Label}<span class="label">{Label}</span>{/block:Label} {Line}
+</div>
+{/block:Lines}
+</div>
+{/block:Chat}
+
+{block:Answer}
+<div class="q-wrap flex round">
+<div class="q"><img src="{AskerPortraitURL-128}"><div class="asker">{Asker} asked</div></div>
+<div class="question">{Question}</div>
+</div>
+<div class="a-wrap flex round">
+<div class="a"><img src="{block:NotReblog}{PortraitURL-128}{/block:NotReblog}{block:Rebloggedfrom}{block:Answerer}{AnswererPortraitURL-128}{/block:Answerer}{/block:Rebloggedfrom}"><div class="asker">{block:NotReblog}{Name}{/block:NotReblog}{block:Rebloggedfrom}{block:Answerer}{Answerer}{/block:Answerer}{/block:Rebloggedfrom} answered</div></div>
+<div class="answer">{Answer}</div>
+</div>
+{block:Rebloggedfrom}
+<div class="a-unnest">
+{block:Reblogs}
+<div class="reblogged">
+<div class="username {select:Post Header Style}">
+{block:IsActive}
+<div class="active">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}"> {Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
+{/block:IsActive}
+{block:IsDeactivated}
+<div class="deleted">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}"> {Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
+{/block:IsDeactivated}
+<i class="bx bx-repost"></i>
+</div>
+{Body}
+</div>
+{/block:Reblogs}
+</div>
+{/block:RebloggedFrom}
+{/block:Answer}
+
+{block:Photo}
+<div class="photo"><a href="#" onclick="Tumblr.Lightbox.init([{ width:{PhotoWidth-HighRes}, height:{PhotoHeight-HighRes}, low_res:'{PhotoURL-500}', high_res:'{PhotoURL-HighRes}' }]); $('body').toggleClass('tumblr_lightbox_active'); return false"><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"></a></div>
+{/block:Photo}
+
+{block:Photoset}
+<div class="photoset-grid" photoset-layout="{PhotosetLayout}">{block:Photos}<div data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}" data-lowres="{PhotoURL-500}" data-highres="{PhotoURL-HighRes}" onclick="lightbox(this)"><img src="{PhotoURL-HighRes}" /></div>{/block:Photos}</div>
+{/block:Photoset}
+
+{block:Panorama}
+{LinkOpenTag}<div class="photoset-grid"><img src="{PhotoURL-Panorama}" alt="{PhotoAlt}">
+</div>{LinkCloseTag}
+{/block:Panorama}
+
+{block:Video}
+<div class="video">{VideoEmbed-700}</div>
+{/block:Video}
+
+{block:Audio}
+{block:AudioEmbed}{AudioEmbed-640}{/block:AudioEmbed}
+{block:AudioPlayer}
+{AudioPlayer}
+<div class="audio flex justify">
+<div class="flex center">
+<div class="audio_player"><span class="audio-btns flex center"></span><div class="seekbar"></div></div>
+<div class="audio-info">
+{block:TrackName}<strong>{TrackName}</strong>{/block:TrackName}
+{block:Artist}<p>{Artist}</p>{/block:Artist}
+</div>
+</div>
+{block:AlbumArt}<img class="album" src="{AlbumArtURL}">{/block:AlbumArt}
+</div>
+{/block:AudioPlayer}
+{/block:Audio}
+
+</article>
+
+{block:Link}
+{block:NotReblog}
+{block:Description}
+<div class="m-caption">{Description}</div>
+{/block:Description}
+{/block:NotReblog}
+{block:Rebloggedfrom}
+<div class="m-unnest">
+{block:Reblogs}
+<div class="reblogged">
+<div class="username {select:Post Header Style}">
+{block:IsActive}
+<div class="active">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}"> {Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
+{/block:IsActive}
+{block:IsDeactivated}
+<div class="deleted">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}"> {Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
+{/block:IsDeactivated}
+<i class="bx bx-repost"></i>
+</div>
+{Body}
+</div>
+{/block:Reblogs}
+</div>
+{/block:RebloggedFrom}
+{/block:Link}
+
+{block:Caption}
+{block:NotReblog}
+<div class="m-caption">{Caption}</div>
+{/block:NotReblog}
+{block:Rebloggedfrom}
+<div class="m-unnest">
+{block:Reblogs}
+<div class="reblogged">
+<div class="username {select:Post Header Style}">
+{block:IsActive}
+<div class="active">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}"> {Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
+{/block:IsActive}
+{block:IsDeactivated}
+<div class="deleted">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}"> {Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
+{/block:IsDeactivated}
+<i class="bx bx-repost"></i>
+</div>
+{Body}
+</div>
+{/block:Reblogs}
+</div>
+{/block:RebloggedFrom}
+{/block:Caption}
+
+{block:Date}
+{block:IndexPage}
+<div class="post-footer">
+<div class="controls">
+<a href="{Permalink}"><i class="bx bx-time-five"></i>{TimeAgo}</a>
+<a href="{Permalink}"><i class="bx bx-show-alt"></i>{NoteCountWithLabel}</a>
+<a href="{ReblogURL}"><i class="bx bx-revision"></i>Reblog</a>
+<a class="likey">{LikeButton}<i class="bx bx-heart"></i><span class="d">Like</span></a>
+</div>
+{block:HasTags}<div class="tags {block:ifHideTags}none{/block:ifHideTags}"><ul><li>{block:Tags}<a href="{TagURL}">{Tag}</a>{/block:Tags}</li></ul></div>{/block:HasTags}
+</div>
+{/block:IndexPage}
+{block:PermalinkPage}
+<div class="perm-footer">
+<div class="perm-info">
+{block:RebloggedFrom}
+<div class="via"><ul><li><a href="{ReblogParentURL}">{ReblogParentName}</a></li></ul></div>
+<div class="root"><ul><li><a href="{ReblogRootURL}">{ReblogRootName}</a></li></ul></div>
+{/block:RebloggedFrom}
+<div class="date"><ul><li>{Month} {DayOfMonthWithZero}, {Year} with {NoteCountWithLabel}</li></ul></div>
+{block:HasTags}<div class="ptags"><ul><li>{block:Tags}<a href="{TagURL}">{Tag}</a>{/block:Tags}</li></ul></div>{/block:HasTags}
+</div>
+{block:PostNotes}{PostNotes}{/block:PostNotes}
+</div>
+{/block:PermalinkPage}
+{/block:Date}
+
+</div>
+{/block:Posts}
+
+{block:Pagination}
+<div class="pgs flex justify">
+<div class="prev">{block:PreviousPage}<a href="{PreviousPage}" title="{lang:Previous page}"><i class="bx bx-left-arrow-alt"></i></a>{/block:PreviousPage}<span><i class="bx bx-left-arrow-alt"></i></span></div>
+<div class="next">{block:NextPage}<a href="{NextPage}" title="{lang:Next page}"><i class="bx bx-right-arrow-alt"></i></a>{/block:NextPage}<span><i class="bx bx-right-arrow-alt"></i></span></div>
+</div>
+{/block:Pagination}
+
+</div> <!--- WRAPPER --->
+
+<footer class="flex justify">
+<span>© {CopyrightYears} <a href="/">{Name}</a><i class="bx bxs-circle"></i>All rights reserved.</span><span>Theme by <a href="https://ricecodes.tumblr.com/" target="_blank">ricecodes</a><i class="bx bxs-circle"></i>Powered by Tumblr.</span>
+</footer>
+
+</div> <!--- CONTENT --->
+
+</section> <!--- BLOG --->
+
+<section class="panel_b">
+{block:AskEnabled}
+<div class="wrapper">
+{block:ifNotHideFAQ}
+<div class="faq">
+<div class="tagpg {select:Post Header Style}">Frequently Asked Questions<div class="bb"></div></div>
+<!--- BEGINNING OF Q & A --->
+<div class="que flex justify">
+<div class="qmark"><i class="bx bx-question-mark"></i></div>
+<span><h4>Question #1</h4>Question #1 goes here.</span>
+</div>
+<div class="ans flex justify">
+<span>Your answer to question #1 goes here.</span>
+<div class="amark"><i class="bx bx-font"></i></div>
+</div>
+<!--- END OF Q & A --->
+<!--- BEGINNING OF Q & A --->
+<div class="que flex justify">
+<div class="qmark"><i class="bx bx-question-mark"></i></div>
+<span><h4>Question #2</h4>Question #2 goes here.</span>
+</div>
+<div class="ans flex justify">
+<span>Your answer to question #2 goes here.</span>
+<div class="amark"><i class="bx bx-font"></i></div>
+</div>
+<!--- END OF Q & A --->
+<!--- BEGINNING OF Q & A --->
+<div class="que flex justify">
+<div class="qmark"><i class="bx bx-question-mark"></i></div>
+<span><h4>Question #3</h4>Question #3 goes here.</span>
+</div>
+<div class="ans flex justify">
+<span>Your answer to question #3 goes here.</span>
+<div class="amark"><i class="bx bx-font"></i></div>
+</div>
+<!--- END OF Q & A --->
+</div>
+{/block:ifNotHideFAQ}
+{block:ifHideFAQ}<div class="tagpg {select:Post Header Style}">{AskLabel}<div class="bb"></div></div>{/block:ifHideFAQ}
+<iframe frameborder="0" width="100%" height="200" border="none" id="ask_form" scrolling="yes" src="https://www.tumblr.com/ask_form/{Name}.tumblr.com"></iframe>
+</div>
+{/block:AskEnabled}
+</section> <!--- F.A.Q. --->
+
+<section class="panel_c">
+<div class="wrapper">
+<div class="navigate">
+<div class="tagpg {select:Post Header Style}">Navigation<div class="bb"></div></div>
+<!--- BEGINNING OF NAV SECTION --->
+<div class="nav">
+<h2>Heading #1</h2>
+<div class="gate">
+<!--- Add your tags/links here --->
+<a href="URL HERE">Link or Tag</a>
+<a href="URL HERE">Link or Tag</a>
+<a href="URL HERE">Link or Tag</a>
+<a href="URL HERE">Link or Tag</a>
+<a href="URL HERE">Link or Tag</a>
+<a href="URL HERE">Link or Tag</a>
+</div>
+</div>
+<!--- END OF NAV SECTION --->
+<!--- BEGINNING OF NAV SECTION --->
+<div class="nav">
+<h2>Heading #2</h2>
+<div class="gate">
+<!--- Add your tags/links here --->
+<a href="URL HERE">Link or Tag</a>
+<a href="URL HERE">Link or Tag</a>
+<a href="URL HERE">Link or Tag</a>
+<a href="URL HERE">Link or Tag</a>
+<a href="URL HERE">Link or Tag</a>
+<a href="URL HERE">Link or Tag</a>
+</div>
+</div>
+<!--- END OF NAV SECTION --->
+<!--- BEGINNING OF NAV SECTION --->
+<div class="nav">
+<h2>Heading #3</h2>
+<div class="gate">
+<!--- Add your tags/links here --->
+<a href="URL HERE">Link or Tag</a>
+<a href="URL HERE">Link or Tag</a>
+<a href="URL HERE">Link or Tag</a>
+<a href="URL HERE">Link or Tag</a>
+<a href="URL HERE">Link or Tag</a>
+<a href="URL HERE">Link or Tag</a>
+</div>
+</div>
+<!--- END OF NAV SECTION --->
+</div>
+</div>
+</section> <!--- NAVIGATION --->
+
+<section class="panel_d">
+<div class="wrapper">
+<div class="tagpg {select:Post Header Style}">Members<div class="bb"></div></div>
+<div class="members">
+{block:GroupMembers}
+{block:GroupMember}
+<a class="person rounder flex justify" href="{GroupMemberURL}" target="_blank"><img src="{GroupMemberPortraitURL-128}"><div class="m-info"><strong>{GroupMemberName}</strong><br>{GroupMemberTitle}</div></a>
+{/block:GroupMember}
+{/block:GroupMembers}
+
+<!--- 
+If you want to add more members or want to do it manually instead, you can just add this:
+
+<a class="person rounder flex justify" href="MEMBER URL HERE" target="_blank"><img src="IMAGE URL"><div class="m-info"><strong>MEMBER BLOG NAME</strong><br>MEMBER NAME OR NICKNAME</div></a>
+
+If you plan to use the member's Tumblr avatar, you can replace IMAGE URL with https://api.tumblr.com/v2/blog/MEMBER BLOG NAME.tumblr.com/avatar/512
+
+--->
+
+</div>
+<div class="tagpg {select:Post Header Style}">Affiliates<div class="bb"></div></div>
+<div class="affiliates">
+<!--- BEGINNING OF AFFILIATE --->
+<a class="person rounder flex justify" href="AFFILIATE URL HERE" target="_blank"><img src="https://api.tumblr.com/v2/blog/AFFILIATE BLOG NAME.tumblr.com/avatar/512"><div class="m-info"><strong>AFFILIATE BLOG NAME</strong><br>AFFILIATE BLOG TITLE</div></a>
+<!--- END OF AFFILIATE --->
+</div>
+
+<!--- 
+If you want to add more affiliates, you can just add this:
+
+<a class="person rounder flex justify" href="AFFILIATE URL HERE" target="_blank"><img src="https://api.tumblr.com/v2/blog/AFFILIATE BLOG NAME.tumblr.com/avatar/512"><div class="m-info"><strong>AFFILIATE BLOG NAME</strong><br>AFFILIATE BLOG TITLE</div></a>
+
+Just remember to replace whatever is in uppercase letters.
+
+--->
+
+</div>
+</section> <!--- MEMBERS --->
+
+</div> <!--- C-WRAPPER --->
+</div> <!--- CAROUSEL --->
+
+<a class="scroll" title="Back to top"><span class="bx bx-up-arrow-alt"></span></a>
+
+</div> <!--- CONTAINER --->
+
+<!----------------------------------------------------- SCRIPTS ------->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/annasthms/customaudio@latest/customaudio.min.js"></script>
+
+<!--
+        NPF images fix v3.0 by @glenthemes [2021]
+        💌 git.io/JRBt7
+--->
+<script src="//npf-images-v3.github.io/script.js"></script>
+<style tmblr-npf>
+:root {
+    --NPF-Caption-Spacing:1em;
+    --NPF-Image-Spacing:3px;
+}
+</style>
+
+<script src="https://static.tumblr.com/05ejowb/xd7rc9s66/vermilion.min.js"></script>
+
+</body>
+</html>
