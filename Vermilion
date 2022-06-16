@@ -625,6 +625,7 @@ Credit:
 {block:IndexPage}
 <div class="post-footer">
 <div class="controls">
+{block:PinnedPostLabel}<a href="{Permalink}"><i class="bx bx-pin"></i>{lang:Pinned Post}</a>{/block:PinnedPostLabel}
 <a href="{Permalink}"><i class="bx bx-time-five"></i>{TimeAgo}</a>
 <a href="{Permalink}"><i class="bx bx-show-alt"></i>{NoteCountWithLabel}</a>
 <a href="{ReblogURL}"><i class="bx bx-revision"></i>Reblog</a>
