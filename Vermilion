@@ -162,7 +162,7 @@ Credit:
 
 <link href="https://fonts.googleapis.com/css2?family={text:Head Font}:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family={text:Body Font}:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link href="https://static.tumblr.com/05ejowb/abgrcvhvh/vermilion.min.css" rel="stylesheet">
+<link href="https://static.tumblr.com/05ejowb/iwXrgy7k3/vermilion.min.css" rel="stylesheet">
 <link href="https://static.tumblr.com/0podkko/oDSpg7y88/photosets.css" rel="stylesheet">
 <link href="//npf-images-v3.github.io/recon.css">
 <link href="//unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
@@ -827,7 +827,7 @@ Just remember to replace whatever is in uppercase letters.
 }
 </style>
 
-<script src="https://static.tumblr.com/05ejowb/xd7rc9s66/vermilion.min.js"></script>
+<script src="https://static.tumblr.com/05ejowb/Kk9rgy7if/vermilion.min.js"></script>
 
 </body>
 </html>
