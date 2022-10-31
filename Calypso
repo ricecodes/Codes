@@ -7,6 +7,7 @@ Credit:
 ★ CSS Photosets: https://annasthms.tumblr.com/post/177359244495/photosetscss-by-annasthms-and-espoirthemes-to
 ★ Custom Audio js: https://annasthms.tumblr.com/more/js/customaudio/new
 ★ Day/Night Mode: https://egg.design/post/186889223257/day-night-mode-tutorial-after-featuring-a
+★ NPF Images: https://glenthemes.tumblr.com/post/659034084446748672/npf-images-v3
 ★ Tumblr Redirects: https://magnusthemes.tumblr.com/post/643460974823833600/remove-redirects-v20
 ★ Tippy Tooltip: https://atomiks.github.io/tippyjs/
 ★ Custom "Not Found" Page: https://fukuo.site/post/145043341255/how-to-make-a-custom-not-found-page-on-tumblr
@@ -98,7 +99,8 @@ Credit:
 <link href="https://fonts.googleapis.com/css2?family={text:Head Font}:wght@400;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family={text:Body Font}:wght@400;700&display=swap" rel="stylesheet">
 <link href="https://static.tumblr.com/0podkko/oDSpg7y88/photosets.css" rel="stylesheet">
-<link href="https://static.tumblr.com/05ejowb/u1Mrgy7qo/calypso.min.css" rel="stylesheet">
+<link href="//npf-images-v3.github.io/recon.css" rel="stylesheet">
+<link href="https://static.tumblr.com/05ejowb/kfRrkn4lo/calypso.min.css" rel="stylesheet">
 
 <style>
 
@@ -111,6 +113,8 @@ Credit:
     --line-hgt:{text:Line Height};
     --post-size:{select:Post Size};
     --rgb-accent-text:{RGBcolor:Accent Text};
+    --NPF-Caption-Spacing:1em;
+    --NPF-Image-Spacing:3px;
 }
 
 {block:ifNotDarkMode}
@@ -849,7 +853,12 @@ Aliquam nisi lorem, pulvinar id, commodo feugiat, vehicula et, mauris. <!-- Quot
 <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
 <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/annasthms/customaudio@latest/customaudio.min.js"></script>
-<script src="https://static.tumblr.com/05ejowb/OqMrklb9t/calypso.min.js"></script>
+<!--
+        NPF images fix v3.0 by @glenthemes [2021]
+        💌 git.io/JRBt7
+--->
+<script src="//npf-images-v3.github.io/script.js"></script>
+<script src="https://static.tumblr.com/05ejowb/0ZLrkn4u6/calypso.min.js"></script>
 
 {block:PermalinkPage}
 <script> 
