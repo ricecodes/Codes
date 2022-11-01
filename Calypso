@@ -100,7 +100,7 @@ Credit:
 <link href="https://fonts.googleapis.com/css2?family={text:Body Font}:wght@400;700&display=swap" rel="stylesheet">
 <link href="https://static.tumblr.com/0podkko/oDSpg7y88/photosets.css" rel="stylesheet">
 <link href="//npf-images-v3.github.io/recon.css" rel="stylesheet">
-<link href="https://static.tumblr.com/05ejowb/kfRrkn4lo/calypso.min.css" rel="stylesheet">
+<link href="https://static.tumblr.com/05ejowb/U0jrkn72t/calypso.min.css" rel="stylesheet">
 
 <style>
 
@@ -378,10 +378,10 @@ body.right-side .tmblr-iframe { right:20px!important; }
 
 <!--- START OF BLOG --->
 <section class="tab_a">
-{block:Posts}
+{block:Posts inlineMediaWidth="1280" inlineNestedMediaWidth="1280"}
 
 <div class="entry">
-<article class="round borders-{select:Borders} {block:PinnedPostLabel}pinned{/block:PinnedPostLabel}">
+<article class="round borders-{select:Borders} {block:PinnedPostLabel}pinned{/block:PinnedPostLabel}" post-type="{PostType}">
 
 {block:Date}
 <div class="post-header flex justify">
@@ -408,7 +408,7 @@ body.right-side .tmblr-iframe { right:20px!important; }
 <div class="unnest">
 {block:Reblogs}
 <div class="reblogged">
-<div class="username">
+<div class="username source-head">
 {block:IsActive}
 <div class="active">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<i class="ft" data-feather="circle"></i> {Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
 {/block:IsActive}
