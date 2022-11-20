@@ -1,16 +1,14 @@
 <!-----
 
-                   ★ [ Vermilion ] by ricecodes ★
+                   ★ [ Vermilion ] by ricecodes ★ 
 Credit:
 
 ★ Icons: https://boxicons.com/
 ★ CSS Photosets: https://annasthms.tumblr.com/post/177359244495/photosetscss-by-annasthms-and-espoirthemes-to
-★ Custom Audio js: hhttps://annasthms.tumblr.com/more/js/customaudio/new
 ★ Day/Night Mode: https://egg.design/post/186889223257/day-night-mode-tutorial-after-featuring-a
 ★ NPF Images: https://glenthemes.tumblr.com/post/659034084446748672/npf-images-v3
 ★ Tumblr Redirects: https://magnusthemes.tumblr.com/post/643460974823833600/remove-redirects-v20
 ★ Tippy Tooltip: https://atomiks.github.io/tippyjs/
-★ Vertical Carousel: https://yeolithm.com/post/176445927712/basic-vertical-css-carousel-tutorial
 
 ----->
 
@@ -20,7 +18,6 @@ Credit:
 
 <title>{Title}{block:TagPage} — {lang:Posts tagged Tag}{/block:TagPage}{block:SearchPage} — {lang:Search results for SearchQuery}{/block:SearchPage}{block:PermalinkPage}{block:PostSummary} — {PostSummary}{/block:PostSummary}{/block:PermalinkPage}</title>
 <meta name="description" content="{MetaDescription}">
-
 
 <link rel="shortcut icon" href="{Favicon}">
 <link rel="alternate" type="application/rss+xml" href="{RSS}">
@@ -160,12 +157,12 @@ Credit:
 <meta name="text:Project 3" content="Project Name">
 <meta name="text:Project 3 Percent" content="50%">
 
-<link href="https://fonts.googleapis.com/css2?family={text:Head Font}:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family={text:Body Font}:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link href="https://static.tumblr.com/05ejowb/iwXrgy7k3/vermilion.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family={text:Head Font}:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family={text:Body Font}:wght@400;700&display=swap" rel="stylesheet">
 <link href="https://static.tumblr.com/0podkko/oDSpg7y88/photosets.css" rel="stylesheet">
-<link href="//npf-images-v3.github.io/recon.css">
-<link href="//unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+<link href="//npf-images-v3.github.io/recon.css" rel="stylesheet">
+<link href="https://static.tumblr.com/05ejowb/qmWrlml39/vermilion.min.css" rel="stylesheet">
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
 <style>
 
@@ -188,6 +185,8 @@ Credit:
     --selection:{color:Selection};
     --tooltips:{color:Tooltips};
     --tooltips-text:{color:Tooltips Text};
+    --NPF-Caption-Spacing:1em;
+    --NPF-Image-Spacing:4px;
 }
 
 {block:ifNotDarkMode}
@@ -283,7 +282,7 @@ Credit:
 
 <body>
 
-<div class="container flex">
+<div class="contain flex">
 
 <input hidden type="radio" name="carousel-control" id="button_a" checked/>
 <input hidden type="radio" name="carousel-control" id="button_b"/>
@@ -320,9 +319,8 @@ Credit:
 
 <div class="carousel">
 <div class="c-wrapper">
-
+    
 <section class="panel_a">
-
 {block:ifNotHideHeader}
 {block:HomePage}
 <div class="home-wrap page-{CurrentPage}">
@@ -339,7 +337,6 @@ Credit:
 {/block:ifNotHideHeader}
 
 <div class="content flex justify">
-
 <div class="sidebar flex center">
 <div class="sidenav flex center">
 <a class="tbtn_a selected" title="About"><i class="bx bx-star"></i></a>
@@ -436,31 +433,22 @@ Credit:
 </div>
 {block:ifDisclaimer}<h2>Disclaimer</h2>{text:Disclaimer}{/block:ifDisclaimer}
 </div> <!--- SITE INFO --->
-</div>
-</div>
+</div> <!--- TABS --->
+</div> <!--- SIDEBAR --->
 
 <div class="wrapper">
-
-{block:TagPage}
-<div class="tagpg {select:Post Header Style}">{lang:TagResultCount posts tagged Tag 2}<div class="bb"></div></div>
-{/block:TagPage}
-
-{block:SearchPage}
-<div class="tagpg">{lang:SearchResultCount results for SearchQuery 2}{block:NoSearchResults}{lang:Sorry no results for SearchQuery 2}{/block:NoSearchResults}<div class="bb"></div></div>
-{/block:SearchPage}
-
-{block:posts inlineMediaWidth="1280" inlineNestedMediaWidth="1280"}
+{block:Posts inlineMediaWidth="1280" inlineNestedMediaWidth="1280"}
 <div class="entry">
 
 {block:Date}
 <div class="post-header flex justify">
 <div class="post-info {select:Post Header Style}">
-{block:NotReblog}<img src="{PostAuthorPortraitURL-128}">{/block:NotReblog}{block:RebloggedFrom}<img src="{ReblogRootPortraitURL-128}">{/block:RebloggedFrom}{block:NotReblog}<a href="{Permalink}" title="{lang:Posted by PostAuthorName}">{PostAuthorName}</a>{/block:NotReblog}{block:RebloggedFrom}<a href="{ReblogRootURL}" title="{lang:Originally from ReblogRootName}">{ReblogRootName}</a>{/block:RebloggedFrom}
+{block:NotReblog}<a href="{Permalink}" title="{lang:Posted by PostAuthorName}"><img src="{PostAuthorPortraitURL-128}">{PostAuthorName}</a>{/block:NotReblog}{block:RebloggedFrom}<a href="{ReblogRootURL}" title="{lang:Originally from ReblogRootName}"><img src="{ReblogRootPortraitURL-128}">{ReblogRootName}</a>{/block:RebloggedFrom}
 </div>
 </div>
 {/block:Date}
 
-<article class="{block:Link}round{/block:Link}{block:Answer}round{/block:Answer}{block:Photo}round{/block:Photo}{block:Photoset}round{/block:Photoset}{block:Video}round{/block:Video}{block:Audio}round{/block:Audio} borders-{select:Borders}" post-type="{PostType}">
+<article class="{block:Link}round{/block:Link}{block:Answer}round{/block:Answer}{block:Photo}round{/block:Photo}{block:Photoset}round{/block:Photoset}{block:Video}round{/block:Video}{block:Audio}round{/block:Audio}" post-type="{PostType}">
 
 {block:Text}
 {block:Title}<div class="t-title">{Title}</div>{/block:Title}
@@ -471,14 +459,13 @@ Credit:
 <div class="unnest">
 {block:Reblogs}
 <div class="reblogged">
-<div class="username {select:Post Header Style}">
+<div class="username source-head">
 {block:IsActive}
-<div class="active">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}"> {Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
+<div class="active">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<span><img src="{PortraitURL-64}"><i class="bx bx-repost"></i></span>{Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
 {/block:IsActive}
 {block:IsDeactivated}
-<div class="deleted">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}"> {Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
+<div class="deleted">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<span><img src="{PortraitURL-64}"><i class="bx bx-repost"></i></span>{Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
 {/block:IsDeactivated}
-<i class="bx bx-repost"></i>
 </div>
 {Body}
 </div>
@@ -488,7 +475,29 @@ Credit:
 {/block:Text}
 
 {block:Link}
-<a href="{URL}"><div class="link flex justify">{Name}<i class="bx bx-link-external"></i></div></a>
+<a href="{URL}"><div class="link flex justify">{Name}<span class="bx bx-link-external"></span></div></a>
+{block:NotReblog}
+{block:Description}
+<div class="caption">{Description}</div>
+{/block:Description}
+{/block:NotReblog}
+{block:Rebloggedfrom}
+<div class="unnest">
+{block:Reblogs}
+<div class="reblogged">
+<div class="username">
+{block:IsActive}
+<div class="active">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<span><img src="{PortraitURL-64}"><i class="bx bx-repost"></i></span>{Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
+{/block:IsActive}
+{block:IsDeactivated}
+<div class="deleted">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<span><img src="{PortraitURL-64}"><i class="bx bx-repost"></i></span>{Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
+{/block:IsDeactivated}
+</div>
+{Body}
+</div>
+{/block:Reblogs}
+</div>
+{/block:RebloggedFrom}
 {/block:Link}
 
 {block:Quote}
@@ -551,7 +560,7 @@ Credit:
 {block:Video}
 <div class="video">{VideoEmbed-700}</div>
 {/block:Video}
-
+            
 {block:Audio}
 {block:AudioEmbed}{AudioEmbed-640}{/block:AudioEmbed}
 {block:AudioPlayer}
@@ -571,48 +580,21 @@ Credit:
 
 </article>
 
-{block:Link}
-{block:NotReblog}
-{block:Description}
-<div class="m-caption">{Description}</div>
-{/block:Description}
-{/block:NotReblog}
-{block:Rebloggedfrom}
-<div class="m-unnest">
-{block:Reblogs}
-<div class="reblogged">
-<div class="username {select:Post Header Style}">
-{block:IsActive}
-<div class="active">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}"> {Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
-{/block:IsActive}
-{block:IsDeactivated}
-<div class="deleted">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}"> {Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
-{/block:IsDeactivated}
-<i class="bx bx-repost"></i>
-</div>
-{Body}
-</div>
-{/block:Reblogs}
-</div>
-{/block:RebloggedFrom}
-{/block:Link}
-
 {block:Caption}
 {block:NotReblog}
-<div class="m-caption">{Caption}</div>
+<div class="caption top">{Caption}</div>
 {/block:NotReblog}
 {block:Rebloggedfrom}
-<div class="m-unnest">
+<div class="unnest top">
 {block:Reblogs}
 <div class="reblogged">
-<div class="username {select:Post Header Style}">
+<div class="username">
 {block:IsActive}
-<div class="active">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}"> {Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
+<div class="active">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<span><img src="{PortraitURL-64}"><i class="bx bx-repost"></i></span>{Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
 {/block:IsActive}
 {block:IsDeactivated}
-<div class="deleted">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}"> {Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
+<div class="deleted">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<span><img src="{PortraitURL-64}"><i class="bx bx-repost"></i></span>{Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
 {/block:IsDeactivated}
-<i class="bx bx-repost"></i>
 </div>
 {Body}
 </div>
@@ -626,6 +608,7 @@ Credit:
 <div class="post-footer">
 <div class="controls">
 {block:PinnedPostLabel}<a href="{Permalink}"><i class="bx bx-pin"></i>{lang:Pinned Post}</a>{/block:PinnedPostLabel}
+{block:ContentSource}<a href="{SourceURL}" target="_blank"><i class="bx bx-link-external"></i>Content Source</a>{/block:ContentSource}
 <a href="{Permalink}"><i class="bx bx-time-five"></i>{TimeAgo}</a>
 <a href="{Permalink}"><i class="bx bx-show-alt"></i>{NoteCountWithLabel}</a>
 <a href="{ReblogURL}"><i class="bx bx-revision"></i>Reblog</a>
@@ -648,13 +631,14 @@ Credit:
 </div>
 {/block:PermalinkPage}
 {/block:Date}
-
+    
 </div>
 {/block:Posts}
 
 {block:Pagination}
 <div class="pgs flex justify">
 <div class="prev">{block:PreviousPage}<a href="{PreviousPage}" title="{lang:Previous page}"><i class="bx bx-left-arrow-alt"></i></a>{/block:PreviousPage}<span><i class="bx bx-left-arrow-alt"></i></span></div>
+<span>{CurrentPage} of {TotalPages}</span>
 <div class="next">{block:NextPage}<a href="{NextPage}" title="{lang:Next page}"><i class="bx bx-right-arrow-alt"></i></a>{/block:NextPage}<span><i class="bx bx-right-arrow-alt"></i></span></div>
 </div>
 {/block:Pagination}
@@ -666,7 +650,6 @@ Credit:
 </footer>
 
 </div> <!--- CONTENT --->
-
 </section> <!--- BLOG --->
 
 <section class="panel_b">
@@ -814,20 +797,12 @@ Just remember to replace whatever is in uppercase letters.
 <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
 <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/annasthms/customaudio@latest/customaudio.min.js"></script>
-
+<script src="https://static.tumblr.com/05ejowb/Tbfrlml6k/vermilion.min.js"></script>
 <!--
         NPF images fix v3.0 by @glenthemes [2021]
         💌 git.io/JRBt7
 --->
 <script src="//npf-images-v3.github.io/script.js"></script>
-<style tmblr-npf>
-:root {
-    --NPF-Caption-Spacing:1em;
-    --NPF-Image-Spacing:3px;
-}
-</style>
-
-<script src="https://static.tumblr.com/05ejowb/Kk9rgy7if/vermilion.min.js"></script>
-
+    
 </body>
 </html>
