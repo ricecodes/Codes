@@ -461,10 +461,10 @@ Credit:
 <div class="reblogged">
 <div class="username source-head">
 {block:IsActive}
-<div class="active">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<span><img src="{PortraitURL-64}"><i class="bx bx-repost"></i></span>{Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
+<div class="active">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<table><tr><td><img src="{PortraitURL-64}"></td><td>{Username}</td></tr></table>{block:HasPermalink}</a>{/block:HasPermalink}</div>
 {/block:IsActive}
 {block:IsDeactivated}
-<div class="deleted">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<span><img src="{PortraitURL-64}"><i class="bx bx-repost"></i></span>{Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
+<div class="deleted">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<table><tr><td><img src="{PortraitURL-64}"></td><td>{Username}</td></tr></table>{block:HasPermalink}</a>{/block:HasPermalink}</div>
 {/block:IsDeactivated}
 </div>
 {Body}
@@ -487,10 +487,10 @@ Credit:
 <div class="reblogged">
 <div class="username">
 {block:IsActive}
-<div class="active">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<span><img src="{PortraitURL-64}"><i class="bx bx-repost"></i></span>{Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
+<div class="active">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<table><tr><td><img src="{PortraitURL-64}"></td><td>{Username}</td></tr></table>{block:HasPermalink}</a>{/block:HasPermalink}</div>
 {/block:IsActive}
 {block:IsDeactivated}
-<div class="deleted">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<span><img src="{PortraitURL-64}"><i class="bx bx-repost"></i></span>{Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
+<div class="deleted">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<table><tr><td><img src="{PortraitURL-64}"></td><td>{Username}</td></tr></table>{block:HasPermalink}</a>{/block:HasPermalink}</div>
 {/block:IsDeactivated}
 </div>
 {Body}
@@ -590,10 +590,10 @@ Credit:
 <div class="reblogged">
 <div class="username">
 {block:IsActive}
-<div class="active">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<span><img src="{PortraitURL-64}"><i class="bx bx-repost"></i></span>{Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
+<div class="active">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<table><tr><td><img src="{PortraitURL-64}"></td><td>{Username}</td></tr></table>{block:HasPermalink}</a>{/block:HasPermalink}</div>
 {/block:IsActive}
 {block:IsDeactivated}
-<div class="deleted">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<span><img src="{PortraitURL-64}"><i class="bx bx-repost"></i></span>{Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
+<div class="deleted">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<table><tr><td><img src="{PortraitURL-64}"></td><td>{Username}</td></tr></table>{block:HasPermalink}</a>{/block:HasPermalink}</div>
 {/block:IsDeactivated}
 </div>
 {Body}
