@@ -1,0 +1,596 @@
+<!-----
+
+                   ★ [ Lowlife ] by ricecodes ★ 
+Credit:
+
+★ Icons: https://boxicons.com/
+★ CSS Photosets: https://annasthms.tumblr.com/post/177359244495/photosetscss-by-annasthms-and-espoirthemes-to
+★ Custom Audio js: https://annasthms.tumblr.com/more/js/customaudio/new
+★ Custom "Not Found" Page: https://fukuo.site/post/145043341255/how-to-make-a-custom-not-found-page-on-tumblr
+★ Customize Page Divider: https://glenthemes.tumblr.com/post/671422052920705024/customize-page-divider-tutorial
+★ Day/Night Mode: https://egg.design/post/186889223257/day-night-mode-tutorial-after-featuring-a
+★ NPF Images: https://glenthemes.tumblr.com/post/659034084446748672/npf-images-v3
+★ Tumblr Redirects: https://magnusthemes.tumblr.com/post/643460974823833600/remove-redirects-v20
+★ Tippy Tooltip: https://atomiks.github.io/tippyjs/
+
+----->
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>{Title}{block:TagPage} — {lang:Posts tagged Tag}{/block:TagPage}{block:SearchPage} — {lang:Search results for SearchQuery}{/block:SearchPage}{block:PermalinkPage}{block:PostSummary} — {PostSummary}{/block:PostSummary}{/block:PermalinkPage}</title>
+<meta name="description" content="{MetaDescription}">
+
+
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+<script src="https://static.tumblr.com/05ejowb/RA6r1jy9i/render.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+<meta name="image:Sidebar" content="">
+
+<meta name="color:Accent" content="#cc8fc7">
+<meta name="color:Accent Text" content="#ffffff">
+<meta name="color:Links" content="#53d385">
+<meta name="color:Links Hover" content="#9dc6d7">
+<meta name="color:Like Button" content="#ff492f">
+<meta name="color:Selection Background" content="#b37dae">
+<meta name="color:Selection" content="#ffffff">
+<meta name="color:Tooltips" content="#000000">
+<meta name="color:Tooltips Text" content="#ffffff">
+<meta name="color:Mobile Sidebar" content="#25262b">
+<meta name="color:&#x2584;&#x2580;&#x2584;&#x2580; Dark Theme &#x2580;&#x2584;&#x2580;&#x2584;" content="#ffffff">
+<meta name="color:Dark Background" content="#15161a">
+<meta name="color:Dark Borders" content="#41424d">
+<meta name="color:Dark Posts" content="#25262b">
+<meta name="color:Dark Text" content="#ffffff">
+<meta name="color:Dark Question" content="#25262b">
+<meta name="color:&#x2584;&#x2580;&#x2584;&#x2580; Light Theme &#x2580;&#x2584;&#x2580;&#x2584;" content="#ffffff">
+<meta name="color:Sidebar" content="#f2f2f2">
+<meta name="color:Sidebar Text" content="#888888">
+<meta name="color:Background" content="#ffffff">
+<meta name="color:Posts" content="#ffffff">
+<meta name="color:Borders" content="#c0c0c0">
+<meta name="color:Text" content="#000000">
+<meta name="color:Question" content="#f2f2f2">
+
+<meta name="select:Blog Theme" title="Dark Theme" content="dark">
+<meta name="select:Blog Theme" title="Light Theme" content="light">
+
+<meta name="select:Blog Layout" title="Left Sidebar" content="left-side">
+<meta name="select:Blog Layout" title="Right Sidebar" content="right-side">
+
+<meta name="select:Header Style" title="None" content="normal">
+<meta name="select:Header Style" title="Uppercase" content="uppercase">
+<meta name="select:Header Style" title="Lowercase" content="lowercase">
+<meta name="select:Header Style" title="Capitalize" content="capitalize">
+
+<meta name="select:Image Style" title="Blob" content="blob">
+<meta name="select:Image Style" title="Square" content="square">
+<meta name="select:Image Style" title="Circle" content="circle">
+
+<meta name="select:Borders Style" title="Solid" content="solid">
+<meta name="select:Borders Style" title="Dashed" content="dash">
+<meta name="select:Borders Style" title="Dotted" content="dot">
+
+<meta name="if:Hide Tumblr Controls" content="">
+<meta name="if:Hide Menu" content="">
+<meta name="if:Hide Captions" content="">
+<meta name="if:Hide Tags" content="">
+<meta name="if:Sidebar Image" content="">
+<meta name="if:Social Media" content="">
+<meta name="if:FAQ Link" content="">
+<meta name="if:Greyscale Photos" content="">
+
+<meta name="text:Post Size" content="35vw">
+<meta name="text:Photoset Gap" content="3px">
+<meta name="text:Body Font" content="Karla">
+<meta name="text:Font Size" content="14px">
+<meta name="text:Line Height" content="1.5em">
+<meta name="text:Custom Title" content="">
+<meta name="text:Custom Description" content="">
+<meta name="text:&#x2584;&#x2580;&#x2584;&#x2580; Updates &#x2580;&#x2584;&#x2580;&#x2584;" content="">
+<meta name="text:Updates" content="The updates box will automatically be hidden if this is empty.">
+<meta name="text:&#x2584;&#x2580;&#x2584;&#x2580; Sidebar Links &#x2580;&#x2584;&#x2580;&#x2584;" content="">
+<meta name="text:Home Link" content="Home">
+<meta name="text:Home Link Icon" content="bx-home-alt">
+<meta name="text:Ask Link" content="Contact">
+<meta name="text:Ask Link Icon" content="bx-envelope">
+<meta name="text:FAQ Link URL" content="/faq">
+<meta name="text:FAQ Link Icon" content="bx-message-detail">
+<meta name="text:Submit Link" content="Submit">
+<meta name="text:Submit Link Icon" content="bx-box">
+<meta name="text:Archive Link" content="Archive">
+<meta name="text:Archive Link Icon" content="bx-time">
+<meta name="text:&#x2584;&#x2580;&#x2584;&#x2580; Menu Links &#x2580;&#x2584;&#x2580;&#x2584;" content="">
+<meta name="text:Menu Icon" content="bx-category-alt">
+<meta name="text:Menu Link" content="Menu">
+<meta name="text:Menu Header" content="Navigation">
+<meta name="text:Link 1" content="Link 1">
+<meta name="text:Link 1 URL" content="">
+<meta name="text:Link 2" content="Link 2">
+<meta name="text:Link 2 URL" content="">
+<meta name="text:Link 3" content="Link 3">
+<meta name="text:Link 3 URL" content="">
+<meta name="text:Link 4" content="Link 4">
+<meta name="text:Link 4 URL" content="">
+<meta name="text:&#x2584;&#x2580;&#x2584;&#x2580; Social Media &#x2580;&#x2584;&#x2580;&#x2584;" content="">
+<meta name="text:Social Media Header" content="Social Media">
+<meta name="text:Tumblr 1 Link" content="Side Tumblr Link">
+<meta name="text:Tumblr 1 Name" content="Side Tumblr Name">
+<meta name="text:Tumblr 2 Link" content="Side Tumblr Link">
+<meta name="text:Tumblr 2 Name" content="Side Tumblr Name">
+<meta name="text:Twitter Link" content="Twitter Link">
+<meta name="text:Twitter Name" content="Twitter Name">
+<meta name="text:Instagram Link" content="Instgram Link">
+<meta name="text:Instagram Name" content="Instagram Name">
+<meta name="text:Discord Link" content="Discord Link">
+<meta name="text:Discord Name" content="Discord Name">
+<meta name="text:Twitch Link" content="Twitch Link">
+<meta name="text:Twitch Name" content="Twitch Name">
+<meta name="text:TikTok Link" content="TikTok Link">
+<meta name="text:TikTok Name" content="TikTok Name">
+<meta name="text:YouTube Link" content="YouTube Link">
+<meta name="text:YouTube Name" content="YouTube Name">
+<meta name="text:Spotify Link" content="Spotify Link">
+<meta name="text:Spotify Name" content="Spotify Name">
+<meta name="text:SoundCloud Link" content="SoundCloud Link">
+<meta name="text:SoundCloud Name" content="SoundCloud Name">
+
+<link href="https://fonts.googleapis.com/css2?family={text:Body Font}:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://static.tumblr.com/0podkko/oDSpg7y88/photosets.css" rel="stylesheet">
+<link href="https://static.tumblr.com/05ejowb/jv1ro30by/lowlife.min.css" rel="stylesheet">
+<link href="//npf-images-v3.github.io/recon.css" rel="stylesheet">
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+<style>
+
+/* VARIABLES - Please do not edit/remove this */
+
+:root {
+    --body-font:{text:Body Font},sans-serif;
+    --body-size:{text:Font Size};
+    --line-hgt:{text:Line Height};
+    --post-size:{text:Post Size};
+    --gap-size:{text:Photoset Gap};
+    --accent:{color:Accent};
+    --accent-text:{color:Accent Text};
+    --rgb-accent-text:{RGBcolor:Accent Text};
+    --links:{color:Links};
+    --links-hover:{color:Links Hover};
+    --like-btn:{color:Like Button};
+    --selection-bg:{color:Selection Background};
+    --selection:{color:Selection};
+    --tooltips:{color:Tooltips};
+    --tooltips-text:{color:Tooltips Text};
+    --mobile-side:{color:Mobile Sidebar};
+    --NPF-Caption-Spacing:1em;
+    --NPF-Image-Spacing:{text:Photoset Gap};
+}
+
+body.dark {
+    --side:{color:Dark Posts};
+    --side-text:{color:Dark Text};
+    --rgb-side-text:{RGBcolor:Dark Text};
+    --bg:{color:Dark Background};
+    --rgb-bg:{RGBcolor:Dark Background};
+    --borders:{color:Dark Borders};
+    --posts:{color:Dark Posts};
+    --ask:{color:Dark Question};
+    --text:{color:Dark Text};
+    --rgb-text:{RGBcolor:Dark Text};
+}
+
+[data-theme="daynight"] body.dark {
+    --side:{color:Sidebar};
+    --side-text:{color:Sidebar Text};
+    --rgb-side-text:{RGBcolor:Sidebar Text};
+    --bg:{color:Background};
+    --rgb-bg:{RGBcolor:Background};
+    --borders:{color:Borders};
+    --posts:{color:Posts};
+    --ask:{color:Question};
+    --text:{color:Text};
+    --rgb-text:{RGBcolor:Text};
+}
+
+
+body.light {
+    --side:{color:Sidebar};
+    --side-text:{color:Sidebar Text};
+    --rgb-side-text:{RGBcolor:Sidebar Text};
+    --bg:{color:Background};
+    --rgb-bg:{RGBcolor:Background};
+    --borders:{color:Borders};
+    --posts:{color:Posts};
+    --ask:{color:Question};
+    --text:{color:Text};
+    --rgb-text:{RGBcolor:Text};
+}
+
+[data-theme="daynight"] body.light {
+    --side:{color:Dark Posts};
+    --side-text:{color:Dark Text};
+    --rgb-side-text:{RGBcolor:Dark Text};
+    --bg:{color:Dark Background};
+    --rgb-bg:{RGBcolor:Dark Background};
+    --borders:{color:Dark Borders};
+    --posts:{color:Dark Posts};
+    --ask:{color:Dark Question};
+    --text:{color:Dark Text};
+    --rgb-text:{RGBcolor:Dark Text};
+}
+
+{block:ifHideTumblrControls}
+{block:IndexPage}
+.tmblr-iframe { opacity:0; visibility:hidden; }
+body.open .tmblr-iframe { opacity:1; visibility:visible; }
+{/block:IndexPage}
+{block:PermalinkPage}
+.tmblr-iframe { opacity:1; visibility:visible; }
+{/block:PermalinkPage}
+{/block:ifHideTumblrControls}
+
+{CustomCSS}
+</style>
+</head>
+
+<body class="{select:Blog Theme} {select:Blog Layout} {select:Header Style} {select:Borders Style} {select:Image Style} {block:ifGreyscalePhotos}grey{/block:ifGreyscalePhotos}">
+
+<div class="menu-bg"></div>
+<div class="menu flex center">
+<a class="exit" title="{lang:Close}"><i class="bx bx-x"></i></a>
+<div class="menu-links">
+{block:ifMenuHeader}<h2>{text:Menu Header}</h2>{/block:ifMenuHeader}
+<div class="menug">
+{block:ifLink1}<a href="{text:Link 1 URL}"><i class="bx bx-link-alt"></i>{text:Link 1}</a>{/block:ifLink1}
+{block:ifLink2}<a href="{text:Link 2 URL}"><i class="bx bx-link-alt"></i>{text:Link 2}</a>{/block:ifLink2}
+{block:ifLink3}<a href="{text:Link 3 URL}"><i class="bx bx-link-alt"></i>{text:Link 3}</a>{/block:ifLink3}
+{block:ifLink4}<a href="{text:Link 4 URL}"><i class="bx bx-link-alt"></i>{text:Link 4}</a>{/block:ifLink4}
+{block:HasPages}{block:Pages}<a href="{URL}"><i class="bx bx-link-alt"></i>{Label}</a>{/block:Pages}{/block:HasPages}
+</div>
+{block:ifSocialMedia}
+{block:ifSocialMediaHeader}<h2>{text:Social Media Header}</h2>{/block:ifSocialMediaHeader}
+<div class="menug">
+{block:ifTumblr1Link}<a href="{text:Tumblr 1 Link}" target="_blank"><i class="bx bxl-tumblr"></i>{text:Tumblr 1 Name}</a>{/block:ifTumblr1Link}
+{block:ifTumblr2Link}<a href="{text:Tumblr 2 Link}" target="_blank"><i class="bx bxl-tumblr"></i>{text:Tumblr 2 Name}</a>{/block:ifTumblr2Link}
+{block:ifTwitterLink}<a href="{text:Twitter Link}" target="_blank"><i class="bx bxl-twitter"></i>{text:Twitter Name}</a>{/block:ifTwitterLink}
+{block:ifInstagramLink}<a href="{text:Instagram Link}" target="_blank"><i class="bx bxl-instagram-alt"></i>{text:Instagram Name}</a>{/block:ifInstagramLink}
+{block:ifDiscordLink}<a href="{text:Discord Link}" target="_blank"><i class="bx bxl-discord-alt"></i>{text:Discord Name}</a>{/block:ifDiscordLink}
+{block:ifTwitchLink}<a href="{text:Twitch Link}" target="_blank"><i class="bx bxl-twitch"></i>{text:Twitch Name}</a>{/block:ifTwitchLink}
+{block:ifTikTokLink}<a href="{text:TikTok Link}" target="_blank"><i class="bx bxl-tiktok"></i>{text:TikTok Name}</a>{/block:ifTikTokLink}
+{block:ifYouTubeLink}<a href="{text:YouTube Link}" target="_blank"><i class="bx bxl-youtube"></i>{text:YouTube Name}</a>{/block:ifYouTubeLink}
+{block:ifSpotifyLink}<a href="{text:Spotify Link}" target="_blank"><i class="bx bxl-spotify"></i>{text:Spotify Name}</a>{/block:ifSpotifyLink}
+{block:ifSoundCloudLink}<a href="{text:SoundCloud Link}" target="_blank"><i class="bx bxl-soundcloud"></i>{text:SoundCloud Name}</a>{/block:ifSoundCloudLink}
+</div>
+{/block:ifSocialMedia}
+</div>
+</div>
+
+<div class="labels">
+<div class="icons">
+{block:ifNotHideMenu}<a class="mbtn" title="{text:Menu Link}"><i class="bx {text:Menu Icon}"></i></a>{/block:ifNotHideMenu}
+{block:ifHideMenu}<a class="ebtn"><i class="bx {text:Menu Icon}"></i></a>{/block:ifHideMenu}
+{block:ifHideTumblrControls}{block:IndexPage}
+<a class="tbtn"><span class="hide"><i class="bx bx-cog"></i></span><span class="hide none"><i class="bx bx-x"></i></span></a>
+{/block:IndexPage}{/block:ifHideTumblrControls}
+<label class="dn"><input class="modus" type="checkbox">
+<div class="diem"><a class="diemnox moon" title="Enable Dark Mode"><i class="bx bx-moon"></i></a><a class="diemnox none" title="Disable Dark Mode"><i class="bx bx-sun"></i></a></div>
+<div class="nox"><a class="diemnox moon" title="Enable Light Mode"><i class="bx bx-sun"></i></a><a class="diemnox none" title="Disable Light Mode"><i class="bx bx-moon"></i></a></div>
+</label>
+{block:ifUpdates}<a class="ubtn"><span class="close" title="Updates"><i class="bx bx-bell"></i></span><span class="close none"><i class="bx bx-bell-off"></i></span></a>{/block:ifUpdates}
+<div class="up-wrap">{text:Updates}</div>
+<div class="to-top"><a class="scroll" title="{lang:Back to top}"><i class="bx bx-up-arrow-alt"></i></a><i class="bx bx-up-arrow-alt"></i></div>
+</div>
+</div>
+
+<div class="container">
+
+<div class="content flex justify">
+
+<div class="sidebar flex center">
+<div class="side-wrap">
+<div class="side flex justify">
+<div class="portrait"><img src="{block:ifSidebarImage}{image:Sidebar}{/block:ifSidebarImage}{block:ifNotSidebarImage}{PortraitURL-128}{/block:ifNotSidebarImage}" draggable="false"></div>
+<div class="desc-wrap flex">
+<a class="desc-title" href="/">{block:ifNotCustomTitle}<h3>{Title}</h3>{/block:ifNotCustomTitle}{block:ifCustomTitle}<h3>{text:Custom Title}</h3>{/block:ifCustomTitle}</a>
+<div class="desc">{block:ifNotCustomDescription}{Description}{/block:ifNotCustomDescription}{block:ifCustomDescription}{text:Custom Description}{/block:ifCustomDescription}</div>
+<div class="nav">
+<a href="/" title="{text:Home Link}"><i class="bx {text:Home Link Icon}"></i></a>
+{block:ifNotFAQLink}{block:AskEnabled}<a href="/ask" title="{text:Ask Link}"><i class="bx {text:Ask Link Icon}"></i></a>{/block:AskEnabled}{/block:ifNotFAQLink}
+{block:ifFAQLink}<a href="{text:FAQ Link URL}" title="Frequently Asked Questions"><i class="bx {text:FAQ Link Icon}"></i></a>{/block:ifFAQLink}
+{block:SubmissionsEnabled}<a href="/submit" title="{text:Submit Link}"><i class="bx {text:Submit Link Icon}"></i></a>{/block:SubmissionsEnabled}
+<a href="/archive" title="{text:Archive Link}" target="_blank"><i class="bx {text:Archive Link Icon}"></i></a>
+<a href="https://ricecodes.tumblr.com/" target="_blank" title="Theme by ricecodes"><i class="bx bx-star"></i></a>
+</div>
+<div class="search {block:HideFromSearchEnabled}none{/block:HideFromSearchEnabled}"><form action="/search" method="get" class="flex justify"><button class="enter" type="submit"><i class="bx bx-search"></i></button><input class="searchbar" type="text" name="q" placeholder="Search" value="{SearchQuery}" autocomplete="off"/></form></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="wrapper">
+{block:PermalinkPage}
+<div class="error_wrapper">
+<div class="error flex">
+<div class="error_404">
+<i class="bx bx-dizzy"></i>
+{lang:Sorry no posts found}
+<p><a href="/">Go Back</a></p>
+</div>
+</div>
+</div>
+{/block:PermalinkPage}
+
+{block:SearchPage}
+{block:NoSearchResults}
+<div class="search_error">
+<div class="error flex">
+<div class="error_404">
+<i class="bx bx-dizzy"></i>
+{lang:Sorry no results for SearchQuery 2}
+<p><a href="/">Go Back</a></p>
+</div>
+</div>
+</div>
+{/block:NoSearchResults}
+{/block:SearchPage}
+
+{block:TagPage}
+<div class="bb"><i class="bx bxs-purchase-tag"></i>{lang:TagResultCount posts tagged Tag 2}</div>
+{/block:TagPage}
+
+{block:SearchPage}
+<div class="bb"><i class="bx bx-search"></i>{lang:Search results for SearchQuery 2}</div>
+{/block:SearchPage}
+
+{block:Posts inlineMediaWidth="1280" inlineNestedMediaWidth="1280"}
+<div class="entry">
+<article post-type="{PostType}">
+
+{block:Date}
+<div class="post-header flex justify">
+<div class="post-info">
+{block:NotReblog}<a href="{Permalink}" title="{lang:Posted by PostAuthorName}"><img src="{PostAuthorPortraitURL-64}"><b>{PostAuthorName}</b></a>{/block:NotReblog}
+{block:RebloggedFrom}<a href="{ReblogRootURL}" title="{lang:Originally from ReblogRootName}" target="_blank"><img src="{ReblogRootPortraitURL-64}"><b>{ReblogRootName}</b></a>{/block:RebloggedFrom}
+</div>
+<div class="pp">
+{block:IndexPage}{block:Submission}<a href="{SubmitterURL}" target="_blank" title="{lang:Submitted By}"><i class="bx bx-edit small"></i></a>{/block:Submission}{/block:IndexPage}
+{block:PinnedPostLabel}<a href="{Permalink}" title="{lang:Pinned Post}"><i class="bx bx-pin"></i></a>{/block:PinnedPostLabel}
+</div>
+</div>
+{/block:Date}
+
+{block:Text}
+{block:Title}<div class="t-title">{Title}</div>{/block:Title}
+{block:NotReblog}
+<div class="caption">{Body}</div>
+{/block:NotReblog}
+{block:Rebloggedfrom}
+<div class="unnest">
+{block:Reblogs}
+<div class="reblogged">
+<div class="username source-head">
+{block:IsActive}
+{block:HasPermalink}
+<a href="{Permalink}" target="_blank"><div class="active"><span><img src="{PortraitURL-64}"><i class="bx bx-refresh"></i></span>{Username}</div></a>
+{/block:HasPermalink}
+{/block:IsActive}
+{block:IsDeactivated}
+{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<div class="deleted"><span><img src="{PortraitURL-64}"><i class="bx bx-refresh"></i></span>{Username}</div>{block:HasPermalink}</a>{/block:HasPermalink}
+{/block:IsDeactivated}
+</div>
+{Body}
+</div>
+{/block:Reblogs}
+</div>
+{/block:RebloggedFrom}
+{/block:Text}
+
+{block:Link}
+<a href="{URL}" target="_blank"><div class="link flex justify">{Name}<span class="bx bx-link-external"></span></div></a>
+{block:NotReblog}
+{block:Description}
+<div class="caption">{Description}</div>
+{/block:Description}
+{/block:NotReblog}
+{block:Rebloggedfrom}
+<div class="unnest">
+{block:Reblogs}
+<div class="reblogged">
+<div class="username">
+{block:IsActive}
+{block:HasPermalink}
+<a href="{Permalink}" target="_blank"><div class="active"><span><img src="{PortraitURL-64}"><i class="bx bx-refresh"></i></span>{Username}</div></a>
+{/block:HasPermalink}
+{/block:IsActive}
+{block:IsDeactivated}
+{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<div class="deleted"><span><img src="{PortraitURL-64}"><i class="bx bx-refresh"></i></span>{Username}</div>{block:HasPermalink}</a>{/block:HasPermalink}
+{/block:IsDeactivated}
+</div>
+{Body}
+</div>
+{/block:Reblogs}
+</div>
+{/block:RebloggedFrom}
+{/block:Link}
+
+{block:Quote}
+<div class="quote">{Quote}</div>
+{block:Source}<div class="src">— {Source}</div>{/block:Source}
+{/block:Quote}
+
+{block:Chat}
+{block:Title}<div class="t-title">{Title}</div>{/block:Title}
+<div class="chat">
+{block:Lines}
+<div class="lines">
+{block:Label}<span class="label">{Label}</span>{/block:Label} {Line}
+</div>
+{/block:Lines}
+</div>
+{/block:Chat}
+
+{block:Answer}
+<div class="ask-wrap flex justify">
+<div class="question round"><div class="ask flex"><i class="bx bxs-message-alt-detail"></i><div class="asker"><span>{Asker}</span>sent</div></div><div class="quest">{Question}</div></div>
+<div class="q"><img src="{AskerPortraitURL-128}"></div>
+</div>
+<div class="ask-wrap margintop flex justify">
+<div class="q"><img src="{block:NotReblog}{PortraitURL-128}{/block:NotReblog}{block:RebloggedFrom}{block:Answerer}{AnswererPortraitURL-128}{/block:Answerer}{/block:RebloggedFrom}"></div>
+<div class="question round min"><div class="ask flex"><i class="bx bxs-message-alt-check"></i><div class="asker"><span>{block:NotReblog}<a href="{Permalink}">{Name}</a>{/block:NotReblog}{block:RebloggedFrom}{block:Answerer}{Answerer}{/block:Answerer}{/block:RebloggedFrom}</span>replied</div></div><div class="quest">{Answer}</div></div>
+</div>
+{block:Rebloggedfrom}
+<div class="a-unnest">
+{block:Reblogs}
+<div class="reblogged">
+<div class="username">
+{block:IsActive}
+{block:HasPermalink}
+<a href="{Permalink}" target="_blank"><div class="active"><span><img src="{PortraitURL-64}"><i class="bx bx-refresh"></i></span>{Username}</div></a>
+{/block:HasPermalink}
+{/block:IsActive}
+{block:IsDeactivated}
+{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<div class="deleted"><span><img src="{PortraitURL-64}"><i class="bx bx-refresh"></i></span>{Username}</div>{block:HasPermalink}</a>{/block:HasPermalink}
+{/block:IsDeactivated}
+</div>
+{Body}
+</div>
+{/block:Reblogs}
+</div>
+{/block:RebloggedFrom}
+{/block:Answer}
+
+{block:Photo}
+<div class="photo round"><a href="#" onclick="Tumblr.Lightbox.init([{ width:{PhotoWidth-HighRes}, height:{PhotoHeight-HighRes}, low_res:'{PhotoURL-500}', high_res:'{PhotoURL-HighRes}' }]); $('body').toggleClass('tumblr_lightbox_active'); return false"><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"></a></div>
+{/block:Photo}
+
+{block:Photoset}
+<div class="photoset-grid round" photoset-layout="{PhotosetLayout}">{block:Photos}<div data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}" data-lowres="{PhotoURL-500}" data-highres="{PhotoURL-HighRes}" onclick="lightbox(this)"><img src="{PhotoURL-HighRes}" /></div>{/block:Photos}</div>
+{/block:Photoset}
+
+{block:Panorama}
+{LinkOpenTag}<div class="photoset-grid"><img src="{PhotoURL-Panorama}" alt="{PhotoAlt}">
+</div>{LinkCloseTag}
+{/block:Panorama}
+
+{block:Video}
+<div class="video">{VideoEmbed-700}</div>
+{/block:Video}
+            
+{block:Audio}
+{block:AudioEmbed}{AudioEmbed-640}{/block:AudioEmbed}
+{block:AudioPlayer}
+{AudioPlayer}
+<div class="audio round">
+<div class="audio-info flex center">
+<div class="album">{block:AlbumArt}<img src="{AlbumArtURL}">{/block:AlbumArt}<i class="bx bxs-album"></i></div>
+<div class="audio-details">{block:TrackName}<strong>{TrackName}</strong>{/block:TrackName}{block:Artist}<p><b>{Artist}</b></p>{/block:Artist}<p><span class="audio-current"></span><i class="bx bxs-circle"></i><span class="audio-left"></span></div>
+</div>
+<div class="seekbar flex center justify"><div class="audio-btns flex"><i class="bx bx-skip-previous"></i><i class="audio-play"></i><i class="bx bx-skip-next"></i></div><div class="audioseek"></div></div>
+</div>
+{/block:AudioPlayer}
+{/block:Audio}
+
+{block:Caption}
+{block:NotReblog}
+<div class="caption top {block:ifHideCaptions}{block:IndexPage}none{/block:IndexPage}{/block:ifHideCaptions}">{Caption}</div>
+{/block:NotReblog}
+{block:Rebloggedfrom}
+<div class="unnest top {block:ifHideCaptions}{block:IndexPage}none{/block:IndexPage}{/block:ifHideCaptions}">
+{block:Reblogs}
+<div class="reblogged">
+<div class="username">
+{block:IsActive}
+{block:HasPermalink}
+<a href="{Permalink}" target="_blank"><div class="active"><span><img src="{PortraitURL-64}"><i class="bx bx-refresh"></i></span>{Username}</div></a>
+{/block:HasPermalink}
+{/block:IsActive}
+{block:IsDeactivated}
+{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<div class="deleted"><span><img src="{PortraitURL-64}"><i class="bx bx-refresh"></i></span>{Username}</div>{block:HasPermalink}</a>{/block:HasPermalink}
+{/block:IsDeactivated}
+</div>
+{Body}
+</div>
+{/block:Reblogs}
+</div>
+{/block:RebloggedFrom}
+{/block:Caption}
+
+</article>
+
+{block:Date}
+{block:IndexPage}
+<div class="post-footer flex justify">
+<div class="flex justify">
+<div class="permalink"><i class="bx {block:Text}bx-file{/block:Text}{block:Link}bx-link-alt{/block:Link}{block:Quote}bxs-quote-left{/block:Quote}{block:Chat}bx-chat{/block:Chat}{block:Answer}bx-envelope{/block:Answer}{block:Photo}bx-image{/block:Photo}{block:Photoset}bx-image{/block:Photoset}{block:Panorama}bx-image{/block:Panorama}{block:Video}bx-video-recording{/block:Video}{block:Audio}bxs-music{/block:Audio}"></i></div>
+<div class="perm-info"><div class="perm-title"><a href="{Permalink}">{DayOfMonthWithZero} {ShortMonth} '{ShortYear}</a><i class="bx bx-at"></i><a href="{Permalink}">{24HourWithZero}:{Minutes}</a></div><a href="{Permalink}">{NoteCountWithLabel}</a></div>
+</div>
+<div class="controls">
+{block:ContentSource}<a href="{SourceURL}" target="_blank" title="Content Source"><i class="bx bx-link-external small"></i></a>{/block:ContentSource}
+<a href="{ReblogURL}"><i class="bx bx-refresh"></i></a>
+<a class="likey">{LikeButton size="30"}<i class="bx bx-meh"></i></a>
+</div>
+</div>
+{block:HasTags}
+<div class="tags {block:ifHideTags}none{/block:ifHideTags}"><div class="itags"><ul><li>{block:Tags}<a href="{TagURL}">#{Tag}</a>{/block:Tags}</li></ul></div></div>
+{/block:HasTags}
+{/block:IndexPage}
+
+{block:PermalinkPage}
+<div class="perm-footer">
+<div class="pfoot">
+{block:Submission}<div class="sub"><ul><li><a href="{SubmitterURL}" target="_blank">{lang:Submitted By}</a></li></ul></div>{/block:Submission}
+{block:ContentSource}<div class="csrc"><ul><li><a href="{SourceURL}" target="_blank">{SourceTitle}</a></li></ul></div>{/block:ContentSource}
+{block:RebloggedFrom}
+<div class="via"><ul><li><a href="{ReblogParentURL}" title="{lang:Reblogged from ReblogParentName}">{ReblogParentName}</a></li></ul></div>
+<div class="root"><ul><li><a href="{ReblogRootURL}" title="{lang:Originally from ReblogRootName}">{ReblogRootName}</a></li></ul></div>
+{/block:RebloggedFrom}
+{block:NotReblog}
+<div class="root"><ul><li>Original {PostType} post</li></ul></div>
+{/block:NotReblog}
+<div class="date"><ul><li>{Month} {DayOfMonthWithZero}, {Year} with {NoteCountWithLabel}</li></ul></div>
+{block:HasTags}<div class="ptags"><ul><li>{block:Tags}<a href="{TagURL}">#{Tag}</a>{/block:Tags}</li></ul></div>{/block:HasTags}
+</div>
+{block:PostNotes}{PostNotes-64}{/block:PostNotes}
+</div>
+{/block:PermalinkPage}
+{/block:Date}
+    
+</div>
+{/block:Posts}
+
+{block:Pagination}
+<div class="pgs flex justify">
+<div class="prev">{block:PreviousPage}<a href="{PreviousPage}" class="rounder">Previous</a>{/block:PreviousPage}<span class="rounder">Previous</span></div>
+<div class="next">{block:NextPage}<a href="{NextPage}" class="rounder">Next</a>{/block:NextPage}<span class="rounder">Next</span></div>
+</div>
+{/block:Pagination}
+</div>
+
+</div>
+</div>
+
+<!----------------------------------------------------- SCRIPTS ------->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/annasthms/customaudio@latest/customaudio.min.js"></script>
+<script src="https://static.tumblr.com/05ejowb/rXAro1eda/lowlife.min.js"></script>
+<!-- NPF images fix v3.0 by @glenthemes [2021] - git.io/JRBt7 --->
+<script src="//npf-images-v3.github.io/script.js"></script>
+
+{block:PermalinkPage}
+<script> 
+$(document).ready(function() {
+    if ($('p:contains("The URL you requested could not be found.")').html()) {
+        $(".error_wrapper").css( "visibility", "visible" ); 
+        $('title').append( " — Error 404" ); } 
+});
+</script>
+{/block:PermalinkPage}
+    
+</body>
+</html>
