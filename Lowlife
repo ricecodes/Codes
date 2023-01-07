@@ -141,7 +141,7 @@ Credit:
 
 <link href="https://fonts.googleapis.com/css2?family={text:Body Font}:wght@400;700&display=swap" rel="stylesheet">
 <link href="https://static.tumblr.com/0podkko/oDSpg7y88/photosets.css" rel="stylesheet">
-<link href="https://static.tumblr.com/05ejowb/V4tro3843/lowlife.min.css" rel="stylesheet">
+<link href="https://static.tumblr.com/05ejowb/lCJro3kyn/lowlife.min.css" rel="stylesheet">
 <link href="//npf-images-v3.github.io/recon.css" rel="stylesheet">
 <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
@@ -295,8 +295,8 @@ body.open .tmblr-iframe { opacity:1; visibility:visible; }
 <div class="side flex justify">
 <div class="portrait"><img src="{block:ifSidebarImage}{image:Sidebar}{/block:ifSidebarImage}{block:ifNotSidebarImage}{PortraitURL-128}{/block:ifNotSidebarImage}" draggable="false"></div>
 <div class="desc-wrap flex">
-<a class="desc-title" href="/">{block:ifNotCustomTitle}<h3>{Title}</h3>{/block:ifNotCustomTitle}{block:ifCustomTitle}<h3>{text:Custom Title}</h3>{/block:ifCustomTitle}</a>
-<div class="desc">{block:ifNotCustomDescription}{Description}{/block:ifNotCustomDescription}{block:ifCustomDescription}{text:Custom Description}{/block:ifCustomDescription}</div>
+<a class="desc-title {block:HideTitle}none{/block:HideTitle}{block:HideDescription}desc-none{/block:HideDescription}" href="/">{block:ifNotCustomTitle}<h3>{Title}</h3>{/block:ifNotCustomTitle}{block:ifCustomTitle}<h3>{text:Custom Title}</h3>{/block:ifCustomTitle}</a>
+<div class="desc {block:HideDescription}none{/block:HideDescription}">{block:ifNotCustomDescription}{Description}{/block:ifNotCustomDescription}{block:ifCustomDescription}{text:Custom Description}{/block:ifCustomDescription}</div>
 <div class="nav">
 <a href="/" title="{text:Home Link}"><i class="bx {text:Home Link Icon}"></i></a>
 {block:ifNotFAQLink}{block:AskEnabled}<a href="/ask" title="{text:Ask Link}"><i class="bx {text:Ask Link Icon}"></i></a>{/block:AskEnabled}{/block:ifNotFAQLink}
