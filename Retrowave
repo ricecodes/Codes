@@ -491,10 +491,7 @@ body.light { background-image:url({image:Day Background}); }
 <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/annasthms/customaudio@latest/customaudio.min.js"></script>
 <script src="https://static.tumblr.com/05ejowb/wtirog6ty/retrowave.min.js"></script>
-<!--
-        NPF images fix v3.0 by @glenthemes [2021]
-        💌 git.io/JRBt7
---->
+<!-- NPF images fix v3.0 by @glenthemes [2021] - git.io/JRBt7 --->
 <script src="//npf-images-v3.github.io/script.js"></script>
     
 </body>
