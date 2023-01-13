@@ -5,8 +5,9 @@ Credit:
 
 ★ Icons: https://boxicons.com/
 ★ CSS Photosets: https://annasthms.tumblr.com/post/177359244495/photosetscss-by-annasthms-and-espoirthemes-to
+★ Custom Audio js: https://annasthms.tumblr.com/more/js/customaudio/new
 ★ Day/Night Mode: https://egg.design/post/186889223257/day-night-mode-tutorial-after-featuring-a
-★ NPF Photosets: https://annalogs.tumblr.com/photosets
+★ NPF Photosets: https://glenthemes.tumblr.com/post/659034084446748672/npf-v3-2021
 ★ Tumblr Redirects: https://magnusthemes.tumblr.com/post/643460974823833600/remove-redirects-v20
 ★ Tippy Tooltip: https://atomiks.github.io/tippyjs/
 
@@ -16,7 +17,8 @@ Credit:
 <html>
 <head>
 
-<title>{Title}</title>
+<title>{Title}{block:TagPage} ({lang:Posts tagged Tag}){/block:TagPage}{block:SearchPage} ({lang:Search results for SearchQuery}){/block:SearchPage}{block:PermalinkPage}{block:PostSummary} — {PostSummary}{/block:PostSummary}{/block:PermalinkPage}</title>
+
 <link rel="shortcut icon" href="{Favicon}">
 <link rel="alternate" type="application/rss+xml" href="{RSS}">
 <script src="https://static.tumblr.com/05ejowb/RA6r1jy9i/render.js"></script>
@@ -26,45 +28,50 @@ Credit:
 <meta name="image:Night Background" content="https://static.tumblr.com/05ejowb/g8Fqs3jp3/dark_retrowave.png">
 <meta name="image:Day Background" content="https://static.tumblr.com/05ejowb/jvAquwszx/retrowave.png">
 
-<meta name="color:Accent" content="#f2cd3d">
 <meta name="color:Accent Text" content="#ffffff">
-<meta name="color:Links" content="#f4d258">
-<meta name="color:Links Hover" content="#dc9bb3">
-<meta name="color:Selection Background" content="#dc9bb3">
-<meta name="color:Selection" content="#ffffff">
+<meta name="color:Links" content="#e28eb7">
+<meta name="color:Links Hover" content="#9ce28e">
+<meta name="color:Like Button" content="#ff492f">
 <meta name="color:Tooltips" content="#000000">
 <meta name="color:Tooltips Text" content="#ffffff">
-<meta name="color:Like Button" content="#ff492f">
-<meta name="color:Background" content="#444444">
-<meta name="color:Posts Head" content="#191919">
-<meta name="color:Posts" content="#303030">
-<meta name="color:Borders" content="#555555">
-<meta name="color:Text" content="#ffffff">
-<meta name="color:Permalink" content="#dddddd">
-<meta name="color:Question" content="#191919">
-<meta name="color:Day Accent" content="#a5c0ff">
-<meta name="color:Day Background" content="#f7f7f7">
-<meta name="color:Day Posts Head" content="#f2f2f2">
-<meta name="color:Day Posts" content="#ffffff">
-<meta name="color:Day Borders" content="#d2d2d2">
-<meta name="color:Day Text" content="#111111">
-<meta name="color:Day Permalink" content="#555555">
-<meta name="color:Day Question" content="#eeeeee">
+<meta name="color:*+:&#xFF61;. Dark Theme .&#xFF61;:+*" content="#ffffff">
+<meta name="color:Dark Accent" content="#f2cd3d">
+<meta name="color:Dark Background" content="#444444">
+<meta name="color:Dark Borders" content="#555555">
+<meta name="color:Dark Posts Head" content="#191919">
+<meta name="color:Dark Posts" content="#303030">
+<meta name="color:Dark Text" content="#ffffff">
+<meta name="color:Dark Permalink" content="#dddddd">
+<meta name="color:Dark Question" content="#191919">
+<meta name="color:*+:&#xFF61;. Light Theme .&#xFF61;:+*" content="#ffffff">
+<meta name="color:Accent" content="#a5c0ff">
+<meta name="color:Background" content="#f7f7f7">
+<meta name="color:Borders" content="#d2d2d2">
+<meta name="color:Posts Head" content="#f2f2f2">
+<meta name="color:Posts" content="#ffffff">
+<meta name="color:Text" content="#111111">
+<meta name="color:Permalink" content="#555555">
+<meta name="color:Question" content="#eeeeee">
+
+<meta name="select:Blog Theme" title="Dark Theme" content="dark">
+<meta name="select:Blog Theme" title="Light Theme" content="light">
 
 <meta name="select:Background Size" title="Contain" content="contain">
 <meta name="select:Background Size" title="Cover" content="cover">
 <meta name="select:Background Size" title="Auto" content="auto">
 
-<meta name="if:Day Mode" content="">
-<meta name="if:Custom Description" content="">
 <meta name="if:Round Corners" content="">
+<meta name="if:Hide Captions" content="">
 <meta name="if:Hide Tags" content="">
 
-<meta name="text:Google Font" content="Roboto">
+<meta name="text:Body Font" content="Roboto">
 <meta name="text:Font Size" content="14px">
 <meta name="text:Line Height" content="1.5em">
-<meta name="text:Description" content="Insert custom description here.">
+<meta name="text:Photoset Gap" content="4px">
+<meta name="text:Custom Description" content="">
+<meta name="text:*+:&#xFF61;. Updates .&#xFF61;:+*" content="">
 <meta name="text:Updates" content="Share any updates here.">
+<meta name="text:*+:&#xFF61;. Links .&#xFF61;:+*" content="">
 <meta name="text:Home Link" content="Home">
 <meta name="text:Ask Link" content="Ask">
 <meta name="text:Submit Link" content="Submit">
@@ -77,312 +84,209 @@ Credit:
 <meta name="text:Link 3 URL" content="">
 <meta name="text:Link 4" content="Link 4">
 <meta name="text:Link 4 URL" content="">
-        
-<link href="https://fonts.googleapis.com/css?family={text:Google Font}:700,400" rel="stylesheet">
-<link href="https://static.tumblr.com/0podkko/oDSpg7y88/photosets.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
-<link href="https://static.tumblr.com/05ejowb/tKmr1tm5o/retrowave.min.css" rel="stylesheet">
 
-<style type="text/css">
+<link href="https://fonts.googleapis.com/css2?family={text:Body Font}:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://static.tumblr.com/0podkko/oDSpg7y88/photosets.css" rel="stylesheet">
+<link href="https://static.tumblr.com/05ejowb/Ndhrog778/retrowave.min.css" rel="stylesheet">
+<link href="//npf-images-v3.github.io/recon.css" rel="stylesheet">
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+<style>
 
 /* VARIABLES - Please do not edit/remove this */
 
 :root {
-    --body-family:{text:Google Font};
+    --head-font:{text:Head Font},sans-serif;
+    --body-font:{text:Body Font},sans-serif;
     --body-size:{text:Font Size};
     --line-hgt:{text:Line Height};
     --bg-size:{select:Background Size};
-}
-
-{block:ifNotDayMode}
-:root {
-    --accent:{color:Accent};
+    --photo-gap:{text:Photoset Gap};
     --accent-text:{color:Accent Text};
+    --rgb-accent-text:{RGBcolor:Accent Text};
     --links:{color:Links};
     --links-hover:{color:Links Hover};
-    --selection-bg:{color:Selection Background};
-    --selection:{color:Selection};
+    --like-btn:{color:Like Button};
     --tooltips:{color:Tooltips};
     --tooltips-text:{color:Tooltips Text};
-    --like-btn:{color:Like Button};
-    --bg:{color:Background};
-    --posts-head:{color:Posts Head};
-    --posts:{color:Posts};
-    --borders:{color:Borders};
-    --text:{color:Text};
-    --permalink:{color:Permalink};
-    --question:{color:Question};
-    --rgb-posts-head:{RGBcolor:Posts Head};
+    --mobile:{color:Dark Posts Head};
+    --mobile-search:{color:Dark Posts};
+    --NPF-Caption-Spacing:1em;
+    --NPF-Image-Spacing:{text:Photoset Gap};
 }
 
-[data-theme="daynight"] {
-    --accent:{color:Day Accent};
-    --bg:{color:Day Background};
-    --posts-head:{color:Day Posts Head};
-    --posts:{color:Day Posts};
-    --borders:{color:Day Borders};
-    --text:{color:Day Text};
-    --permalink:{color:Day Permalink};
-    --question:{color:Day Question};
-    --rgb-posts-head:{RGBcolor:Day Posts Head};
+body.dark {
+    --accent:{color:Dark Accent};
+    --bg:{color:Dark Background};
+    --blockquote:{color:Dark Background};
+    --borders:{color:Dark Borders};
+    --posts-head:{color:Dark Posts Head};
+    --posts:{color:Dark Posts};
+    --ask:{color:Dark Question};
+    --text:{color:Dark Text};
+    --rgb-text:{RGBcolor:Dark Text};
+    --permalink:{color:Dark Permalink};
 }
 
-.pgs a, .tags a, .m-side-links a, .m-search { background:var(--posts-head); color:var(--text); border:1px solid var(--posts-head); }
-
-[data-theme="daynight"] .pgs a, [data-theme="daynight"] .tags a, [data-theme="daynight"] .m-side-links a, [data-theme="daynight"] .ctrls .bx, [data-theme="daynight"] .credits .bx { border-color:var(--borders); background:var(--posts); }
-[data-theme="daynight"] .m-side-links a { background:var(--posts-head); }
-[data-theme="daynight"] .m-search, [data-theme="daynight"] .search, [data-theme="daynight"] .address, [data-theme="daynight"] .side-links a { border-color:var(--borders); }
-{/block:ifNotDayMode}
-
-{block:ifDayMode}
-:root {
-    --accent:{color:Day Accent};
-    --accent-text:{color:Accent Text};
-    --links:{color:Links};
-    --links-hover:{color:Links Hover};
-    --selection-bg:{color:Selection Background};
-    --selection:{color:Selection};
-    --tooltips:{color:Tooltips};
-    --tooltips-text:{color:Tooltips Text};
-    --like-btn:{color:Like Button};
-    --bg:{color:Day Background};
-    --posts-head:{color:Day Posts Head};
-    --posts:{color:Day Posts};
-    --borders:{color:Day Borders};
-    --text:{color:Day Text};
-    --permalink:{color:Day Permalink};
-    --question:{color:Day Question};
-    --rgb-posts-head:{RGBcolor:Day Posts Head};
-}
-
-[data-theme="daynight"] {
+[data-theme="daynight"] body.dark {
     --accent:{color:Accent};
     --bg:{color:Background};
+    --blockquote:{color:Question};
+    --borders:{color:Borders};
     --posts-head:{color:Posts Head};
     --posts:{color:Posts};
-    --borders:{color:Borders};
+    --ask:{color:Question};
     --text:{color:Text};
+    --rgb-text:{RGBcolor:Text};
     --permalink:{color:Permalink};
-    --question:{color:Question};
-    --rgb-posts-head:{RGBcolor:Posts Head};
 }
 
-.pgs a, .tags a, .ctrls .bx, .credits .bx { background:var(--posts); color:var(--text); border:1px solid var(--borders); }
+body.dark { background-image:url({image:Night Background}); }
+[data-theme="daynight"] body.dark { background-image:url({image:Day Background}); }
 
-.m-side-links a { background:var(--posts-head); color:var(--text); }
-.search, .address, .side-links a, .m-side-links a { border:1px solid var(--borders); }
-
-[data-theme="daynight"] .pgs a, [data-theme="daynight"] .tags a, [data-theme="daynight"] .ctrls .bx, [data-theme="daynight"] .credits .bx, [data-theme="daynight"] .search, [data-theme="daynight"] .address, [data-theme="daynight"] .side-links a, [data-theme="daynight"] .m-side-links a { border-color:var(--posts-head); background:var(--posts-head); }
-
-@media only screen and (max-width:999px) {
-[data-theme="daynight"] .ctrls .bx, [data-theme="daynight"] .m-post-icons .bx { background:var(--posts); color:var(--text); border:1px solid var(--borders); }
-.m-search .bx, [data-theme="daynight"] .m-search .bx { border-width:0; }
-.m-search .bx:hover { background:transparent!important; cursor:default; border-width:0; color:var(--text)!important; }
+body.light {
+    --accent:{color:Accent};
+    --bg:{color:Background};
+    --blockquote:{color:Question};
+    --borders:{color:Borders};
+    --posts-head:{color:Posts Head};
+    --posts:{color:Posts};
+    --ask:{color:Question};
+    --text:{color:Text};
+    --rgb-text:{RGBcolor:Text};
+    --permalink:{color:Permalink};
 }
-{/block:ifDayMode}
 
-{block:ifNotRoundCorners}
-.tippy-box[data-theme~='custom'] { border-radius:0; }
-{/block:ifNotRoundCorners}
+[data-theme="daynight"] body.light {
+    --accent:{color:Dark Accent};
+    --bg:{color:Dark Background};
+    --blockquote:{color:Dark Background};
+    --borders:{color:Dark Borders};
+    --posts-head:{color:Dark Posts Head};
+    --posts:{color:Dark Posts};
+    --ask:{color:Dark Question};
+    --text:{color:Dark Text};
+    --rgb-text:{RGBcolor:Dark Text};
+    --permalink:{color:Dark Permalink};
+}
 
-/* ROUNDED CORNERS */
+body.light { background-image:url({image:Day Background}); }
+[data-theme="daynight"] body.light { background-image:url({image:Night Background}); }
 
 {block:ifRoundCorners}
-.reblogged blockquote, blockquote { border-radius:7px; }
-.side-links a, .m-side-links a { border-radius:5px; }
-{/block:ifRoundCorners}
-
-/* DAYNIGHT */
-body { background-image:url({image:Night Background}); }
-[data-theme="daynight"] body { background-image:url({image:Day Background}); }
-
-{block:ifDayMode}
-body { background-image:url({image:Day Background})!important; }
-[data-theme="daynight"] body { background-image:url({image:Night Background})!important; }
-{/block:ifDayMode}
-
-/* MEDIA QUERIES */
-
-@media only screen and (max-width:999px) {
-body { background-image:url({image:Night Background}); background-size:cover; background-attachment:fixed; background-repeat:repeat; }
-[data-theme="daynight"] body { background-image:url({image:Day Background}); background-size:cover; background-attachment:fixed; background-repeat:repeat; }
-
-{block:ifDayMode}
-body { background-image:url({image:Day Background}); background-size:cover; background-attachment:fixed; background-repeat:repeat; }
-[data-theme="daynight"] body { background-image:url({image:Night Background}); background-size:cover; background-attachment:fixed; background-repeat:repeat; }
-{/block:ifDayMode}
-
-.permalink, .p-wrap, .stick { display:none!important; } 
+.roundest { border-radius:10px; }
+.rounder, .active img, .deleted img, .tab .bx, .p-wrap .bx { border-radius:5px; }
+.round, .side-links a { border-radius:4px; }
+.rounder-bottom { border-bottom-left-radius:5px; border-bottom-right-radius:5px; }
+.round-bottom { border-bottom-left-radius:4px; border-bottom-right-radius:4px; }
+@media only screen and (max-width:1025px) {
+.side_a { border-radius:10px 10px 0 0!important; }
+.side_b, .side_c { border-radius:0!important; }
+[class^="side_"]:last-of-type { border-radius:0 0 10px 10px!important; }
 }
-
-body.night .diemnox { display:block; }
-input[type=checkbox], body.night .moon { display:none; }
-input[type=checkbox]:checked + .dn { vertical-align:middle; }
+{/block:ifRoundCorners}
 
 {CustomCSS}
 </style>
 </head>
 
-<body>
+<body class="{select:Blog Theme}">
+
+<div class="tab">
+<a class="tbtn"><span class="hide" title="Show Tumblr Controls"><i class="bx bx-cog"></i></span><span class="hide none" title="Hide Tumblr Controls"><i class="bx bx-x"></i></span></a>
+<label class="dn"><input class="modus" type="checkbox">
+<div class="diem"><a class="diemnox moon" title="Enable Dark Mode"><i class="bx bx-moon"></i></a><a class="diemnox none" title="Disable Dark Mode"><i class="bx bx-sun"></i></a></div>
+<div class="nox"><a class="diemnox moon" title="Enable Light Mode"><i class="bx bx-sun"></i></a><a class="diemnox none" title="Disable Light Mode"><i class="bx bx-moon"></i></a></div>
+</label>
+<div class="msearchwrap {block:HideFromSearchEnabled}m-none{/block:HideFromSearchEnabled}"><div class="m-search"><form action="/search" method="get"><input class="m-searchbar" type="text" name="q" placeholder="Search" value="{SearchQuery}" autocomplete="off"/></form></div></div>
+<div class="credit">
+<a class="scroll" title="Back to top"><i class="bx bxs-chevron-up"></i></a>
+<a href="https://ricecodes.tumblr.com/" title="Theme by ricecodes" target="_blank"><i class="bx bx-star"></i></a>
+</div>
+</div>
 
 <div class="content">
 
-<div class="wrapper">
+<div class="wrapper flex justify">
 
 <div class="sidebar">
-
-<div class="side_a {block:ifRoundCorners}round{/block:ifRoundCorners} r-border b-border l-border a-border">
-<div class="sidehead b-border">
-<div class="side-icons">
-<a><span class="bx bx-minus {block:ifRoundCorners}lr{/block:ifRoundCorners}"></span><span class="bx bx-window"></span><span class="bx bx-x big {block:ifRoundCorners}rr{/block:ifRoundCorners}"></span></a>
-</div> <!--- SIDE ICONS --->
-</div> <!--- SIDEHEAD --->
-<div class="search-wrap b-border">
-<div class="search border {block:ifRoundCorners}rounder{/block:ifRoundCorners}"><span class="bx bx-search"></span><form action="/search" method="get"><input class="searchbar" type="text" name="q" placeholder="Search" value="{SearchQuery}" autocomplete="off"/></form></div>
-</div> <!--- SEARCH --->
-<div class="description">
-{block:ifNotCustomDescription}{Description}{/block:ifNotCustomDescription}
-{block:ifCustomDescription}{text:Description}{/block:ifCustomDescription}
-</div> <!--- DESCRIPTION --->
+<div class="side-wrap">
+<div class="side_a roundest">
+<div class="sidehead flex justify">
+<div class="side-type"></div>
+<div class="side-icons"><div class="icons rounder-bottom"><i class="bx bx-minus"></i><i class="bx bx-window"></i><i class="bx bx-x"></i></div></div>
+</div>
+<div class="searchwrap {block:HideFromSearchEnabled}none{/block:HideFromSearchEnabled}"><div class="search round"><span class="bx bx-search"></span><form action="/search" method="get"><input class="searchbar" type="text" name="q" placeholder="Search" value="{SearchQuery}" autocomplete="off"/></form></div></div>
+<div class="sidepad">{block:ifNotCustomDescription}{Description}{/block:ifNotCustomDescription}{block:ifCustomDescription}{text:Custom Description}{/block:ifCustomDescription}</div>
 </div> <!--- BOX A --->
-
-<div class="side_b {block:ifRoundCorners}round{/block:ifRoundCorners} r-border b-border l-border a-border">
-<div class="sidehead b-border">
-<div class="side-icons">
-<a><span class="bx bx-minus {block:ifRoundCorners}lr{/block:ifRoundCorners}"></span><span class="bx bx-window"></span><span class="bx bx-x big {block:ifRoundCorners}rr{/block:ifRoundCorners}"></span></a>
-</div> <!--- SIDE ICONS --->
-</div> <!--- SIDEHEAD --->
-<div class="side-links">
-{block:ifLink1}<a href="{text:Link 1 URL}">{text:Link 1}</a>{/block:ifLink1}
-{block:ifLink2}<a href="{text:Link 2 URL}">{text:Link 2}</a>{/block:ifLink2}
-{block:ifLink3}<a href="{text:Link 3 URL}">{text:Link 3}</a>{/block:ifLink3}
-{block:ifLink4}<a href="{text:Link 4 URL}">{text:Link 4}</a>{/block:ifLink4}
-{block:HasPages}{block:Pages}<a href="{URL}">{Label}</a>{/block:Pages}{/block:HasPages}
-</div> <!--- SIDE LINKS --->
-</div> <!--- BOX B --->
-
-<div class="side_c {block:ifRoundCorners}round{/block:ifRoundCorners} r-border b-border l-border a-border">
-<div class="sidehead b-border">
-<div class="side-icons">
-<a><span class="bx bx-minus {block:ifRoundCorners}lr{/block:ifRoundCorners}"></span><span class="bx bx-window"></span><span class="bx bx-x big {block:ifRoundCorners}rr{/block:ifRoundCorners}"></span></a>
-</div> <!--- SIDE ICONS --->
-</div> <!--- SIDEHEAD --->
+<div class="side_b roundest">
+<div class="sidehead flex justify">
+<div class="side-type"></div>
+<div class="side-icons"><div class="icons rounder-bottom"><i class="bx bx-minus"></i><i class="bx bx-window"></i><i class="bx bx-x"></i></div></div>
+</div>
 <div class="navigation">
 <a href="/"><span class="bx bx-home-alt"></span>{text:Home Link}</a>
 {block:AskEnabled}<a href="/ask"><span class="bx bx-envelope"></span>{text:Ask Link}</a>{/block:AskEnabled}
 {block:SubmissionsEnabled}<a href="/submit"><span class="bx bx-edit-alt"></span>{text:Submit Link}</a>{/block:SubmissionsEnabled}
 <a href="/archive"><span class="bx bx-time"></span>{text:Archive Link}</a>
 </div>
-</div> <!--- BOX C --->
-
-{block:ifUpdates}
-<div class="side_d {block:ifRoundCorners}round{/block:ifRoundCorners} r-border b-border l-border a-border">
-<div class="sidehead b-border">
-<div class="side-icons">
-<a><span class="bx bx-minus {block:ifRoundCorners}lr{/block:ifRoundCorners}"></span><span class="bx bx-window"></span><span class="bx bx-x big {block:ifRoundCorners}rr{/block:ifRoundCorners}"></span></a>
-</div> <!--- SIDE ICONS --->
-</div> <!--- SIDEHEAD --->
-<div class="updates">
-{text:Updates}
-</div> <!--- UPDATES --->
-</div> <!--- BOX D --->
-{/block:ifUpdates}
-
-</div> <!--- SIDEBAR --->
-
-<section>
-
-<div class="ctrls">
-<a class="appear"><span class="hide" title="Show Controls"><i class="bx bx-cog {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></i></span><span class="hide" style="display:none;" title="Hide Controls"><i class="bx bx-cog {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></i></span></a>
-<div class="m-post-header flex justify">
-<label class="dn"><input class="modus" type="checkbox">
-{block:ifNotDayMode}
-<a class="diemnox moon" title="Day"><i class="bx bx-sun {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></i></a>
-<a class="diemnox none" title="Night"><i class="bx bx-moon {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></i></a>
-{/block:ifNotDayMode}
-{block:ifDayMode}
-<a class="diemnox moon" title="Night"><i class="bx bx-moon {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></i></a>
-<a class="diemnox none" title="Day"><i class="bx bx-sun {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></i></a>
-{/block:ifDayMode}
-</label>
-<div class="m-post-icons">
-<a class="{block:IndexPage}hover{/block:IndexPage}"><span class="bx bx-minus {block:ifRoundCorners}lr{/block:ifRoundCorners}" {block:IndexPage}title="Posted {TimeAgo}"{/block:IndexPage}></span><span class="bx bx-window" {block:IndexPage}title="{NoteCountWithLabel}"{/block:IndexPage}></span><span class="bx bx-x big {block:ifRoundCorners}rr{/block:ifRoundCorners}" {block:IndexPage}title="{block:NotReblog}Original Post{/block:NotReblog}{block:RebloggedFrom}Reblogged Post{/block:RebloggedFrom}"{/block:IndexPage}></span></a>
-</div> <!--- MOBILE ICONS --->
-</div> <!--- MOBILE POST HEADER --->
-
-<div class="m-address flex justify centered">
-<div class="m-search border {block:ifRoundCorners}rounder{/block:ifRoundCorners}"><span class="bx bx-search"></span><form action="/search" method="get"><input class="searchbar" type="text" name="q" placeholder="Search" value="{SearchQuery}" autocomplete="off"/></form></div>
-</div> <!--- MOBILE SEARCHBAR --->
-
-<div class="m-description">
-{block:ifNotCustomDescription}{Description}{/block:ifNotCustomDescription}
-{block:ifCustomDescription}{text:Description}{/block:ifCustomDescription}
+</div> <!--- BOX B --->
+<div class="side_c roundest">
+<div class="sidehead flex justify">
+<div class="side-type"></div>
+<div class="side-icons"><div class="icons rounder-bottom"><i class="bx bx-minus"></i><i class="bx bx-window"></i><i class="bx bx-x"></i></div></div>
 </div>
-
-{block:ifUpdates}
-<div class="m-updates t-border">{text:Updates}</div>
-{/block:ifUpdates} <!--- MOBILE UPDATES --->
-
-<div class="m-side-links t-border">
-<a href="/">{text:Home Link}</a>
-{block:AskEnabled}<a href="/ask">{text:Ask Link}</a>{/block:AskEnabled}
-{block:SubmissionsEnabled}<a href="/submit">{text:Submit Link}</a>{/block:SubmissionsEnabled}
-<a href="/archive">{text:Archive Link}</a>
+<div class="side-links">
 {block:ifLink1}<a href="{text:Link 1 URL}">{text:Link 1}</a>{/block:ifLink1}
 {block:ifLink2}<a href="{text:Link 2 URL}">{text:Link 2}</a>{/block:ifLink2}
 {block:ifLink3}<a href="{text:Link 3 URL}">{text:Link 3}</a>{/block:ifLink3}
 {block:ifLink4}<a href="{text:Link 4 URL}">{text:Link 4}</a>{/block:ifLink4}
 {block:HasPages}{block:Pages}<a href="{URL}">{Label}</a>{/block:Pages}{/block:HasPages}
-<a href="https://ricecodes.tumblr.com/">Theme</a>
-</div> <!--- MOBILE SIDE LINKS --->
-</div> <!--- END OF CTRLS --->
+</div>
+</div> <!--- BOX C --->
+{block:ifUpdates}
+<div class="side_d roundest">
+<div class="sidehead flex justify">
+<div class="side-type"></div>
+<div class="side-icons"><div class="icons rounder-bottom"><i class="bx bx-minus"></i><i class="bx bx-window"></i><i class="bx bx-x"></i></div></div>
+</div>
+<div class="sidepad">{text:Updates}</div>
+</div> <!--- BOX D --->
+{/block:ifUpdates}
+</div>
+</div> <!--- SIDEBAR --->
 
-{block:Posts}
+<section>
 
+{block:Posts inlineMediaWidth="1280" inlineNestedMediaWidth="1280"}
 <div class="entry flex justify">
-
-<article class="{PostType}posts {block:ifRoundCorners}round{/block:ifRoundCorners} r-border b-border l-border a-border">
+<article class="roundest" post-type="{PostType}">
 
 {block:Date}
-<div class="post-header flex justify b-border">
-<div class="post-type border {block:ifRoundCorners}rounder{/block:ifRoundCorners}">
-{block:Text}<span class="bx bx-file"></span>{/block:Text}
-{block:Link}<span class="bx bx-link"></span>{/block:Link}
-{block:Quote}<span class="bx bxs-quote-left"></span>{/block:Quote}
-{block:Chat}<span class="bx bx-conversation"></span>{/block:Chat}
-{block:Answer}<span class="bx bx-envelope"></span>{/block:Answer}
-{block:Photo}<span class="bx bx-image"></span>{/block:Photo}
-{block:Photoset}<span class="bx bx-image"></span>{/block:Photoset}
-{block:Panorama}<span class="bx bx-image"></span>{/block:Panorama}
-{block:Video}<span class="bx bx-camera-movie"></span>{/block:Video}
-{block:Audio}<span class="bx bxs-music"></span>{/block:Audio}
-{PostType}
-</div> <!--- POST TYPE --->
-<div class="post-icons">
-<a class="pbtn {block:IndexPage}hover{/block:IndexPage}"><span class="bx bx-minus {block:ifRoundCorners}lr{/block:ifRoundCorners}" {block:IndexPage}title="Posted {TimeAgo}"{/block:IndexPage}></span><span class="bx bx-window" {block:IndexPage}title="{NoteCountWithLabel}"{/block:IndexPage}></span><span class="bx bx-x big {block:ifRoundCorners}rr{/block:ifRoundCorners}" {block:IndexPage}title="{block:NotReblog}Original Post{/block:NotReblog}{block:RebloggedFrom}Reblogged Post{/block:RebloggedFrom}"{/block:IndexPage}></span></a>
-</div> <!--- POST ICONS --->
-</div> <!--- POST HEADER --->
-
-<div class="post-address flex justify centered b-border">
-<a class="address {block:ifRoundCorners}round{/block:ifRoundCorners}" href="{Permalink}" title="Permalink"><span class="bx bxs-bookmark"></span>{Name}.tumblr.com/{PostID}</a>
-</div> <!--- POST ADDRESS --->
+<div class="post-header flex justify">
+<div class="post-type rounder"><i class="bx {block:Text}bx-file{/block:Text}{block:Link}bx-link-alt{/block:Link}{block:Quote}bxs-quote-left{/block:Quote}{block:Chat}bx-chat{/block:Chat}{block:Answer}bx-envelope{/block:Answer}{block:Photo}bx-image{/block:Photo}{block:Photoset}bx-image{/block:Photoset}{block:Panorama}bx-image{/block:Panorama}{block:Video}bx-video-recording{/block:Video}{block:Audio}bxs-music{/block:Audio}"></i>{PostType}</div>
+<div class="post-icons"><div class="icons rounder-bottom {block:IndexPage}pbtn{/block:IndexPage}"><i class="bx bx-minus" title="{lang:Posted TimeAgo}"></i><i class="bx bx-window" title="{NoteCountWithLabel}"></i><i class="bx bx-x" title="{block:NotReblog}Original Post{/block:NotReblog}{block:RebloggedFrom}Reblogged Post{/block:RebloggedFrom}"></i></div></div>
+</div>
+<div class="post-address flex justify centered">
+<a class="address rounder" href="{Permalink}" title="Permalink"><span class="bx bxs-bookmark"></span>{Name}.tumblr.com/{PostID}</a>
+</div>
 {/block:Date}
 
 {block:Text}
 {block:Title}<div class="t-title">{Title}</div>{/block:Title}
 {block:NotReblog}
-<div class="text"><div class="caption">{Body}</div></div>
+<div class="caption">{Body}</div>
 {/block:NotReblog}
 {block:Rebloggedfrom}
 <div class="unnest">
 {block:Reblogs}
 <div class="reblogged">
-<div class="username">
+<div class="username source-head">
 {block:IsActive}
-<div class="active">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}"> {Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
+<div class="active">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}">{Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
 {/block:IsActive}
 {block:IsDeactivated}
-<div class="deleted">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}"> {Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
+<div class="deleted">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}">{Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
 {/block:IsDeactivated}
 </div>
 {Body}
@@ -405,10 +309,10 @@ input[type=checkbox]:checked + .dn { vertical-align:middle; }
 <div class="reblogged">
 <div class="username">
 {block:IsActive}
-<div class="active">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}"> {Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
+<div class="active">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}">{Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
 {/block:IsActive}
 {block:IsDeactivated}
-<div class="deleted">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}"> {Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
+<div class="deleted">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}">{Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
 {/block:IsDeactivated}
 </div>
 {Body}
@@ -434,31 +338,27 @@ input[type=checkbox]:checked + .dn { vertical-align:middle; }
 {/block:Chat}
 
 {block:Answer}
-{block:NotReblog}
-<div class="q-wrap flex">
-<div class="q"><img src="{AskerPortraitURL-128}"></div>
-<div class="question {block:ifRoundCorners}round{/block:ifRoundCorners}"><div class="asker">{Asker} asked</div>{Question}</div>
+<div class="q-wrap flex justify">
+<div class="q"><img src="{AskerPortraitURL-128}"><i class="bx bxs-envelope"></i></div>
+<div class="question"><div class="asker">{Asker} sent</div>{Question}</div>
 </div>
+{block:NotReblog}
 <div class="answer">{Answer}</div>
 {/block:NotReblog}
 {block:Rebloggedfrom}
-<div class="q-wrap flex">
-<div class="q"><img src="{AskerPortraitURL-128}"></div>
-<div class="question {block:ifRoundCorners}round{/block:ifRoundCorners}"><div class="asker">{Asker} asked</div>{Question}</div>
+<div class="a-wrap flex justify">
+<div class="q"><img src="{block:Answerer}{AnswererPortraitURL-128}{/block:Answerer}"><i class="bx bxs-envelope-open"></i></div>
+<div class="question">{block:Answerer}<div class="asker">{Answerer} answered</div>{/block:Answerer}{Answer}</div>
 </div>
-<div class="a-wrap flex">
-<div class="reanswer {block:ifRoundCorners}round{/block:ifRoundCorners}">{block:Answerer}<div class="asker answerer">{Answerer} answered</div>{/block:Answerer}{Answer}</div>
-{block:Answerer}<div class="a"><img src="{AnswererPortraitURL-128}"></div>{/block:Answerer}
-</div>
-<div class="unnest">
+<div class="a-unnest">
 {block:Reblogs}
 <div class="reblogged">
 <div class="username">
 {block:IsActive}
-<div class="active">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}"> {Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
+<div class="active">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}">{Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
 {/block:IsActive}
 {block:IsDeactivated}
-<div class="deleted">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}"> {Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
+<div class="deleted">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}">{Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
 {/block:IsDeactivated}
 </div>
 {Body}
@@ -486,23 +386,37 @@ input[type=checkbox]:checked + .dn { vertical-align:middle; }
 {/block:Video}
             
 {block:Audio}
-{block:AudioEmbed}{AudioEmbed}{/block:AudioEmbed}
+{block:AudioEmbed}{AudioEmbed-640}{/block:AudioEmbed}
+{block:AudioPlayer}
+{AudioPlayer}
+<div class="audio flex justify">
+<div class="flex center">
+<div class="audio_player"><span class="audio-btns flex center"></span><div class="seekbar"></div></div>
+<div class="audio-info">
+{block:TrackName}<strong>{TrackName}</strong>{/block:TrackName}
+{block:Artist}<p>{Artist}</p>{/block:Artist}
+</div>
+</div>
+{block:AlbumArt}<img class="album" src="{AlbumArtURL}">{/block:AlbumArt}
+</div>
+{/block:AudioPlayer}
+
 {/block:Audio}
 
 {block:Caption}
 {block:NotReblog}
-<div class="caption">{Caption}</div>
+<div class="caption {block:Audio}b-top{/block:Audio}">{Caption}</div>
 {/block:NotReblog}
 {block:Rebloggedfrom}
-<div class="unnest">
+<div class="unnest {block:Audio}b-top{/block:Audio}">
 {block:Reblogs}
 <div class="reblogged">
 <div class="username">
 {block:IsActive}
-<div class="active">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}"> {Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
+<div class="active">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}">{Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
 {/block:IsActive}
 {block:IsDeactivated}
-<div class="deleted">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}"> {Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
+<div class="deleted">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}">{Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
 {/block:IsDeactivated}
 </div>
 {Body}
@@ -513,82 +427,75 @@ input[type=checkbox]:checked + .dn { vertical-align:middle; }
 {/block:Caption}
 
 {block:Date}
-{block:IndexPage}
-<div class="m-footer flex justify t-border">
-<a class="mcount {block:ifRoundCorners}rounder{/block:ifRoundCorners}" href="{Permalink}">{NoteCountWithLabel}</a>
-<div class="mcon"><a href="{ReblogURL}" title="Reblog"><span class="bx bx-revision {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></span></a>
-{block:HasTags}{block:ifHideTags}<a class="tbtn"><span class="close"><i class="bx bx-hash {block:ifRoundCorners}rounder{/block:ifRoundCorners}" title="Show Tags"></i></span><span class="close none"><i class="bx bx-x {block:ifRoundCorners}rounder{/block:ifRoundCorners}" title="Hide Tags"></i></span></a>{/block:ifHideTags}{/block:HasTags}</div>
-</div>
-{/block:IndexPage}
+
+
 {block:PermalinkPage}
-<div class="post-footer t-border">
-<div class="notecount">
+<div class="perm-footer">
+<div class="perm-info">
 {block:RebloggedFrom}
-<div class="via"><span class="bx bx-revision"></span><a href="{ReblogParentURL}">{ReblogParentName}</a></div>
-<div class="root"><span class="bx bxs-map"></span><a href="{ReblogRootURL}">{ReblogRootName}</a></div>
+<div class="via"><ul><li><a href="{ReblogParentURL}">{ReblogParentName}</a></li></ul></div>
+<div class="root"><ul><li><a href="{ReblogRootURL}">{ReblogRootName}</a></li></ul></div>
 {/block:RebloggedFrom}
-<div class="date"><span class="bx bxs-bookmark"></span>{Month} {DayOfMonthWithZero}, {Year} with {NoteCountWithLabel}</div>
-{block:HasTags}<div class="permtags"><span class="bx bxs-purchase-tag"></span>{block:Tags}<a href="{TagURL}">#{Tag}</a>{/block:Tags}</div>{/block:HasTags}
+<div class="date"><ul><li>{Month} {DayOfMonthWithZero}, {Year} with {NoteCountWithLabel}</li></ul></div>
+{block:HasTags}<div class="ptags"><ul><li>{block:Tags}<a href="{TagURL}">{Tag}</a>{/block:Tags}</li></ul></div>{/block:HasTags}
 </div>
-{block:PostNotes}{PostNotes}{/block:PostNotes}
-</div> <!--- POST FOOTER --->
+{block:PostNotes}{PostNotes-64}{/block:PostNotes}
+</div>
 {/block:PermalinkPage}
 {/block:Date}
 
 </article>
 
-{block:IndexPage}
 {block:Date}
-<div class="p-wrap" style="{block:HasTags}{block:ifHideTags}margin-bottom:10px{/block:ifHideTags}{/block:HasTags}">
+<div class="p-wrap">
 <div class="stick">
+<a class="m-wrap rounder" href="{Permalink}">{NoteCountWithLabel}</a>
+<a href="{block:NotReblog}{Permalink}{/block:NotReblog}{block:RebloggedFrom}{ReblogRootURL}{/block:RebloggedFrom}" target="_blank" title="{block:NotReblog}{lang:Posted by PostAuthorName}{/block:NotReblog}{block:RebloggedFrom}{lang:Originally from ReblogRootName}{/block:RebloggedFrom}"><img class="rounder" src="{block:NotReblog}{PortraitURL-128}{/block:NotReblog}{block:RebloggedFrom}{ReblogRootPortraitURL-128}{/block:RebloggedFrom}"></a>
 <div class="controls">
-{block:PinnedPostLabel}<a title="Pinned Post"><span class="bx bx-map {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></span></a>{/block:PinnedPostLabel}
-{block:RebloggedFrom}<a href="{ReblogParentURL}" title="Via {ReblogParentName}"><img src="{ReblogParentPortraitURL-128}" class="{block:ifRoundCorners}rounder{/block:ifRoundCorners}"></a>{/block:RebloggedFrom}
-{block:ContentSource}<a href="{SourceURL}" target="_blank" title="Content Source"><i class="bx bx-link-external {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></i></a>{/block:ContentSource}
-<a href="{ReblogURL}" title="Reblog"><span class="bx bx-revision {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></span></a>
-<a class="likey" title="Like">{LikeButton}<span class="bx bx-meh {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></span></a>
-{block:HasTags}{block:ifHideTags}<a class="tbtn"><span class="close"><i class="bx bx-hash {block:ifRoundCorners}rounder{/block:ifRoundCorners}" title="Show Tags"></i></span><span class="close none"><i class="bx bx-x {block:ifRoundCorners}rounder{/block:ifRoundCorners}" title="Hide Tags"></i></span></a>{/block:ifHideTags}{/block:HasTags}
-</div> <!--- PERMALINK --->
-</div> <!--- STICK --->
-</div> <!--- P-WRAP --->
+{block:ContentSource}<a href="{SourceURL}" target="_blank" title="{lang:Source}:{SourceTitle}"><i class="bx bx-link-external small"></i></a>{/block:ContentSource}
+<a href="{ReblogURL}"><i class="bx bx-revision"></i></a>
+<a class="likey">{LikeButton}<span class="bx bx-meh"></span></a>
+{block:ifHideTags}{block:HasTags}<a class="tagb"><span class="close" title="Show Tags"><i class="bx bx-hash"></i></span><span class="close none" title="Hide Tags"><i class="bx bx-x"></i></span></a>{/block:HasTags}{/block:ifHideTags}
+</div>
+</div>
+</div>
 {/block:Date}
 
+{block:IndexPage}
 {block:HasTags}
 <div class="tags {block:ifHideTags}none{/block:ifHideTags}">
-{block:Tags}<a class="{block:ifBorders}border{/block:ifBorders}{block:ifRoundCorners}rounder{/block:ifRoundCorners}" href="{TagURL}">{Tag}</a>{/block:Tags}
-</div> <!--- TAGS --->
+{block:Tags}<a href="{TagURL}" class="rounder">{Tag}</a>{/block:Tags}
+</div>
 {/block:HasTags}
 {/block:IndexPage}
-
-</div> <!--- ENTRY --->
-
+    
+</div>
 {/block:Posts}
 
 {block:Pagination}
 <div class="pgs flex justify">
-<div class="prev">{block:PreviousPage}<a href="{PreviousPage}" class="{block:ifRoundCorners}rounder{/block:ifRoundCorners}">Previous</a>{/block:PreviousPage}<span class="{block:ifRoundCorners}rounder{/block:ifRoundCorners}">Previous</span></div>
-<div class="next">{block:NextPage}<a href="{NextPage}" class="{block:ifRoundCorners}rounder{/block:ifRoundCorners}">Next</a>{/block:NextPage}<span class="{block:ifRoundCorners}rounder{/block:ifRoundCorners}">Next</span></div>
+<div class="prev">{block:PreviousPage}<a href="{PreviousPage}" class="rounder">Previous</a>{/block:PreviousPage}<span class="rounder">Previous</span></div>
+<div class="next">{block:NextPage}<a href="{NextPage}" class="rounder">Next</a>{/block:NextPage}<span class="rounder">Next</span></div>
 </div>
 {/block:Pagination}
 
 </section>
-</div> <!--- WRAPPER --->
-
-<div class="credits">
-<a class="scroll" title="Back to top"><span class="bx bxs-chevron-up {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></span></a>
-<a href="https://ricecodes.tumblr.com/" title="Theme by ricecodes" target="_blank"><span class="bx bx-code-alt {block:ifRoundCorners}rounder{/block:ifRoundCorners}"></span></a>
 </div>
 
-</div> <!--- CONTENT --->
+</div>
 
 <!----------------------------------------------------- SCRIPTS ------->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
 <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
-<script src="https://static.tumblr.com/0podkko/qWqq8va08/photosets.js"></script>
-<script src="https://static.tumblr.com/05ejowb/Y02qjlxxp/csslightbox.js"></script>
-<script src="https://static.tumblr.com/05ejowb/4O3r1tgrb/retrowave.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/annasthms/customaudio@latest/customaudio.min.js"></script>
+<script src="https://static.tumblr.com/05ejowb/wtirog6ty/retrowave.min.js"></script>
+<!--
+        NPF images fix v3.0 by @glenthemes [2021]
+        💌 git.io/JRBt7
+--->
+<script src="//npf-images-v3.github.io/script.js"></script>
     
 </body>
 </html>
