@@ -258,8 +258,8 @@ body.night .moon { display:none; }
 
 <div class="tab">
 <label class="dn"><input class="modus" type="checkbox">
-<a class="diemnox moon" title="Night"><i class="bx bxs-moon"></i></a>
-<a class="diemnox none" title="Day"><i class="bx bxs-sun"></i></a>
+<div class="diem"><a class="diemnox moon" title="Enable Dark Mode"><i class="bx bxs-moon"></i></a><a class="diemnox none" title="Disable Dark Mode"><i class="bx bxs-sun"></i></a></div>
+<div class="nox"><a class="diemnox moon" title="Enable Light Mode"><i class="bx bxs-sun"></i></a><a class="diemnox none" title="Disable Light Mode"><i class="bx bxs-moon"></i></a></div>
 </label>
 <a class="navi"><span class="close"><i class="bx bx-menu"></i></span><span class="close" style="display:none;"><i class="bx bx-x"></i></span></a>
 <div class="m-thm"><a href="https://ricecodes.tumblr.com/" title="Page by Ricecodes"><span class="bx bxs-star"></span></a></div>
