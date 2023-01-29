@@ -26,23 +26,22 @@ Notes:
 
 <link href="https://fonts.googleapis.com/css?family=Source Sans Pro:700,400" rel="stylesheet">
 <script src="https://static.tumblr.com/05ejowb/RA6r1jy9i/render.js"></script>
-<link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
 <style type="text/css">
 
 /* VARIABLES - Change to your preference! */
 
 :root {
-    
-    /* COLORS */
     --accent:#7eaba6;
     --accent-text:#fff;
-    --bg:#f0f0f0;
-    --hp-bg:#eee;
     --links:#7eaba6;
     --links-hover:#f1b6aa;
-    --content:#fafafa;
-    --text:#333;
+    --mobile:#25262b;
+    --selection-bg:#7eaba6;
+    --selection:#ffffff;
+    --tooltips:#000000;
+    --tooltips-text:#ffffff;
     
     /* FONT */
     --font-size:14px;
@@ -51,25 +50,37 @@ Notes:
     --round:10px; /* Change 10px this to 0 if you don't want round corners */
     --rounded:4px; /* This is the round corners for smaller items */
     
-    /* SKILLS PERCENTAGE */
-    --skill-one:7%;
-    --skill-two:23%;
-    --skill-three:13%;
-    
     /* FAVE COLORS */
     --color-one:#7eaba6;
     --color-two:#7e99ab;
     --color-three:#ab7e99;
+    
+    /* SKILLS PERCENTAGE */
+    --skill-one:7%;
+    --skill-two:23%;
+    --skill-three:13%;
 }
 
-[data-theme="daynight"] {
-    --hp-bg:#222;
-    --bg:#222;
-    --content:#3a3a3a;
+body.light, [data-theme="daynight"] body.dark {
+    --bg:#f0f0f0;
+    --hp-bg:#eee;
+    --content:#fafafa;
+    --text:#333;
+}
+
+[data-theme="daynight"] body.light, body.dark {
+    --bg:#15161a;
+    --hp-bg:#15161a;
+    --content:#25262b;
     --text:#fff;
 }
 
 /* BASICS */
+
+body.light .nox, body.dark .diem { display:none; }
+
+body.light .tmblr-iframe, [data-theme="daynight"] body.dark .tmblr-iframe { filter:invert(1); -webkit-filter:invert(1); -o-filter:invert(1); -moz-filter:invert(1); -ms-filter:invert(1); }
+[data-theme="daynight"] body.light .tmblr-iframe, body.dark .tmblr-iframe { filter:invert(0); -webkit-filter:invert(0); -o-filter:invert(0); -moz-filter:invert(0); -ms-filter:invert(0); }
 
 .tmblr-iframe {
     z-index:9999999999999!important;
@@ -129,11 +140,11 @@ hr { width:25%; margin:10px auto; }
 body::-webkit-scrollbar { width:18px; background:var(--bg);  }
 body::-webkit-scrollbar-thumb { background:var(--accent); border:6px solid var(--bg); border-radius:10px; }
 
-::selection { background:var(--accent); color:var(--accent-text); }
-::-moz-selection { background:var(--accent); color:var(--accent-text); }
-::-webkit-selection { background:var(--accent); color:var(--accent-text); }
+::selection { background:var(--selection-bg); color:var(--selection); }
+::-moz-selection { background:var(--selection-bg); color:var(--selection); }
+::-webkit-selection { background:var(--selection-bg); color:var(--selection); }
 
-.tippy-box[data-theme~='custom'] { background:var(--accent); color:var(--accent-text); border-radius:var(--rounded); }
+.tippy-box[data-theme~='custom'] { background:var(--tooltips); color:var(--tooltips-text); border-radius:var(--rounded); }
 
 /* SIDEBAR */
 
@@ -256,23 +267,25 @@ input[type=checkbox]:checked + .dn { vertical-align:middle; }
 iframe.tmblr-iframe, .t-ctrls { display:none; }
 .container { width:95%; margin:50px auto; } 
 .sidebar { display:none; }
-.tab { display:inline-block; position:inherit; width:100%; text-align:center; }
-.navi, .m-thm, .tab .bx { display:inline-block; margin:0; }
+.tab { display:inline-block; position:fixed; top:0; left:0; padding:20px 0; width:100%; text-align:center; background:var(--mobile); }
+.navi, .m-thm, .tab .bx { display:inline-block; margin:0; background:transparent; }
 .tab .bx { margin:0 5px; }
-.gate { position:absolute; width:60%; margin:10px 0 0 20%; z-index:9999; }
-.content { margin:70px auto; width:100%; }
+.tab .bx:hover { background:transparent; color:var(--links-hover); }
+.gate { position:absolute; width:60%; margin:40px 0 0 20%; z-index:9999; }
+.content { margin:120px auto; width:100%; }
 .small, .big { width:100%; }
 .detail .con { display:grid; grid-template-columns:repeat(2, 1fr); }
 .detail span:after { content:":"; }
 .thm { display:none; }
-body.night .diemnox { display:inline-block; }
+body.night .diemnox, .dn { display:inline-block; }
 body.night .moon { display:none; }
 }
 
 </style>
 </head>
 
-<body>
+<body class="light">
+<!--- Change "light" to "dark" if you want to use the dark color scheme. --->
 
 <div class="container">
 
@@ -280,8 +293,8 @@ body.night .moon { display:none; }
 
 <div class="tab">
 <label class="dn"><input class="modus" type="checkbox">
-<a class="diemnox moon" title="Night"><i class="bx bxs-moon"></i></a>
-<a class="diemnox none" title="Day"><i class="bx bxs-sun"></i></a>
+<div class="diem"><a class="diemnox moon" title="Enable Dark Mode"><i class="bx bxs-moon"></i></a><a class="diemnox none" title="Disable Dark Mode"><i class="bx bxs-sun"></i></a></div>
+<div class="nox"><a class="diemnox moon" title="Enable Light Mode"><i class="bx bxs-sun"></i></a><a class="diemnox none" title="Disable Light Mode"><i class="bx bxs-moon"></i></a></div>
 </label>
 <a class="navi"><span class="close"><i class="bx bx-menu"></i></span><span class="close" style="display:none;"><i class="bx bx-x"></i></span></a>
 <div class="m-thm"><a href="https://ricecodes.tumblr.com/" title="Page by Ricecodes"><span class="bx bxs-star"></span></a></div>
@@ -505,45 +518,7 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
 <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
-
-<script>
-$(document).ready(function(){
-    //remove tumblr redirects script by magnusthemes@tumblr
-    $('a[href*="t.umblr.com/redirect"]').each(function(){
-        var originalURL = $(this).attr("href").split("?z=")[1].split("&t=")[0];
-        var replaceURL = decodeURIComponent(originalURL);
-        $(this).attr("href", replaceURL);
-    });
-    tippy("[title]", {
-        theme:"custom",
-        duration:300,
-        allowHTML:true,
-        arrow:false,
-        followCursor:true,
-        inlinePositioning:true,
-        placement:"auto",
-        zIndex:9999999,
-        content(reference) {
-            const title = reference.getAttribute("title");
-            reference.removeAttribute("title");
-            return title;
-        },
-    });
-    $(".t-ctrls").click(function(){
-        $("body").toggleClass("open");
-        $(".hide",this).toggle();
-    });
-    $(".menu").click(function(){
-        $(".lists").slideToggle();
-        $(".close",this).toggle();
-    });
-    $(".navi").click(function(){
-        $(".gate").slideToggle();
-        $(".close",this).toggle();
-    });
-});
-</script>
-<script src="https://static.tumblr.com/05ejowb/5yUr1k551/mode.min.js"></script>
+<script src="https://static.tumblr.com/05ejowb/e2rrp9rls/basics.min.js"></script>
 
 </body>
 </html>
