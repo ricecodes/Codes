@@ -33,15 +33,15 @@ Notes:
 /* VARIABLES - Change to your preference! */
 
 :root {
-    
-    /* COLORS */
     --accent:#7eaba6;
     --accent-text:#fff;
-    --bg:#f0f0f0;
     --links:#7eaba6;
     --links-hover:#f1b6aa;
-    --content:#fafafa;
-    --text:#333;
+    --mobile:#25262b;
+    --selection-bg:#7eaba6;
+    --selection:#ffffff;
+    --tooltips:#000000;
+    --tooltips-text:#ffffff;
     
     /* FONT */
     --font-size:14px;
@@ -49,16 +49,26 @@ Notes:
     /* STYLING */
     --round:10px; /* Change 10px this to 0 if you don't want round corners */
     --rounded:4px; /* This is the round corners for smaller items */
-    
 }
 
-[data-theme="daynight"] {
-    --bg:#222;
-    --content:#3a3a3a;
+body.light, [data-theme="daynight"] body.dark {
+    --bg:#f0f0f0;
+    --content:#fafafa;
+    --text:#333;
+}
+
+[data-theme="daynight"] body.light, body.dark {
+    --bg:#15161a;
+    --content:#25262b;
     --text:#fff;
 }
 
 /* BASICS */
+
+body.light .nox, body.dark .diem { display:none; }
+
+body.light .tmblr-iframe, [data-theme="daynight"] body.dark .tmblr-iframe { filter:invert(1); -webkit-filter:invert(1); -o-filter:invert(1); -moz-filter:invert(1); -ms-filter:invert(1); }
+[data-theme="daynight"] body.light .tmblr-iframe, body.dark .tmblr-iframe { filter:invert(0); -webkit-filter:invert(0); -o-filter:invert(0); -moz-filter:invert(0); -ms-filter:invert(0); }
 
 .tmblr-iframe {
     z-index:9999999999999!important;
@@ -75,7 +85,7 @@ Notes:
 
 body.open .tmblr-iframe { opacity:1; visibility:visible; top:15px!important; right:60px!important; }
 
-body { margin:0; background:var(--bg); color:var(--text); font-family:'Source Sans Pro',sans-serif; font-size:var(--font-size); }
+body { margin:0; background:var(--bg); color:var(--text); font-family:'Source Sans Pro',sans-serif; font-size:var(--font-size); overflow-x:hidden; }
 
 a {
     color:var(--links);
@@ -94,6 +104,7 @@ u { text-decoration:underline; }
 b, strong { font-weight:bold; }
 
 p { margin:10px 0; }
+p:last-of-type { margin:10px 0; }
 
 pre {
     margin:5px 0;
@@ -117,11 +128,11 @@ hr { width:25%; margin:10px auto; }
 body::-webkit-scrollbar { width:18px; background:var(--bg);  }
 body::-webkit-scrollbar-thumb { background:var(--accent); border:6px solid var(--bg); border-radius:10px; }
 
-::selection { background:var(--accent); color:var(--accent-text); }
-::-moz-selection { background:var(--accent); color:var(--accent-text); }
-::-webkit-selection { background:var(--accent); color:var(--accent-text); }
+::selection { background:var(--selection-bg); color:var(--selection); }
+::-moz-selection { background:var(--selection-bg); color:var(--selection); }
+::-webkit-selection { background:var(--selection-bg); color:var(--selection); }
 
-.tippy-box[data-theme~='custom'] { background:var(--accent); color:var(--accent-text); border-radius:var(--rounded); }
+.tippy-box[data-theme~='custom'] { background:var(--tooltips); color:var(--tooltips-text); border-radius:var(--rounded); }
 
 /* SIDEBAR */
 
@@ -205,22 +216,24 @@ input[type=checkbox]:checked + .dn { vertical-align:middle; }
 iframe.tmblr-iframe, .t-ctrls { display:none; }
 .container { width:95%; margin:50px auto; } 
 .sidebar { display:none; }
-.tab { display:inline-block; position:inherit; margin:50px 0 0; display:inline-block; width:100%; text-align:center; }
-.tab .bx, .navi, .m-thm { display:inline-block; margin:0; }
+.tab { display:inline-block; position:fixed; top:0; left:0; padding:20px 0; width:100%; text-align:center; background:var(--mobile); }
+.navi, .m-thm, .tab .bx { display:inline-block; margin:0; background:transparent; }
 .tab .bx { margin:0 5px; }
-.gate { position:absolute; width:50%; margin:10px 0 0 25%; z-index:9999; }
-.content { margin:70px auto; width:90%; }
+.tab .bx:hover { background:transparent; color:var(--links-hover); }
+.gate { position:absolute; width:50%; margin:40px 0 0 25%; z-index:9999; }
+.content { margin:120px auto; width:90%; }
 .avatar { margin:7px; width:80px; height:80px; }
 .avatar img { width:60px; height:60px; }
 .thm { display:none; }
-body.night .diemnox { display:inline-block; }
+body.night .diemnox, .dn { display:inline-block; }
 body.night .moon { display:none; }
 }
 
 </style>
 </head>
 
-<body>
+<body class="light">
+<!--- Change "light" to "dark" if you want to use the dark color scheme. --->
 
 <div class="container">
 
@@ -286,46 +299,7 @@ body.night .moon { display:none; }
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
 <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
-<script src="https://static.tumblr.com/05ejowb/m2iqxwfgt/night.min.js"></script>
-
-<script>
-$(document).ready(function(){
-    //remove tumblr redirects script by magnusthemes@tumblr
-    $('a[href*="t.umblr.com/redirect"]').each(function(){
-        var originalURL = $(this).attr("href").split("?z=")[1].split("&t=")[0];
-        var replaceURL = decodeURIComponent(originalURL);
-        $(this).attr("href", replaceURL);
-    });
-    tippy("[title]", {
-        theme:"custom",
-        duration:300,
-        allowHTML:true,
-        arrow:false,
-        followCursor:true,
-        inlinePositioning:true,
-        placement:"auto-start",
-        zIndex:9999999,
-        content(reference) {
-            const title = reference.getAttribute("title");
-            reference.removeAttribute("title");
-            return title;
-        },
-    });
-    $(".t-ctrls").click(function(){
-        $("body").toggleClass("open");
-        $(".hide",this).toggle();
-    });
-    $(".menu").click(function(){
-        $(".lists").slideToggle(500);
-        $(".close",this).toggle();
-    });
-    $(".navi").click(function(){
-        $(".gate").slideToggle(500);
-        $(".close",this).toggle();
-    });
-});
-</script>
-<script src="https://static.tumblr.com/05ejowb/5yUr1k551/mode.min.js"></script>
+<script src="https://static.tumblr.com/05ejowb/e2rrp9rls/basics.min.js"></script>
 
 </body>
 </html>
