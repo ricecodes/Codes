@@ -1,6 +1,6 @@
 <!-----
 
-                   ★ [ Rose Wood ] by Ricecodes ★ 
+                   ★ [ Rose Wood] by ricecodes ★ 
 Credit:
 
 ★ Icons: https://boxicons.com/
@@ -8,7 +8,7 @@ Credit:
 ★ Day/Night Mode: https://egg.design/post/186889223257/day-night-mode-tutorial-after-featuring-a
 ★ Infinite Scroll: https://infinite-scroll.com/
 ★ Masonry: https://masonry.desandro.com/
-★ NPF Photosets: https://annalogs.tumblr.com/photosets
+★ NPF Images: https://glenthemes.tumblr.com/post/659034084446748672/npf-images-v3
 ★ Tumblr Redirects: https://magnusthemes.tumblr.com/post/162657076440/remove-tumblrs-redirects
 ★ Tippy Tooltip: https://atomiks.github.io/tippyjs/
 
@@ -18,8 +18,8 @@ Credit:
 <html>
 <head>
 
+<meta charset="utf-8">
 <title>{Title}{block:TagPage} — {lang:Posts tagged Tag}{/block:TagPage}{block:SearchPage} — {lang:Search results for SearchQuery}{/block:SearchPage}{block:PermalinkPage}{block:PostSummary} — {PostSummary}{/block:PostSummary}{/block:PermalinkPage}</title>
-
 
 <link rel="shortcut icon" href="{Favicon}">
 <link rel="alternate" type="application/rss+xml" href="{RSS}">
@@ -29,22 +29,28 @@ Credit:
 
 <meta name="color:Accent" content="#d99d98">
 <meta name="color:Accent Text" content="#ffffff">
-<meta name="color:Background" content="#f0f0f0">
-<meta name="color:Posts" content="#fafafa">
-<meta name="color:Borders" content="#d2d2d2">
-<meta name="color:Text" content="#000000">
-<meta name="color:Question" content="#eeeeee">
 <meta name="color:Links" content="#c48380">
 <meta name="color:Links Hover" content="#87c1af">
 <meta name="color:Selection Background" content="#e09692">
 <meta name="color:Selection" content="#ffffff">
 <meta name="color:Tooltips" content="#000000">
 <meta name="color:Tooltips Text" content="#ffffff">
-<meta name="color:Night Background" content="#15161a">
-<meta name="color:Night Borders" content="#41424d">
-<meta name="color:Night Posts" content="#25262b">
-<meta name="color:Night Text" content="#ffffff">
-<meta name="color:Night Question" content="#15161a">
+<meta name="color:Mobile Header" content="#25262b">
+<meta name="color:&#x2740;&#x22B1;&#x2504;&#x2504;&#x2504; Light Theme &#x2504;&#x2504;&#x2504;&#x22B0;&#x2740;" content="#ffffff">
+<meta name="color:Background" content="#f0f0f0">
+<meta name="color:Posts" content="#fafafa">
+<meta name="color:Borders" content="#d2d2d2">
+<meta name="color:Text" content="#000000">
+<meta name="color:Question" content="#eeeeee">
+<meta name="color:&#x2740;&#x22B1;&#x2504;&#x2504;&#x2504; Dark Theme &#x2504;&#x2504;&#x2504;&#x22B0;&#x2740;" content="#ffffff">
+<meta name="color:Dark Background" content="#15161a">
+<meta name="color:Dark Borders" content="#41424d">
+<meta name="color:Dark Posts" content="#25262b">
+<meta name="color:Dark Text" content="#ffffff">
+<meta name="color:Dark Question" content="#15161a">
+
+<meta name="select:Blog Theme" title="Light Theme" content="light">
+<meta name="select:Blog Theme" title="Dark Theme" content="dark">
 
 <meta name="select:Blog Layout" title="Two Columns" content="two">
 <meta name="select:Blog Layout" title="Three Columns" content="three">
@@ -55,7 +61,7 @@ Credit:
 <meta name="select:Updates Icon" title="Error" content="bxs-error">
 <meta name="select:Updates Icon" title="News" content="bxs-news">
 
-<meta name="if:Dark Mode" content="">
+<meta name="if:Hide Tumblr Controls" content="">
 <meta name="if:Round Corners" content="">
 <meta name="if:Infinite Scroll" content="">
 <meta name="if:Manual Load" content="">
@@ -69,7 +75,10 @@ Credit:
 <meta name="text:Body Font" content="Source Sans Pro">
 <meta name="text:Font Size" content="14px">
 <meta name="text:Line Height" content="1.5em">
+<meta name="text:Photoset Gap" content="4px">
+<meta name="text:&#x2740;&#x22B1;&#x2504;&#x2504;&#x2504; Updates &#x2504;&#x2504;&#x2504;&#x22B0;&#x2740;" content="">
 <meta name="text:Updates" content="The updates tab will automatically be hidden if this is empty.">
+<meta name="text:&#x2740;&#x22B1;&#x2504;&#x2504;&#x2504; Links &#x2504;&#x2504;&#x2504;&#x22B0;&#x2740;" content="">
 <meta name="text:Link 1" content="Link 1">
 <meta name="text:Link 1 URL" content="">
 <meta name="text:Link 2" content="Link 2">
@@ -81,8 +90,9 @@ Credit:
 
 <link href="https://fonts.googleapis.com/css2?family={text:Body Font}:wght@400;700&display=swap" rel="stylesheet">
 <link href="https://static.tumblr.com/0podkko/oDSpg7y88/photosets.css" rel="stylesheet">
-<link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
-<link href="https://static.tumblr.com/05ejowb/jlAr5s3jr/rosewood.min.css" rel="stylesheet">
+<link href="https://static.tumblr.com/05ejowb/IZKrp9qle/rosewood.min.css" rel="stylesheet">
+<link href="//npf-images-v3.github.io/recon.css" rel="stylesheet">
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
 <style>
 
@@ -92,70 +102,22 @@ Credit:
     --body-font:{text:Body Font},sans-serif;
     --body-size:{text:Font Size};
     --line-hgt:{text:Line Height};
-    --post-size:{select:Post Size};
+    --gap-size:{text:Photoset Gap};
+    --accent:{color:Accent};
+    --accent-text:{color:Accent Text};
     --rgb-accent:{RGBcolor:Accent};
-}
-
-{block:ifNotDarkMode}
-:root {
-    --accent:{color:Accent};
-    --accent-text:{color:Accent Text};
-    --bg:{color:Background};
-    --rgb-bg:{RGBcolor:Background};
-    --blockquote:{color:Question};
-    --borders:{color:Borders};
     --links:{color:Links};
     --links-hover:{color:Links Hover};
-    --posts:{color:Posts};
-    --ask:{color:Question};
-    --text:{color:Text};
-    --rgb-text:{RGBcolor:Text};
+    --mobile:{color:Mobile Header};
     --selection-bg:{color:Selection Background};
     --selection:{color:Selection};
     --tooltips:{color:Tooltips};
     --tooltips-text:{color:Tooltips Text};
+    --NPF-Caption-Spacing:1em;
+    --NPF-Image-Spacing:{text:Photoset Gap};
 }
 
-[data-theme="daynight"] {
-    --bg:{color:Night Background};
-    --rgb-bg:{RGBcolor:Night Background};
-    --blockquote:{color:Night Background};
-    --borders:{color:Night Borders};
-    --menu:{color:Night Posts};
-    --menu-text:{color:Night Text};
-    --posts:{color:Night Posts};
-    --ask:{color:Night Question};
-    --text:{color:Night Text};
-    --rgb-text:{RGBcolor:Night Text};
-    --tooltips:{color:Accent};
-    --tooltips-text:{color:Accent Text};
-}
-
-.tmblr-iframe { filter:invert(1); -webkit-filter:invert(1); -o-filter:invert(1); -moz-filter:invert(1); -ms-filter:invert(1); }
-[data-theme="daynight"] .tmblr-iframe { filter:invert(0); -webkit-filter:invert(0); -o-filter:invert(0); -moz-filter:invert(0); -ms-filter:invert(0); }
-{/block:ifNotDarkMode}
-
-{block:ifDarkMode}
-:root {
-    --accent:{color:Accent};
-    --accent-text:{color:Accent Text};
-    --bg:{color:Night Background};
-    --rgb-bg:{RGBcolor:Night Background};
-    --blockquote:{color:Night Background};
-    --borders:{color:Night Borders};
-    --links:{color:Links};
-    --links-hover:{color:Links Hover};
-    --posts:{color:Night Posts};
-    --ask:{color:Night Question};
-    --text:{color:Night Text};
-    --rgb-text:{RGBcolor:Night Text};
-    --selection-bg:{color:Selection Background};
-    --selection:{color:Selection};
-    --tooltips:{color:Accent};
-    --tooltips-text:{color:Accent Text};
-}
-
-[data-theme="daynight"] {
+body.light, [data-theme="daynight"] body.dark {
     --bg:{color:Background};
     --rgb-bg:{RGBcolor:Background};
     --blockquote:{color:Question};
@@ -164,18 +126,33 @@ Credit:
     --ask:{color:Question};
     --text:{color:Text};
     --rgb-text:{RGBcolor:Text};
-    --tooltips:{color:Tooltips};
-    --tooltips-text:{color:Tooltips Text};
 }
 
-.tmblr-iframe { filter:invert(0); -webkit-filter:invert(0); -o-filter:invert(0); -moz-filter:invert(0); -ms-filter:invert(0); }
-[data-theme="daynight"] .tmblr-iframe { filter:invert(1); -webkit-filter:invert(1); -o-filter:invert(1); -moz-filter:invert(1); -ms-filter:invert(1); }
-{/block:ifDarkMode}
+[data-theme="daynight"] body.light, body.dark {
+    --bg:{color:Dark Background};
+    --rgb-bg:{RGBcolor:Dark Background};
+    --blockquote:{color:Dark Background};
+    --borders:{color:Dark Borders};
+    --posts:{color:Dark Posts};
+    --ask:{color:Dark Question};
+    --text:{color:Dark Text};
+    --rgb-text:{RGBcolor:Dark Text};
+}
 
 {block:ifRoundCorners}
-.round { border-radius:10px; }
+.round, .npf-link-block.no-poster { border-radius:10px; }
 .rounder { border-radius:5px; }
 {/block:ifRoundCorners}
+
+{block:ifHideTumblrControls}
+.tmblr-iframe { opacity:0; visibility:hidden; }
+{/block:ifHideTumblrControls}
+
+{block:ifNotHideTumblrControls}
+.t-ctrls { display:none; }
+.tmblr-iframe { opacity:1!important; visibility:visible!important; top:15px!important; right:0!important; }
+{/block:ifNotHideTumblrControls}
+
 
 {block:PermalinkPage}
 .container { width:65vw; }
@@ -193,18 +170,12 @@ article, article.layout-three{margin:0 0 3em 0; width:100%;}
 </style>
 </head>
 
-<body>
+<body class="{select:Blog Theme}">
 
 <div class="tab">
 <label class="dn"><input class="modus" type="checkbox">
-{block:ifNotDarkMode}
-<a class="diemnox moon" title="Night"><i class="bx bxs-moon"></i></a>
-<a class="diemnox none" title="Day"><i class="bx bxs-sun"></i></a>
-{/block:ifNotDarkMode}
-{block:ifDarkMode}
-<a class="diemnox moon" title="Day"><i class="bx bxs-sun"></i></a>
-<a class="diemnox none" title="Night"><i class="bx bxs-moon"></i></a>
-{/block:ifDarkMode}
+<div class="diem"><a class="diemnox moon" title="Enable Dark Mode"><i class="bx bxs-moon"></i></a><a class="diemnox none" title="Disable Dark Mode"><i class="bx bxs-sun"></i></a></div>
+<div class="nox"><a class="diemnox moon" title="Enable Light Mode"><i class="bx bxs-sun"></i></a><a class="diemnox none" title="Disable Light Mode"><i class="bx bxs-moon"></i></a></div>
 </label>
 <!--- START OF MOBILE NAVIGATION --->
 <a class="m-nav"><span class="close"><i class="bx bx-menu"></i></span><span class="close none"><i class="bx bx-x"></i></span></a>
@@ -277,8 +248,8 @@ article, article.layout-three{margin:0 0 3em 0; width:100%;}
 
 <div class="grid">
 
-{block:Posts}
-<article class="flex center {block:IndexPage}layout-{select:Blog Layout}{/block:IndexPage} round">
+{block:Posts inlineMediaWidth="1280" inlineNestedMediaWidth="1280"}
+<article class="flex center {block:IndexPage}layout-{select:Blog Layout}{/block:IndexPage} round" post-type="{PostType}">
 
 {block:Date}
 {block:IndexPage}
@@ -533,7 +504,7 @@ article, article.layout-three{margin:0 0 3em 0; width:100%;}
 <div class="modal-content">
 <div class="post-header flex justify">
 <a class="exit" title="Close"><span class="bx bx-x"></span></a>
-<div class="controls">{block:PinnedPostLabel}<a href="{Permalink}" title="Pinned Post"><span class="bx bx-pin"></span></a>{/block:PinnedPostLabel}<a href="{Permalink}" title="Permalink"><span class="bx bx-link-alt"></span></a><a class="likey" title="Like">{LikeButton}<span class="bx bx-heart"></span></a><a href="{ReblogURL}" title="Reblog"><span class="bx bx-revision"></span></a></div>
+<div class="controls">{block:PinnedPostLabel}<a href="{Permalink}" title="Pinned Post"><span class="bx bx-pin"></span></a>{/block:PinnedPostLabel}<a href="{Permalink}" title="Permalink"><span class="bx bx-link-alt"></span></a><a class="likey" title="Like">{LikeButton}<span class="bx bx-heart"></span></a><a href="{ReblogURL}" title="Reblog"><span class="bx bx-refresh"></span></a></div>
 </div>
 <div class="modal-container round">
 {block:Text}
@@ -747,7 +718,10 @@ article, article.layout-three{margin:0 0 3em 0; width:100%;}
 <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 {block:ifInfiniteScroll}<script src="https://unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.min.js"></script>{/block:ifInfiniteScroll}
 <script src="https://cdn.jsdelivr.net/gh/annasthms/customaudio@latest/customaudio.min.js"></script>
+<script src="https://static.tumblr.com/05ejowb/X4Yrp9q3s/rosewood.min.js"></script>
 <script src="https://static.tumblr.com/05ejowb/cxAqpcpux/load.min.js"></script>
+<!-- NPF images fix v3.0 by @glenthemes [2021] - git.io/JRBt7 --->
+<script src="//npf-images-v3.github.io/script.js"></script>
 
 <script>
 $(document).ready(function(){
@@ -832,7 +806,6 @@ $(document).ready(function(){
     {/block:IndexPage}
 });
 </script>
-<script src="https://static.tumblr.com/05ejowb/ekPrkn503/rosewood.min.js"></script>
     
 </body>
 </html>
