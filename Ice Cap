@@ -124,7 +124,7 @@ i, em { color:var(--italics); }
 sub, small { font-size:var(--body-size); }
 
 h1 { margin:0; font-size:calc(var(--body-size) + 15px); line-height:1.6em; }
-.t-title { margin:0; padding:20px 30px; font-weight:bold; font-size:calc(var(--body-size) + 15px); line-height:var(--line-hgt); text-align:center; }
+.t-title { margin:0; padding:0 0 20px; font-weight:bold; font-size:calc(var(--body-size) + 15px); line-height:var(--line-hgt); text-align:center; }
 h1, h2, h3, h4 { margin:20px 0; }
 
 p { margin:10px 0; }
