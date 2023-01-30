@@ -1,0 +1,366 @@
+<!-----
+
+                ★ [ Hail Storm - Blogroll Page #02 ] by Ricecodes ★ 
+
+Credit:
+★ Icons: https://boxicons.com/
+★ Day/Night Mode: https://egg.design/post/186889223257/day-night-mode-tutorial-after-featuring-a
+★ Tumblr Redirects: https://magnusthemes.tumblr.com/post/162657076440/remove-tumblrs-redirects
+★ Tippy Tooltip: https://atomiks.github.io/tippyjs/
+
+----->
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>{Title} — Blogroll</title>
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+    
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+<script src="https://static.tumblr.com/05ejowb/RA6r1jy9i/render.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Karla:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+<style type="text/css">
+
+/* VARIABLES */
+
+:root {
+    --body-font:Karla,sans-serif;
+    --body-size:14px;
+    --line-hgt:1.5em;
+    --box-size:35vw;
+    --accent:#9dc6d7;
+    --accent-text:#ffffff;
+    --rgb-accent-text:255,255,255;
+    --links:#89adbc;
+    --links-hover:#d99d98;
+    --selection-bg:#9dc6d7;
+    --selection:#ffffff;
+    --tooltips:#000000;
+    --tooltips-text:#ffffff;
+    --mobile-side:#25262b;
+    --roundest:10px;
+    --rounder:5px;
+    --skill-one:40%;
+    --skill-two:20%;
+    --skill-three:60%;
+}
+
+body.dark, [data-theme="daynight"] body.light {
+    --side:#25262b;
+    --side-text:#ffffff;
+    --rgb-side-text:255,255,255;
+    --bg:#15161a;
+    --rgb-bg:21,22,26;
+    --borders:#41424d;
+    --box:#25262b;
+    --ask:#25262b;
+    --text:#ffffff;
+    --rgb-text:255,255,255;
+}
+
+[data-theme="daynight"] body.dark, body.light {
+    --side:#f2f2f2;
+    --side-text:#888888;
+    --rgb-side-text:136,136,136;
+    --bg:#ffffff;
+    --rgb-bg:255,255,255;
+    --borders:#c0c0c0;
+    --box:#ffffff;
+    --ask:#f2f2f2;
+    --text:#000000;
+    --rgb-text:0,0,0;
+}
+
+body.dark .tmblr-iframe { filter:invert(0); -webkit-filter:invert(0); -o-filter:invert(0); -moz-filter:invert(0); -ms-filter:invert(0); }
+[data-theme="daynight"] body.dark .tmblr-iframe { filter:invert(1); -webkit-filter:invert(1); -o-filter:invert(1); -moz-filter:invert(1); -ms-filter:invert(1); }
+
+body.dark .up-wrap blockquote { background:var(--bg); }
+[data-theme="daynight"] body.dark .up-wrap blockquote { background:var(--ask); }
+
+body.dark .ask .bx { background:var(--bg); color:var(--accent); }
+[data-theme="daynight"] body.dark .ask .bx { background:var(--accent); color:var(--accent-text); }
+
+body.light .tmblr-iframe { filter:invert(1); -webkit-filter:invert(1); -o-filter:invert(1); -moz-filter:invert(1); -ms-filter:invert(1); }
+[data-theme="daynight"] body.light .tmblr-iframe { filter:invert(0); -webkit-filter:invert(0); -o-filter:invert(0); -moz-filter:invert(0); -ms-filter:invert(0); }
+
+body.light .up-wrap blockquote { background:var(--ask); }
+[data-theme="daynight"] body.light .up-wrap blockquote { background:var(--bg); }
+
+body.light .ask .bx { background:var(--accent); color:var(--accent-text); }
+[data-theme="daynight"] body.light .ask .bx { background:var(--bg); color:var(--accent); }
+
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+.roundest { border-radius:var(--roundest); }
+.rounder { border-radius:var(--rounder); }
+
+.tmblr-iframe { display:none; opacity:0; visibility:hidden; }
+
+body { 
+    margin:0;
+    background-color:var(--bg);
+    color:var(--text);
+    font-family:var(--body-font);
+    font-size:var(--body-size);
+    line-height:var(--line-hgt);
+    -webkit-transition:all 0s ease;
+    -moz-transition:all 0s ease;
+    -o-transition:all 0s ease;
+    -ms-transition:all 0s ease;
+    transition:all 0s ease;
+    overflow-x:hidden;
+    }
+
+a { color:var(--links); text-decoration:none; }
+a:hover { color:var(--links-hover); }
+
+u { text-decoration:underline; }
+b, strong { font-weight:bold; }
+i, em { color:var(--italics); }
+sub, small { font-size:var(--body-size); }
+
+h1 { margin:0; font-size:calc(var(--body-size) + 15px); line-height:1.6em; }
+.t-title { margin:0; padding:30px 0; font-weight:bold; font-size:calc(var(--body-size) + 15px); line-height:var(--line-hgt); text-align:center; }
+h1, h2, h3, h4 { margin:20px 0; }
+
+p { margin:10px 0; }
+
+code { margin:10px 0!important; padding:15px; }
+pre { white-space:pre-wrap; overflow-x:auto; padding:15px; font-family:monospace,sans-serif; background:var(--ask); color:var(--text); border-radius:10px; }
+
+ol, ul { margin-left:3em; line-height:1.8em; }
+ol { margin-top:10px; margin-bottom:10px; }
+ul { list-style:none; }
+ol li, ul li { margin:5px 0; }
+.sidebar ul { margin-left:1.5em; }
+ul li::before { font-family:"Boxicons"; content:"\ed47"; vertical-align:middle; font-size:7px; color:var(--accent); font-weight:bold; margin:0 2em 0 -3em; width:3em; }
+ol li::before { margin:0 2em 0 -3em; width:3em; }
+
+blockquote { margin:10px 0; padding:20px; background:var(--ask); border:1px solid var(--borders); border-radius:10px; }
+
+hr { width:25%; margin:10px auto; border-top:1px solid var(--borders); }
+
+.flex { display:flex; flex-wrap:wrap; }
+.center { align-content:center; }
+.justify { justify-content:space-between; }
+.none { display:none; }
+
+::selection { color:var(--selection); background:var(--selection-bg); }
+::-moz-selection { color:var(--selection); background:var(--selection-bg); }
+::-webkit-selection { color:var(--selection); background:var(--selection-bg); }
+
+::-webkit-scrollbar { width:20px; }
+::-webkit-scrollbar-thumb { background:var(--accent); height:90px; border-radius:15px; }
+body.left-side::-webkit-scrollbar { background:var(--bg); }
+body.right-side::-webkit-scrollbar { background:var(--side); }
+body.left-side::-webkit-scrollbar-thumb { border:5px solid var(--bg); }
+body.right-side::-webkit-scrollbar-thumb { border:5px solid var(--side); }
+
+.tippy-box[data-theme~='custom'] { background:var(--tooltips); color:var(--tooltips-text); }
+
+a, .nav .bx, .labels .bx, .desc-title h3 { -webkit-transition:all 0.4s ease; -moz-transition:all 0.4s ease; -o-transition:all 0.4s ease; -ms-transition:all 0.4s ease; transition:all 0.4s ease; }
+
+/* LABELS */
+
+.labels { position:fixed; top:0; width:60px; height:100vh; background:var(--side); z-index:9999999; }
+body.left-side .labels { left:0; }
+body.right-side .labels { right:0; }
+
+.icons { margin:auto; }
+.labels .bx { display:block; vertical-align:middle; font-size:17px; margin:30px 0 0; padding:5px 20px; background:var(--side); color:var(--side-text); cursor:pointer; -webkit-transition:all 0s ease; -moz-transition:all 0s ease; -o-transition:all 0s ease; -ms-transition:all 0s ease; transition:all 0s ease; }
+.labels .bx:hover { color:var(--links-hover); background:var(--side); }
+
+.rbtn .bx { margin:0; padding:20px; font-size:21px; background:var(--accent); color:var(--accent-text); cursor:default; }
+.rbtn .bx:hover { background:var(--accent); color:var(--accent-text); }
+
+.to-top .bx { color:rgba(var(--rgb-side-text), 0.5); }
+.to-top .bx:hover { color:rgba(var(--rgb-side-text), 0.5); cursor:default; }
+.scroll { display:none; position:absolute; margin:0; }
+.scroll .bx { margin:0; color:var(--side-text)!important; z-index:9999; animation:fadein 0.4s ease-in-out forwards; }
+.scroll .bx:hover { color:var(--links-hover)!important; cursor:pointer; }
+
+@keyframes fadein {
+	0% { opacity:0; }
+	100% { opacity:1; }
+}
+
+/* SIDEBAR */
+
+.sidebar { position:fixed; width:38%; height:100vh; }
+body.left-side .sidebar { margin-left:0; }
+body.right-side .sidebar { margin-left:calc(62% - 60px); }
+
+.side-wrap { margin:auto; padding:10px; width:380px; }
+.side { margin:0; width:100%; }
+
+.portrait { margin:0; }
+.portrait img { margin:0; width:70px; height:70px; border-radius:38% 62% 74% 26% / 62% 44% 56% 38%; }
+
+.desc-wrap { margin:0; padding:0; width:calc(100% - 85px); vertical-align:middle; }
+.desc { margin:0 0 15px; padding-right:5px; width:100%; scrollbar-width:thin; scrollbar-color:var(--accent) var(--bg); max-height:15vh; overflow-y:auto; }
+.desc-title { margin:0 0 5px; padding:0; width:100%; }
+.desc-none { margin-bottom:15px; }
+.desc-title h3 { margin:0; font-size:calc(var(--body-size) + 3px); }
+a.desc-title h3 { color:var(--text); }
+a:hover.desc-title h3 { color:var(--links-hover); }
+
+.nav { margin:0; width:100%; }
+.nav .bx { display:inline-block; margin:0 7px 7px 0; padding:5px; background:var(--posts); color:rgba(var(--rgb-text),0.9); font-size:17px; border:1px solid var(--borders); border-radius:5px; }
+.nav .bx:hover { background:var(--links-hover); color:var(--accent-text); border-color:var(--links-hover); }
+
+/* CONTAINER */
+
+.container { width:calc(100% - 60px); }
+body.left-side .container { margin:0 0 0 60px; }
+body.right-side .container { margin:0; }
+
+.content { margin:0; width:100%; }
+
+.wrapper { width:62%; }
+body.left-side .wrapper { margin:100px 0 100px calc(38% + 20px); }
+body.right-side .wrapper { margin:100px 0; }
+
+.box { margin:0 auto 5rem; width:var(--box-size); }
+
+.dn { margin:0; }
+body.light .nox, body.dark .diem { display:none; }
+body.night .diemnox { display:block; }
+input[type=checkbox], body.night .moon { display:none; }
+input[type=checkbox]:checked + .dn { vertical-align:middle; }
+
+/* FOLLOWING */
+
+.following { display:grid; grid-template-columns:repeat(2, 1fr); }
+.person strong, .person b { color:var(--text); }
+.person { margin:0; padding:15px; white-space:nowrap; overflow:hidden; }
+.person img { margin-right:15px; vertical-align:middle; width:40px; height:40px; padding:3px; background:var(--box); border:1px solid var(--borders); border-radius:100%; }
+.person:hover { background:var(--links-hover); }
+.f-info { margin:0; width:calc(100% - 55px); }
+.f-name, .f-title { vertical-align:middle; margin:auto 0; width:100%; color:var(--text); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.f-title { font-weight:bold; }
+.person:hover .f-name, .person:hover .f-title { color:var(--accent-text); }
+
+
+
+/* IMAGE STYLES */
+
+body.square .portrait img, body.square .person img { border-radius:7px; }
+body.circle .portrait img, body.circle .person img { border-radius:100%; }
+
+/* BORDER STYLES */
+
+body.dash blockquote, body.dash .nav .bx, body.dash .person img { border-style:dashed; }
+body.dot blockquote, body.dot .nav .bx, body.dot .person img { border-style:dotted; }
+
+
+/* MOBILE */
+
+@media only screen and (max-width:999px) {
+tippy-box[data-theme~='custom'], .tmblr-iframe { display:none!important; }
+body.left-side::-webkit-scrollbar, body.right-side::-webkit-scrollbar { background:var(--bg); }
+body.left-side::-webkit-scrollbar-thumb, body.right-side::-webkit-scrollbar-thumb { border:5px solid var(--bg); }
+
+.labels { padding:20px 100px; width:100%; height:auto; background:var(--mobile-side); z-index:999999; }
+body.left-side .labels, body.right-side .labels { left:0; }
+.icons { display:flex; align-content:center; justify-content:space-between; }
+.labels .bx { display:inline-block; vertical-align:middle; font-size:17px; margin:auto 0; background:transparent!important; color:var(--accent-text); padding:0; cursor:pointer; }
+
+.rbtn .bx { margin:auto 0; padding:0; font-size:17px; background:transparent; color:var(--accent-text); cursor:default; }
+.rbtn .bx:hover { background:transparent; color:var(--accent-text); }
+
+.to-top .bx { color:rgba(var(--rgb-side-text), 0.5); }
+.to-top .bx:hover { color:rgba(var(--rgb-side-text), 0.5); cursor:default; }
+.scroll .bx { margin:0; color:var(--accent-text)!important; }
+.scroll .bx:hover { color:var(--links-hover)!important; cursor:pointer; }
+
+.container { width:100%; }
+body.left-side .container, body.right-side .container { margin:0; }
+
+.sidebar { position:relative; margin-top:100px; width:80vw; height:auto; }
+body.left-side .sidebar, body.right-side .sidebar { margin:100px auto 0; }
+.side-wrap { padding:0; width:100%; }
+
+.wrapper, .line { width:80vw; }
+body.left-side .wrapper, body.right-side .wrapper { margin:100px auto; }
+.box { margin:0 auto 5rem; width:100%; }
+}
+
+
+</style>
+</head>
+
+<body class="light right-side blob solid"> 
+<!--- 
+★ Change "light" to "dark" if you want to use the dark color scheme. 
+★ Change "right-side" to "left-side" if you want a left sidebar. 
+★ Change "blob" to "square" or "circle" to change the style of the images. 
+★ Change "solid" to "dash" or "dot" to change the border style. 
+★ Change "norm" to "uppercase" or "lowercase"  or "capitalize" to change the text style. 
+--->
+
+<div class="labels">
+<div class="icons">
+<div class="rbtn"><i class="bx bx-user-plus"></i></div>
+<label class="dn"><input class="modus" type="checkbox">
+<div class="diem"><a class="diemnox moon" title="Enable Dark Mode"><i class="bx bx-moon"></i></a><a class="diemnox none" title="Disable Dark Mode"><i class="bx bx-sun"></i></a></div>
+<div class="nox"><a class="diemnox moon" title="Enable Light Mode"><i class="bx bx-sun"></i></a><a class="diemnox none" title="Disable Light Mode"><i class="bx bx-moon"></i></a></div>
+</label>
+<div class="to-top"><a class="scroll" title="{lang:Back to top}"><i class="bx bx-up-arrow-alt"></i></a><i class="bx bx-up-arrow-alt"></i></div>
+</div>
+</div>
+
+<div class="container">
+
+<div class="content flex justify">
+<div class="sidebar flex center">
+<div class="side-wrap">
+<div class="side flex justify">
+<div class="portrait"><img src="{PortraitURL-128}" draggable="false"></div>
+<!--- You can replace the sidebar image. Just replace {PortraitURL-128} with the image URL. --->
+<div class="desc-wrap flex">
+<a class="desc-title" href="/"><h3>Following</h3></a>
+<!--- START OF DESCRIPTION --->
+<div class="desc">
+A short description can be pasted here.
+</div>
+<!--- END OF DESCRIPTION --->
+<div class="nav">
+<a href="/" title="Home"><i class="bx bx-home-alt"></i></a>
+<a href="/archive" title="Archive" target="_blank"><i class="bx bx-box"></i></a>
+<a href="https://ricecodes.tumblr.com/" target="_blank" title="Theme by ricecodes"><i class="bx bx-star"></i></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="wrapper">
+<div class="box">
+<div class="t-title">Following</div>
+<!--- START OF FOLLOWING --->
+{block:Following}
+<div class="following">
+{block:Followed}
+<a class="person rounder flex justify" href="{FollowedURL}" target="_blank"><img src="{FollowedPortraitURL-128}"><div class="f-info flex center"><div class="f-title">{FollowedTitle}</div><div class="f-name">@{FollowedName}</div></div></a>
+{/block:Followed}
+</div>
+{/block:Following}
+<!--- END OF FOLLOWING --->
+</div>
+</div>
+</div>
+
+</div>
+
+<!----------------------------------------------------- SCRIPTS ------->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script><script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script><script src="https://static.tumblr.com/05ejowb/Io9rotdk6/basics.min.js"></script>
+
+</body>
+</html>
