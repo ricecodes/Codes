@@ -211,7 +211,7 @@ a.desc-title h3 { color:var(--text); }
 a:hover.desc-title h3 { color:var(--links-hover); }
 
 .nav { margin:0; width:100%; }
-.nav .bx { display:inline-block; margin:0 7px 7px 0; padding:5px; background:var(--posts); color:rgba(var(--rgb-text),0.9); font-size:17px; border:1px solid var(--borders); border-radius:5px; }
+.nav .bx { display:inline-block; margin:0 7px 7px 0; padding:5px; background:var(--box); color:rgba(var(--rgb-text),0.9); font-size:17px; border:1px solid var(--borders); border-radius:5px; }
 .nav .bx:hover { background:var(--links-hover); color:var(--accent-text); border-color:var(--links-hover); }
 
 /* CONTAINER */
