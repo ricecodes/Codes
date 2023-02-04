@@ -54,7 +54,7 @@ body.dark, [data-theme="daynight"] body.light {
     --bg:#15161a;
     --rgb-bg:21,22,26;
     --borders:#41424d;
-    --posts:#25262b;
+    --box:#25262b;
     --ask:#25262b;
     --text:#ffffff;
     --rgb-text:255,255,255;
@@ -67,7 +67,7 @@ body.dark, [data-theme="daynight"] body.light {
     --bg:#ffffff;
     --rgb-bg:255,255,255;
     --borders:#c0c0c0;
-    --posts:#ffffff;
+    --box:#ffffff;
     --ask:#f2f2f2;
     --text:#000000;
     --rgb-text:0,0,0;
@@ -209,7 +209,7 @@ a.desc-title h3 { color:var(--text); }
 a:hover.desc-title h3 { color:var(--links-hover); }
 
 .nav { margin:0; width:100%; }
-.nav .bx { display:inline-block; margin:0 7px 7px 0; padding:5px; background:var(--posts); color:rgba(var(--rgb-text),0.9); font-size:17px; border:1px solid var(--borders); border-radius:5px; }
+.nav .bx { display:inline-block; margin:0 7px 7px 0; padding:5px; background:var(--box); color:rgba(var(--rgb-text),0.9); font-size:17px; border:1px solid var(--borders); border-radius:5px; }
 .nav .bx:hover { background:var(--links-hover); color:var(--accent-text); border-color:var(--links-hover); }
 
 /* CONTAINER */
@@ -253,7 +253,7 @@ input[type=checkbox]:checked + .dn { vertical-align:middle; }
 .asker a:hover { color:var(--links-hover); }
 
 .q { margin:0; padding:0; }
-.q img, .a img { margin-top:20px; vertical-align:middle; width:40px!important; height:40px!important; background:var(--posts); padding:3px; border-radius:100%; border:1px solid var(--borders); }
+.q img, .a img { margin-top:20px; vertical-align:middle; width:40px!important; height:40px!important; background:var(--box); padding:3px; border-radius:100%; border:1px solid var(--borders); }
 
 /* IMAGE STYLES */
 
