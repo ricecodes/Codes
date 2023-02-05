@@ -365,7 +365,7 @@ A short description can be pasted here.
 <!--- END OF DESCRIPTION --->
 <div class="nav">
 <a href="/" title="Home"><i class="bx bx-home-alt"></i></a>
-<a href="/archive" title="Archive" target="_blank"><i class="bx bx-box"></i></a>
+<a href="/archive" title="Archive" target="_blank"><i class="bx bx-time"></i></a>
 <a href="https://ricecodes.tumblr.com/" target="_blank" title="Theme by ricecodes"><i class="bx bx-star"></i></a>
 </div>
 </div>
