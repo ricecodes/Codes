@@ -19,8 +19,6 @@ Credit:
 <head>
 
 <title>{Title}{block:TagPage} — {lang:Posts tagged Tag}{/block:TagPage}{block:SearchPage} — {lang:Search results for SearchQuery}{/block:SearchPage}{block:PermalinkPage}{block:PostSummary} — {PostSummary}{/block:PostSummary}{/block:PermalinkPage}</title>
-<meta name="description" content="{MetaDescription}">
-
 
 <link rel="shortcut icon" href="{Favicon}">
 <link rel="alternate" type="application/rss+xml" href="{RSS}">
@@ -32,42 +30,48 @@ Credit:
 
 <meta name="color:Accent" content="#d99d98">
 <meta name="color:Accent Text" content="#ffffff">
-<meta name="color:Bold" content="#b35965">
-<meta name="color:Italics" content="#dc9bb3">
-<meta name="color:Background" content="#f2f2f2">
-<meta name="color:Posts" content="#ffffff">
-<meta name="color:Borders" content="#d2d2d2">
-<meta name="color:Text" content="#000000">
 <meta name="color:Like Button" content="#ff492f">
-<meta name="color:Question" content="#eeeeee">
 <meta name="color:Links" content="#c48380">
 <meta name="color:Links Hover" content="#47abca">
 <meta name="color:Selection Background" content="#e09692">
 <meta name="color:Selection" content="#ffffff">
 <meta name="color:Tooltips" content="#000000">
 <meta name="color:Tooltips Text" content="#ffffff">
-<meta name="color:Night Bold" content="#e09692">
-<meta name="color:Night Italics" content="#e8b0ad">
-<meta name="color:Night Background" content="#15161a">
-<meta name="color:Night Borders" content="#41424d">
-<meta name="color:Night Posts" content="#25262b">
-<meta name="color:Night Text" content="#ffffff">
-<meta name="color:Night Question" content="#15161a">
+<meta name="color:Mobile Menu" content="#222222">
+<meta name="color:Mobile Search" content="#333333">
+<meta name="color:&#xFF61;&#xFF9F;&#x2022;&#x2508;&#xB68;&#x2661;&#xB67; Light Theme &#xB68;&#x2661;&#xB67;&#x2508;&#x2022; &#xFF61;&#xFF9F;" content="#ffffff">
+<meta name="color:Bold" content="#b35965">
+<meta name="color:Italics" content="#dc9bb3">
+<meta name="color:Background" content="#f2f2f2">
+<meta name="color:Posts" content="#ffffff">
+<meta name="color:Borders" content="#d2d2d2">
+<meta name="color:Text" content="#000000">
+<meta name="color:Question" content="#eeeeee">
+<meta name="color:&#xFF61;&#xFF9F;&#x2022;&#x2508;&#xB68;&#x2661;&#xB67; Dark Theme &#xB68;&#x2661;&#xB67;&#x2508;&#x2022; &#xFF61;&#xFF9F;" content="#ffffff">
+<meta name="color:Dark Bold" content="#e09692">
+<meta name="color:Dark Italics" content="#e8b0ad">
+<meta name="color:Dark Background" content="#15161a">
+<meta name="color:Dark Borders" content="#41424d">
+<meta name="color:Dark Posts" content="#25262b">
+<meta name="color:Dark Text" content="#ffffff">
+<meta name="color:Dark Question" content="#15161a">
+
+<meta name="select:Blog Theme" title="Light Theme" content="light">
+<meta name="select:Blog Theme" title="Dark Theme" content="dark">
+
+<meta name="select:Blog Layout" title="Left Sidebar" content="left-side">
+<meta name="select:Blog Layout" title="Right Sidebar" content="right-side">
 
 <meta name="select:Post Size" title="Small" content="35vw">
 <meta name="select:Post Size" title="Medium" content="40vw">
 <meta name="select:Post Size" title="Large" content="45vw">
-
-<meta name="select:Blog Layout" title="Left Sidebar" content="left-side">
-<meta name="select:Blog Layout" title="Right Sidebar" content="right-side">
 
 <meta name="select:Borders" title="All Modes" content="all">
 <meta name="select:Borders" title="None" content="none-b">
 <meta name="select:Borders" title="Only Light Mode" content="day-b">
 <meta name="select:Borders" title="Only Dark Mode" content="night-b">
 
-<meta name="if:Dark Mode" content="">
-<meta name="if:Show Tumblr Controls" content="">
+<meta name="if:Hide Tumblr Controls" content="">
 <meta name="if:Hide Sidebar Image" content="">
 <meta name="if:Hide Captions" content="">
 <meta name="if:Hide Tags" content="">
@@ -79,14 +83,17 @@ Credit:
 <meta name="text:Body Font" content="Roboto">
 <meta name="text:Font Size" content="14px">
 <meta name="text:Line Height" content="1.5em">
+<meta name="text:Photoset Gap" content="3px">
 <meta name="text:Custom Title" content="">
 <meta name="text:Subtitle" content="Subtitle">
 <meta name="text:Custom Description" content="">
+<meta name="text:&#xFF61;&#xFF9F;&#x2022;&#x2508;&#xB68;&#x2661;&#xB67; Sidebar Links &#xB68;&#x2661;&#xB67;&#x2508;&#x2022; &#xFF61;&#xFF9F;" content="">
 <meta name="text:Home Link" content="Home">
 <meta name="text:Ask Link" content="Contact">
 <meta name="text:Archive Link" content="Archive">
 <meta name="text:Search Link" content="Search">
 <meta name="text:Navigation Link" content="Explore">
+<meta name="text:&#xFF61;&#xFF9F;&#x2022;&#x2508;&#xB68;&#x2661;&#xB67; Navigation Links &#xB68;&#x2661;&#xB67;&#x2508;&#x2022; &#xFF61;&#xFF9F;" content="">
 <meta name="text:Link 1" content="Link 1">
 <meta name="text:Link 1 URL" content="">
 <meta name="text:Link 2" content="Link 2">
@@ -99,8 +106,8 @@ Credit:
 <link href="https://fonts.googleapis.com/css2?family={text:Head Font}:wght@400;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family={text:Body Font}:wght@400;700&display=swap" rel="stylesheet">
 <link href="https://static.tumblr.com/0podkko/oDSpg7y88/photosets.css" rel="stylesheet">
+<link href="https://static.tumblr.com/05ejowb/qrgrpthxb/calypso.min.css" rel="stylesheet">
 <link href="//npf-images-v3.github.io/recon.css" rel="stylesheet">
-<link href="https://static.tumblr.com/05ejowb/x9yrmamcq/calypso.min.css" rel="stylesheet">
 
 <style>
 
@@ -114,141 +121,77 @@ Credit:
     --post-size:{select:Post Size};
     --rgb-accent-text:{RGBcolor:Accent Text};
     --NPF-Caption-Spacing:1em;
-    --NPF-Image-Spacing:3px;
-}
-
-{block:ifNotDarkMode}
-:root {
+    --NPF-Image-Spacing:{text:Photoset Gap};
+    
+    /* COLORS */
     --accent:{color:Accent};
     --accent-text:{color:Accent Text};
-    --bold:{color:Bold};
-    --italics:{color:Italics};
-    --bg:{color:Background};
-    --rgb-bg:{RGBcolor:Background};
-    --blockquote:{color:Question};
-    --borders:{color:Borders};
     --like-btn:{color:Like Button};
     --links:{color:Links};
     --links-hover:{color:Links Hover};
-    --posts:{color:Posts};
-    --ask:{color:Question};
-    --text:{color:Text};
-    --rgb-text:{RGBcolor:Text};
     --selection-bg:{color:Selection Background};
     --selection:{color:Selection};
     --tooltips:{color:Tooltips};
     --tooltips-text:{color:Tooltips Text};
-    --mobile-nav:#222;
-    --mobile-search:#333;
 }
 
-[data-theme="daynight"] {
-    --bold:{color:Night Bold};
-    --italics:{color:Night Italics};
-    --bg:{color:Night Background};
-    --rgb-bg:{RGBcolor:Night Background};
-    --blockquote:{color:Night Background};
-    --borders:{color:Night Borders};
-    --menu:{color:Night Posts};
-    --menu-text:{color:Night Text};
-    --posts:{color:Night Posts};
-    --ask:{color:Night Question};
-    --text:{color:Night Text};
-    --rgb-text:{RGBcolor:Night Text};
-    --tooltips:{color:Accent};
-    --tooltips-text:{color:Accent Text};
-    --mobile-nav:{color:Night Posts};
-    --mobile-search:{color:Night Background};
-}
-
-.tmblr-iframe { filter:invert(1); -webkit-filter:invert(1); -o-filter:invert(1); -moz-filter:invert(1); -ms-filter:invert(1); }
-[data-theme="daynight"] .tmblr-iframe { filter:invert(0); -webkit-filter:invert(0); -o-filter:invert(0); -moz-filter:invert(0); -ms-filter:invert(0); }
-
-article.borders-day-b, .sidebar.borders-day-b { border:1px solid var(--borders); }
-[data-theme="daynight"] article.borders-day-b, [data-theme="daynight"] .sidebar.borders-day-b { border-color:var(--bg); }
-
-article.borders-night-b, .sidebar.borders-night-b { border:1px solid var(--bg); }
-[data-theme="daynight"] article.borders-night-b, [data-theme="daynight"] .sidebar.borders-night-b { border-color:var(--borders); }
-{/block:ifNotDarkMode}
-
-{block:ifDarkMode}
-:root {
-    --accent:{color:Accent};
-    --accent-text:{color:Accent Text};
-    --bold:{color:Night Bold};
-    --italics:{color:Night Italics};
-    --bg:{color:Night Background};
-    --rgb-bg:{RGBcolor:Night Background};
-    --blockquote:{color:Night Background};
-    --borders:{color:Night Borders};
-    --like-btn:{color:Like Button};
-    --links:{color:Links};
-    --links-hover:{color:Links Hover};
-    --posts:{color:Night Posts};
-    --ask:{color:Night Question};
-    --text:{color:Night Text};
-    --rgb-text:{RGBcolor:Night Text};
-    --selection-bg:{color:Selection Background};
-    --selection:{color:Selection};
-    --tooltips:{color:Accent};
-    --tooltips-text:{color:Accent Text};
-    --mobile-nav:{color:Night Posts};
-    --mobile-search:{color:Night Background};
-}
-
-[data-theme="daynight"] {
+body.light, [data-theme="daynight"] body.dark {
     --bold:{color:Bold};
     --italics:{color:Italics};
     --bg:{color:Background};
-    --rgb-bg:{RGBcolor:Background};
     --blockquote:{color:Question};
     --borders:{color:Borders};
     --posts:{color:Posts};
     --ask:{color:Question};
     --text:{color:Text};
     --rgb-text:{RGBcolor:Text};
-    --tooltips:{color:Tooltips};
-    --tooltips-text:{color:Tooltips Text};
-    --mobile-nav:#222;
-    --mobile-search:#333;
+    --mobile-nav:{color:Mobile Menu};
+    --mobile-search:{color:Mobile Search};
 }
 
-.tmblr-iframe { filter:invert(0); -webkit-filter:invert(0); -o-filter:invert(0); -moz-filter:invert(0); -ms-filter:invert(0); }
-[data-theme="daynight"] .tmblr-iframe { filter:invert(1); -webkit-filter:invert(1); -o-filter:invert(1); -moz-filter:invert(1); -ms-filter:invert(1); }
+[data-theme="daynight"] body.light, body.dark {
+    --bold:{color:Dark Bold};
+    --italics:{color:Dark Italics};
+    --bg:{color:Dark Background};
+    --blockquote:{color:Dark Background};
+    --borders:{color:Dark Borders};
+    --menu:{color:Dark Posts};
+    --menu-text:{color:Dark Text};
+    --posts:{color:Dark Posts};
+    --ask:{color:Dark Question};
+    --text:{color:Dark Text};
+    --rgb-text:{RGBcolor:Dark Text};
+    --mobile-nav:{color:Dark Posts};
+    --mobile-search:{color:Dark Background};
+}
 
-article.borders-day-b, .sidebar.borders-day-b { border:1px solid var(--bg); }
-[data-theme="daynight"] article.borders-day-b, [data-theme="daynight"] .sidebar.borders-day-b { border-color:var(--borders); }
-
-article.borders-night-b, .sidebar.borders-night-b { border:1px solid var(--borders); }
-[data-theme="daynight"] article.borders-night-b, [data-theme="daynight"] .sidebar.borders-night-b { border-color:var(--bg); }
-{/block:ifDarkMode}
-
-{block:ifNotShowTumblrControls}
+{block:ifHideTumblrControls}
 .tmblr-iframe { opacity:0; visibility:hidden; }
 body.open.left-side .tmblr-iframe { opacity:1; visibility:visible; left:65px!important; padding-left:0; }
 body.open.right-side .tmblr-iframe { opacity:1; visibility:visible; right:90px!important; }
-{/block:ifNotShowTumblrControls}
+{/block:ifHideTumblrControls}
 
-{block:ifShowTumblrControls}
+{block:ifNotHideTumblrControls}
 .ctrl-panel { display:none; }
 body.left-side .tmblr-iframe { left:0!important; }
 body.right-side .tmblr-iframe { right:20px!important; }
-{/block:ifShowTumblrControls}
+{/block:ifNotHideTumblrControls}
 
 {block:ifNotHideSidebarImage}
-@media only screen and (max-width:999px) {
+@media only screen and (max-width:1025px) {
 .m-head { background-color:var(--accent); background-image:url({image:Sidebar}); background-size:contain; background-attachment:fixed; background-repeat:repeat; background-position:top; }
 }
 {/block:ifNotHideSidebarImage}
 {block:ifHideSidebarImage}
-@media only screen and (max-width:999px) { .m-head { background:var(--accent); } }
+@media only screen and (max-width:1025px) { .m-head { background:var(--accent); } }
 {/block:ifHideSidebarImage}
+
 
 {CustomCSS}
 </style>
 </head>
 
-<body class="{select:Blog Layout}">
+<body class="{select:Blog Theme} {select:Blog Layout}">
 
 <div class="ctrl-panel">
 <a class="ctrls"><span class="hide" title="Show Controls"><i class="ft" data-feather="settings"></i></span><span class="hide none" title="Hide Controls"><i class="ft" data-feather="x"></i></span></a>
@@ -292,25 +235,16 @@ body.right-side .tmblr-iframe { right:20px!important; }
 <div class="side-wrap flex center">
 <div class="sidebar round borders-{select:Borders}">
 <div class="side-head flex justify">
-<div class="side-info">
-<table>
-<tr>
-{block:ShowAvatar}<td><img src="{PortraitURL-128}"></td>{/block:ShowAvatar}
-<td><strong>{block:ifNotCustomTitle}{Title}{/block:ifNotCustomTitle}{block:ifCustomTitle}{text:Custom Title}{/block:ifCustomTitle}</strong>{block:ifSubtitle}<br>{text:Subtitle}{/block:ifSubtitle}</td>
-</tr>
-</table>
+{block:ShowAvatar}<div class="side-ava"><img src="{PortraitURL-128}"></div>{/block:ShowAvatar}
+<div class="side-info {block:ShowAvatar}showava{/block:ShowAvatar} {block:HideAvatar}hideava{/block:HideAvatar} flex center">
+<div class="side-tit">{block:ifNotCustomTitle}{Title}{/block:ifNotCustomTitle}{block:ifCustomTitle}{text:Custom Title}{/block:ifCustomTitle}</div>
+{block:ifSubtitle}<div class="side-sub">{text:Subtitle}</div>{/block:ifSubtitle}
 </div> <!--- SIDE INFO --->
 <a class="m-mbtn"><span class="mexit"><i class="ft" data-feather="menu"></i></span><span class="mexit none"><i class="ft" data-feather="x"></i></span></a> <!--- MOBILE MENU BUTTON --->
 <div class="m-search {block:HideFromSearchEnabled}m-none{/block:HideFromSearchEnabled}"><form action="/search" method="get"><input class="m-searchbar" type="text" name="q" placeholder="Search" value="{SearchQuery}" autocomplete="off"/></form></div> <!--- MOBILE SEARCHBAR --->
 <label class="dn"><input class="modus" type="checkbox">
-{block:ifNotDarkMode}
-<a class="diemnox moon" title="Night"><i class="ft" data-feather="moon"></i></a>
-<a class="diemnox none" title="Day"><i class="ft" data-feather="sun"></i></a>
-{/block:ifNotDarkMode}
-{block:ifDarkMode}
-<a class="diemnox moon" title="Day"><i class="ft" data-feather="sun"></i></a>
-<a class="diemnox none" title="Night"><i class="ft" data-feather="moon"></i></a>
-{/block:ifDarkMode}
+<div class="diem"><a class="diemnox moon" title="Enable Dark Mode"><i class="ft" data-feather="moon"></i></a><a class="diemnox none" title="Disable Dark Mode"><i class="ft" data-feather="sun"></i></a></div>
+<div class="nox"><a class="diemnox moon" title="Enable Light Mode"><i class="ft" data-feather="sun"></i></a><a class="diemnox none" title="Disable Light Mode"><i class="ft" data-feather="moon"></i></a></div>
 </label>
 </div> <!--- SIDE HEAD --->
 {block:IfNotHideSidebarImage}<div class="header"><img src="{image:Sidebar}"></div>{/block:IfNotHideSidebarImage}
@@ -828,7 +762,7 @@ Aliquam nisi lorem, pulvinar id, commodo feugiat, vehicula et, mauris. <!-- Quot
 {block:Following}
 <div class="following">
 {block:Followed}
-<a class="person rounder flex justify" href="{FollowedURL}" target="_blank"><img src="{FollowedPortraitURL-128}"><div class="f-info"><strong>{FollowedName}</strong><br>{FollowedTitle}</div></a>
+<a class="person rounder flex justify" href="{FollowedURL}" target="_blank"><img src="{FollowedPortraitURL-128}"><div class="f-info flex center"><div class="f-title">{FollowedTitle}</div><div class="f-name">@{FollowedName}</div></div></a>
 {/block:Followed}
 </div>
 {/block:Following}
@@ -855,7 +789,7 @@ Aliquam nisi lorem, pulvinar id, commodo feugiat, vehicula et, mauris. <!-- Quot
 <script src="https://cdn.jsdelivr.net/gh/annasthms/customaudio@latest/customaudio.min.js"></script>
 <!--
         NPF images fix v3.0 by @glenthemes [2021]
-        💌 git.io/JRBt7
+        ? git.io/JRBt7
 --->
 <script src="//npf-images-v3.github.io/script.js"></script>
 <script src="https://static.tumblr.com/05ejowb/0ZLrkn4u6/calypso.min.js"></script>
