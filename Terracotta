@@ -18,7 +18,6 @@ Credit:
 <head>
 
 <title>{Title}{block:TagPage} ({lang:Posts tagged Tag}){/block:TagPage}{block:SearchPage} ({lang:Search results for SearchQuery}){/block:SearchPage}{block:PermalinkPage}{block:PostSummary} — {PostSummary}{/block:PostSummary}{/block:PermalinkPage}</title>
-<meta name="description" content="{MetaDescription}">
 
 
 <link rel="shortcut icon" href="{Favicon}">
