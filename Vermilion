@@ -272,9 +272,6 @@ body.light, [data-theme="daynight"] body.dark {
     --permalink:{color:Dark Permalink};
 }
 
-.d-wrap a { margin-top:15px; background:var(--accent); border-radius:5px; padding:8px 11px; color:var(--accent-text)!important; }
-.d-wrap a:hover { background:var(--links-hover); }
-
 {CustomCSS}
 </style>
 </head>
