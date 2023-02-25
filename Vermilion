@@ -202,7 +202,7 @@ Credit:
 <link href="https://fonts.googleapis.com/css2?family={text:Head Font}:wght@400;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family={text:Body Font}:wght@400;700&display=swap" rel="stylesheet">
 <link href="https://static.tumblr.com/0podkko/oDSpg7y88/photosets.css" rel="stylesheet">
-<link href="https://static.tumblr.com/05ejowb/0Gfrqnmko/vermilion.min.css" rel="stylesheet">
+<link href="https://static.tumblr.com/05ejowb/hkvrqnn02/vermilion.min.css" rel="stylesheet">
 <link href="//npf-images-v3.github.io/recon.css" rel="stylesheet">
 <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
@@ -271,6 +271,9 @@ body.light, [data-theme="daynight"] body.dark {
     --rgb-text:{RGBcolor:Dark Text};
     --permalink:{color:Dark Permalink};
 }
+
+.d-wrap a { margin-top:15px; background:var(--accent); border-radius:5px; padding:8px 11px; color:var(--accent-text)!important; }
+.d-wrap a:hover { background:var(--links-hover); }
 
 {CustomCSS}
 </style>
@@ -478,10 +481,12 @@ Please view the theme guide for Vermilion if you want to add more tabs/tab butto
 <div class="reblogged">
 <div class="username source-head">
 {block:IsActive}
-<div class="active">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<table><tr><td><img src="{PortraitURL-64}"></td><td>{Username}</td></tr></table>{block:HasPermalink}</a>{/block:HasPermalink}</div>
+{block:HasPermalink}
+<a href="{Permalink}" target="_blank"><div class="active"><span><img src="{PortraitURL-64}"><i class="bx bx-refresh"></i></span>{Username}</div></a>
+{/block:HasPermalink}
 {/block:IsActive}
 {block:IsDeactivated}
-<div class="deleted">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<table><tr><td><img src="{PortraitURL-64}"></td><td>{Username}</td></tr></table>{block:HasPermalink}</a>{/block:HasPermalink}</div>
+{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<div class="deleted"><span><img src="{PortraitURL-64}"><i class="bx bx-refresh"></i></span>{Username}</div>{block:HasPermalink}</a>{/block:HasPermalink}
 {/block:IsDeactivated}
 </div>
 {Body}
@@ -504,10 +509,12 @@ Please view the theme guide for Vermilion if you want to add more tabs/tab butto
 <div class="reblogged">
 <div class="username">
 {block:IsActive}
-<div class="active">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<table><tr><td><img src="{PortraitURL-64}"></td><td>{Username}</td></tr></table>{block:HasPermalink}</a>{/block:HasPermalink}</div>
+{block:HasPermalink}
+<a href="{Permalink}" target="_blank"><div class="active"><span><img src="{PortraitURL-64}"><i class="bx bx-refresh"></i></span>{Username}</div></a>
+{/block:HasPermalink}
 {/block:IsActive}
 {block:IsDeactivated}
-<div class="deleted">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<table><tr><td><img src="{PortraitURL-64}"></td><td>{Username}</td></tr></table>{block:HasPermalink}</a>{/block:HasPermalink}</div>
+{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<div class="deleted"><span><img src="{PortraitURL-64}"><i class="bx bx-refresh"></i></span>{Username}</div>{block:HasPermalink}</a>{/block:HasPermalink}
 {/block:IsDeactivated}
 </div>
 {Body}
@@ -542,10 +549,12 @@ Please view the theme guide for Vermilion if you want to add more tabs/tab butto
 <div class="reblogged">
 <div class="username">
 {block:IsActive}
-<div class="active">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<table><tr><td><img src="{PortraitURL-64}"></td><td>{Username}</td></tr></table>{block:HasPermalink}</a>{/block:HasPermalink}</div>
+{block:HasPermalink}
+<a href="{Permalink}" target="_blank"><div class="active"><span><img src="{PortraitURL-64}"><i class="bx bx-refresh"></i></span>{Username}</div></a>
+{/block:HasPermalink}
 {/block:IsActive}
 {block:IsDeactivated}
-<div class="deleted">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<table><tr><td><img src="{PortraitURL-64}"></td><td>{Username}</td></tr></table>{block:HasPermalink}</a>{/block:HasPermalink}</div>
+{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<div class="deleted"><span><img src="{PortraitURL-64}"><i class="bx bx-refresh"></i></span>{Username}</div>{block:HasPermalink}</a>{/block:HasPermalink}
 {/block:IsDeactivated}
 </div>
 {Body}
@@ -596,10 +605,12 @@ Please view the theme guide for Vermilion if you want to add more tabs/tab butto
 <div class="reblogged">
 <div class="username">
 {block:IsActive}
-<div class="active">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<table><tr><td><img src="{PortraitURL-64}"></td><td>{Username}</td></tr></table>{block:HasPermalink}</a>{/block:HasPermalink}</div>
+{block:HasPermalink}
+<a href="{Permalink}" target="_blank"><div class="active"><span><img src="{PortraitURL-64}"><i class="bx bx-refresh"></i></span>{Username}</div></a>
+{/block:HasPermalink}
 {/block:IsActive}
 {block:IsDeactivated}
-<div class="deleted">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<table><tr><td><img src="{PortraitURL-64}"></td><td>{Username}</td></tr></table>{block:HasPermalink}</a>{/block:HasPermalink}</div>
+{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<div class="deleted"><span><img src="{PortraitURL-64}"><i class="bx bx-refresh"></i></span>{Username}</div>{block:HasPermalink}</a>{/block:HasPermalink}
 {/block:IsDeactivated}
 </div>
 {Body}
