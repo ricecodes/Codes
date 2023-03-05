@@ -635,8 +635,6 @@ Please view the theme guide for Vermilion if you want to add more tabs/tab butto
 {block:PermalinkPage}
 <div class="perm-footer">
 <div class="pfoot">
-{block:Submission}<div class="sub"><ul><li><a href="{SubmitterURL}" target="_blank">{lang:Submitted By}</a></li></ul></div>{/block:Submission}
-{block:ContentSource}<div class="csrc"><ul><li><a href="{SourceURL}" target="_blank">{SourceTitle}</a></li></ul></div>{/block:ContentSource}
 {block:RebloggedFrom}
 <div class="via"><ul><li><a href="{ReblogParentURL}" title="{lang:Reblogged from ReblogParentName}">{ReblogParentName}</a></li></ul></div>
 <div class="root"><ul><li><a href="{ReblogRootURL}" title="{lang:Originally from ReblogRootName}">{ReblogRootName}</a></li></ul></div>
