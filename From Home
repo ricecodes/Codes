@@ -560,7 +560,7 @@ body.dark, [data-theme="daynight"] body.light {
 <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
 <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/annasthms/customaudio@latest/customaudio.min.js"></script>
-<script src="https://static.tumblr.com/05ejowb/YwTrsgy36/main.min.js"></script>
+<script src="https://static.tumblr.com/05ejowb/Khdrtleup/main.min.js"></script>
 <!-- NPF images fix v3.0 by @glenthemes [2021] - git.io/JRBt7 --->
 <script src="//npf-images-v3.github.io/script.js"></script>
 
