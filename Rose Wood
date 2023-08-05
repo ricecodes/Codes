@@ -90,7 +90,7 @@ Credit:
 
 <link href="https://fonts.googleapis.com/css2?family={text:Body Font}:wght@400;700&display=swap" rel="stylesheet">
 <link href="https://static.tumblr.com/0podkko/oDSpg7y88/photosets.css" rel="stylesheet">
-<link href="https://static.tumblr.com/05ejowb/O4trp9wc8/rosewood.min.css" rel="stylesheet">
+<link href="https://static.tumblr.com/05ejowb/9psryw6bc/rosewood.min.css" rel="stylesheet">
 <link href="//npf-images-v3.github.io/recon.css" rel="stylesheet">
 <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
@@ -718,7 +718,7 @@ article, article.layout-three{margin:0 0 3em 0; width:100%;}
 <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 {block:ifInfiniteScroll}<script src="https://unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.min.js"></script>{/block:ifInfiniteScroll}
 <script src="https://cdn.jsdelivr.net/gh/annasthms/customaudio@latest/customaudio.min.js"></script>
-<script src="https://static.tumblr.com/05ejowb/X4Yrp9q3s/rosewood.min.js"></script>
+<script src="https://static.tumblr.com/05ejowb/lEVryw6ab/rosewood.min.js"></script>
 <script src="https://static.tumblr.com/05ejowb/cxAqpcpux/load.min.js"></script>
 <!-- NPF images fix v3.0 by @glenthemes [2021] - git.io/JRBt7 --->
 <script src="//npf-images-v3.github.io/script.js"></script>
