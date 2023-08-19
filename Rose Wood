@@ -76,6 +76,9 @@ Credit:
 <meta name="text:Font Size" content="14px">
 <meta name="text:Line Height" content="1.5em">
 <meta name="text:Photoset Gap" content="4px">
+<meta name="text:&#x2740;&#x22B1;&#x2504;&#x2504;&#x2504; Searchbar &#x2504;&#x2504;&#x2504;&#x22B0;&#x2740;" content="">
+<meta name="text:Searchbar Title" content="Search">
+<meta name="text:Searchbar Placeholder" content="Start searching">
 <meta name="text:&#x2740;&#x22B1;&#x2504;&#x2504;&#x2504; Updates &#x2504;&#x2504;&#x2504;&#x22B0;&#x2740;" content="">
 <meta name="text:Updates" content="The updates tab will automatically be hidden if this is empty.">
 <meta name="text:&#x2740;&#x22B1;&#x2504;&#x2504;&#x2504; Links &#x2504;&#x2504;&#x2504;&#x22B0;&#x2740;" content="">
@@ -200,6 +203,8 @@ article, article.layout-three{margin:0 0 3em 0; width:100%;}
 <div class="up-info">{text:Updates}</div>
 </div>
 {/block:ifUpdates}
+<a class="sbtn {block:HideFromSearchEnabled}none{/block:HideFromSearchEnabled}"><span class="close" title="Search"><i class="bx bx-search"></i></span><span class="close none" title="{lang:Close}"><i class="bx bx-x"></i></span></a>
+<div class="search round"><h1>{text:Searchbar Title}</h1><div class="up-info"><form action="/search" method="get"><input class="searchbar" type="text" name="q" placeholder="{text:Searchbar Placeholder}" value="{SearchQuery}" autocomplete="off"/></form></div></div>
 <a class="m-thm" href="https://ricecodes.tumblr.com/" target="_blank"><span class="bx bxs-star"></span></a>
 </div>
 
