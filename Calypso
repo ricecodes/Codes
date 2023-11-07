@@ -102,11 +102,30 @@ Credit:
 <meta name="text:Link 3 URL" content="">
 <meta name="text:Link 4" content="Link 4">
 <meta name="text:Link 4 URL" content="">
+<meta name="text:&#xFF61;&#xFF9F;&#x2022;&#x2508;&#xB68;&#x2661;&#xB67; About &#xB68;&#x2661;&#xB67;&#x2508;&#x2022; &#xFF61;&#xFF9F;" content="">
+<meta name="text:Quote" content="Quote goes here.">
+<meta name="text:Quote Source" content="Quote source here.">
+<meta name="text:Details" content="&#x3C;span&#x3E;Name&#x3C;/span&#x3E;&#x3C;span&#x3E;Age&#x3C;/span&#x3E;&#x3C;span&#x3E;Pronouns&#x3C;/span&#x3E;">
+<meta name="text:About Info" content="Add information about yourself here. Some basic knowledge of HTML is recommended.">
+<meta name="text:Social Media" content="&#x3C;a href=&#x22;LINK URL&#x22;&#x3E;Link Name&#x3C;/a&#x3E;">
+<meta name="text:&#xFF61;&#xFF9F;&#x2022;&#x2508;&#xB68;&#x2661;&#xB67; Navigation Section &#xB68;&#x2661;&#xB67;&#x2508;&#x2022; &#xFF61;&#xFF9F;" content="">
+<meta name="text:Links 1 Header" content="&#x3C;h2&#x3E;Header&#x3C;/h2&#x3E;">
+<meta name="text:Links 1 Section" content="&#x3C;h3&#x3E;Subheading&#x3C;/h3&#x3E;&#x3C;a href=&#x22;URL here&#x22;&#x3E;Link Name&#x3C;/a&#x3E;&#x3C;a href=&#x22;URL here&#x22;&#x3E;Link Name&#x3C;/a&#x3E;&#x3C;a href=&#x22;URL here&#x22;&#x3E;Link Name&#x3C;/a&#x3E;">
+<meta name="text:Links 2 Header" content="">
+<meta name="text:Links 2 Section" content="">
+<meta name="text:Links 3 Header" content="">
+<meta name="text:Links 3 Section" content="">
+<meta name="text:Tags 1 Header" content="&#x3C;h2&#x3E;Header&#x3C;/h2&#x3E;">
+<meta name="text:Tags 1 Section" content="&#x3C;h3&#x3E;Subheading&#x3C;/h3&#x3E;&#x3C;a href=&#x22;URL HERE&#x22;&#x3E;#Tag&#x3C;/a&#x3E;&#x3C;a href=&#x22;URL HERE&#x22;&#x3E;#Tag&#x3C;/a&#x3E;&#x3C;a href=&#x22;URL HERE&#x22;&#x3E;#Tag&#x3C;/a&#x3E;">
+<meta name="text:Tags 2 Header" content="">
+<meta name="text:Tags 2 Section" content="">
+<meta name="text:Tags 3 Header" content="">
+<meta name="text:Tags 3 Section" content="">
 
 <link href="https://fonts.googleapis.com/css2?family={text:Head Font}:wght@400;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family={text:Body Font}:wght@400;700&display=swap" rel="stylesheet">
 <link href="https://static.tumblr.com/0podkko/oDSpg7y88/photosets.css" rel="stylesheet">
-<link href="https://static.tumblr.com/05ejowb/qrgrpthxb/calypso.min.css" rel="stylesheet">
+<link href="https://static.tumblr.com/05ejowb/Jq1s3rr8x/calypso.min.css" rel="stylesheet">
 <link href="//npf-images-v3.github.io/recon.css" rel="stylesheet">
 
 <style>
@@ -122,6 +141,10 @@ Credit:
     --rgb-accent-text:{RGBcolor:Accent Text};
     --NPF-Caption-Spacing:1em;
     --NPF-Image-Spacing:{text:Photoset Gap};
+    --NPF-Audio-Buttons-Size:1.4rem;
+    --NPF-Audio-Buttons-Spacing:1.3rem; /* space between buttons and song info */
+    --NPF-Audio-Image-Size:90px;
+    --NPF-Audio-Image-Spacing:0px; /* gap between player info and cover image */
     
     /* COLORS */
     --accent:{color:Accent};
@@ -185,7 +208,6 @@ body.right-side .tmblr-iframe { right:20px!important; }
 {block:ifHideSidebarImage}
 @media only screen and (max-width:1025px) { .m-head { background:var(--accent); } }
 {/block:ifHideSidebarImage}
-
 
 {CustomCSS}
 </style>
@@ -596,49 +618,37 @@ body.right-side .tmblr-iframe { right:20px!important; }
 <div class="abt">
     
 <!--- START OF QUOTE --->
+{block:ifQuote}
 <div class="qte">
-Aliquam nisi lorem, pulvinar id, commodo feugiat, vehicula et, mauris. <!-- Quote goes here --->
-<div class="src">— Source goes here</div>
+{text:Quote} <!-- Quote goes here --->
+{block:ifQuoteSource}<div class="src">— {text:Quote Source}</div>{/block:ifQuoteSource}
 </div>
+{/block:ifQuote}
 <!--- END OF QUOTE --->
 
 <!--- START OF DETAILS --->
-<div class="details">
-
-<span>Name</span>
-<span>Age</span>
-<span>Pronouns</span>
-<span>MBTI</span>
-<span>Zodiac</span>
-<span>Occupation</span>
-
+{block:ifDetails}<div class="details">
+{text:Details}
 <!--- You can add as many details as you would like. Just make sure to use <span>DETAIL</span> in between <div class="details"> </div> --->
-
-</div>
+</div>{/block:ifDetails}
 <!--- END OF DETAILS --->
 
 <!--- START OF BIO --->
+{block:ifAboutInfo}
 <div class="bio">
-
-<b>Bold</b>. <i>Italics</i>. <u>Underline</u>. 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacus erat, placerat mattis semper vel, pharetra eget nisl. <a href="">Vestibulum cursus</a> vestibulum porttitor. Aliquam accumsan libero in mauris varius convallis. Sed ultricies augue quis sollicitudin mollis. Sed iaculis mi eu fermentum pharetra. Etiam dignissim varius massa, at aliquet neque congue vel. Proin ut varius magna.</p>
-<blockquote>You can also add blockquotes in your bio.</blockquote>
-<p>Cras laoreet pharetra sodales. Proin varius, felis sit amet auctor consectetur, eros quam vehicula turpis, sit amet ornare ligula est a diam. Aenean mauris ante, hendrerit at nulla vitae, ultricies tristique tortor. Fusce ac viverra enim, quis iaculis ante. Phasellus ultricies risus in diam tincidunt faucibus. Ut eget urna sed purus cursus consequat vel vitae lectus. Nulla in imperdiet libero. Aliquam sed adipiscing nisl, in blandit mauris.</p>
-
+{text:About Info}
 </div>
+{/block:ifAboutInfo}
 <!--- END OF BIO --->
 
 <!--- START OF SOCIAL MEDIA --->
+{block:ifSocialMedia}
 <div class="social">
 <h3>Elsewhere</h3>
-
-<a href="">Social Media</a>
-<a href="">Social Media</a>
-<a href="">Social Media</a>
-
+{text:Social Media}
 <!--- You can add as many links as you would like. Just make sure to use <a href="">LINK NAME</a> in between <div class="social"> </div> --->
-
 </div>
+{/block:ifSocialMedia}
 <!--- END OF SOCIAL MEDIA --->
 
 </div>
@@ -665,31 +675,24 @@ Aliquam nisi lorem, pulvinar id, commodo feugiat, vehicula et, mauris. <!-- Quot
 </div> <!--- POST TYPE --->
 </div> <!--- POST HEADER --->
 <div class="nav">
-
-<h3>Subheading #1</h3> <!--- To use subheadings, make sure they are OUTSIDE of <div class="list"> </div> --->
+{block:ifLinks1Section}
+{block:ifLinks1Header}{text:Links 1 Header}{/block:ifLinks1Header}
 <div class="list">
-<!--- Insert links in between <div class="list"> </div> --->
-<a href="URL here">Link Name</a>
-<a href="URL here">Link Name</a>
-<a href="URL here">Link Name</a>
-<a href="URL here">Link Name</a>
-<a href="URL here">Link Name</a>
-<a href="URL here">Link Name</a>
-<!--- End of links --->
+{text:Links 1 Section}
 </div>
-
-<h3>Subheading #2</h3>
+{/block:ifLinks1Section}
+{block:ifLinks2Section}
+{block:ifLinks2Header}{text:Links 2 Header}{/block:ifLinks2Header}
 <div class="list">
-<!--- Insert links in between <div class="list"> </div> --->
-<a href="URL here">Link Name</a>
-<a href="URL here">Link Name</a>
-<a href="URL here">Link Name</a>
-<a href="URL here">Link Name</a>
-<a href="URL here">Link Name</a>
-<a href="URL here">Link Name</a>
-<!--- End of links --->
+{text:Links 2 Section}
 </div>
-
+{/block:ifLinks2Section}
+{block:ifLinks3Section}
+{block:ifLinks3Header}{text:Links 3 Header}{/block:ifLinks3Header}
+<div class="list">
+{text:Links 3 Section}
+</div>
+{/block:ifLinks3Section}
 </div>
 </article>
 </div>
@@ -710,31 +713,24 @@ Aliquam nisi lorem, pulvinar id, commodo feugiat, vehicula et, mauris. <!-- Quot
 </div> <!--- POST TYPE --->
 </div> <!--- POST HEADER --->
 <div class="nav">
-
-<h3>Subheading #1</h3> <!--- To use subheadings, make sure they are OUTSIDE of <div class="list"> </div> --->
+{block:ifTags1Section}
+{block:ifTags1Header}{text:Tags 1 Header}{/block:ifTags1Header}
 <div class="list">
-<!--- Insert tags in between <div class="list"> </div> --->
-<a href="URL HERE">#Tag</a>
-<a href="URL HERE">#Tag</a>
-<a href="URL HERE">#Tag</a>
-<a href="URL HERE">#Tag</a>
-<a href="URL HERE">#Tag</a>
-<a href="URL HERE">#Tag</a>
-<!--- End of tags --->
+{text:Tags 1 Section}
 </div>
-
-<h3>Subheading #2</h3>
+{/block:ifTags1Section}
+{block:ifTags2Section}
+{block:ifTags2Header}{text:Tags 2 Header}{/block:ifTags2Header}
 <div class="list">
-<!--- Insert tags in between <div class="list"> </div> --->
-<a href="URL HERE">#Tag</a>
-<a href="URL HERE">#Tag</a>
-<a href="URL HERE">#Tag</a>
-<a href="URL HERE">#Tag</a>
-<a href="URL HERE">#Tag</a>
-<a href="URL HERE">#Tag</a>
-<!--- End of tags --->
+{text:Tags 2 Section}
 </div>
-
+{/block:ifTags2Section}
+{block:ifTags3Section}
+{block:ifTags3Header}{text:Tags 3 Header}{/block:ifTags3Header}
+<div class="list">
+{text:Tags 3 Section}
+</div>
+{/block:ifTags3Section}
 </div>
 </article>
 </div>
@@ -759,6 +755,10 @@ Aliquam nisi lorem, pulvinar id, commodo feugiat, vehicula et, mauris. <!-- Quot
 <div class="type"><i class="ft" data-feather="user-plus"></i></div>
 </div> <!--- POST TYPE --->
 </div> <!--- POST HEADER --->
+<div class="no-posts {block:Following}none{/block:Following}">
+<i class="ft" data-feather="slash"></i>
+{lang:This Tumblr hasnt followed any other Tumblrs}
+</div>
 {block:Following}
 <div class="following">
 {block:Followed}
@@ -787,12 +787,14 @@ Aliquam nisi lorem, pulvinar id, commodo feugiat, vehicula et, mauris. <!-- Quot
 <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
 <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/annasthms/customaudio@latest/customaudio.min.js"></script>
+<!--✻✻✻✻✻✻  npf audio player by @glenthemes  ✻✻✻✻✻✻-->
+<script src="//tmblr-npf-audio.gitlab.io/s/init.js"></script>
 <!--
         NPF images fix v3.0 by @glenthemes [2021]
         ? git.io/JRBt7
 --->
 <script src="//npf-images-v3.github.io/script.js"></script>
-<script src="https://static.tumblr.com/05ejowb/0ZLrkn4u6/calypso.min.js"></script>
+<script src="https://static.tumblr.com/05ejowb/CpXs3rrdf/calypso.min.js"></script>
 
 {block:PermalinkPage}
 <script> 
@@ -803,6 +805,6 @@ $(document).ready(function() {
 });
 </script>
 {/block:PermalinkPage}
-    
+
 </body>
 </html>
