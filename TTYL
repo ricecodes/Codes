@@ -407,7 +407,7 @@ body.dark, [data-theme="daynight"] body.light {
 {/block:NewDayDate}{/block:Date}
 {/block:IndexPage}
 <div class="entry">
-<article post-type="{PostType}" class="round">
+<article post-type="{PostType}" class="round {block:PinnedPostLabel}pinned{/block:PinnedPostLabel}">
 
 {block:Date}
 <div class="post-header flex justify center">
@@ -586,6 +586,7 @@ body.dark, [data-theme="daynight"] body.light {
 <div class="post-footer flex justify">
 <a class="notecount" href="{Permalink}" title="{lang:Permalink}">{NoteCountWithLabel}</a>
 <div class="controls">
+{block:PinnedPostLabel}<a href="{Permalink}" titled="{lang:Pinned Post}"><i class="ti ti-pin"></i></a>{/block:PinnedPostLabel}
 {block:ContentSource}<a href="{SourceURL}" target="_blank" title="{SourceTitle}"><i class="ti ti-external-link small"></i></a>{/block:ContentSource}{block:Submission}<a href="{SubmitterURL}" target="_blank" title="{lang:Submitted By}"><i class="ti ti-user-edit small"></i></a>{/block:Submission}<a href="{ReblogURL}" title="Reblog"><i class="ti ti-repeat small"></i></a><a class="likey" title="Like">{LikeButton size="50"}<i class="ti ti-heart"></i></a>
 </div>
 </div>
@@ -608,6 +609,7 @@ body.dark, [data-theme="daynight"] body.light {
 <div class="perm-footer">
 <div class="pfoot">
 <table>
+{block:PinnedPostLabel}<tr><td><i class="ti ti-pin"></i></td><td>{lang:Pinned Post}</td></tr>{/block:PinnedPostLabel}
 {block:Submission}<tr><td><i class="ti ti-user-edit"></i></td><td><a href="{SubmitterURL}" target="_blank">{lang:Submitted By}</a></td></tr>{/block:Submission}
 {block:ContentSource}<tr><td><i class="ti ti-external-link"></i></td><td><a href="{SourceURL}" target="_blank">{SourceTitle}</a></td></tr>{/block:ContentSource}
 {block:RebloggedFrom}
