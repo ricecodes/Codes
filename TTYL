@@ -586,7 +586,7 @@ body.dark, [data-theme="daynight"] body.light {
 <div class="post-footer flex justify">
 <a class="notecount" href="{Permalink}" title="{lang:Permalink}">{NoteCountWithLabel}</a>
 <div class="controls">
-{block:PinnedPostLabel}<a href="{Permalink}" titled="{lang:Pinned Post}"><i class="ti ti-pin"></i></a>{/block:PinnedPostLabel}
+{block:PinnedPostLabel}<a href="{Permalink}" title="{lang:Pinned Post}"><i class="ti ti-pin"></i></a>{/block:PinnedPostLabel}
 {block:ContentSource}<a href="{SourceURL}" target="_blank" title="{SourceTitle}"><i class="ti ti-external-link small"></i></a>{/block:ContentSource}{block:Submission}<a href="{SubmitterURL}" target="_blank" title="{lang:Submitted By}"><i class="ti ti-user-edit small"></i></a>{/block:Submission}<a href="{ReblogURL}" title="Reblog"><i class="ti ti-repeat small"></i></a><a class="likey" title="Like">{LikeButton size="50"}<i class="ti ti-heart"></i></a>
 </div>
 </div>
