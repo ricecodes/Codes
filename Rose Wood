@@ -8,6 +8,7 @@ Credit:
 ★ Day/Night Mode: https://egg.design/post/186889223257/day-night-mode-tutorial-after-featuring-a
 ★ Infinite Scroll: https://infinite-scroll.com/
 ★ Masonry: https://masonry.desandro.com/
+★ NPF Audio: https://glenthemes.tumblr.com/post/722160746171072512/npf-audio-player
 ★ NPF Images: https://glenthemes.tumblr.com/post/659034084446748672/npf-images-v3
 ★ Tumblr Redirects: https://magnusthemes.tumblr.com/post/162657076440/remove-tumblrs-redirects
 ★ Tippy Tooltip: https://atomiks.github.io/tippyjs/
@@ -72,9 +73,14 @@ Credit:
 <meta name="if:Show Random" content="">
 <meta name="if:Hide Tags" content="">
 
+<meta name="text:&#x2740;&#x22B1;&#x2504;&#x2504;&#x2504; Fonts &#x2504;&#x2504;&#x2504;&#x22B0;&#x2740;" content="">
 <meta name="text:Body Font" content="Source Sans Pro">
 <meta name="text:Font Size" content="14px">
 <meta name="text:Line Height" content="1.5em">
+<meta name="text:&#x2740;&#x22B1;&#x2504;&#x2504;&#x2504; Container &#x2504;&#x2504;&#x2504;&#x22B0;&#x2740;" content="">
+<meta name="text:Sidebar Size" content="10vw">
+<meta name="text:Two Column Size" content="55vw">
+<meta name="text:Three Column Size" content="65vw">
 <meta name="text:Photoset Gap" content="4px">
 <meta name="text:&#x2740;&#x22B1;&#x2504;&#x2504;&#x2504; Searchbar &#x2504;&#x2504;&#x2504;&#x22B0;&#x2740;" content="">
 <meta name="text:Searchbar Title" content="Search">
@@ -93,8 +99,8 @@ Credit:
 
 <link href="https://fonts.googleapis.com/css2?family={text:Body Font}:wght@400;700&display=swap" rel="stylesheet">
 <link href="https://static.tumblr.com/0podkko/oDSpg7y88/photosets.css" rel="stylesheet">
-<link href="https://static.tumblr.com/05ejowb/9psryw6bc/rosewood.min.css" rel="stylesheet">
 <link href="//npf-images-v3.github.io/recon.css" rel="stylesheet">
+<link href="https://static.tumblr.com/05ejowb/sPqs4tk2q/rosewood.min.css" rel="stylesheet">
 <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
 <style>
@@ -105,6 +111,9 @@ Credit:
     --body-font:{text:Body Font},sans-serif;
     --body-size:{text:Font Size};
     --line-hgt:{text:Line Height};
+    --side-size:{text:Sidebar Size};
+    --two-size:{text:Two Column Size};
+    --three-size:{text:Three Column Size};
     --gap-size:{text:Photoset Gap};
     --accent:{color:Accent};
     --accent-text:{color:Accent Text};
@@ -118,6 +127,10 @@ Credit:
     --tooltips-text:{color:Tooltips Text};
     --NPF-Caption-Spacing:1em;
     --NPF-Image-Spacing:{text:Photoset Gap};
+    --NPF-Audio-Buttons-Size:1.4rem;
+    --NPF-Audio-Buttons-Spacing:1.3rem; /* space between buttons and song info */
+    --NPF-Audio-Image-Size:90px;
+    --NPF-Audio-Image-Spacing:0px; /* gap between player info and cover image */
 }
 
 body.light, [data-theme="daynight"] body.dark {
@@ -158,14 +171,14 @@ body.light, [data-theme="daynight"] body.dark {
 
 
 {block:PermalinkPage}
-.container { width:65vw; }
-.content { margin:100px 0 100px 15vw; width:45vw; }
+.container, body.three .container { width:calc(var(--side-size) + 48vw); }
+.content, body.three .content { margin:100px 0; width:45vw; }
 article { margin:0 0 3em 0; width:100%; }
 
 @media only screen and (max-width:999px) {
-.container, .container.layout-three{ margin:0; width:100%; }
-.content{ margin:100px auto; width:90%; }
-article, article.layout-three{margin:0 0 3em 0; width:100%;}
+.container, body.three .container{ margin:0; width:100%; }
+.content{ margin:130px auto; width:90%; }
+article, body.three article{margin:0 0 3em 0; width:100%;}
 }
 {/block:PermalinkPage}
 
@@ -173,7 +186,7 @@ article, article.layout-three{margin:0 0 3em 0; width:100%;}
 </style>
 </head>
 
-<body class="{select:Blog Theme}">
+<body class="{select:Blog Theme} {block:IndexPage}{select:Blog Layout}{/block:IndexPage}">
 
 <div class="tab">
 <label class="dn"><input class="modus" type="checkbox">
@@ -210,7 +223,7 @@ article, article.layout-three{margin:0 0 3em 0; width:100%;}
 
 <a class="t-ctrls"><span class="hide"><i class="bx bxs-cog"></i></span><span class="hide" style="display:none;"><i class="bx bx-x"></i></span></a>
 
-<div class="container {block:IndexPage}layout-{select:Blog Layout}{/block:IndexPage}">
+<div class="container flex justify">
 
 <div class="sidebar">
 <div class="side">
@@ -254,7 +267,7 @@ article, article.layout-three{margin:0 0 3em 0; width:100%;}
 <div class="grid">
 
 {block:Posts inlineMediaWidth="1280" inlineNestedMediaWidth="1280"}
-<article class="flex center {block:IndexPage}layout-{select:Blog Layout}{/block:IndexPage} round" post-type="{PostType}">
+<article class="flex center round" post-type="{PostType}">
 
 {block:Date}
 {block:IndexPage}
@@ -368,7 +381,7 @@ article, article.layout-three{margin:0 0 3em 0; width:100%;}
 {block:Title}<div class="t-title">{Title}</div>{/block:Title}
 <div class="chat">
 {block:Lines}
-<div class="lines">
+<div class="lines {Alt}">
 {block:Label}<span class="label">{Label}</span>{/block:Label} {Line}
 </div>
 {/block:Lines}
@@ -379,7 +392,7 @@ article, article.layout-three{margin:0 0 3em 0; width:100%;}
 {block:Title}<div class="t-title">{Title}</div>{/block:Title}
 <div class="chat">
 {block:Lines}
-<div class="lines">
+<div class="lines {Alt}">
 {block:Label}<span class="label">{Label}</span>{/block:Label} {Line}
 </div>
 {/block:Lines}
@@ -491,6 +504,9 @@ article, article.layout-three{margin:0 0 3em 0; width:100%;}
 {block:Date}
 <div class="perm-footer">
 <div class="perm-info">
+{block:ContentSource}
+<div class="consrc"><ul><li><a href="{SourceURL}" target="_blank">{SourceTitle}</a></li></ul></div>
+{/block:ContentSource}
 {block:RebloggedFrom}
 <div class="via"><ul><li><a href="{ReblogParentURL}">{ReblogParentName}</a></li></ul></div>
 <div class="root"><ul><li><a href="{ReblogRootURL}">{ReblogRootName}</a></li></ul></div>
@@ -509,7 +525,7 @@ article, article.layout-three{margin:0 0 3em 0; width:100%;}
 <div class="modal-content">
 <div class="post-header flex justify">
 <a class="exit" title="Close"><span class="bx bx-x"></span></a>
-<div class="controls">{block:PinnedPostLabel}<a href="{Permalink}" title="Pinned Post"><span class="bx bx-pin"></span></a>{/block:PinnedPostLabel}<a href="{Permalink}" title="Permalink"><span class="bx bx-link-alt"></span></a><a class="likey" title="Like">{LikeButton}<span class="bx bx-heart"></span></a><a href="{ReblogURL}" title="Reblog"><span class="bx bx-refresh"></span></a></div>
+<div class="controls">{block:PinnedPostLabel}<a href="{Permalink}" title="Pinned Post"><span class="bx bx-pin"></span></a>{/block:PinnedPostLabel}{block:ContentSource}<a href="{SourceURL}" target="_blank" title="{SourceTitle}"><i class="bx bx-link-external"></i></a>{/block:ContentSource}<a href="{Permalink}" title="Permalink"><span class="bx bx-link-alt"></span></a><a class="likey" title="Like">{LikeButton}<span class="bx bx-heart"></span></a><a href="{ReblogURL}" title="Reblog"><span class="bx bx-refresh"></span></a></div>
 </div>
 <div class="modal-container round">
 {block:Text}
@@ -570,7 +586,7 @@ article, article.layout-three{margin:0 0 3em 0; width:100%;}
 {block:Title}<div class="t-title">{Title}</div>{/block:Title}
 <div class="chat">
 {block:Lines}
-<div class="lines">
+<div class="lines {Alt}">
 {block:Label}<span class="label">{Label}</span>{/block:Label} {Line}
 </div>
 {/block:Lines}
@@ -716,21 +732,18 @@ article, article.layout-three{margin:0 0 3em 0; width:100%;}
 </div>
 
 <!----------------------------------------------------- SCRIPTS ------->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
-<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
-<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-{block:ifInfiniteScroll}<script src="https://unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.min.js"></script>{/block:ifInfiniteScroll}
-<script src="https://cdn.jsdelivr.net/gh/annasthms/customaudio@latest/customaudio.min.js"></script>
-<script src="https://static.tumblr.com/05ejowb/lEVryw6ab/rosewood.min.js"></script>
-<script src="https://static.tumblr.com/05ejowb/cxAqpcpux/load.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script><script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script><script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script><script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>{block:ifInfiniteScroll}<script src="https://unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.min.js"></script>{/block:ifInfiniteScroll}<script src="https://cdn.jsdelivr.net/gh/annasthms/customaudio@latest/customaudio.min.js"></script><script src="https://static.tumblr.com/05ejowb/cxAqpcpux/load.min.js"></script>
+<!--✻✻✻✻✻✻  npf audio player by @glenthemes  ✻✻✻✻✻✻-->
+<script src="//tmblr-npf-audio.gitlab.io/s/init.js"></script>
 <!-- NPF images fix v3.0 by @glenthemes [2021] - git.io/JRBt7 --->
 <script src="//npf-images-v3.github.io/script.js"></script>
 
 <script>
 $(document).ready(function(){
     {block:IndexPage}
+    $(".npf-audio-wrapper,.spotify_audio_player,.soundcloud_audio_player ").each(function() {
+        $(this).not(".modal-container .npf-audio-wrapper,.modal-container .spotify_audio_player,.modal-container .soundcloud_audio_player").replaceWith("<div class='small'><span class='bx bxs-music'></span></div>");
+    });
     var $grid = $(".grid").imagesLoaded( function() {
         $(".grid").masonry({
           itemSelector:"article",
@@ -777,6 +790,25 @@ $(document).ready(function(){
             $(this).closest(items).find(".modal").fadeOut();
         });
     });
+    $(".npf-audio-wrapper,.spotify_audio_player,.soundcloud_audio_player ").each(function() {
+        $(this).not(".modal-container .npf-audio-wrapper,.modal-container .spotify_audio_player,.modal-container .soundcloud_audio_player").replaceWith("<div class='small'><span class='bx bxs-music'></span></div>");
+    });
+    $(".username + p").filter(function() { return $(this).text().trim().length == 0; }).remove();
+    $(".reblogged a.read_more").each(function(){
+        $(this).wrapAll("<div class='read_more_contain'></div>");
+    });
+    $("p:not(:only-of-type).npf_chat").closest("article").wrapAll("<div class='not-only'></div>");
+    $(".npf_inst ~ p.npf_chat,blockquote ~ p.npf_chat,ul ~ p.npf_chat,ol ~ .npf_chat").each(function(){
+        $(this).wrapAll("<div class='below'></div>");
+    });
+        tumblr_npf_audio({
+        emptyTitleText:"",
+        emptyArtistText:"",
+        emptyAlbumText:"",
+        titleLabel:"",
+        artistLabel:"",
+        albumLabel:""
+        });
         customAudio({
 	    post:"article",
 	    wrappers: {
@@ -811,6 +843,8 @@ $(document).ready(function(){
     {/block:IndexPage}
 });
 </script>
+
+<script src="https://static.tumblr.com/05ejowb/aK8s4tk6q/rosewood.min.js"></script>
     
 </body>
 </html>
