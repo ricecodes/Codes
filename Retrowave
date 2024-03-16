@@ -626,6 +626,8 @@ body { background-size:cover; }
 </div>
 
 <div class="m-cred">
+{block:ifUpdates}{text:Updates}{/block:ifUpdates}
+<div style="padding:10px"></div>
 <p>© {CopyrightYears} theme by <a href="https://ricecodes.tumblr.com/" target="_blank">ricecodes</a>. Powered by Tumblr.</p>
 </div>
 
