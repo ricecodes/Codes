@@ -9,6 +9,7 @@ Credit:
 ★ Custom "Not Found" Page: https://fukuo.site/post/145043341255/how-to-make-a-custom-not-found-page-on-tumblr
 ★ Customize Page Divider: https://glenthemes.tumblr.com/post/671422052920705024/customize-page-divider-tutorial
 ★ Day/Night Mode: https://egg.design/post/186889223257/day-night-mode-tutorial-after-featuring-a
+★ NPF Audio: https://glenthemes.tumblr.com/post/722160746171072512/npf-audio-player
 ★ NPF Images: https://glenthemes.tumblr.com/post/659034084446748672/npf-images-v3
 ★ Tumblr Redirects: https://magnusthemes.tumblr.com/post/643460974823833600/remove-redirects-v20
 ★ Tippy Tooltip: https://atomiks.github.io/tippyjs/
@@ -139,7 +140,7 @@ Credit:
 
 <link href="https://fonts.googleapis.com/css2?family={text:Body Font}:wght@400;700&display=swap" rel="stylesheet">
 <link href="https://static.tumblr.com/0podkko/oDSpg7y88/photosets.css" rel="stylesheet">
-<link href="https://static.tumblr.com/05ejowb/POqrweso6/lowlife.min.css" rel="stylesheet">
+<link href="https://static.tumblr.com/05ejowb/Mu3saggkd/main.min.css" rel="stylesheet">
 <link href="//npf-images-v3.github.io/recon.css" rel="stylesheet">
 <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
@@ -576,9 +577,11 @@ body.open .tmblr-iframe { opacity:1; visibility:visible; }
 <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
 <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/annasthms/customaudio@latest/customaudio.min.js"></script>
-<script src="https://static.tumblr.com/05ejowb/rXAro1eda/lowlife.min.js"></script>
+<!--✻✻✻✻✻✻  npf audio player by @glenthemes  ✻✻✻✻✻✻-->
+<script src="//tmblr-npf-audio.gitlab.io/s/init.js"></script>
 <!-- NPF images fix v3.0 by @glenthemes [2021] - git.io/JRBt7 --->
 <script src="//npf-images-v3.github.io/script.js"></script>
+<script src="https://static.tumblr.com/05ejowb/xpEsaggld/main.min.js"></script>
 
 {block:PermalinkPage}
 <script> 
