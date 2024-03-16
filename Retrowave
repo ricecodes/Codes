@@ -3,11 +3,12 @@
                    ★ [ Retrowave ] by ricecodes ★ 
 Credit:
 
-★ Icons: https://boxicons.com/
+★ Icons: https://tabler-icons.io/ 
 ★ CSS Photosets: https://annasthms.tumblr.com/post/177359244495/photosetscss-by-annasthms-and-espoirthemes-to
 ★ Custom Audio js: https://annasthms.tumblr.com/more/js/customaudio/new
 ★ Day/Night Mode: https://egg.design/post/186889223257/day-night-mode-tutorial-after-featuring-a
-★ NPF Photosets: https://glenthemes.tumblr.com/post/659034084446748672/npf-v3-2021
+★ NPF Audio: https://glenthemes.tumblr.com/post/722160746171072512/npf-audio-player
+★ NPF Images: https://glenthemes.tumblr.com/post/659034084446748672/npf-images-v3
 ★ Tumblr Redirects: https://magnusthemes.tumblr.com/post/643460974823833600/remove-redirects-v20
 ★ Tippy Tooltip: https://atomiks.github.io/tippyjs/
 
@@ -17,7 +18,7 @@ Credit:
 <html>
 <head>
 
-<title>{Title}{block:TagPage} ({lang:Posts tagged Tag}){/block:TagPage}{block:SearchPage} ({lang:Search results for SearchQuery}){/block:SearchPage}{block:PermalinkPage}{block:PostSummary} — {PostSummary}{/block:PostSummary}{/block:PermalinkPage}</title>
+<title>{Title}{block:TagPage} — {lang:Posts tagged Tag}{/block:TagPage}{block:SearchPage} — {lang:Search results for SearchQuery}{/block:SearchPage}{block:PermalinkPage}{block:PostSummary} — {PostSummary}{/block:PostSummary}{/block:PermalinkPage}</title>
 
 <link rel="shortcut icon" href="{Favicon}">
 <link rel="alternate" type="application/rss+xml" href="{RSS}">
@@ -25,57 +26,92 @@ Credit:
 
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 
-<meta name="image:Night Background" content="https://static.tumblr.com/05ejowb/g8Fqs3jp3/dark_retrowave.png">
-<meta name="image:Day Background" content="https://static.tumblr.com/05ejowb/jvAquwszx/retrowave.png">
+<meta name="image:Sidebar" content="{HeaderImage}">
+<meta name="image:Dark Background" content="https://static.tumblr.com/05ejowb/g8Fqs3jp3/dark_retrowave.png">
+<meta name="image:Light Background" content="https://static.tumblr.com/05ejowb/jvAquwszx/retrowave.png">
+<meta name="image:Custom Profile" content="">
 
 <meta name="color:Accent Text" content="#ffffff">
 <meta name="color:Links" content="#e28eb7">
 <meta name="color:Links Hover" content="#9ce28e">
 <meta name="color:Like Button" content="#ff492f">
+<meta name="color:Selection Background" content="#9ce28e">
+<meta name="color:Selection" content="#ffffff">
 <meta name="color:Tooltips" content="#000000">
 <meta name="color:Tooltips Text" content="#ffffff">
-<meta name="color:*+:&#xFF61;. Dark Theme .&#xFF61;:+*" content="#ffffff">
+<meta name="color:Mobile Sidebar" content="#25262b">
+<meta name="color:&#x2584;&#x2580;&#x2584;&#x2580; Dark Theme &#x2580;&#x2584;&#x2580;&#x2584;" content="#ffffff">
 <meta name="color:Dark Accent" content="#f2cd3d">
-<meta name="color:Dark Background" content="#444444">
-<meta name="color:Dark Borders" content="#555555">
+<meta name="color:Dark Background" content="#333333">
+<meta name="color:Dark Borders" content="#444444">
 <meta name="color:Dark Posts Head" content="#191919">
-<meta name="color:Dark Posts" content="#303030">
+<meta name="color:Dark Posts" content="#2d2d2d">
 <meta name="color:Dark Text" content="#ffffff">
-<meta name="color:Dark Permalink" content="#dddddd">
+<meta name="color:Dark Permalink" content="#eeeeee">
 <meta name="color:Dark Question" content="#191919">
-<meta name="color:*+:&#xFF61;. Light Theme .&#xFF61;:+*" content="#ffffff">
+<meta name="color:&#x2584;&#x2580;&#x2584;&#x2580; Light Theme &#x2580;&#x2584;&#x2580;&#x2584;" content="#ffffff">
 <meta name="color:Accent" content="#a5c0ff">
-<meta name="color:Background" content="#f7f7f7">
-<meta name="color:Borders" content="#d2d2d2">
+<meta name="color:Background" content="#fcfcfc">
 <meta name="color:Posts Head" content="#f2f2f2">
 <meta name="color:Posts" content="#ffffff">
-<meta name="color:Text" content="#111111">
-<meta name="color:Permalink" content="#555555">
-<meta name="color:Question" content="#eeeeee">
+<meta name="color:Borders" content="#dddddd">
+<meta name="color:Text" content="#000000">
+<meta name="color:Permalink" content="#888888">
+<meta name="color:Question" content="#f2f2f2">
 
 <meta name="select:Blog Theme" title="Dark Theme" content="dark">
 <meta name="select:Blog Theme" title="Light Theme" content="light">
 
-<meta name="select:Background Size" title="Contain" content="contain">
-<meta name="select:Background Size" title="Cover" content="cover">
-<meta name="select:Background Size" title="Auto" content="auto">
+<meta name="select:Dark Background Size" title="Contain" content="contain">
+<meta name="select:Dark Background Size" title="Auto" content="auto">
+<meta name="select:Dark Background Size" title="Cover" content="cover">
+
+<meta name="select:Light Background Size" title="Contain" content="contain">
+<meta name="select:Light Background Size" title="Auto" content="auto">
+<meta name="select:Light Background Size" title="Cover" content="cover">
 
 <meta name="if:Round Corners" content="">
-<meta name="if:Hide Captions" content="">
+<meta name="if:Hide Tumblr Controls" content="">
 <meta name="if:Hide Tags" content="">
 
+<meta name="text:&#x2584;&#x2580;&#x2584;&#x2580; Fonts &#x2580;&#x2584;&#x2580;&#x2584;" content="">
 <meta name="text:Body Font" content="Roboto">
 <meta name="text:Font Size" content="14px">
+<meta name="text:Font Weight" content="400">
 <meta name="text:Line Height" content="1.5em">
-<meta name="text:Photoset Gap" content="4px">
+<meta name="text:&#x2584;&#x2580;&#x2584;&#x2580; Container &#x2580;&#x2584;&#x2580;&#x2584;" content="">
+<meta name="text:Sidebar Size" content="35vw">
+<meta name="text:Post Size" content="40vw">
+<meta name="text:Photoset Gap" content="2px">
+<meta name="text:&#x2584;&#x2580;&#x2584;&#x2580; Background &#x2580;&#x2584;&#x2580;&#x2584;" content="">
+<meta name="text:Background Repeat" content="repeat">
+<meta name="text:Background Attachment" content="fixed">
+<meta name="text:Background Position" content="center">
+<meta name="text:Dark Background Repeat" content="repeat">
+<meta name="text:Dark Background Attachment" content="fixed">
+<meta name="text:Dark Background Position" content="center">
+<meta name="text:&#x2584;&#x2580;&#x2584;&#x2580; Icons &#x2580;&#x2584;&#x2580;&#x2584;" content="">
+<meta name="text:Light Mode Icon" content="sun">
+<meta name="text:Dark Mode Icon" content="moon">
+<meta name="text:Previous Icon" content="arrow-left">
+<meta name="text:Next Icon" content="arrow-right">
+<meta name="text:Back to Top Icon" content="arrow-up">
+<meta name="text:&#x2584;&#x2580;&#x2584;&#x2580; Sidebar &#x2580;&#x2584;&#x2580;&#x2584;" content="">
+<meta name="text:Name" content="Name">
+<meta name="text:Custom Title" content="">
 <meta name="text:Custom Description" content="">
-<meta name="text:*+:&#xFF61;. Updates .&#xFF61;:+*" content="">
-<meta name="text:Updates" content="Share any updates here.">
-<meta name="text:*+:&#xFF61;. Links .&#xFF61;:+*" content="">
+<meta name="text:&#x2584;&#x2580;&#x2584;&#x2580; Sidebar Links &#x2580;&#x2584;&#x2580;&#x2584;" content="">
+<meta name="text:Menu Icon" content="layout-grid">
 <meta name="text:Home Link" content="Home">
-<meta name="text:Ask Link" content="Ask">
+<meta name="text:Home Link Icon" content="home">
+<meta name="text:Ask Link" content="Contact">
+<meta name="text:Ask Link Icon" content="mail">
 <meta name="text:Submit Link" content="Submit">
-<meta name="text:Archive Link" content="Past">
+<meta name="text:Submit Link Icon" content="inbox">
+<meta name="text:Archive Link" content="Archive">
+<meta name="text:Archive Link Icon" content="clock">
+<meta name="text:More Link" content="More">
+<meta name="text:More Link Icon" content="dots">
 <meta name="text:Link 1" content="Link 1">
 <meta name="text:Link 1 URL" content="">
 <meta name="text:Link 2" content="Link 2">
@@ -84,107 +120,119 @@ Credit:
 <meta name="text:Link 3 URL" content="">
 <meta name="text:Link 4" content="Link 4">
 <meta name="text:Link 4 URL" content="">
+<meta name="text:&#x2584;&#x2580;&#x2584;&#x2580; Updates &#x2580;&#x2584;&#x2580;&#x2584;" content="">
+<meta name="text:Updates Icon" content="bell">
+<meta name="text:Updates Icon Close" content="bell-off">
+<meta name="text:Updates Header" content="Updates">
+<meta name="text:Updates" content="The updates box will automatically be hidden if this is empty.">
 
-<link href="https://fonts.googleapis.com/css2?family={text:Body Font}:wght@400;700&display=swap" rel="stylesheet">
-<link href="https://static.tumblr.com/0podkko/oDSpg7y88/photosets.css" rel="stylesheet">
-<link href="https://static.tumblr.com/05ejowb/UkNrog7ia/retrowave.min.css" rel="stylesheet">
-<link href="//npf-images-v3.github.io/recon.css" rel="stylesheet">
-<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family={text:Body Font}:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"><link href="https://static.tumblr.com/0podkko/oDSpg7y88/photosets.css" rel="stylesheet"><link href="https://static.tumblr.com/05ejowb/qkNsaf8uq/main.min.css" rel="stylesheet"><link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" rel="stylesheet">
 
 <style>
 
 /* VARIABLES - Please do not edit/remove this */
 
 :root {
-    --head-font:{text:Head Font},sans-serif;
     --body-font:{text:Body Font},sans-serif;
     --body-size:{text:Font Size};
+    --body-wgt:{text:Font Weight};
     --line-hgt:{text:Line Height};
-    --bg-size:{select:Background Size};
-    --photo-gap:{text:Photoset Gap};
+    --side-size:{text:Sidebar Size};
+    --post-size:{text:Post Size};
+    --NPF-Caption-Spacing:1em;
+    --NPF-Image-Spacing:{text:Photoset Gap};
+    --NPF-Audio-Buttons-Size:1.4rem;
+    --NPF-Audio-Buttons-Spacing:1.3rem; /* space between buttons and song info */
+    --NPF-Audio-Image-Size:90px;
+    --NPF-Audio-Image-Spacing:0px; /* gap between player info and cover image */
+    --skill1:{text:Skill 1 Percentage};
+    --skill2:{text:Skill 2 Percentage};
+    --skill3:{text:Skill 3 Percentage};
+    --skill4:{text:Skill 4 Percentage};
+    --skill5:{text:Skill 5 Percentage};
+    
+    /* COLORS */
     --accent-text:{color:Accent Text};
     --rgb-accent-text:{RGBcolor:Accent Text};
+    --statc:{text:Status Color};
     --links:{color:Links};
     --links-hover:{color:Links Hover};
     --like-btn:{color:Like Button};
+    --selection-bg:{color:Selection Background};
+    --selection:{color:Selection};
     --tooltips:{color:Tooltips};
     --tooltips-text:{color:Tooltips Text};
-    --mobile:{color:Dark Posts Head};
-    --mobile-search:{color:Dark Posts};
-    --NPF-Caption-Spacing:1em;
-    --NPF-Image-Spacing:{text:Photoset Gap};
+    --mobile-side:{color:Dark Posts Head};
+    --sea-mobile:{color:Dark Posts};
 }
 
-body.dark {
-    --accent:{color:Dark Accent};
-    --bg:{color:Dark Background};
-    --blockquote:{color:Dark Background};
-    --borders:{color:Dark Borders};
-    --posts-head:{color:Dark Posts Head};
-    --posts:{color:Dark Posts};
-    --ask:{color:Dark Question};
-    --text:{color:Dark Text};
-    --rgb-text:{RGBcolor:Dark Text};
-    --permalink:{color:Dark Permalink};
-}
-
-[data-theme="daynight"] body.dark {
+body.light, [data-theme="daynight"] body.dark {
+    --bg-img:url('{image:Light Background}');
+    --bg-size:{select:Light Background Size};
+    --bg-repeat:{text:Background Repeat};
+    --bg-attach:{text:Background Attachment};
+    --bg-position:{text:Background Position};
     --accent:{color:Accent};
+    --rgb-accent:{RGBcolor:Accent};
     --bg:{color:Background};
-    --blockquote:{color:Question};
+    --rgb-bg:{RGBcolor:Background};
     --borders:{color:Borders};
     --posts-head:{color:Posts Head};
     --posts:{color:Posts};
+    --rgb-posts:{RGBcolor:Posts};
     --ask:{color:Question};
     --text:{color:Text};
     --rgb-text:{RGBcolor:Text};
     --permalink:{color:Permalink};
+    --rgb-permalink:{RGBcolor:Permalink};
+    --NPF-Audio-Buttons-Color:{color:Text};
 }
 
-body.dark { background-image:url({image:Night Background}); }
-[data-theme="daynight"] body.dark { background-image:url({image:Day Background}); }
-
-body.light {
-    --accent:{color:Accent};
-    --bg:{color:Background};
-    --blockquote:{color:Question};
-    --borders:{color:Borders};
-    --posts-head:{color:Posts Head};
-    --posts:{color:Posts};
-    --ask:{color:Question};
-    --text:{color:Text};
-    --rgb-text:{RGBcolor:Text};
-    --permalink:{color:Permalink};
-}
-
-[data-theme="daynight"] body.light {
+body.dark, [data-theme="daynight"] body.light {
+    --bg-img:url('{image:Dark Background}');
+    --bg-size:{select:Dark Background Size};
+    --bg-repeat:{text:Dark Background Repeat};
+    --bg-attach:{text:Dark Background Attachment};
+    --bg-position:{text:Dark Background Position};
     --accent:{color:Dark Accent};
+    --rgb-accent:{RGBcolor:Dark Accent};
     --bg:{color:Dark Background};
-    --blockquote:{color:Dark Background};
+    --rgb-bg:{RGBcolor:Dark Background};
     --borders:{color:Dark Borders};
     --posts-head:{color:Dark Posts Head};
     --posts:{color:Dark Posts};
+    --rgb-posts:{RGBcolor:Dark Posts};
     --ask:{color:Dark Question};
     --text:{color:Dark Text};
     --rgb-text:{RGBcolor:Dark Text};
     --permalink:{color:Dark Permalink};
+    --rgb-permalink:{RGBcolor:Dark Permalink};
+    --NPF-Audio-Buttons-Color:{color:Dark Text};
 }
 
-body.light { background-image:url({image:Day Background}); }
-[data-theme="daynight"] body.light { background-image:url({image:Night Background}); }
+{block:ifHideTumblrControls}
+{block:IndexPage}
+.tmblr-iframe { opacity:0; visibility:hidden; }
+body.open .tmblr-iframe { opacity:1; visibility:visible; }
+{/block:IndexPage}
+{block:PermalinkPage}
+.tmblr-iframe { opacity:1; visibility:visible; }
+{/block:PermalinkPage}
+{/block:ifHideTumblrControls}
 
 {block:ifRoundCorners}
-.roundest { border-radius:10px; }
-.rounder, .active img, .deleted img, .tab .bx, .p-wrap .bx { border-radius:5px; }
-.round, .side-links a { border-radius:4px; }
-.rounder-bottom { border-bottom-left-radius:5px; border-bottom-right-radius:5px; }
-.round-bottom { border-bottom-left-radius:4px; border-bottom-right-radius:4px; }
-@media only screen and (max-width:1025px) {
-.side_a { border-radius:10px 10px 0 0!important; }
-.side_b, .side_c { border-radius:0!important; }
-[class^="side_"]:last-of-type { border-radius:0 0 10px 10px!important; }
-}
+.round, .box, p:only-of-type.npf_chat, p.npf_chat, p.npf_quote, [class^="box_"], .ml a, .portrait.square img { border-radius:10px; }
+.rounder, a.read_more, .icons .ti, .active img, .deleted img, ol.notes li.note img.avatar, .perm-footer .ti, a.more_notes_link, .more-likes a, .b-title, .b-title span, .p-wrap img, .p-wrap .ti { border-radius:5px; }
+.post-btns .min { border-radius:0 0 0 5px; }
+.post-btns .ti-x { border-radius:0 0 5px 0; }
+.poll-row, .poll-see-results { border-radius:10px!important; }
+.quote { border-radius:0; }
 {/block:ifRoundCorners}
+
+@media only screen and (max-width:1025px) {
+body { background-size:cover; }
+.cover img { width:100%; height:250px; object-fit:cover; object-position:50% 50%; }
+}
 
 {CustomCSS}
 </style>
@@ -192,83 +240,167 @@ body.light { background-image:url({image:Day Background}); }
 
 <body class="{select:Blog Theme}">
 
-<div class="tab">
-<a class="tbtn"><span class="hide" title="Show Tumblr Controls"><i class="bx bx-cog"></i></span><span class="hide none" title="Hide Tumblr Controls"><i class="bx bx-x"></i></span></a>
+<div class="container">
+
+<div class="labels">
+<div class="icons flex justify">
+<div class="tophe">
+<div class="topge">
+{block:ifHideTumblrControls}
+{block:IndexPage}
+<a class="ctrls"><span class="close" title="{lang:Show}"><i class="ti ti-settings"></i></span><span class="close none" title="{lang:Close}"><i class="ti ti-settings-off"></i></span></a>
+{/block:IndexPage}
+{/block:ifHideTumblrControls}
 <label class="dn"><input class="modus" type="checkbox">
-<div class="diem"><a class="diemnox moon" title="Enable Dark Mode"><i class="bx bx-moon"></i></a><a class="diemnox none" title="Disable Dark Mode"><i class="bx bx-sun"></i></a></div>
-<div class="nox"><a class="diemnox moon" title="Enable Light Mode"><i class="bx bx-sun"></i></a><a class="diemnox none" title="Disable Light Mode"><i class="bx bx-moon"></i></a></div>
+<div class="diem"><a class="diemnox moon" title="Enable Dark Mode"><i class="ti ti-{text:Dark Mode Icon}"></i></a><a class="diemnox none" title="Disable Dark Mode"><i class="ti ti-{text:Light Mode Icon}"></i></a></div>
+<div class="nox"><a class="diemnox moon" title="Enable Light Mode"><i class="ti ti-{text:Light Mode Icon}"></i></a><a class="diemnox none" title="Disable Light Mode"><i class="ti ti-{text:Dark Mode Icon}"></i></a></div>
 </label>
-<div class="msearchwrap {block:HideFromSearchEnabled}m-none{/block:HideFromSearchEnabled}"><div class="m-search"><form action="/search" method="get"><input class="m-searchbar" type="text" name="q" placeholder="Search" value="{SearchQuery}" autocomplete="off"/></form></div></div>
-<div class="credit">
-<a class="scroll" title="Back to top"><i class="bx bxs-chevron-up"></i></a>
-<a href="https://ricecodes.tumblr.com/" title="Theme by ricecodes" target="_blank"><i class="bx bx-star"></i></a>
 </div>
+</div>
+<div class="msearch rounder {block:HideFromSearchEnabled}none{/block:HideFromSearchEnabled}"><form action="/search" method="get" class="flex"><input class="searchbar" type="text" name="q" placeholder="Search" value="{SearchQuery}" autocomplete="off"/></form></div>
+<div class="bothe">
+<div class="botge">
+<div class="to-top"><a class="scroll" title="{lang:Back to top}"><i class="ti ti-{text:Back to Top Icon}"></i></a><i class="ti ti-{text:Back to Top Icon}"></i></div>
+<a class="thm" href="https://ricecodes.tumblr.com/" target="_blank" title="Theme by ricecodes"><i class="ti ti-star"></i></a>
+</div>
+</div>
+</div> <!--- ICONS --->
 </div>
 
-<div class="content">
+<div class="package flex justify">
 
-<div class="wrapper flex justify">
-
-<div class="sidebar">
-<div class="side-wrap">
-<div class="side_a roundest">
-<div class="sidehead flex justify">
-<div class="side-type"></div>
-<div class="side-icons"><div class="icons rounder-bottom"><i class="bx bx-minus"></i><i class="bx bx-window"></i><i class="bx bx-x"></i></div></div>
+<div class="sidebar flex center">
+<div class="sidebox">
+<div class="sidemenu">
+<div class="box_img">
+<div class="b-padding flex justify center">
+<div class="b-title"><span class="copyri">IMG_{CopyRightYears}</span></div>
+<div class="post-btns">
+<i class="ti ti-minus min"></i><i class="ti ti-rectangle win"></i><i class="ti ti-x"></i>
 </div>
-<div class="searchwrap {block:HideFromSearchEnabled}none{/block:HideFromSearchEnabled}"><div class="search round"><span class="bx bx-search"></span><form action="/search" method="get"><input class="searchbar" type="text" name="q" placeholder="Search" value="{SearchQuery}" autocomplete="off"/></form></div></div>
-<div class="sidepad">{block:ifNotCustomDescription}{Description}{/block:ifNotCustomDescription}{block:ifCustomDescription}{text:Custom Description}{/block:ifCustomDescription}</div>
-</div> <!--- BOX A --->
-<div class="side_b roundest">
-<div class="sidehead flex justify">
-<div class="side-type"></div>
-<div class="side-icons"><div class="icons rounder-bottom"><i class="bx bx-minus"></i><i class="bx bx-window"></i><i class="bx bx-x"></i></div></div>
 </div>
-<div class="navigation">
-<a href="/"><span class="bx bx-home-alt"></span>{text:Home Link}</a>
-{block:AskEnabled}<a href="/ask"><span class="bx bx-envelope"></span>{text:Ask Link}</a>{/block:AskEnabled}
-{block:SubmissionsEnabled}<a href="/submit"><span class="bx bx-edit-alt"></span>{text:Submit Link}</a>{/block:SubmissionsEnabled}
-<a href="/archive"><span class="bx bx-time"></span>{text:Archive Link}</a>
+<img src="{image:Sidebar}" draggable="false">
 </div>
-</div> <!--- BOX B --->
-<div class="side_c roundest">
-<div class="sidehead flex justify">
-<div class="side-type"></div>
-<div class="side-icons"><div class="icons rounder-bottom"><i class="bx bx-minus"></i><i class="bx bx-window"></i><i class="bx bx-x"></i></div></div>
+{block:ifUpdates}
+<div class="box_up">
+<div class="b-padding flex justify center">
+<div class="b-title"><span>{text:Updates Header}</span></div>
+<div class="post-btns">
+<i class="ti ti-minus min"></i><i class="ti ti-rectangle win"></i><i class="ti ti-x"></i>
 </div>
-<div class="side-links">
+</div>
+<div class="up">{text:Updates}</div>
+</div>
+{/block:ifUpdates}
+<div class="box_nav">
+<div class="b-padding flex justify center">
+<div class="b-title"><span>{lang:Navigate}</span></div>
+<div class="post-btns">
+<i class="ti ti-minus min"></i><i class="ti ti-rectangle win"></i><i class="ti ti-x"></i>
+</div>
+</div>
+<div class="nav">
+<a href="/"><i class="ti ti-{text:Home Link Icon}"></i>{text:Home Link}</a>
+{block:AskEnabled}<a href="/ask"><i class="ti ti-{text:Ask Link Icon}"></i>{text:Ask Link}</a>{/block:AskEnabled}
+{block:SubmissionsEnabled}<a href="/submit"><i class="ti ti-{text:Submit Link Icon}"></i>{text:Submit Link}</a>{/block:SubmissionsEnabled}
+<a href="/archive" target="_blank"><i class="ti ti-{text:Archive Link Icon}"></i>{text:Archive Link}</a>
+<a class="mbtn"><i class="ti ti-{text:More Link Icon}"></i><span class="close">{text:More Link}</span><span class="close none">{lang:Close}</span></a>
+<div class="more-links">
 {block:ifLink1}<a href="{text:Link 1 URL}">{text:Link 1}</a>{/block:ifLink1}
 {block:ifLink2}<a href="{text:Link 2 URL}">{text:Link 2}</a>{/block:ifLink2}
 {block:ifLink3}<a href="{text:Link 3 URL}">{text:Link 3}</a>{/block:ifLink3}
 {block:ifLink4}<a href="{text:Link 4 URL}">{text:Link 4}</a>{/block:ifLink4}
 {block:HasPages}{block:Pages}<a href="{URL}">{Label}</a>{/block:Pages}{/block:HasPages}
 </div>
-</div> <!--- BOX C --->
-{block:ifUpdates}
-<div class="side_d roundest">
-<div class="sidehead flex justify">
-<div class="side-type"></div>
-<div class="side-icons"><div class="icons rounder-bottom"><i class="bx bx-minus"></i><i class="bx bx-window"></i><i class="bx bx-x"></i></div></div>
 </div>
-<div class="sidepad">{text:Updates}</div>
-</div> <!--- BOX D --->
-{/block:ifUpdates}
 </div>
-</div> <!--- SIDEBAR --->
+<div class="box_desc">
+<div class="b-padding flex justify center">
+<div class="b-title">{block:ifNotCustomTitle}<span>{Title}</span>{/block:ifNotCustomTitle}{block:ifCustomTitle}<span>{text:Custom Title}</span>{/block:ifCustomTitle}</div>
+<div class="post-btns">
+<i class="ti ti-minus min"></i><i class="ti ti-rectangle win"></i><i class="ti ti-x"></i>
+</div>
+</div>
+<div class="desc flex"><div class="d-info flex center"><div class="d-title">{text:Name}</div><div class="d-name">@{Name}</div></div></div>
+{block:ifNotCustomDescription}<div class="descript {block:HideDescription}none{/block:HideDescription}">{Description}</div>{/block:ifNotCustomDescription}
+{block:ifCustomDescription}<div class="descript">{text:Custom Description}</div>{/block:ifCustomDescription}
+<div class="search {block:HideFromSearchEnabled}none{/block:HideFromSearchEnabled}"><form action="/search" method="get" class="flex"><input class="searchbar rounder" type="text" name="q" placeholder="Search" value="{SearchQuery}" autocomplete="off"/></form></div>
+</div>
+</div>
+</div>
+<!--- START OF MOBILE DESC --->
+<div class="m-desc">
+<div class="cover"><img src="{image:Sidebar}" draggable="false"></div>
+<div class="portrait flex center {AvatarShape}"><img src="{PortraitURL-128}" draggable="false"></div>
+<div class="desc-wrap">
+<a class="desc-title {block:HideTitle}none{/block:HideTitle}" href="/">{block:ifNotCustomTitle}<h3>{Title}</h3>{/block:ifNotCustomTitle}{block:ifCustomTitle}<h3>{text:Custom Title}</h3>{/block:ifCustomTitle}</a>
+{block:ifNotCustomDescription}<p class="{block:HideDescription}none{/block:HideDescription}">{Description}</p>{/block:ifNotCustomDescription}
+{block:ifCustomDescription}<p>{text:Custom Description}</p>{/block:ifCustomDescription}
+<div class="ml">
+<a href="/">{text:Home Link}</a>
+{block:AskEnabled}<a href="/ask">{text:Ask Link}</a>{/block:AskEnabled}
+{block:SubmissionsEnabled}<a href="/submit">{text:Submit Link}</a>{/block:SubmissionsEnabled}
+<a href="/archive" target="_blank">{text:Archive Link}</a>
+{block:ifLink1}<a href="{text:Link 1 URL}">{text:Link 1}</a>{/block:ifLink1}
+{block:ifLink2}<a href="{text:Link 2 URL}">{text:Link 2}</a>{/block:ifLink2}
+{block:ifLink3}<a href="{text:Link 3 URL}">{text:Link 3}</a>{/block:ifLink3}
+{block:HasPages}{block:Pages}<a href="{URL}">{Label}</a>{/block:Pages}{/block:HasPages}
+</div>
+</div>
+</div> <!--- END OF MOBILE DESC --->
+</div>
 
-<section>
+<div class="wrapper">
+
+<div class="posts-wrap">
+{block:TagPage}
+<div class="bb round"><i class="ti ti-tag"></i>{lang:TagResultCount posts tagged Tag 2}</div>
+{/block:TagPage}
+
+{block:SearchPage}
+<div class="bb round"><i class="ti ti-search"></i>{lang:Search results for SearchQuery 2}</div>
+{/block:SearchPage}
+
+{block:NoPosts}
+<div class="bb round">
+<i class="ti ti-article-off"></i>
+{lang:This Tumblr is cool but empty}
+</div>
+{/block:NoPosts}
 
 {block:Posts inlineMediaWidth="1280" inlineNestedMediaWidth="1280"}
-<div class="entry flex justify">
-<article class="roundest" post-type="{PostType}">
+<div class="posts flex justify">
+<div class="entry">
+<article post-type="{PostType}" class="round {block:PinnedPostLabel}pinned{/block:PinnedPostLabel}">
 
 {block:Date}
-<div class="post-header flex justify">
-<div class="post-type rounder"><i class="bx {block:Text}bx-file{/block:Text}{block:Link}bx-link-alt{/block:Link}{block:Quote}bxs-quote-left{/block:Quote}{block:Chat}bx-chat{/block:Chat}{block:Answer}bx-envelope{/block:Answer}{block:Photo}bx-image{/block:Photo}{block:Photoset}bx-image{/block:Photoset}{block:Panorama}bx-image{/block:Panorama}{block:Video}bx-video-recording{/block:Video}{block:Audio}bxs-music{/block:Audio}"></i>{PostType}</div>
-<div class="post-icons"><div class="icons rounder-bottom {block:IndexPage}pbtn{/block:IndexPage}"><i class="bx bx-minus" title="{lang:Posted TimeAgo}"></i><i class="bx bx-window" title="{NoteCountWithLabel}"></i><i class="bx bx-x" title="{block:NotReblog}Original Post{/block:NotReblog}{block:RebloggedFrom}Reblogged Post{/block:RebloggedFrom}"></i></div></div>
+<div class="post-header flex justify center">
+<div class="post-info rounder">
+<i class="ti ti-{block:Text}file-text{/block:Text}{block:Link}link{/block:Link}{block:Quote}quote{/block:Quote}{block:Chat}messages{/block:Chat}{block:Answer}mail{/block:Answer}{block:Photo}photo{/block:Photo}{block:Photoset}stack-2{/block:Photoset}{block:Panorama}photo{/block:Panorama}{block:Video}video{/block:Video}{block:Audio}music{/block:Audio}"></i>{block:Text}{lang:Text}{/block:Text}{block:Link}{lang:Link}{/block:Link}{block:Quote}{lang:Quote}{/block:Quote}{block:Chat}{lang:Chat}{/block:Chat}{block:Answer}{lang:Answer}{/block:Answer}{block:Photo}{lang:Photo}{/block:Photo}{block:Photoset}{lang:Photoset}{/block:Photoset}{block:Panorama}{lang:Photo}{/block:Panorama}{block:Video}{lang:Video}{/block:Video}{block:Audio}{lang:Audio}{/block:Audio}
 </div>
-<div class="post-address flex justify centered">
-<a class="address rounder" href="{Permalink}" title="Permalink"><span class="bx bxs-bookmark"></span>{Name}.tumblr.com/{PostID}</a>
+<div class="post-btns rounder">
+{block:IndexPage}
+<div class="pb">
+<a class="pbtn" title="{lang:Posted TimeAgo}"><i class="ti ti-minus min"></i></a>
+<a class="pbtn" title="{NoteCountWithLabel}"><i class="ti ti-rectangle win"></i></a>
+<a class="pbtn" title="{lang:Permalink}"><i class="ti ti-x"></i></a>
+</div>
+<div class="mb">
+<i class="ti ti-minus min"></i><i class="ti ti-rectangle win"></i><i class="ti ti-x ex"></i>
+</div>
+{/block:IndexPage}
+{block:PermalinkPage}
+<i class="ti ti-minus min"></i><i class="ti ti-rectangle win"></i><i class="ti ti-x ex"></i>
+{/block:PermalinkPage}
+</div>
+</div>
+<div class="post-address">
+<div class="address flex center justify round">
+<i class="ti ti-bookmark-filled"></i>
+<div class="a-info flex center"><div class="a-name">
+<a href="{Permalink}">https://{Name}.tumblr.com<span class="urlol">/{PostID}</span></a>
+</div></div>
+</div> <!--- ADDRESS --->
 </div>
 {/block:Date}
 
@@ -283,10 +415,12 @@ body.light { background-image:url({image:Day Background}); }
 <div class="reblogged">
 <div class="username source-head">
 {block:IsActive}
-<div class="active">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}">{Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
+{block:HasPermalink}
+<a href="{Permalink}" target="_blank"><div class="active"><span><img src="{PortraitURL-64}"></span>{Username}</div></a>
+{/block:HasPermalink}
 {/block:IsActive}
 {block:IsDeactivated}
-<div class="deleted">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}">{Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
+{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<div class="deleted"><span><img src="{PortraitURL-64}"></span>{Username}<span class="deact">deactivated</span></div>{block:HasPermalink}</a>{/block:HasPermalink}
 {/block:IsDeactivated}
 </div>
 {Body}
@@ -297,7 +431,7 @@ body.light { background-image:url({image:Day Background}); }
 {/block:Text}
 
 {block:Link}
-<a href="{URL}"><div class="link flex justify">{Name}<span class="bx bx-link-external"></span></div></a>
+<a href="{URL}" target="_blank"><div class="link flex justify">{Name}<span class="ti ti-link"></span></div></a>
 {block:NotReblog}
 {block:Description}
 <div class="caption">{Description}</div>
@@ -309,10 +443,12 @@ body.light { background-image:url({image:Day Background}); }
 <div class="reblogged">
 <div class="username">
 {block:IsActive}
-<div class="active">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}">{Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
+{block:HasPermalink}
+<a href="{Permalink}" target="_blank"><div class="active"><span><img src="{PortraitURL-64}"></span>{Username}</div></a>
+{/block:HasPermalink}
 {/block:IsActive}
 {block:IsDeactivated}
-<div class="deleted">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}">{Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
+{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<div class="deleted"><span><img src="{PortraitURL-64}"></span>{Username}<span class="deact">deactivated</span></div>{block:HasPermalink}</a>{/block:HasPermalink}
 {/block:IsDeactivated}
 </div>
 {Body}
@@ -323,7 +459,8 @@ body.light { background-image:url({image:Day Background}); }
 {/block:Link}
 
 {block:Quote}
-<div class="quote">{Quote} {block:Source}<div class="src">— {Source}</div>{/block:Source}</div>
+<div class="quote round">{Quote}</div>
+{block:Source}<div class="src">— {Source}</div>{/block:Source}
 {/block:Quote}
 
 {block:Chat}
@@ -339,7 +476,7 @@ body.light { background-image:url({image:Day Background}); }
 
 {block:Answer}
 <div class="q-wrap flex justify">
-<div class="q"><img src="{AskerPortraitURL-128}"><i class="bx bxs-envelope"></i></div>
+<div class="q"><img src="{AskerPortraitURL-128}"><i class="ti ti-mail-filled"></i></div>
 <div class="question"><div class="asker">{Asker} sent</div>{Question}</div>
 </div>
 {block:NotReblog}
@@ -347,7 +484,7 @@ body.light { background-image:url({image:Day Background}); }
 {/block:NotReblog}
 {block:Rebloggedfrom}
 <div class="a-wrap flex justify">
-<div class="q"><img src="{block:Answerer}{AnswererPortraitURL-128}{/block:Answerer}"><i class="bx bxs-envelope-open"></i></div>
+<div class="q"><img src="{block:Answerer}{AnswererPortraitURL-128}{/block:Answerer}"><i class="ti ti-mail-opened-filled"></i></div>
 <div class="question">{block:Answerer}<div class="asker">{Answerer} answered</div>{/block:Answerer}{Answer}</div>
 </div>
 <div class="a-unnest">
@@ -355,10 +492,12 @@ body.light { background-image:url({image:Day Background}); }
 <div class="reblogged">
 <div class="username">
 {block:IsActive}
-<div class="active">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}">{Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
+{block:HasPermalink}
+<a href="{Permalink}" target="_blank"><div class="active"><span><img src="{PortraitURL-64}"></span>{Username}</div></a>
+{/block:HasPermalink}
 {/block:IsActive}
 {block:IsDeactivated}
-<div class="deleted">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}">{Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
+{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<div class="deleted"><span><img src="{PortraitURL-64}"></span>{Username}<span class="deact">deactivated</span></div>{block:HasPermalink}</a>{/block:HasPermalink}
 {/block:IsDeactivated}
 </div>
 {Body}
@@ -369,7 +508,7 @@ body.light { background-image:url({image:Day Background}); }
 {/block:Answer}
 
 {block:Photo}
-<div class="photo"><a href="#" onclick="Tumblr.Lightbox.init([{ width:{PhotoWidth-HighRes}, height:{PhotoHeight-HighRes}, low_res:'{PhotoURL-500}', high_res:'{PhotoURL-HighRes}' }]); $('body').toggleClass('tumblr_lightbox_active'); return false"><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"></a></div>
+<div class="photo"><a href="#" onclick="Tumblr.Lightbox.init([{ width:{PhotoWidth-HighRes}, height:{PhotoHeight-HighRes}, low_res:'{PhotoURL-500}', high_res:'{PhotoURL-HighRes}' }]); $('body').toggleClass('tumblr_lightctive'); return false"><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"></a></div>
 {/block:Photo}
 
 {block:Photoset}
@@ -389,9 +528,9 @@ body.light { background-image:url({image:Day Background}); }
 {block:AudioEmbed}{AudioEmbed-640}{/block:AudioEmbed}
 {block:AudioPlayer}
 {AudioPlayer}
-<div class="audio flex justify">
+<div class="audio flex justify center">
 <div class="flex center">
-<div class="audio_player"><span class="audio-btns flex center"></span><div class="seekbar"></div></div>
+<div class="audio_player flex center"><span class="audio-btns flex center"></span><div class="seekbar"></div></div>
 <div class="audio-info">
 {block:TrackName}<strong>{TrackName}</strong>{/block:TrackName}
 {block:Artist}<p>{Artist}</p>{/block:Artist}
@@ -400,23 +539,24 @@ body.light { background-image:url({image:Day Background}); }
 {block:AlbumArt}<img class="album" src="{AlbumArtURL}">{/block:AlbumArt}
 </div>
 {/block:AudioPlayer}
-
 {/block:Audio}
 
 {block:Caption}
 {block:NotReblog}
-<div class="caption {block:Audio}b-top{/block:Audio}">{Caption}</div>
+<div class="caption {block:ifHideCaptions}{block:IndexPage}none{/block:IndexPage}{/block:ifHideCaptions}">{Caption}</div>
 {/block:NotReblog}
 {block:Rebloggedfrom}
-<div class="unnest {block:Audio}b-top{/block:Audio}">
+<div class="unnest {block:ifHideCaptions}{block:IndexPage}none{/block:IndexPage}{/block:ifHideCaptions}">
 {block:Reblogs}
 <div class="reblogged">
 <div class="username">
 {block:IsActive}
-<div class="active">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}">{Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
+{block:HasPermalink}
+<a href="{Permalink}" target="_blank"><div class="active"><span><img src="{PortraitURL-64}"></span>{Username}</div></a>
+{/block:HasPermalink}
 {/block:IsActive}
 {block:IsDeactivated}
-<div class="deleted">{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<img src="{PortraitURL-64}">{Username}{block:HasPermalink}</a>{/block:HasPermalink}</div>
+{block:HasPermalink}<a href="{Permalink}">{/block:HasPermalink}<div class="deleted"><span><img src="{PortraitURL-64}"></span>{Username}<span class="deact">deactivated</span></div>{block:HasPermalink}</a>{/block:HasPermalink}
 {/block:IsDeactivated}
 </div>
 {Body}
@@ -427,72 +567,72 @@ body.light { background-image:url({image:Day Background}); }
 {/block:Caption}
 
 {block:Date}
-
-
 {block:PermalinkPage}
 <div class="perm-footer">
-<div class="perm-info">
+<div class="pfoot">
+<table>
+{block:PinnedPostLabel}<tr><td><i class="ti ti-pin"></i></td><td>{lang:Pinned Post}</td></tr>{/block:PinnedPostLabel}
+{block:Submission}<tr><td><i class="ti ti-user-edit"></i></td><td><a href="{SubmitterURL}" target="_blank">{lang:Submitted By}</a></td></tr>{/block:Submission}
+{block:ContentSource}<tr><td><i class="ti ti-external-link"></i></td><td><a href="{SourceURL}" target="_blank">{SourceTitle}</a></td></tr>{/block:ContentSource}
 {block:RebloggedFrom}
-<div class="via"><ul><li><a href="{ReblogParentURL}">{ReblogParentName}</a></li></ul></div>
-<div class="root"><ul><li><a href="{ReblogRootURL}">{ReblogRootName}</a></li></ul></div>
+<tr><td><i class="ti ti-reload"></i></td><td><a href="{ReblogParentURL}" title="{lang:Reblogged from ReblogParentName}">{ReblogParentName}</a></td></tr>
+<tr><td><i class="ti ti-user-pin"></i></td><td><a href="{ReblogRootURL}" title="{lang:Originally from ReblogRootName}">{ReblogRootName}</a></td></tr>
 {/block:RebloggedFrom}
-<div class="date"><ul><li>{Month} {DayOfMonthWithZero}, {Year} with {NoteCountWithLabel}</li></ul></div>
-{block:HasTags}<div class="ptags"><ul><li>{block:Tags}<a href="{TagURL}">{Tag}</a>{/block:Tags}</li></ul></div>{/block:HasTags}
+{block:NotReblog}
+<tr><td><i class="ti ti-user-star"></i></td><td>{PostAuthorName}</td></tr>
+{/block:NotReblog}
+<tr><td><i class="ti ti-bookmark"></i></td><td>{Month} {DayOfMonthWithZero}, {Year} with {NoteCountWithLabel}</td></tr>
+</table>
 </div>
+{block:HasTags}<div class="ptags"><center><h4>See more posts like this</h4></center>{block:Tags}<a class="rounder" href="{TagURL}">#{Tag}</a>{/block:Tags}</div>{/block:HasTags}
 {block:PostNotes}{PostNotes-64}{/block:PostNotes}
-</div>
 {/block:PermalinkPage}
 {/block:Date}
-
 </article>
+</div>
 
 {block:Date}
-<div class="p-wrap">
+<div class="p-wrap none">
 <div class="stick">
-<a class="m-wrap rounder" href="{Permalink}">{NoteCountWithLabel}</a>
-<a href="{block:NotReblog}{Permalink}{/block:NotReblog}{block:RebloggedFrom}{ReblogRootURL}{/block:RebloggedFrom}" target="_blank" title="{block:NotReblog}{lang:Posted by PostAuthorName}{/block:NotReblog}{block:RebloggedFrom}{lang:Originally from ReblogRootName}{/block:RebloggedFrom}"><img class="rounder" src="{block:NotReblog}{PortraitURL-128}{/block:NotReblog}{block:RebloggedFrom}{ReblogRootPortraitURL-128}{/block:RebloggedFrom}"></a>
-<div class="controls">
-{block:ContentSource}<a href="{SourceURL}" target="_blank" title="{lang:Source}:{SourceTitle}"><i class="bx bx-link-external small"></i></a>{/block:ContentSource}
-<a href="{ReblogURL}"><i class="bx bx-revision"></i></a>
-<a class="likey">{LikeButton}<span class="bx bx-meh"></span></a>
-{block:ifHideTags}{block:HasTags}<a class="tagb"><span class="close" title="Show Tags"><i class="bx bx-hash"></i></span><span class="close none" title="Hide Tags"><i class="bx bx-x"></i></span></a>{/block:HasTags}{/block:ifHideTags}
-</div>
+{block:PinnedPostLabel}<a href="{Permalink}" title="{lang:Pinned Post}"><i class="ti ti-pin"></i></a>{/block:PinnedPostLabel}
+<a href="{block:NotReblog}{Permalink}{/block:NotReblog}{block:RebloggedFrom}{ReblogRootURL}{/block:RebloggedFrom}"><img class="rounder" src="{block:NotReblog}{PortraitURL-128}{/block:NotReblog}{block:RebloggedFrom}{ReblogRootPortraitURL-128}{/block:RebloggedFrom}"></a>
+{block:ContentSource}<a href="{SourceURL}" target="_blank" title="{SourceTitle}"><i class="ti ti-external-link"></i></a>{/block:ContentSource}
+<a href="{ReblogURL}" title="Reblog"><i class="ti ti-reload"></i></a>
+<a class="likey" title="Like">{LikeButton size="50"}<i class="ti ti-mood-empty"></i></a>
+{block:ifHideTags}{block:HasTags}<a class="tagb"><span class="close" title="Show Tags"><i class="ti ti-tag"></i></span><span class="close none" title="Hide Tags"><i class="ti ti-tag-off"></i></span></a>{/block:HasTags}{/block:ifHideTags}
 </div>
 </div>
 {/block:Date}
 
 {block:IndexPage}
 {block:HasTags}
-<div class="tags {block:ifHideTags}none{/block:ifHideTags}">
-{block:Tags}<a href="{TagURL}" class="rounder">{Tag}</a>{/block:Tags}
+<div class="tags {block:ifHidetags}none{/block:ifHidetags}">
+{block:Tags}<a class="rounder" href="{TagURL}">#{Tag}</a>{/block:Tags}
 </div>
 {/block:HasTags}
 {/block:IndexPage}
-    
-</div>
+
+</div> <!--- POSTS --->
 {/block:Posts}
 
 {block:Pagination}
 <div class="pgs flex justify">
-<div class="prev">{block:PreviousPage}<a href="{PreviousPage}" class="rounder">Previous</a>{/block:PreviousPage}<span class="rounder">Previous</span></div>
-<div class="next">{block:NextPage}<a href="{NextPage}" class="rounder">Next</a>{/block:NextPage}<span class="rounder">Next</span></div>
+<div class="prev">{block:PreviousPage}<a href="{PreviousPage}" class="round">{lang:Previous}</a>{/block:PreviousPage}<span class="round">{lang:Previous}</span></div>
+<div class="next">{block:NextPage}<a href="{NextPage}" class="round">{lang:Next}</a>{/block:NextPage}<span class="round">{lang:Next}</span></div>
 </div>
 {/block:Pagination}
-
-</section>
+</div> <!--- POSTS WRAP --->
+</div> <!--- WRAPPER --->
 </div>
 
+<div class="m-cred">
+<p>© {CopyrightYears} theme by <a href="https://ricecodes.tumblr.com/" target="_blank">ricecodes</a>. Powered by Tumblr.</p>
 </div>
+
+</div> <!--- CONTAINER --->
 
 <!----------------------------------------------------- SCRIPTS ------->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
-<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/annasthms/customaudio@latest/customaudio.min.js"></script>
-<script src="https://static.tumblr.com/05ejowb/wtirog6ty/retrowave.min.js"></script>
-<!-- NPF images fix v3.0 by @glenthemes [2021] - git.io/JRBt7 --->
-<script src="//npf-images-v3.github.io/script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script><script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script><script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script><script src="https://cdn.jsdelivr.net/gh/annasthms/customaudio@latest/customaudio.min.js"></script><script src="//tmblr-npf-audio.gitlab.io/s/init.js"></script><script src="//npf-images-v3.github.io/script.js"></script><script src="https://static.tumblr.com/05ejowb/ZLQsaf6xt/main.min.js"></script>
     
 </body>
 </html>
