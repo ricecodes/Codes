@@ -170,7 +170,7 @@ Credit:
 <meta name="text:Muses 2 Section" content="">
 <meta name="text:Muses 3 Section" content="&#x3C;a class=&#x22;mu flex justify&#x22; href=&#x22;LINK URL&#x22; title=&#x22;LINK TITLE&#x22;&#x3E;&#x3C;img src=&#x22;IMAGE URL&#x22;&#x3E;&#x3C;div class=&#x22;m-info flex center&#x22;&#x3E;&#x3C;div class=&#x22;m-name&#x22;&#x3E;Name&#x3C;/div&#x3E;&#x3C;div class=&#x22;m-in&#x22;&#x3E;Keep it short.&#x3C;/div&#x3E;&#x3C;/div&#x3E;&#x3C;/a&#x3E;">
 
-<link href="https://fonts.googleapis.com/css2?family={text:Body Font}:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"><link href="https://static.tumblr.com/0podkko/oDSpg7y88/photosets.css" rel="stylesheet"><link href="https://static.tumblr.com/05ejowb/ez1s3ton7/ttyl.min.css" rel="stylesheet"><link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family={text:Body Font}:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"><link href="https://static.tumblr.com/0podkko/oDSpg7y88/photosets.css" rel="stylesheet"><link href="https://static.tumblr.com/05ejowb/ez1s3ton7/ttyl.min.css" rel="stylesheet"><link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" rel="stylesheet">
 
 <style>
 
